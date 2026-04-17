@@ -120,7 +120,12 @@ export default function Chat() {
       const data = await res.json()
       setMensajes([...nuevos, { rol: 'sistema', contenido: data.respuesta }])
     } catch {
-      setMensajes([...nuevos, { rol: 'sistema', contenido: 'Error al conectar. Intenta de nuevo.' }])
+      const errorMsg = data?.error?.includes('rate_limit') || data?.detalle?.includes('rate_limit')
+        ? 'El documento es demasiado extenso para procesarlo de una vez. Por favor sube solo el capítulo o fragmento relevante para el análisis.'
+        : data?.error?.includes('tokens')
+        ? 'El contenido excede el límite de procesamiento. Reduce el tamaño del documento o divide el análisis en partes.'
+        : 'Hubo un problema al conectar con el servidor. Intenta de nuevo en unos segundos.'
+      setMensajes([...nuevos, { rol: 'sistema', contenido: errorMsg }])
     } finally {
       setCargando(false)
     }
