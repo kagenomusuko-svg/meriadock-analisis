@@ -1,4 +1,6 @@
-import { useState, useRef, useEffect } from 'react'
+const fs = require('fs');
+
+const contenido = `import { useState, useRef, useEffect } from 'react'
 import { supabase } from '../utils/supabaseClient'
 
 const OCUPACIONES = ['Psicólogo / Terapeuta / Acompañante','Abogado / Jurista','Consultor / Auditor','Investigador / Académico','Gestor / Directivo organizacional','Trabajador social / Educador','Particular / Uso personal','Otro']
@@ -290,3 +292,7 @@ export default function Chat() {
     </div>
   )
 }
+`;
+
+fs.writeFileSync('pages/chat.tsx', contenido);
+console.log('chat.tsx reescrito limpio');
