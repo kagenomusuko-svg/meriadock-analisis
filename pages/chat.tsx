@@ -84,6 +84,7 @@ export default function Chat() {
     setArchivos(prev => prev.filter((_, idx) => idx !== i))
   }
 
+
   async function enviar() {
     if (!input.trim() && archivos.length === 0) return
     if (cargando) return
@@ -100,6 +101,7 @@ export default function Chat() {
     const nuevos = [...mensajes, { rol: 'usuario', contenido: texto + etiqueta }]
     setMensajes(nuevos)
     setCargando(true)
+    setMensajes(prev => [...prev, { rol: 'sistema', contenido: 'Analizando...', esPaso: true }])
 
     try {
       const res = await fetch('/api/chat', {
@@ -111,18 +113,36 @@ export default function Chat() {
           archivos: archivosData
         })
       })
-      const data = await res.json()
-      if (data.respuesta) {
-        setMensajes([...nuevos, { rol: 'sistema', contenido: data.respuesta }])
-      } else {
-        setMensajes([...nuevos, { rol: 'sistema', contenido: 'Hubo un problema. Intenta de nuevo.' }])
+
+      const reader = res.body.getReader()
+      const decoder = new TextDecoder()
+      let buffer = ''
+
+      while (true) {
+        const { done, value } = await reader.read()
+        if (done) break
+        buffer += decoder.decode(value, { stream: true })
+        const lines = buffer.split('\n')
+        buffer = lines.pop()
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue
+          try {
+            const data = JSON.parse(line.slice(6))
+            if (data.tipo === 'paso') {
+              setMensajes(prev => [...prev.filter(m => !m.esPaso), { rol: 'sistema', contenido: data.contenido, esPaso: true }])
+            } else if (data.tipo === 'final' || data.tipo === 'error') {
+              setMensajes(prev => [...prev.filter(m => !m.esPaso), { rol: 'sistema', contenido: data.contenido }])
+            }
+          } catch {}
+        }
       }
     } catch {
-      setMensajes([...nuevos, { rol: 'sistema', contenido: 'No fue posible conectar. Intenta de nuevo.' }])
+      setMensajes(prev => [...prev.filter(m => !m.esPaso), { rol: 'sistema', contenido: 'No fue posible conectar. Intenta de nuevo.' }])
     } finally {
       setCargando(false)
     }
   }
+
 
   if (!user) return (
     <div style={{ display:'flex', alignItems:'center', justifyContent:'center', height:'100vh', background:'#faf9f7', fontFamily:'Georgia,serif', color:'#1E4C45' }}>
@@ -248,7 +268,7 @@ export default function Chat() {
                   </div>
                   <div style={{ maxWidth:'78%' }}>
                     <div style={{ fontSize:'11px', color:'#9a9080', marginBottom:'5px', letterSpacing:'0.05em' }}>{m.rol === 'usuario' ? (perfil?.nombre_preferido || 'Tú') : 'Prometeo'}</div>
-                    <div style={{ fontSize:'15px', lineHeight:'1.75', color:'#2c2820', whiteSpace:'pre-wrap' }}>{m.contenido}</div>
+                    <div style={{ fontSize: m.esPaso ? '13px' : '15px', lineHeight:'1.75', color: m.esPaso ? '#9a9080' : '#2c2820', whiteSpace:'pre-wrap', fontStyle: m.esPaso ? 'italic' : 'normal' }}>{m.contenido}</div>
                   </div>
                 </div>
               ))}
