@@ -1,4 +1,6 @@
-import Anthropic from '@anthropic-ai/sdk'
+var fs = require('fs');
+
+var nuevo = `import Anthropic from '@anthropic-ai/sdk'
 import mammoth from 'mammoth'
 import { createClient } from '@supabase/supabase-js'
 
@@ -20,7 +22,7 @@ async function procesarArchivo(archivo) {
   return null
 }
 
-const SYSTEM_PROMETEO = `Eres Prometeo, el sistema de análisis causal del Centro Multidisciplinario Meriadock Formación y Asesoría A.C. Eres la obra completa del autor traducida a instrucciones ejecutables.
+const SYSTEM_PROMETEO = \`Eres Prometeo, el sistema de análisis causal del Centro Multidisciplinario Meriadock Formación y Asesoría A.C. Eres la obra completa del autor traducida a instrucciones ejecutables.
 
 IDENTIDAD Y TONO
 - Tono: neutro, forense, accesible. Nunca clínico ni judicial en exceso.
@@ -141,7 +143,7 @@ REGLAS ABSOLUTAS
 - NUNCA rehaces el análisis en un mensaje posterior sin que el usuario haya aportado nueva evidencia.
 - Una sola vez el análisis. Si el usuario quiere cambios, es una nueva versión con folio distinto.
 - El chat después del análisis es para enriquecimiento de evidencia únicamente.
-`;
+\`;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Metodo no permitido' })
@@ -158,16 +160,16 @@ export default async function handler(req, res) {
   res.setHeader('Connection', 'keep-alive')
 
   function enviarPaso(texto) {
-    res.write('data: ' + JSON.stringify({ tipo: 'paso', contenido: texto }) + '\n\n')
+    res.write('data: ' + JSON.stringify({ tipo: 'paso', contenido: texto }) + '\\n\\n')
   }
 
   function enviarFinal(texto, grafo) {
-    res.write('data: ' + JSON.stringify({ tipo: 'final', contenido: texto, grafo: grafo || null }) + '\n\n')
+    res.write('data: ' + JSON.stringify({ tipo: 'final', contenido: texto, grafo: grafo || null }) + '\\n\\n')
     res.end()
   }
 
   function enviarError(texto) {
-    res.write('data: ' + JSON.stringify({ tipo: 'error', contenido: texto }) + '\n\n')
+    res.write('data: ' + JSON.stringify({ tipo: 'error', contenido: texto }) + '\\n\\n')
     res.end()
   }
 
@@ -182,7 +184,7 @@ export default async function handler(req, res) {
       for (const doc of procesados.filter(Boolean)) {
         if (doc.type === 'document') contenidoUltimo.push({ type: 'document', source: doc.source })
         else if (doc.type === 'image') contenidoUltimo.push({ type: 'image', source: doc.source })
-        else if (doc.type === 'texto') contenidoUltimo.push({ type: 'text', text: '[Documento: ' + doc.nombre + ']\n\n' + doc.contenido })
+        else if (doc.type === 'texto') contenidoUltimo.push({ type: 'text', text: '[Documento: ' + doc.nombre + ']\\n\\n' + doc.contenido })
       }
     }
 
@@ -191,7 +193,7 @@ export default async function handler(req, res) {
 
     enviarPaso('Analizando...')
 
-    const SYSTEM = SYSTEM_PROMETEO + '\n\nUsuario: ' + nombre + ' (' + ocupacion + '). Uso principal: ' + uso + '.'
+    const SYSTEM = SYSTEM_PROMETEO + '\\n\\nUsuario: ' + nombre + ' (' + ocupacion + '). Uso principal: ' + uso + '.'
 
     const messagesAPI = [
       ...mensajesAnteriores.map(m => ({
@@ -235,7 +237,7 @@ export default async function handler(req, res) {
         const response2 = await anthropic.messages.create({
           model: 'claude-sonnet-4-5',
           max_tokens: 6000,
-          system: SYSTEM + '\n\nRESULTADOS DEL MOTOR MATEMÁTICO — USA EXACTAMENTE ESTOS NÚMEROS:\n' + JSON.stringify(calcData, null, 2),
+          system: SYSTEM + '\\n\\nRESULTADOS DEL MOTOR MATEMÁTICO — USA EXACTAMENTE ESTOS NÚMEROS:\\n' + JSON.stringify(calcData, null, 2),
           messages: [
             ...messagesAPI,
             { role: 'assistant', content: textoSinGrafo.trim() || 'He construido el mapa causal del caso.' },
@@ -278,3 +280,7 @@ export default async function handler(req, res) {
     }
   }
 }
+`;
+
+fs.writeFileSync('pages/api/chat.js', nuevo);
+console.log('Listo');

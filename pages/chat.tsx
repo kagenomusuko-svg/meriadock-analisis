@@ -40,6 +40,8 @@ export default function Chat() {
   const [cargando, setCargando] = useState(false)
   const [sesiones, setSesiones] = useState([])
   const [archivos, setArchivos] = useState([])
+  const [ultimoGrafo, setUltimoGrafo] = useState(null)
+  const [generandoExp, setGenerandoExp] = useState(false)
   const fileRef = useRef(null)
 
   useEffect(() => {
@@ -84,6 +86,31 @@ export default function Chat() {
     setArchivos(prev => prev.filter((_, idx) => idx !== i))
   }
 
+
+  async function descargarExpediente() {
+    if (!ultimoGrafo) return
+    setGenerandoExp(true)
+    try {
+      const res = await fetch('/api/expediente', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          grafo: ultimoGrafo,
+          insumosAlpha: ultimoGrafo.insumosAlpha || [],
+          nodosIIC: ultimoGrafo.nodosIIC || [],
+          metadatos: { titulo: ultimoGrafo.titulo || 'Análisis Causal', folio: 'EP-' + Date.now() }
+        })
+      })
+      const html = await res.text()
+      const blob = new Blob([html], { type: 'text/html' })
+      const url = URL.createObjectURL(blob)
+      window.open(url, '_blank')
+    } catch (e) {
+      console.error('Error generando expediente:', e)
+    } finally {
+      setGenerandoExp(false)
+    }
+  }
 
   async function enviar() {
     if (!input.trim() && archivos.length === 0) return
@@ -132,6 +159,7 @@ export default function Chat() {
               setMensajes(prev => [...prev.filter(m => !m.esPaso), { rol: 'sistema', contenido: data.contenido, esPaso: true }])
             } else if (data.tipo === 'final' || data.tipo === 'error') {
               setMensajes(prev => [...prev.filter(m => !m.esPaso), { rol: 'sistema', contenido: data.contenido }])
+              if (data.grafo) setUltimoGrafo(data.grafo)
             }
           } catch {}
         }
@@ -281,6 +309,17 @@ export default function Chat() {
                 </div>
               )}
             </div>
+            {ultimoGrafo && (
+              <div style={{ padding:'8px 24px', background:'#faf9f7', display:'flex', justifyContent:'center' }}>
+                <button
+                  onClick={descargarExpediente}
+                  disabled={generandoExp}
+                  style={{ padding:'10px 24px', background: generandoExp ? '#8aada9' : '#1E4C45', color:'#D9D9D9', border:'none', borderRadius:'8px', cursor: generandoExp ? 'not-allowed' : 'pointer', fontSize:'13px', fontFamily:'Georgia,serif', display:'flex', alignItems:'center', gap:'8px' }}
+                >
+                  {generandoExp ? 'Generando...' : '↓ Descargar expediente'}
+                </button>
+              </div>
+            )}
             <div style={{ borderTop:'1px solid #e8e3db', padding:'16px 24px', background:'#faf9f7' }}>
               <div style={{ maxWidth:'760px', margin:'0 auto' }}>
                 <div style={{ background:'#fff', border:'1.5px solid #d4cfc8', borderRadius:'14px', padding:'12px 16px', boxShadow:'0 2px 12px rgba(0,0,0,0.04)' }}>
