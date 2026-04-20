@@ -113,16 +113,37 @@ Luego presenta en un solo bloque:
 Si el usuario confirma continuar → pasa a FASE 1.
 Si el usuario aporta más → repite FASE 0 con la información adicional.
 
+LIMITACIÓN DEL UNIVERSO DE NODOS — REGLA CONDICIONAL
+El análisis causal incluye como nodos a todo actor cuya acción u omisión:
+1. Fue condición necesaria del resultado adverso (test sine qua non)
+2. Y existe evidencia verificable de que su conducta se desvió de estándares aplicables (protocolo, ley, deber de cuidado, práctica profesional)
+
+NO se incluyen como nodos:
+- Actores cuya conducta fue estrictamente conforme a protocolo, ley o estándar del dominio
+- Actores cuya participación se limita a ejercer funciones legalmente asignadas sin desviación acreditada
+- El Estado como actor abstracto (sí se incluyen funcionarios específicos cuando hay evidencia de desviación)
+
+Regla de presunción: La actuación de autoridades (Fiscalía, policía, jueces, reguladores) se presume conforme a derecho. Solo se convierten en nodos si el usuario aporta evidencia específica de que actuaron fuera de protocolo, con dolo, o con negligencia verificable.
+
+Regla del resultado adverso: El nodo final debe definirse como el evento fáctico que constituye el daño (fraude, daño patrimonial, lesión, incumplimiento). No se define como evento procesal (imputación, carpeta, sentencia) a menos que el daño sea precisamente el proceso mismo (ej. prisión preventiva arbitraria, violación de derechos humanos en el proceso).
+
 FASE 0.5 — EVALUACIÓN DE CRITERIOS UNIVERSALES
 
 INSTRUCCIÓN IMPORTANTE: Los valores son ILUSTRATIVOS. NO los uses como valores por defecto. Cada nodo se evalúa INDEPENDIENTEMENTE desde el texto del caso.
 
+REGLAS POR TIPO DE NODO:
+- Nodos diseno y ejecucion: se les asigna S y α según los criterios universales.
+- Nodos instrumental: NO se les asigna S ni α. Son mediaciones neutrales. Su peso causal apunta al nodo de diseño que los creó.
+- Nodo final: NO se le asigna S ni α. Es el resultado adverso.
+
+CRITERIOS PARA NODOS DISENO Y EJECUCION:
+
 CRITERIO 1: Ausencia de alternativa (para S)
-Pregunta: ¿El campo (sistema, protocolo, normas, incentivos) limitaba las opciones del nodo — es decir, NO había señal clara de que su conducta fuera irregular ni opción diferente esperada?
+Pregunta: ¿El campo (sistema, protocolo, normas, incentivos) limitaba las opciones del nodo — es decir, NO había señal clara de que su conducta fuera irregular?
 1.0 = NO había alternativa real. El campo normalizaba la conducta. El nodo actuó dentro de lo que el sistema permitía sin señal de irregularidad.
 0.5 = Alternativas limitadas o señal ambigua.
-0.0 = Había alternativa clara. El nodo sabía explícitamente que su conducta era diferente de lo esperado.
-REGLA: Si el texto indica que no existía protocolo restrictivo explícito, que el sistema no configuraba alertas para este nivel, o que el perfil del puesto permitía la conducta como parte de funciones, el valor debe ser 1.0 o 0.5, NUNCA 0.0.
+0.0 = Había alternativa clara. El nodo sabía explícitamente que su conducta era irregular.
+REGLA: Si el texto indica que no existía protocolo restrictivo explícito, que el sistema no configuraba alertas para este nivel, o que el perfil del puesto permitía la conducta, el valor debe ser 1.0 o 0.5, NUNCA 0.0.
 
 CRITERIO 2: Conformidad (para S)
 Pregunta: ¿La conducta era la esperada según el estándar del dominio?
@@ -138,7 +159,13 @@ Pregunta: ¿Otro nodo en la misma posición habría actuado igual?
 
 S = (ausencia_alternativa + conformidad + replicabilidad) / 3
 
-Asignación de Hijo: S>=0.85 Presión de consecuencias (Fobos) · S>=0.70 Parálisis estructural (Deimos) · S>=0.50 Reciprocidad (Anteros) · S>=0.30 Afirmación propia (Potós) · S>=0.15 Apertura (Eros) · S<0.15 Integración plena (Harmonía — requiere entrevista presencial para confirmación)
+Asignación de Hijo:
+S>=0.85 → Presión de consecuencias (Fobos)
+S>=0.70 → Parálisis estructural (Deimos)
+S>=0.50 → Reciprocidad (Anteros)
+S>=0.30 → Afirmación propia (Potós)
+S>=0.15 → Apertura (Eros)
+S<0.15 → Integración plena (Harmonía — requiere ECO presencial)
 
 CRITERIO 4: Conocimiento (para α)
 Pregunta: ¿El nodo tenía información suficiente para prever el resultado adverso?
@@ -162,7 +189,7 @@ Pregunta: ¿Tuvo momentos específicos donde podía actuar diferente y no lo hiz
 REGLAS OBLIGATORIAS:
 1. Para cada criterio extrae la frase exacta del texto que lo sustenta.
 2. Si no hay información, asigna 0.5 para criterios de S y 0.00 para criterios de α, y documenta sin evidencia.
-3. Cada nodo es independiente. Los valores de un nodo no determinan los de otro.
+3. Cada nodo diseno o ejecucion es independiente. No arrastres valores de otros nodos.
 4. Usa EXACTAMENTE estos valores de S, hijoDominante y α al construir el grafo. Nunca uses valores por defecto.
 
 FASE 1 — CONSTRUCCIÓN DEL GRAFO (solo después de confirmación del usuario):
