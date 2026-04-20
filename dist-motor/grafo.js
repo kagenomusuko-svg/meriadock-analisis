@@ -1,29 +1,5 @@
 "use strict";
-var escalas = require('./escalas');
-
-// Calcular midpoint de una arista
-// Si la arista tiene dominio + nivelEvidencia (string/numero), usa la tabla de escalas
-// Si tiene pesoMin + pesoMax como fallback, los usa directamente
-exports.midpoint = function(a) {
-  if (a.dominio && (a.nivelEvidencia !== undefined)) {
-    return escalas.midpoint(a.dominio, a.nivelEvidencia);
-  }
-  if (a.pesoMin !== undefined && a.pesoMax !== undefined) {
-    return (a.pesoMin + a.pesoMax) / 2;
-  }
-  return 0;
-};
-
-exports.rangoArista = function(a) {
-  if (a.dominio && (a.nivelEvidencia !== undefined)) {
-    return escalas.obtenerRango(a.dominio, a.nivelEvidencia);
-  }
-  if (a.pesoMin !== undefined && a.pesoMax !== undefined) {
-    return { min: a.pesoMin, max: a.pesoMax, midpoint: (a.pesoMin + a.pesoMax) / 2 };
-  }
-  return { min: 0, max: 0, midpoint: 0 };
-};
-
+exports.midpoint = function(a) { return (a.pesoMin + a.pesoMax) / 2; };
 exports.construirMatrizW = function(grafo) {
   var n = grafo.nodos.length;
   var indice = {};
@@ -47,7 +23,6 @@ exports.construirMatrizW = function(grafo) {
   });
   return W;
 };
-
 exports.pertrubarMatriz = function(W, eps) {
   eps = eps || 0.01;
   var n = W.length;
@@ -55,6 +30,5 @@ exports.pertrubarMatriz = function(W, eps) {
     return fila.map(function(v) { return (1-eps)*v + eps/n; });
   });
 };
-
 exports.tieneNodoFinal = function(g) { return g.nodos.some(function(n) { return n.tipo==='final'; }); };
 exports.indiceNodoFinal = function(g) { return g.nodos.findIndex(function(n) { return n.tipo==='final'; }); };
