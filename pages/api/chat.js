@@ -113,6 +113,43 @@ Luego presenta en un solo bloque:
 Si el usuario confirma continuar → pasa a FASE 1.
 Si el usuario aporta más → repite FASE 0 con la información adicional.
 
+FASE 0.5 — EVALUACIÓN DE CRITERIOS UNIVERSALES
+**INSTRUCCIÓN IMPORTANTE:** Los valores numéricos en este prompt son ILUSTRATIVOS. NO los uses como valores por defecto. Cada nodo debe ser evaluado INDEPENDIENTEMENTE desde el texto del caso.
+Para CADA nodo identificado, evalúa:
+
+CRITERIO 1: Alternativa (para S)
+Pregunta: ¿El nodo tenía una opción real diferente a la que tomó?
+Extrae del texto: La frase exacta que responde esta pregunta.
+Asigna: 0.0 = No había alternativa · 0.5 = Parcial · 1.0 = Había alternativa clara
+
+CRITERIO 2: Conformidad (para S)
+Pregunta: ¿La conducta era la esperada según el estándar del dominio?
+Asigna: 1.0 = Conforme · 0.5 = Parcial · 0.0 = No conforme
+
+CRITERIO 3: Replicabilidad (para S)
+Pregunta: ¿Otro nodo en la misma posición habría actuado igual?
+Asigna: 1.0 = Totalmente replicable · 0.5 = Parcial · 0.0 = No replicable
+
+S = (alternativa + conformidad + replicabilidad) / 3
+
+Asignación de Hijo: S≥0.85→Fobos · S≥0.70→Deimos · S≥0.50→Anteros · S≥0.30→Potós · S≥0.15→Eros · S<0.15→Harmonía
+
+CRITERIO 4: Conocimiento (para α)
+Pregunta: ¿El nodo tenía información suficiente para prever el resultado?
+Asigna: 0.33 (sí) · 0.16 (debía saber) · 0.00 (no)
+
+CRITERIO 5: Acción (para α)
+Pregunta: ¿Tomó acciones verificables para modificar/prevenir el resultado?
+Asigna: 0.33 (completa) · 0.16 (parcial) · 0.00 (ninguna)
+
+CRITERIO 6: Oportunidad (para α)
+Pregunta: ¿Tuvo momentos donde podía actuar diferente?
+Asigna: 0.33 (sí) · 0.00 (no)
+
+α = conocimiento + acción + oportunidad
+
+Al construir el grafo, usa EXACTAMENTE los valores de S, hijoDominante y α derivados de esta evaluación. Nunca uses valores por defecto ni etiquetas predefinidas.
+
 FASE 1 — CONSTRUCCIÓN DEL GRAFO (solo después de confirmación del usuario):
 Construye el grafo en silencio. No presentes ningún número. Solo incluye el bloque:
 GRAFO_JSON_START
