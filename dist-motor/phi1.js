@@ -1,12 +1,16 @@
 "use strict";
 exports.HIJOS = ['fobos','deimos','anteros','eros','potos','harmonia'];
+
+// Rangos S por Hijo — Tabla 9 de la Taxonomia (Capitulo U·3)
+// Fuente canonica: Libro 2, cap. 4.2
+// Correccion: anteros y potos estaban intercambiados. harmonia corregido.
 exports.RANGOS_S = {
-  fobos:   {min:0.70,max:0.95,midpoint:0.85},
-  deimos:  {min:0.72,max:0.95,midpoint:0.83},
-  anteros: {min:0.30,max:0.70,midpoint:0.55},
-  eros:    {min:0.30,max:0.70,midpoint:0.50},
-  potos:   {min:0.08,max:0.30,midpoint:0.23},
-  harmonia:{min:0.00,max:1.00,midpoint:0.50}
+  fobos:   { min: 0.70, max: 0.92, midpoint: 0.81 },
+  deimos:  { min: 0.75, max: 0.95, midpoint: 0.85 },
+  anteros: { min: 0.08, max: 0.30, midpoint: 0.19 },
+  eros:    { min: 0.30, max: 0.60, midpoint: 0.45 },
+  potos:   { min: 0.55, max: 0.80, midpoint: 0.68 },
+  harmonia:{ min: 0.05, max: 0.20, midpoint: 0.13 }
 };
 exports.parametrosIniciales = function() {
   return exports.HIJOS.map(function(_,k) {
