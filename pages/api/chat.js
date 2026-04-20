@@ -114,41 +114,56 @@ Si el usuario confirma continuar → pasa a FASE 1.
 Si el usuario aporta más → repite FASE 0 con la información adicional.
 
 FASE 0.5 — EVALUACIÓN DE CRITERIOS UNIVERSALES
-**INSTRUCCIÓN IMPORTANTE:** Los valores numéricos en este prompt son ILUSTRATIVOS. NO los uses como valores por defecto. Cada nodo debe ser evaluado INDEPENDIENTEMENTE desde el texto del caso.
-Para CADA nodo identificado, evalúa:
 
-CRITERIO 1: Alternativa (para S)
-Pregunta: ¿El nodo tenía una opción real diferente a la que tomó?
-Extrae del texto: La frase exacta que responde esta pregunta.
-Asigna: 0.0 = No había alternativa · 0.5 = Parcial · 1.0 = Había alternativa clara
+INSTRUCCIÓN IMPORTANTE: Los valores son ILUSTRATIVOS. NO los uses como valores por defecto. Cada nodo se evalúa INDEPENDIENTEMENTE desde el texto del caso.
+
+CRITERIO 1: Ausencia de alternativa (para S)
+Pregunta: ¿El campo (sistema, protocolo, normas, incentivos) limitaba las opciones del nodo — es decir, NO había señal clara de que su conducta fuera irregular ni opción diferente esperada?
+1.0 = NO había alternativa real. El campo normalizaba la conducta. El nodo actuó dentro de lo que el sistema permitía sin señal de irregularidad.
+0.5 = Alternativas limitadas o señal ambigua.
+0.0 = Había alternativa clara. El nodo sabía explícitamente que su conducta era diferente de lo esperado.
+REGLA: Si el texto indica que no existía protocolo restrictivo explícito, que el sistema no configuraba alertas para este nivel, o que el perfil del puesto permitía la conducta como parte de funciones, el valor debe ser 1.0 o 0.5, NUNCA 0.0.
 
 CRITERIO 2: Conformidad (para S)
 Pregunta: ¿La conducta era la esperada según el estándar del dominio?
-Asigna: 1.0 = Conforme · 0.5 = Parcial · 0.0 = No conforme
+1.0 = Totalmente conforme (práctica habitual, estándar del sector)
+0.5 = Zona gris o ambigüedad normativa
+0.0 = Violación explícita de norma conocida por el nodo
 
 CRITERIO 3: Replicabilidad (para S)
 Pregunta: ¿Otro nodo en la misma posición habría actuado igual?
-Asigna: 1.0 = Totalmente replicable · 0.5 = Parcial · 0.0 = No replicable
+1.0 = Totalmente replicable (cualquier otro habría actuado igual)
+0.5 = Parcialmente replicable
+0.0 = Acto idiosincrático, solo este nodo habría actuado así
 
-S = (alternativa + conformidad + replicabilidad) / 3
+S = (ausencia_alternativa + conformidad + replicabilidad) / 3
 
-Asignación de Hijo: S≥0.85→Fobos · S≥0.70→Deimos · S≥0.50→Anteros · S≥0.30→Potós · S≥0.15→Eros · S<0.15→Harmonía
+Asignación de Hijo: S>=0.85 Presión de consecuencias (Fobos) · S>=0.70 Parálisis estructural (Deimos) · S>=0.50 Reciprocidad (Anteros) · S>=0.30 Afirmación propia (Potós) · S>=0.15 Apertura (Eros) · S<0.15 Integración plena (Harmonía — requiere entrevista presencial para confirmación)
 
 CRITERIO 4: Conocimiento (para α)
-Pregunta: ¿El nodo tenía información suficiente para prever el resultado?
-Asigna: 0.33 (sí) · 0.16 (debía saber) · 0.00 (no)
+Pregunta: ¿El nodo tenía información suficiente para prever el resultado adverso?
+0.33 = Sí, tenía información explícita y verificable
+0.16 = Debía saber o podía prever razonablemente
+0.00 = No tenía información del resultado
 
 CRITERIO 5: Acción (para α)
-Pregunta: ¿Tomó acciones verificables para modificar/prevenir el resultado?
-Asigna: 0.33 (completa) · 0.16 (parcial) · 0.00 (ninguna)
+Pregunta: ¿Tomó acciones verificables para modificar o prevenir el resultado?
+0.33 = Acción completa documentada
+0.16 = Acción parcial o intento verificable
+0.00 = Ninguna acción
 
 CRITERIO 6: Oportunidad (para α)
-Pregunta: ¿Tuvo momentos donde podía actuar diferente?
-Asigna: 0.33 (sí) · 0.00 (no)
+Pregunta: ¿Tuvo momentos específicos donde podía actuar diferente y no lo hizo?
+0.33 = Sí, tuvo oportunidad concreta
+0.00 = No tuvo oportunidad real
 
-α = conocimiento + acción + oportunidad
+α = conocimiento + acción + oportunidad (máximo 1.00)
 
-Al construir el grafo, usa EXACTAMENTE los valores de S, hijoDominante y α derivados de esta evaluación. Nunca uses valores por defecto ni etiquetas predefinidas.
+REGLAS OBLIGATORIAS:
+1. Para cada criterio extrae la frase exacta del texto que lo sustenta.
+2. Si no hay información, asigna 0.5 para criterios de S y 0.00 para criterios de α, y documenta sin evidencia.
+3. Cada nodo es independiente. Los valores de un nodo no determinan los de otro.
+4. Usa EXACTAMENTE estos valores de S, hijoDominante y α al construir el grafo. Nunca uses valores por defecto.
 
 FASE 1 — CONSTRUCCIÓN DEL GRAFO (solo después de confirmación del usuario):
 Construye el grafo en silencio. No presentes ningún número. Solo incluye el bloque:
