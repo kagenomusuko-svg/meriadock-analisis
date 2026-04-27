@@ -1,378 +1,633 @@
 "use strict";
 
-var LOGO = require('./logo_b64');
+// ============================================================
+// EXPEDIENTE — Generador de HTML del análisis causal
+// Referencia visual: expediente_dtotal.html
+// ============================================================
 
-exports.generarHTML = function(resultado, grafoCausal, metadatos) {
-  var fecha = new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' });
-  var folio   = metadatos.folio  || ('EP-' + Date.now());
-  var titulo  = metadatos.titulo || 'Análisis Causal';
-  return [
-    cabecera(titulo, folio, fecha),
-    seccion1(grafoCausal, resultado),
-    seccion2(resultado, grafoCausal),
-    seccion3(resultado, grafoCausal),
-    seccion4(resultado),
-    seccion5(resultado, grafoCausal, metadatos),
-    seccion6(resultado),
-    deslinde(folio, fecha),
-    glosario(),
-    '</body></html>'
-  ].join('\n');
+var phi1 = require('./phi1');
+var LOGO_B64 = require('./logo_b64');
+
+// ─── UTILIDADES ─────────────────────────────────────────────
+
+function pct(v) { return (v * 100).toFixed(2) + '%'; }
+function pct1(v) { return (v * 100).toFixed(1) + '%'; }
+function fix3(v) { return v.toFixed(3); }
+function fix2(v) { return v.toFixed(2); }
+
+var NOMBRES_MODO = {
+  fobos:    'Presión de consecuencias',
+  deimos:   'Parálisis estructural',
+  anteros:  'Precedente / práctica habitual',
+  eros:     'Apertura (requiere ECO)',
+  potos:    'Convicción propia',
+  harmonia: 'Deliberación integrada (requiere ECO)'
 };
 
-function cabecera(titulo, folio, fecha) {
-  var css = [
-    '*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}',
-    'body{font-family:"Inter",sans-serif;font-size:10pt;color:#1a1a1a;background:#fff;line-height:1.6}',
-    'h2{font-size:12pt;font-weight:600;color:#1E4C45;border-bottom:2px solid #1E4C45;padding-bottom:6px;margin:28px 0 14px}',
-    'h3{font-size:10pt;font-weight:600;margin:16px 0 8px;color:#2d2d2d}',
-    'p{margin-bottom:8px}',
-    '.seccion{margin:0 0 24px;padding:0 0 16px;border-bottom:1px solid #e0e0e0}',
-    'table{width:100%;border-collapse:collapse;margin:12px 0;font-size:9pt}',
-    'th{background:#1E4C45;color:#fff;padding:6px 10px;text-align:left;font-weight:600;font-size:8.5pt}',
-    'td{padding:5px 10px;border-bottom:1px solid #e8e8e8;vertical-align:top}',
-    'tr:nth-child(even) td{background:#f8f9fa}',
-    '.matriz{font-family:monospace;font-size:8pt;background:#f4f6f4;padding:12px;border-radius:4px;margin:10px 0;white-space:pre;overflow-x:auto}',
-    '.declaracion-box{border:2px solid #1E4C45;border-radius:6px;padding:16px 20px;margin:16px 0;background:#f0f5f4}',
-    '.declaracion-nivel{font-size:20pt;font-weight:700;color:#1E4C45;display:inline-block;margin-right:12px}',
-    '.declaracion-texto{font-size:9.5pt;line-height:1.7}',
-    '.badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:8pt;font-weight:600}',
-    '.badge-brecha{background:#fde8e8;color:#c0392b}',
-    '.badge-equilibrio{background:#e8f5e9;color:#27ae60}',
-    '.badge-sobreasuncion{background:#fff3cd;color:#856404}',
-    '.badge-grave{background:#fde8e8;color:#c0392b}',
-    '.badge-moderado{background:#fff3cd;color:#856404}',
-    '.badge-bajo{background:#e8f5e9;color:#27ae60}',
-    '.nota{font-size:8.5pt;color:#666;font-style:italic;margin:8px 0;padding:8px 12px;background:#fafafa;border-left:3px solid #ccc}',
-    '.deslinde{font-size:7.5pt;color:#888;text-align:center;line-height:1.5;padding:12px 0;border-top:1px solid #e0e0e0;margin-top:16px}',
-    '.pie-pagina{text-align:center;font-size:8pt;color:#999;margin-top:8px}',
-    '.highlight{color:#1E4C45;font-weight:600}',
-    '.sensibilidad-critica{color:#c0392b;font-weight:600}',
-    '@media print{body{font-size:9pt}@page{margin:2cm 2.5cm;size:A4}h2{page-break-after:avoid}table{page-break-inside:avoid}.seccion{page-break-inside:avoid}.declaracion-box{page-break-inside:avoid}.salto-pagina{page-break-before:always}}'
-  ].join('\n');
+var EQUIVALENCIAS = {
+  diseno:       'Derecho: autor mediato (quien diseñó el sistema que hizo posible el daño) · Auditoría: responsable institucional de diseño · Medicina: factor etiológico estructural',
+  ejecucion:    'Derecho: ejecutor (quien llevó a cabo el acto) · Auditoría: operador del protocolo · Medicina: agente causal directo',
+  omision:      'Derecho: garante omisivo · Auditoría: control no ejecutado · Medicina: factor permisivo por inacción',
+  instrumental: 'Derecho: condición necesaria sin autoría directa · Auditoría: punto de bifurcación del sistema · Medicina: factor facilitador',
+  final:        '—'
+};
 
-  var enc =
-    '<table style="font-family:Georgia,serif;color:#2f2f2f;margin:0 auto;width:100%" cellspacing="0" cellpadding="0"><tbody><tr>' +
-    '<td style="vertical-align:middle;padding-right:20px;width:100px">' +
-    '<img style="display:block;filter:drop-shadow(2px 3px 3px rgba(120,120,120,0.45))" src="' + LOGO + '" width="90"/>' +
-    '</td>' +
-    '<td style="text-align:center">' +
-    '<div style="font-family:\'Times New Roman\',serif;font-size:14px;font-weight:bold;text-transform:uppercase;letter-spacing:1px;color:#1f7a4f;white-space:nowrap;margin-bottom:3px">Centro Multidisciplinario Meriadock</div>' +
-    '<table style="margin:2px 0 3px 0;border-collapse:collapse" width="100%" cellspacing="0" cellpadding="0"><tbody><tr>' +
-    '<td style="border-top:1px solid #1f7a4f;font-size:0;line-height:0">&nbsp;</td>' +
-    '<td style="width:20px;font-size:0;line-height:0">&nbsp;</td>' +
-    '<td style="border-top:1px solid #1f7a4f;font-size:0;line-height:0">&nbsp;</td>' +
-    '</tr></tbody></table>' +
-    '<div style="font-size:10px;color:#444;margin-top:1px;line-height:1.2">Formaci\u00f3n y Asesor\u00eda</div>' +
-    '<div style="font-size:10px;color:#555;line-height:1.2">CLUNI CMM25080811X9X</div>' +
-    '<div style="margin-top:6px;font-size:8px;font-style:italic;color:#1f7a4f;line-height:1.3">\u201cLa fuerza interior nos impulsa, un peque\u00f1o apoyo de los dem\u00e1s nos bendice\u201d</div>' +
-    '</td></tr></tbody></table>\n' +
-    '<div style="text-align:center;margin-top:16px;padding-top:12px;border-top:2px solid #1f7a4f">' +
-    '<div style="font-size:15pt;font-weight:700;color:#1a1a1a;margin-bottom:8px">Expediente de An\u00e1lisis Causal</div>' +
-    '<div style="font-size:13pt;font-weight:600;color:#1E4C45;margin-bottom:10px">' + titulo + '</div>' +
-    '<div style="font-size:9pt;color:#555;display:flex;justify-content:center;gap:32px">' +
-    '<span><strong>Folio:</strong> ' + folio + '</span>' +
-    '<span><strong>Fecha:</strong> ' + fecha + '</span>' +
-    '<span><strong>Instrumento:</strong> M\u00e9todo Prometeo \u00b7 Tres Series</span>' +
-    '</div></div>\n';
-
-  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">' +
-    '<title>Expediente ' + folio + '</title>' +
-    '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">' +
-    '<style>' + css + '</style></head><body>' +
-    '<script>window.onload=function(){window.print();}<\/script>\n' + enc;
+// Traducción de tipos internos a español con acentos
+var TIPOS_ES = {
+  diseno:       'Diseño',
+  ejecucion:    'Ejecución',
+  omision:      'Omisión',
+  instrumental: 'Instrumental',
+  final:        'Final',
+  victima:      'Víctima'
+};
+function tipoES(tipo) {
+  return TIPOS_ES[(tipo || '').toLowerCase()] || (tipo ? tipo.charAt(0).toUpperCase() + tipo.slice(1) : '—');
 }
 
-function tipoLabel(t) {
-  return t==='diseno'?'Diseño':t==='ejecucion'?'Ejecución':t==='final'?'Final':t;
+function nombreModo(hijoDominante) {
+  return NOMBRES_MODO[(hijoDominante || 'anteros').toLowerCase()] || 'Reciprocidad';
 }
 
-function matrizW(grafoCausal) {
-  var nodos    = grafoCausal.nodos;
-  var grafoMod = require('./grafo');
-  var W        = grafoMod.construirMatrizW(grafoCausal);
-  var header   = '         ' + nodos.map(function(n){ return n.nombre.substring(0,9).padEnd(10); }).join('');
-  var filas    = W.map(function(fila, i){
-    return nodos[i].nombre.substring(0,8).padEnd(9) + fila.map(function(v){ return v.toFixed(4).padEnd(10); }).join('');
+function rangoS(hijoDominante) {
+  var hijo  = (hijoDominante || 'anteros').toLowerCase();
+  var rango = phi1.RANGOS_S[hijo] || { min: 0.30, max: 0.70, midpoint: 0.50 };
+  return '[' + rango.min.toFixed(2) + ', ' + rango.max.toFixed(2) + '] midpoint ' + rango.midpoint.toFixed(2);
+}
+
+function badgeDiag(signo) {
+  if (!signo) return '';
+  // El motor devuelve: 'brecha', 'sobreasuncion', 'equilibrio' (sin acento, minúscula)
+  var s = (signo || '').toLowerCase().replace(/ó/g,'o').replace(/ú/g,'u');
+  var cls      = s === 'brecha' ? 'brecha' : s === 'sobreasuncion' ? 'sobreasuncion' : 'equilibrio';
+  var etiqueta = s === 'brecha' ? 'Brecha'  : s === 'sobreasuncion' ? 'Sobreasunción' : 'Equilibrio';
+  return '<span class="badge badge-' + cls + '">' + etiqueta + '</span>';
+}
+
+function colorDeclaracion(nivel) {
+  var colores = { A: '#1E4C45', B: '#2e7d32', C: '#e65100', D: '#b71c1c' };
+  return colores[nivel] || '#1E4C45';
+}
+
+function formatMonto(n) {
+  if (n === undefined || n === null) return '—';
+  return Number(n).toLocaleString('es-MX', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+
+// Construye la representación de texto de la matriz W
+function formatearMatriz(grafo, resultado) {
+  var nodos = grafo.nodos;
+  var n     = nodos.length;
+
+  // Nombres cortos (primeros 8 chars)
+  var nombres = nodos.map(function(nd) {
+    return nd.nombre.substring(0, 8).padEnd(9);
   });
+
+  // Reconstruir midpoints desde aristas
+  var indice = {};
+  nodos.forEach(function(nd, i) { indice[nd.id] = i; });
+
+  // Normalización por destino (misma lógica que grafo.js)
+  var porDestino = {};
+  grafo.aristas.forEach(function(a) {
+    if (!porDestino[a.destino]) porDestino[a.destino] = [];
+    porDestino[a.destino].push(a);
+  });
+
+  var W = Array.from({ length: n }, function() { return new Array(n).fill(0); });
+  Object.keys(porDestino).forEach(function(destId) {
+    var ars  = porDestino[destId];
+    var suma = ars.reduce(function(s, a) { return s + (a.pesoMin + a.pesoMax) / 2; }, 0);
+    ars.forEach(function(a) {
+      var i = indice[a.origen], j = indice[a.destino];
+      if (i !== undefined && j !== undefined && suma > 0)
+        W[i][j] = ((a.pesoMin + a.pesoMax) / 2) / suma;
+    });
+  });
+
+  var header = '         ' + nombres.join('');
+  var filas  = nodos.map(function(nd, i) {
+    var fila = nombres[i] + W[i].map(function(v) { return v.toFixed(4).padEnd(10); }).join('');
+    return fila;
+  });
+
   return header + '\n' + filas.join('\n');
 }
 
-function seccion1(grafoCausal, resultado) {
-  var nodos   = grafoCausal.nodos;
-  var aristas = grafoCausal.aristas;
 
-  var filasN = nodos.map(function(nd) {
-    var r = resultado.rStar.find(function(x){ return x.nodo === nd.nombre; });
-    return '<tr><td>' + nd.nombre + '</td><td>' + tipoLabel(nd.tipo) + '</td><td>' + (nd.descripcion||'—') + '</td>' +
-      '<td>' + (function(h){ var m={fobos:'Presión de consecuencias',deimos:'Parálisis estructural',anteros:'Reciprocidad',eros:'Apertura',potos:'Afirmación propia',harmonia:'Integración plena'}; return m[h]||h||'—'; })(nd.hijoDominante) + '</td>' +
-      '<td class="highlight">' + (r ? (r.valor*100).toFixed(2)+'%' : '—') + '</td></tr>';
-  }).join('');
+// ─── CSS ────────────────────────────────────────────────────
 
-  var filasA = aristas.map(function(a) {
-    var nOrigen = grafoCausal.nodos.find(function(n){ return n.id === a.origen; });
-    var nDestino = grafoCausal.nodos.find(function(n){ return n.id === a.destino; });
-    return '<tr><td>' + (nOrigen ? nOrigen.nombre : a.origen) + '</td><td>→</td><td>' + (nDestino ? nDestino.nombre : a.destino) + '</td>' +
-      '<td>[' + a.pesoMin + ', ' + a.pesoMax + ']</td>' +
-      '<td>' + ((a.pesoMin+a.pesoMax)/2).toFixed(3) + '</td>' +
-      '<td>E' + a.nivelEvidencia + '</td>' +
-      '<td>' + (a.descripcionEvidencia||'—') + '</td></tr>';
-  }).join('');
+var CSS = `
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Inter",sans-serif;font-size:10pt;color:#1a1a1a;background:#fff;line-height:1.6}
+h2{font-size:12pt;font-weight:600;color:#1E4C45;border-bottom:2px solid #1E4C45;padding-bottom:6px;margin:16px 0 10px}
+h3{font-size:10pt;font-weight:600;margin:16px 0 8px;color:#2d2d2d}
+p{margin-bottom:8px}
+.seccion{margin:0 0 16px;padding:0 0 12px;border-bottom:1px solid #e0e0e0}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:9pt;page-break-inside:auto}
+th{background:#1E4C45;color:#fff;padding:6px 10px;text-align:left;font-weight:600;font-size:8.5pt}
+td{padding:5px 10px;border-bottom:1px solid #e8e8e8;vertical-align:top}
+tr:nth-child(even) td{background:#f8f9fa}
+.matriz{font-family:monospace;font-size:8pt;background:#f4f6f4;padding:12px;border-radius:4px;margin:10px 0;white-space:pre;overflow-x:auto}
+.declaracion-box{border:2px solid #1E4C45;border-radius:6px;padding:16px 20px;margin:16px 0;background:#f0f5f4}
+.declaracion-nivel{font-size:20pt;font-weight:700;color:#1E4C45;display:inline-block;margin-right:12px}
+.declaracion-texto{font-size:9.5pt;line-height:1.7}
+.badge{display:inline-block;padding:2px 8px;border-radius:3px;font-size:8pt;font-weight:600}
+.badge-brecha{background:#fde8e8;color:#c0392b}
+.badge-equilibrio{background:#e8f5e9;color:#27ae60}
+.badge-sobreasuncion{background:#fff3cd;color:#856404}
+.badge-grave{background:#fde8e8;color:#c0392b}
+.badge-moderado{background:#fff3cd;color:#856404}
+.badge-bajo{background:#e8f5e9;color:#27ae60}
+.badge-critica{background:#fde8e8;color:#c0392b}
+.badge-estable{background:#e8f5e9;color:#27ae60}
+.nota{background:#f0f5f4;padding:8px 12px;border-left:3px solid #1E4C45;margin:8px 0;font-size:9pt}
+.highlight{font-weight:600;color:#1E4C45}
+.deslinde{font-size:8pt;color:#666;margin:24px 0 8px;padding-top:12px;border-top:1px solid #e0e0e0}
+.pie-pagina{font-size:8pt;color:#999;text-align:center;margin-top:16px}
+.salto-pagina{page-break-before:auto}
+.advertencia-box{border:1px solid #e65100;border-radius:4px;padding:10px 14px;margin:12px 0;background:#fff8f0;font-size:9pt;color:#e65100}
+`;
 
-  return '<div class="seccion">' +
-    '<h2>Secci\u00f3n 1 \u00b7 Hoja de Calibraci\u00f3n del Grafo G = (N, E, W)</h2>' +
-    '<h3>1.1 Nodos del sistema causal</h3>' +
-    '<table><thead><tr><th>Nodo</th><th>Tipo</th><th>Descripci\u00f3n</th><th>Modo de actuaci\u00f3n</th><th>R*</th></tr></thead><tbody>' + filasN + '</tbody></table>' +
-    '<h3>1.2 Aristas con rangos de peso y nivel de evidencia</h3>' +
-    '<div class="nota">E0 = sin evidencia \u00b7 E8 = evidencia documental m\u00faltiple verificada. El midpoint es el valor de c\u00e1lculo para Serie I.</div>' +
-    '<table><thead><tr><th>Origen</th><th></th><th>Destino</th><th>Rango [a, b]</th><th>Midpoint</th><th>Nivel</th><th>Evidencia</th></tr></thead><tbody>' + filasA + '</tbody></table>' +
-    '<h3>1.3 Matriz W estoc\u00e1stica (midpoints normalizados por fila)</h3>' +
-    '<div class="nota">La suma de cada fila activa es 1.00. El nodo final (sumidero) no distribuye peso.</div>' +
-    '<div class="matriz">' + matrizW(grafoCausal) + '</div>' +
-    '</div>\n';
+
+// ─── SECCIONES ──────────────────────────────────────────────
+
+function seccionHeader(grafo, metadatos) {
+  var folio  = metadatos.folio  || 'EP-' + Date.now();
+  var fecha  = metadatos.fecha  || new Date().toLocaleDateString('es-MX');
+  var titulo = grafo.titulo     || 'Análisis causal';
+
+  return `
+<div style="margin:0 0 24px">
+  <table style="font-family:'Times New Roman',serif;color:#2f2f2f;width:100%;border-collapse:collapse;margin-bottom:14px" cellspacing="0" cellpadding="0">
+    <tr>
+      <td style="vertical-align:middle;padding-right:20px;width:110px">
+        <img src="${LOGO_B64}" alt="Sello institucional" width="90"
+          style="display:block;filter:drop-shadow(2px 3px 3px rgba(120,120,120,0.45))">
+      </td>
+      <td style="text-align:center">
+        <div style="font-family:'Times New Roman',serif;font-size:13px;font-weight:bold;text-transform:uppercase;letter-spacing:1px;color:#1f7a4f;white-space:nowrap;margin-bottom:3px">
+          CENTRO MULTIDISCIPLINARIO MERIADOCK
+        </div>
+        <table width="100%" cellspacing="0" cellpadding="0" style="margin:2px 0 3px 0;border-collapse:collapse">
+          <tr>
+            <td style="border-top:1px solid #1f7a4f;font-size:0;line-height:0"></td>
+            <td style="width:20px;font-size:0;line-height:0"></td>
+            <td style="border-top:1px solid #1f7a4f;font-size:0;line-height:0"></td>
+          </tr>
+        </table>
+        <div style="font-size:9px;color:#444;margin-top:1px;line-height:1.2">Formación y Asesoría A.C.</div>
+        <div style="font-size:9px;color:#555;line-height:1.2">CLUNI CMM25080811X9X</div>
+        <div style="margin-top:5px;font-size:7.5px;font-style:italic;color:#1f7a4f;line-height:1.3">
+          &ldquo;La fuerza interior nos impulsa, un pequeño apoyo de los demás nos bendice&rdquo;
+        </div>
+      </td>
+    </tr>
+  </table>
+  <div style="border-top:2px solid #1E4C45;border-bottom:1px solid #1E4C45;padding:8px 0;margin-bottom:10px;text-align:center">
+    <div style="font-size:15pt;font-weight:700;color:#1E4C45;font-family:Georgia,serif">${escH(titulo)}</div>
+    <div style="font-size:9pt;color:#555;margin-top:4px;font-family:Georgia,serif">
+      Folio: <strong>${escH(folio)}</strong> &nbsp;·&nbsp; ${escH(fecha)} &nbsp;·&nbsp; Método Prometeo · Tres Series
+    </div>
+  </div>
+</div>`;
 }
 
-function seccion2(resultado, grafoCausal) {
-  var nodos = grafoCausal.nodos;
-  var conv  = resultado.convergencia;
+function seccion1(grafo, resultado) {
+  var nodos   = grafo.nodos;
+  var aristas = grafo.aristas;
+  var nActivos = nodos.filter(function(n) { return n.tipo !== 'final'; }).length;
 
-  var filasR = resultado.rStar.filter(function(r){
-    var nd = nodos.find(function(n){ return n.nombre === r.nodo; });
-    return nd && nd.tipo !== 'final';
-  }).map(function(r) {
-    var a = resultado.alpha.find(function(x){ return x.nodo === r.nodo; });
-    var d = resultado.delta.find(function(x){ return x.nodo === r.nodo; });
-    var signo = d && d.resultado ? d.resultado.signo : '—';
-    return '<tr>' +
-      '<td class="highlight">' + r.nodo + '</td>' +
-      '<td class="highlight">' + (r.valor*100).toFixed(2) + '%</td>' +
-      '<td>' + (r.neta*100).toFixed(2) + '%</td>' +
-      '<td>' + (a ? (a.valor*100).toFixed(1)+'%' : '—') + '</td>' +
-      '<td>' + (d && d.resultado ? d.resultado.valor.toFixed(3) : '—') + '</td>' +
-      '<td><span class="badge badge-' + signo + '">' + signo + '</span></td></tr>';
+  // Tabla de nodos
+  var filasNodos = nodos.map(function(nd, i) {
+    var rData = resultado.rStar[i];
+    var rVal  = rData ? pct(rData.valor) : '—';
+    var modo  = nd.tipo === 'final' ? '—' : nombreModo(nd.hijoDominante);
+    var cls   = nd.tipo !== 'final' ? ' class="highlight"' : '';
+    var desc  = nd.tipo === 'final' ? '—' : escH(nd.descripcion || '');
+    return '<tr><td' + cls + '>' + escH(nd.nombre) + '</td><td>' + escH(tipoES(nd.tipo)) + '</td>' +
+      '<td>' + desc + '</td><td>' + escH(modo) + '</td>' +
+      '<td' + cls + '>' + rVal + '</td></tr>';
   }).join('');
 
-  var filasIIC = resultado.serieII.filter(function(n){ return n.iic !== null; }).map(function(n) {
-    var faGrav = n.fraudeAnnona > 0.30 ? 'grave' : n.fraudeAnnona > 0.10 ? 'moderado' : 'bajo';
-    return '<tr><td>' + n.nombre + '</td>' +
-      '<td>' + (n.iic*100).toFixed(1) + '%</td>' +
-      '<td>' + n.interpretacionIIC + '</td>' +
-      '<td>' + (n.fraudeAnnona !== null ? (n.fraudeAnnona*100).toFixed(2)+'%' : '—') + '</td>' +
-      '<td><span class="badge badge-' + faGrav + '">' + faGrav + '</span></td></tr>';
+  // Tabla de aristas
+  // Índice id → nombre para resolver los IDs internos del constructor
+  var indiceNombres = {};
+  nodos.forEach(function(nd) { indiceNombres[nd.id] = nd.nombre; });
+  indiceNombres['nodo_final'] = grafo.nodos.find(function(n){ return n.tipo === 'final'; })
+    ? grafo.nodos.find(function(n){ return n.tipo === 'final'; }).nombre
+    : 'Resultado final';
+
+  var filasAristas = aristas.map(function(a) {
+    var mp          = ((a.pesoMin + a.pesoMax) / 2).toFixed(3);
+    var nombreOrig  = indiceNombres[a.origen]  || a.origen;
+    var nombreDest  = indiceNombres[a.destino] || a.destino;
+    return '<tr><td>' + escH(nombreOrig) + '</td><td>→</td><td>' + escH(nombreDest) + '</td>' +
+      '<td>[' + a.pesoMin + ', ' + a.pesoMax + ']</td>' +
+      '<td>' + mp + '</td>' +
+      '<td>E' + (a.nivelEvidencia || 0) + '</td>' +
+      '<td>' + escH(a.descripcionEvidencia || '') + '</td></tr>';
   }).join('');
 
-  var serieIISec = filasIIC.length > 0
-    ? '<h3>2.3 Serie II \u2014 \u00cdndice de Integridad Causal (IIC) y Fraude Annona</h3>' +
-      '<div class="nota">IIC = coincidencias / total declarado. Fraude annona = R* \u00d7 (1\u2212\u03b1) \u00d7 (1\u2212IIC). Solo aplica a nodos de tipo dise\u00f1o.</div>' +
-      '<table><thead><tr><th>Nodo</th><th>IIC</th><th>Interpretaci\u00f3n</th><th>Fraude annona</th><th>Nivel</th></tr></thead><tbody>' + filasIIC + '</tbody></table>'
-    : '<h3>2.3 Serie II \u2014 IIC y Fraude Annona</h3><p class="nota">No hay nodos de dise\u00f1o con declaraciones verificables. Serie II no aplica.</p>';
+  // Convergencia
+  var conv = resultado.convergencia;
 
-  var estab = resultado.estabilidad;
-  var metodoBadge = estab.exhaustivo ? '<span class="badge badge-bajo">exhaustivo</span>' : '<span class="badge badge-moderado">muestral</span>';
-  var filasS = estab.sensibilidad.map(function(s) {
-    return (function(){ var nO = grafoCausal.nodos.find(function(n){ return n.id === s.origen; }); var nD = grafoCausal.nodos.find(function(n){ return n.id === s.destino; }); return '<tr><td>' + (nO?nO.nombre:s.origen) + ' \u2192 ' + (nD?nD.nombre:s.destino) + '</td>'; })() +
+  return `
+<div class="seccion" style="page-break-before:auto">
+<h2>Sección 1 · Hoja de Calibración del Grafo G = (N, E, W)</h2>
+<h3>1.1 Nodos del sistema causal</h3>
+<table>
+  <thead><tr><th>Nodo</th><th>Tipo</th><th>Descripción</th><th>Modo de actuación</th><th>Índice de convergencia</th></tr></thead>
+  <tbody>${filasNodos}</tbody>
+</table>
+
+<h3>1.2 Aristas con rangos de peso y nivel de evidencia</h3>
+<div class="nota">E1 = evidencia directa más fuerte (documento con instrucción explícita) · E8 = evidencia más débil (dicho único sin respaldo) · E0 = arista nula documentada (ausencia demostrada). El midpoint es el valor de cálculo para Serie I.</div>
+<table>
+  <thead><tr><th>Origen</th><th></th><th>Destino</th><th>Rango [a, b]</th><th>Midpoint</th><th>Nivel</th><th>Evidencia</th></tr></thead>
+  <tbody>${filasAristas}</tbody>
+</table>
+
+<h3>1.3 Matriz W de pesos (midpoints por arista)</h3>
+<div class="nota">W[i][j] = midpoint de la arista i→j. El motor calcula influencia(i) = suma de productos de pesos en todos los caminos de i al nodo final. R*_i = influencia(i) / Σ influencias de todos los actores.</div>
+<div class="matriz">${escH(formatearMatriz(grafo, resultado))}</div>
+</div>`;
+}
+
+function seccion2(grafo, resultado) {
+  var nodos   = grafo.nodos;
+  var conv    = resultado.convergencia;
+  var estab   = resultado.estabilidad;
+  var decl    = resultado.declaracion;
+
+  // Serie I
+  var filasI = nodos.map(function(nd, i) {
+    var rs = resultado.rStar[i];
+    var al = resultado.alpha[i];
+    var dl = resultado.delta[i];
+    if (!rs || nd.tipo === 'final') return '';
+    var dVal  = dl.resultado ? fix3(dl.resultado.valor) : '—';
+    var signo = dl.resultado ? dl.resultado.signo : '—';
+    var sVal  = (rs.s !== undefined && rs.s !== null) ? pct(rs.s) : '—';
+    return '<tr><td class="highlight">' + escH(nd.nombre) + '</td>' +
+      '<td class="highlight">' + pct(rs.valor) + '</td>' +
+      '<td>' + sVal + '</td>' +
+      '<td>' + pct(rs.neta) + '</td>' +
+      '<td>' + pct(al.valor) + '</td>' +
+      '<td>' + dVal + '</td>' +
+      '<td>' + badgeDiag(signo ? signo.charAt(0).toUpperCase() + signo.slice(1) : signo) + '</td></tr>';
+  }).filter(Boolean).join('');
+
+  // Serie II
+  var s2 = resultado.serieII || [];
+  var filasII = s2.filter(function(n) { return n.iic !== null; }).map(function(n) {
+    var iicPct  = n.iic !== null ? pct1(n.iic) : '—';
+    var faPct   = n.fraudeAnnona !== null ? pct1(n.fraudeAnnona) : '—';
+    var nivelFA = n.fraudeAnnona !== null
+      ? (n.fraudeAnnona > 0.30 ? '<span class="badge badge-grave">grave</span>'
+        : n.fraudeAnnona > 0.10 ? '<span class="badge badge-moderado">moderado</span>'
+        : '<span class="badge badge-bajo">bajo</span>')
+      : '—';
+    return '<tr><td>' + escH(n.nombre) + '</td>' +
+      '<td>' + iicPct + '</td>' +
+      '<td>' + escH(n.interpretacionIIC || '') + '</td>' +
+      '<td>' + faPct + '</td>' +
+      '<td>' + nivelFA + '</td></tr>';
+  }).join('');
+
+  var serieIISec = filasII
+    ? '<table><thead><tr><th>Nodo</th><th>IIC</th><th>Interpretación</th><th>Fraude annona</th><th>Nivel</th></tr></thead><tbody>' + filasII + '</tbody></table>'
+    : '<p>No hay nodos de diseño con declaraciones verificables. Serie II no aplica.</p>';
+
+  // Serie III
+  var rankStr    = (estab.rankingBase || []).join(' > ');
+  var metodoStr  = estab.exhaustivo
+    ? '<span class="badge badge-bajo">exhaustivo</span>'
+    : '<span class="badge badge-moderado">muestral</span>';
+
+  // Índice id → nombre para la tabla del hipercubo
+  var idxNombres2 = {};
+  grafo.nodos.forEach(function(nd) { idxNombres2[nd.id] = nd.nombre; });
+  idxNombres2['nodo_final'] = grafo.nodos.find(function(n){ return n.tipo === 'final'; })
+    ? grafo.nodos.find(function(n){ return n.tipo === 'final'; }).nombre
+    : 'Resultado final';
+
+  var filasAristas = (estab.sensibilidad || []).map(function(s) {
+    var critica    = s.esCritica
+      ? '<span class="badge badge-critica">⚠ crítica</span>'
+      : '<span class="badge badge-estable">estable</span>';
+    var nombreOrig = idxNombres2[s.origen]  || s.origen;
+    var nombreDest = idxNombres2[s.destino] || s.destino;
+    return '<tr><td>' + escH(nombreOrig) + ' → ' + escH(nombreDest) + '</td>' +
       '<td>[' + s.rango[0] + ', ' + s.rango[1] + ']</td>' +
       '<td>' + s.amplitud.toFixed(3) + '</td>' +
-      '<td>' + (s.impactoEnInestabilidad*100).toFixed(1) + '%</td>' +
-      '<td>' + (s.esCritica ? '<span class="sensibilidad-critica">\u26a0 cr\u00edtica</span>' : 'estable') + '</td></tr>';
+      '<td>' + pct1(s.impactoEnInestabilidad) + '</td>' +
+      '<td>' + critica + '</td></tr>';
   }).join('');
 
-  var decl  = resultado.declaracion;
-  var color = { A:'#1E4C45', B:'#2980b9', C:'#e67e22', D:'#c0392b' }[decl.nivel] || '#1E4C45';
+  var colorDecl = colorDeclaracion(decl.nivel);
+  var declBox = `<div class="declaracion-box" style="border-color:${colorDecl}">
+    <span class="declaracion-nivel" style="color:${colorDecl}">Declaración ${escH(decl.nivel)}</span>
+    <span class="declaracion-texto">${escH(decl.descripcion)}</span>
+  </div>`;
 
-  return '<div class="seccion salto-pagina">' +
-    '<h2>Secci\u00f3n 2 \u00b7 C\u00e1lculo R*, \u03b1, \u0394 \u2014 Series I, II y III</h2>' +
-    '<h3>2.1 Convergencia del m\u00e9todo de potencias</h3>' +
-    '<p>Convergencia alcanzada en <strong>' + conv.iteraciones + ' iteraciones</strong>. ' +
-    'Estado: <strong>' + (conv.convergio ? 'convergido' : 'no convergido \u2014 revisar grafo') + '</strong>. ' +
-    'Vector renormalizado excluyendo el nodo sumidero.</p>' +
-    '<h3>2.2 Serie I \u2014 Vector R*, R*_neta, \u03b1 y \u0394 por nodo</h3>' +
-    '<div class="nota">R*_neta = R* \u00d7 (1\u2212S). \u0394 = R* \u2212 \u03b1. \u0394 &gt; 0 (brecha): caus\u00f3 m\u00e1s de lo que asumi\u00f3. \u0394 &lt; 0 (sobreasunci\u00f3n): asumi\u00f3 m\u00e1s de lo que caus\u00f3.</div>' +
-    '<table><thead><tr><th>Nodo</th><th>R*</th><th>R*_neta</th><th>\u03b1</th><th>\u0394</th><th>Diagn\u00f3stico</th></tr></thead><tbody>' + filasR + '</tbody></table>' +
-    serieIISec +
-    '<h3>2.4 Serie III \u2014 An\u00e1lisis de estabilidad del ranking \u03c3(R*)</h3>' +
-    '<div class="nota">El hipercubo eval\u00faa todas las combinaciones de pesos dentro de los rangos [a_ij, b_ij]. \u2265 90% \u2192 Declaraci\u00f3n A. \u2265 70% \u2192 B. \u2265 40% \u2192 C. &lt; 40% \u2192 D.</div>' +
-    '<p><strong>V\u00e9rtices evaluados:</strong> ' + estab.totalVertices + ' ' + metodoBadge + ' \u00b7 ' +
-    '<strong>Ranking base:</strong> ' + estab.rankingBase.join(' &gt; ') + ' \u00b7 ' +
-    '<strong>Estabilidad:</strong> <span class="highlight">' + estab.pctEstabilidad.toFixed(1) + '%</span></p>' +
-    '<table><thead><tr><th>Arista</th><th>Rango</th><th>Amplitud</th><th>Impacto en inestabilidad</th><th>Estado</th></tr></thead><tbody>' + filasS + '</tbody></table>' +
-    '<div class="declaracion-box" style="border-color:' + color + '">' +
-    '<span class="declaracion-nivel" style="color:' + color + '">Declaraci\u00f3n ' + decl.nivel + '</span>' +
-    '<span class="declaracion-texto">' + decl.descripcion + '</span></div>' +
-    '</div>\n';
+  return `
+<div class="seccion" style="page-break-before:auto">
+<h2>Sección 2 · Cálculo R*, α, Δ — Series I, II y III</h2>
+
+<h3>2.1 Método de cálculo</h3>
+<p>Algoritmo: <strong>Influencia causal total</strong> — suma ponderada de contribuciones de todos los caminos de cada actor al nodo final. Método: ${conv.metodo || 'influencia-causal'}. Iteraciones: ${conv.iteraciones || 0}. R* normalizado sobre nodos activos (excluye nodo sumidero).</p>
+
+<h3>2.2 Serie I — Vector R*, R*_neta, α y Δ por nodo</h3>
+<div class="nota">Contribución atribuible = Índice de convergencia × (1−S). Asimetría repercusiva = Índice de convergencia − Condiciones adversas atribuibles. Valor positivo (brecha): convergencia mayor que condiciones adversas. Valor negativo (sobreasunción): condiciones adversas mayores que la convergencia.</div>
+<table>
+  <thead><tr><th>Nodo</th><th>Índice de convergencia</th><th>Sust. (S)</th><th>Contribución atribuible</th><th>Cond. adversas atrib.</th><th>Asimetría repercusiva</th><th>Diagnóstico</th></tr></thead>
+  <tbody>${filasI}</tbody>
+</table>
+
+<h3>2.3 Serie II — Índice de Integridad Causal (IIC) y Fraude Annona</h3>
+<div class="nota">IIC = coincidencias / total declarado. Fraude annona = R* × (1−α) × (1−IIC). Solo aplica a nodos de tipo diseño.</div>
+${serieIISec}
+
+<h3>2.4 Serie III — Análisis de estabilidad del ranking σ(R*)</h3>
+<div class="nota">El hipercubo evalúa todas las combinaciones de pesos dentro de los rangos [a_ij, b_ij]. ≥ 90% → Declaración A. ≥ 70% → B. ≥ 40% → C. &lt; 40% → D.</div>
+<p><strong>Vértices evaluados:</strong> ${estab.totalVertices} ${metodoStr} · <strong>Ranking base:</strong> ${escH(rankStr)} · <strong>Estabilidad:</strong> <span class="highlight">${pct1(estab.pctEstabilidad / 100)}</span></p>
+<table>
+  <thead><tr><th>Arista</th><th>Rango</th><th>Amplitud</th><th>Impacto en inestabilidad</th><th>Estado</th></tr></thead>
+  <tbody>${filasAristas}</tbody>
+</table>
+${declBox}
+</div>`;
 }
 
-function seccion3(resultado, grafoCausal) {
-  var nodosH = grafoCausal.nodos.filter(function(nd){ return nd.tipo !== 'final' && nd.hijoDominante; });
-  if (!nodosH.length) {
-    return '<div class="seccion"><h2>Secci\u00f3n 3 \u00b7 DI-ECO + SDO</h2>' +
-      '<p class="nota">No hay nodos humanos con localizaci\u00f3n ontol\u00f3gica. Secci\u00f3n no aplicable.</p></div>\n';
+function seccion3(grafo, resultado) {
+  var nodos = grafo.nodos;
+
+  var filas = nodos.filter(function(nd) { return nd.tipo !== 'final'; }).map(function(nd, i) {
+    var rs  = resultado.rStar.find(function(r) { return r.nodo === nd.nombre; });
+    var sVal = rs ? rs.s : 0.50;
+    // Distribución P(Hijos) si viene del constructor
+    // Traducción de hijos a términos accesibles
+    var TRAD_HIJOS = {
+      fobos:   'Actuó bajo presión de consecuencias',
+      deimos:  'Actuó por parálisis o ambigüedad del sistema',
+      anteros: 'Siguió precedente o práctica habitual',
+      potos:   'Actuó por convicción o iniciativa propia'
+    };
+    var distStr = '';
+    if (nd.dist) {
+      var hijos = ['fobos','deimos','anteros','potos'];
+      var partes = hijos
+        .filter(function(k){ return parseFloat(nd.dist[k]) > 0; })
+        .sort(function(a,b){ return parseFloat(nd.dist[b]) - parseFloat(nd.dist[a]); })
+        .map(function(k){ return TRAD_HIJOS[k]+' ('+(parseFloat(nd.dist[k])*100).toFixed(0)+'%)'; });
+      distStr = partes.join(' · ');
+      if (distStr) distStr += ' <em style="color:#9a9080;font-size:8pt">— requiere entrevista para confirmar Eros y Harmonía</em>';
+    }
+    var perfilStr = distStr || 'Requiere entrevista directa';
+    var epNivel   = nd.dist ? 'Alta (evidencia documental)' : 'Media (inferido)';
+    return '<tr><td class="highlight">' + escH(nd.nombre) + '</td>' +
+      '<td>' + escH(tipoES(nd.tipo)) + '</td>' +
+      '<td>' + escH(nombreModo(nd.hijoDominante)) + '</td>' +
+      '<td>' + escH(rangoS(nd.hijoDominante)) + ' · S combinado ' + sVal.toFixed(2) + '</td>' +
+      '<td>' + perfilStr + '</td>' +
+      '<td>' + epNivel + '</td></tr>';
+  }).join('');
+
+  return `
+<div class="seccion" style="page-break-before:auto">
+<h2>Sección 3 · Localización ontológica</h2>
+<div class="nota">S alto (cerca de 1.00): el contexto explica la mayor parte del acto — cualquier persona en esa posición habría actuado igual. S bajo (cerca de 0.00): la actuación es propia e idiosincrática. El perfil requiere entrevista presencial para confirmación en niveles EP-1.</div>
+<table>
+  <thead><tr><th>Nodo</th><th>Tipo</th><th>Modo de actuación</th><th>Sustituibilidad (S)</th><th>Modo de actuación documentado</th><th>Certeza</th></tr></thead>
+  <tbody>${filas}</tbody>
+</table>
+</div>`;
+}
+
+function seccion4(grafo, resultado) {
+  var nodos = grafo.nodos;
+
+  var filas = nodos.map(function(nd, i) {
+    var dl = resultado.delta[i];
+    if (!dl || !dl.resultado || Math.abs(dl.resultado.valor) <= 0.10) return '';
+    var signo = dl.resultado.signo;
+    var dVal  = fix3(dl.resultado.valor);
+    var orient = signo === 'brecha'
+      ? 'El nodo causó más de lo que asumió (asimetría repercusiva = +' + dVal + '). Histos facilita la integración del acto en I(t). El Eje E del SDO es el punto de entrada.'
+      : signo === 'sobreasuncion'
+        ? 'El nodo asumió más de lo que causó (asimetría repercusiva = ' + dVal + '). Riesgo de chivo expiatorio — verificar completitud del grafo antes de intervenir.'
+        : dl.resultado.accion || '';
+    return '<tr><td>' + escH(nd.nombre) + '</td><td>' + dVal + '</td>' +
+      '<td>' + badgeDiag(signo) + '</td>' +
+      '<td>' + escH(orient) + '</td></tr>';
+  }).filter(Boolean).join('');
+
+  if (!filas) {
+    filas = '<tr><td colspan="4">No hay nodos con |Δ| &gt; 0.10 en este análisis.</td></tr>';
   }
-  var modos = { fobos:'Presión de consecuencias', deimos:'Parálisis estructural', anteros:'Reciprocidad', eros:'Apertura', potos:'Afirmación propia', harmonia:'Integración plena' };
-  var filas = nodosH.map(function(nd) {
-    var phi1  = require('./phi1');
-    var hijo  = nd.hijoDominante || 'anteros';
-    var rango = phi1.RANGOS_S[hijo] || { min:0, max:1, midpoint:0.5 };
-    return '<tr><td class="highlight">' + nd.nombre + '</td><td>' + nd.tipo + '</td>' +
-      '<td>' + (modos[hijo]||hijo) + '</td>' +
-      '<td>[' + rango.min + ', ' + rango.max + '] midpoint ' + rango.midpoint + '</td>' +
-      '<td>' + (nd.codigoSDO||'Pendiente de ECO presencial') + '</td>' +
-      '<td>' + (nd.nivelEP||'EP-2 (inferido desde expediente)') + '</td></tr>';
-  }).join('');
-  return '<div class="seccion salto-pagina">' +
-    '<h2>Secci\u00f3n 3 \u00b7 Localizaci\u00f3n ontol\u00f3gica</h2>' +
-    '<div class="nota">S alto (cerca de 1.00): el contexto explica la mayor parte del acto \u2014 cualquier persona en esa posici\u00f3n habr\u00eda actuado igual. S bajo (cerca de 0.00): la actuaci\u00f3n es propia e idiosincr\u00e1tica. El perfil requiere entrevista presencial para confirmaci\u00f3n en niveles EP-1.</div>' +
-    '<table><thead><tr><th>Nodo</th><th>Tipo</th><th>Modo de actuaci\u00f3n</th><th>Sustituibilidad (S)</th><th>Perfil SDO</th><th>Nivel EP</th></tr></thead><tbody>' + filas + '</tbody></table>' +
-    '</div>\n';
+
+  return `
+<div class="seccion">
+<h2>Sección 4 · HISTOS — Protocolo de Acompañamiento Ontológico</h2>
+<div class="nota">Histos opera cuando |Δ| &gt; 0.10. Las orientaciones son principios de intervención — no el proceso completo.</div>
+<table>
+  <thead><tr><th>Nodo</th><th>Asimetría repercusiva</th><th>Diagnóstico</th><th>Orientación</th></tr></thead>
+  <tbody>${filas}</tbody>
+</table>
+</div>`;
 }
 
-function seccion4(resultado) {
-  var ds = resultado.delta.filter(function(d){ return d.resultado && Math.abs(d.resultado.valor) > 0.10; });
-  if (!ds.length) {
-    return '<div class="seccion"><h2>Secci\u00f3n 4 \u00b7 Acompa\u00f1amiento ontol\u00f3gico</h2>' +
-      '<p class="nota">No hay d\u00e9ficit de asunci\u00f3n significativo (|\u0394| &gt; 0.10). HISTOS no aplica.</p></div>\n';
-  }
-  var filas = ds.map(function(d) {
-    var r = d.resultado;
-    var t = r.signo === 'brecha'
-      ? 'El nodo caus\u00f3 m\u00e1s de lo que asumi\u00f3 (\u0394 = +' + r.valor.toFixed(3) + '). Histos facilita la integraci\u00f3n del acto en I(t). El Eje E del SDO es el punto de entrada.'
-      : 'El nodo asumi\u00f3 m\u00e1s de lo que caus\u00f3 (\u0394 = ' + r.valor.toFixed(3) + '). Riesgo de chivo expiatorio \u2014 verificar completitud del grafo antes de intervenir.';
-    return '<tr><td>' + d.nodo + '</td><td>' + r.valor.toFixed(3) + '</td>' +
-      '<td><span class="badge badge-' + r.signo + '">' + r.signo + '</span></td><td>' + t + '</td></tr>';
-  }).join('');
-  return '<div class="seccion">' +
-    '<h2>Secci\u00f3n 4 \u00b7 HISTOS \u2014 Protocolo de Acompa\u00f1amiento Ontol\u00f3gico</h2>' +
-    '<div class="nota">Histos opera cuando |\u0394| &gt; 0.10. Las orientaciones son principios de intervenci\u00f3n \u2014 no el proceso completo.</div>' +
-    '<table><thead><tr><th>Nodo</th><th>\u0394</th><th>Diagn\u00f3stico</th><th>Orientaci\u00f3n</th></tr></thead><tbody>' + filas + '</tbody></table>' +
-    '</div>\n';
-}
+function seccion5(grafo, resultado) {
+  var nodos    = grafo.nodos;
+  var decl     = resultado.declaracion;
+  var estab    = resultado.estabilidad;
+  var nActivos = nodos.filter(function(n) { return n.tipo !== 'final'; }).length;
+  var nAristas = grafo.aristas.length;
 
-function seccion5(resultado, grafoCausal, metadatos) {
-  var decl  = resultado.declaracion;
-  var lider = resultado.rStar.filter(function(r){
-    var nd = grafoCausal.nodos.find(function(n){ return n.nombre === r.nodo; });
-    return nd && nd.tipo !== 'final';
-  }).sort(function(a,b){ return b.valor - a.valor; })[0];
-
-  var inversion = resultado.delta.some(function(d){ return d.resultado && d.resultado.signo === 'sobreasuncion'; }) &&
-                  resultado.delta.some(function(d){ return d.resultado && d.resultado.signo === 'brecha'; });
-
-  var invTxt = inversion
-    ? '<p><strong>Inversi\u00f3n causal detectada:</strong> El sistema muestra el patr\u00f3n del Teorema de Inversi\u00f3n Causal: hay nodos con brecha activa y nodos con sobreasunci\u00f3n simult\u00e1neamente.</p>'
+  // Detectar inversión causal
+  var hayBrechas = resultado.delta.some(function(d) { return d.resultado && d.resultado.signo === 'brecha'; });
+  var haySobre   = resultado.delta.some(function(d) { return d.resultado && d.resultado.signo === 'sobreasuncion'; });
+  var inversionStr = (hayBrechas && haySobre)
+    ? '<p><strong>Inversión causal detectada:</strong> El sistema muestra el patrón del Teorema de Inversión Causal: hay nodos con brecha activa y nodos con sobreasunción simultáneamente.</p>'
     : '';
 
-  var iicNodos = resultado.serieII.filter(function(n){ return n.iic !== null; });
-  var iicTxt = iicNodos.length
-    ? '<p><strong>Integridad del dise\u00f1o (Serie II):</strong> ' + iicNodos.map(function(n){ return n.interpretacionIIC + ' ' + n.interpretacionFA; }).join(' ') + '</p>'
-    : '';
+  // Advertencia si nodo líder es ejecución con S alto
+  var lider    = resultado.rStar.filter(function(r) { return r.valor > 0; }).sort(function(a,b){ return b.valor-a.valor; })[0];
+  var ndLider  = lider ? nodos.find(function(n) { return n.nombre === lider.nodo; }) : null;
+  var advStr   = '';
+  if (ndLider && ndLider.tipo === 'ejecucion' && lider.s > 0.60) {
+    var ndDiseno = nodos.find(function(n) { return n.tipo === 'diseno'; });
+    var nombreD  = ndDiseno ? ndDiseno.nombre : 'el nodo de diseño';
+    advStr = `<div class="advertencia-box">
+      R* = ${pct(lider.valor)} en un nodo de ejecución con sustituibilidad S = ${(lider.s * 100).toFixed(1)}% no indica responsabilidad de diseño. Indica que este nodo es el punto de convergencia de cadenas causales diseñadas por otros. El ${(lider.s * 100).toFixed(1)}% de su peso causal es estructural: cualquier actor en esa posición, bajo las mismas condiciones, habría producido el mismo resultado. El peso causal atribuible específicamente a este actor es contribución atribuible = ${pct(lider.neta)}. El nodo de diseño que construyó esas condiciones es: ${escH(nombreD)}.
+    </div>`;
+  }
 
-  var narrativa = resultado.rStar.filter(function(r){
-    var nd = grafoCausal.nodos.find(function(n){ return n.nombre === r.nodo; });
-    return nd && nd.tipo !== 'final';
-  }).sort(function(a,b){ return b.valor - a.valor; }).map(function(r) {
-    var nd = grafoCausal.nodos.find(function(n){ return n.nombre === r.nodo; });
-    var a  = resultado.alpha.find(function(x){ return x.nodo === r.nodo; });
-    var d  = resultado.delta.find(function(x){ return x.nodo === r.nodo; });
-    return 'El nodo <strong>' + r.nodo + '</strong> (' + (nd?tipoLabel(nd.tipo):'') + ') ' +
-      'exhibe R* = ' + (r.valor*100).toFixed(2) + '%, R*_neta = ' + (r.neta*100).toFixed(2) + '%, ' +
-      '\u03b1 = ' + (a?(a.valor*100).toFixed(1)+'%':'—') + '. ' +
-      (d && d.resultado ? '\u0394 = ' + d.resultado.valor.toFixed(3) + ' (' + d.resultado.signo + ').' : '');
+  // Distribución narrativa
+  var distTexto = resultado.rStar.filter(function(r) { return r.valor > 0.001; }).map(function(r) {
+    var nd  = nodos.find(function(n) { return n.nombre === r.nodo; });
+    var al  = resultado.alpha.find(function(a) { return a.nodo === r.nodo; });
+    var dl  = resultado.delta.find(function(d) { return d.nodo === r.nodo; });
+    var sig = dl && dl.resultado ? dl.resultado.signo : '—';
+    return 'El nodo <strong>' + escH(r.nodo) + '</strong> (' + escH(tipoES(nd ? nd.tipo : '')) + ') exhibe índice de convergencia = ' +
+      pct(r.valor) + ', contribución atribuible = ' + pct(r.neta) + ', condiciones adversas = ' + pct(al ? al.valor : 0) + '. asimetría repercusiva = ' +
+      (dl && dl.resultado ? fix3(dl.resultado.valor) : '—') + ' (' + (sig==='sobreasuncion'?'Sobreasunción':sig==='brecha'?'Brecha':'Equilibrio') + ').';
   }).join(' ');
 
-  var tipos = {};
-  grafoCausal.nodos.forEach(function(nd){
-    if (nd.tipo !== 'final') { if (!tipos[nd.tipo]) tipos[nd.tipo] = []; tipos[nd.tipo].push(nd.nombre); }
+  // IIC narrativo
+  var iicTexto = '';
+  var s2con = (resultado.serieII || []).filter(function(n) { return n.iic !== null; });
+  if (s2con.length) {
+    iicTexto = '<p><strong>Integridad del diseño (Serie II):</strong> ' +
+      s2con.map(function(n) {
+        return n.interpretacionIIC + ' ' + (n.interpretacionFA || '');
+      }).join(' ') + '</p>';
+  }
+
+  // Equivalencias por tipo
+  var tiposPresentes = {};
+  nodos.forEach(function(nd) {
+    if (nd.tipo !== 'final' && !tiposPresentes[nd.tipo]) tiposPresentes[nd.tipo] = [];
+    if (nd.tipo !== 'final') tiposPresentes[nd.tipo].push(nd.nombre);
   });
-  var equiv = { diseno:'Derecho: autor mediato (quien dise\u00f1\u00f3 el sistema que hizo posible el da\u00f1o) \u00b7 Auditor\u00eda: responsable institucional de dise\u00f1o \u00b7 Medicina: factor etiol\u00f3gico estructural',
-    ejecucion:'Derecho: ejecutor (quien llev\u00f3 a cabo el acto) \u00b7 Auditor\u00eda: operador del protocolo \u00b7 Medicina: agente causal directo',
-    institucional:'Derecho: persona moral \u00b7 Auditor\u00eda: entidad auditada \u00b7 Econom\u00eda: agente estructural',
-    normativo:'Derecho: norma habilitante \u00b7 Pol\u00edtica p\u00fablica: marco regulatorio' };
-  var filasE = Object.keys(tipos).map(function(t){
-    return '<tr><td>' + t + '</td><td>' + tipos[t].join(', ') + '</td><td>' + (equiv[t]||'—') + '</td></tr>';
+  var filasEq = Object.keys(tiposPresentes).map(function(tipo) {
+    return '<tr><td>' + escH(tipoES(tipo)) + '</td><td>' + escH(tiposPresentes[tipo].join(', ')) + '</td><td>' + (EQUIVALENCIAS[tipo] || '—') + '</td></tr>';
   }).join('');
 
-  return '<div class="seccion salto-pagina">' +
-    '<h2>Secci\u00f3n 5 \u00b7 Declaraci\u00f3n Narrativa</h2>' +
-    '<div class="nota">Tono: neutro / forense. El an\u00e1lisis describe la estructura causal \u2014 no determina culpabilidad.</div>' +
-    '<h3>5.1 S\u00edntesis del an\u00e1lisis causal</h3>' +
-    '<p>El an\u00e1lisis aplic\u00f3 el M\u00e9todo Prometeo en sus tres series sobre un grafo causal de ' +
-    grafoCausal.nodos.filter(function(n){ return n.tipo !== 'final'; }).length + ' nodos y ' +
-    grafoCausal.aristas.length + ' aristas. El nodo de mayor peso causal es <strong>' +
-    lider.nodo + '</strong> con R* = ' + (lider.valor*100).toFixed(2) + '%.</p>' +
-    invTxt +
-    '<h3>5.2 Distribuci\u00f3n de responsabilidad causal</h3><p>' + narrativa + '</p>' +
-    iicTxt +
-    '<h3>5.3 Robustez del an\u00e1lisis (Serie III)</h3>' +
-    '<p>El ranking \u03c3(R*) se mantuvo estable en el <strong>' + resultado.estabilidad.pctEstabilidad.toFixed(1) +
-    '%</strong> del espacio de par\u00e1metros plausibles. Declaraci\u00f3n nivel <strong>' + decl.nivel + '</strong>. ' +
-    decl.descripcion + '</p>' +
-    '<h3>5.4 Tabla de equivalencias disciplinares (Metrolog\u00eda Causal Vol. II)</h3>' +
-    '<div class="nota">La ontolog\u00eda no cambia \u2014 el lenguaje s\u00ed.</div>' +
-    '<table><thead><tr><th>Tipo de nodo</th><th>Nodos</th><th>Equivalencias por dominio</th></tr></thead><tbody>' + filasE + '</tbody></table>' +
-    '</div>\n';
+  var colorDecl = colorDeclaracion(decl.nivel);
+
+  return `
+<div class="seccion" style="page-break-before:auto">
+<h2>Sección 5 · Declaración Narrativa</h2>
+<div class="nota">Tono: neutro / forense. El análisis describe la estructura causal — no determina culpabilidad.</div>
+${advStr}
+<h3>5.1 Síntesis del análisis causal</h3>
+<p>El análisis aplicó el Método Prometeo en sus tres series sobre un grafo causal de <strong>${nActivos} nodos</strong> y <strong>${nAristas} aristas</strong>. El nodo de mayor peso causal es <strong>${escH(decl.nodoLider)}</strong> con R* = ${pct(decl.rStarLider)}.</p>
+${inversionStr}
+<h3>5.2 Distribución de responsabilidad causal</h3>
+<p>${distTexto}</p>
+${iicTexto}
+<h3>5.3 Robustez del análisis (Serie III)</h3>
+<p>El ranking σ(R*) se mantuvo estable en el <strong>${pct1(estab.pctEstabilidad / 100)}</strong> del espacio de parámetros plausibles. Declaración nivel <strong>${escH(decl.nivel)}</strong>. ${escH(decl.descripcion)}</p>
+<h3>5.4 Tabla de equivalencias disciplinares (Metrología Causal Vol. II)</h3>
+<div class="nota">La ontología no cambia — el lenguaje sí.</div>
+<table>
+  <thead><tr><th>Tipo de nodo</th><th>Nodos</th><th>Equivalencias por dominio</th></tr></thead>
+  <tbody>${filasEq}</tbody>
+</table>
+</div>`;
 }
 
-
-
-
-
-function seccion6(resultado) {
+function seccionDTotal(resultado, grafo, metadatos) {
   var dt = resultado.dTotal;
   var ad = resultado.ajusteDebitor;
-  var sinDatos = !dt || dt.pendiente;
-  if (sinDatos) {
-    return '<div class="seccion salto-pagina"><h2>Documento 4 &middot; Ajuste Debitor</h2><div class="nota">No se aportaron componentes del da\u00f1o. Aporte T_invertido, T_impedido y descripci\u00f3n de da\u00f1o a la trayectoria para completar este documento.</div></div>\n';
+
+  if (!dt || dt.pendiente) {
+    return `
+<div class="seccion" style="page-break-before:auto">
+<h2>Documento 4 · Ajuste Debitor</h2>
+<p>No se aportaron componentes del daño. Aporte T_invertido, T_impedido y descripción de daño a la trayectoria para completar este documento.</p>
+</div>`;
   }
-  function fmt(n) { return n.toLocaleString('es-MX'); }
-  var montoT = dt.tTrayectoria.aplica
-    ? (fmt(dt.tTrayectoria.monto) + (dt.tTrayectoria.estimado ? ' (estimado)' : ''))
-    : 'No aplica';
-  var fD =
-    '<tr><td>Da\u00f1o directo (T_invertido)</td><td>' + fmt(dt.tInvertido.monto) + '</td><td>' + dt.tInvertido.nivelEvidencia + '</td><td>' + (dt.tInvertido.tieneDocumentos ? 'Documentado' : 'Sin documentos') + '</td><td>' + (dt.tInvertido.descripcion || '\u2014') + '</td></tr>' +
-    '<tr><td>Lucro cesante (T_impedido)</td><td>' + fmt(dt.tImpedido.monto) + '</td><td>' + dt.tImpedido.nivelEvidencia + '</td><td>' + (dt.tImpedido.esEstimacion ? 'Estimaci\u00f3n' : 'Documentado') + '</td><td>' + (dt.tImpedido.descripcion || '\u2014') + '</td></tr>' +
-    '<tr><td>Da\u00f1o a la trayectoria</td><td>' + montoT + '</td><td>' + dt.tTrayectoria.nivelEvidencia + '</td><td>' + (dt.tTrayectoria.estimado ? 'Estimaci\u00f3n - requiere pericia' : 'Declarado') + '</td><td>' + (dt.tTrayectoria.descripcion || '\u2014') + '</td></tr>';
-  var fA = ad ? ad.map(function(a) {
-    return '<tr><td class="highlight">' + a.nodo + '</td><td class="highlight">' + (a.rStar * 100).toFixed(2) + '%</td><td>' + fmt(a.adMin) + '</td><td>' + fmt(a.adConservador) + '</td><td>' + fmt(a.adCentral) + '</td></tr>';
-  }).join('') : '';
-  return '<div class="seccion salto-pagina">' +
-    '<h2>Documento 4 \u00b7 D_total y Ajuste Debitor</h2>' +
-    '<div class="nota">AD_i = R*_i x D_total. El ajuste debitor es la estimaci\u00f3n causal del da\u00f1o restaurador. No es la condena \u2014 es lo que la causalidad indica antes de cualquier ajuste procesal.</div>' +
-    '<h3>Componentes del D_total</h3>' +
-    '<table><thead><tr><th>Componente</th><th>Monto</th><th>Evidencia</th><th>Estado</th><th>Descripci\u00f3n</th></tr></thead><tbody>' + fD + '</tbody></table>' +
-    '<p><strong>M\u00ednimo:</strong> ' + fmt(dt.dTotalMin) + ' &middot; <strong>Conservador:</strong> ' + fmt(dt.dTotalConservador) + ' &middot; <strong>Completo:</strong> ' + fmt(dt.dTotal) + '</p>' +
-    '<h3>Ajuste debitor por nodo</h3>' +
-    '<table><thead><tr><th>Nodo</th><th>R*</th><th>AD m\u00ednimo</th><th>AD conservador</th><th>AD completo</th></tr></thead><tbody>' + fA + '</tbody></table>' +
-    '</div>\n';
-}
-function glosario() {
-  return '<div class="seccion salto-pagina">' +
-    '<h2>Glosario de t\u00e9rminos</h2>' +
-    '<div class="nota">Este glosario conecta el lenguaje del an\u00e1lisis con la terminolog\u00eda t\u00e9cnica del sistema formal. No es necesario conocerlo para leer el expediente.</div>' +
-    '<table><thead><tr><th>T\u00e9rmino en el documento</th><th>T\u00e9rmino t\u00e9cnico</th><th>Definici\u00f3n operativa</th></tr></thead><tbody>' +
-    '<tr><td>Peso causal (R*)</td><td>Vector de responsabilidad causal</td><td>Fracci\u00f3n del resultado total que se explica por la posici\u00f3n del nodo en el sistema. Calculado como el eigenvector dominante de la matriz de pesos W.</td></tr>' +
-    '<tr><td>Sustituibilidad (S)</td><td>\u00cdndice de sustituibilidad</td><td>Probabilidad de que cualquier otro actor en la misma posici\u00f3n hubiera producido el mismo resultado. S = 1.00: el resultado es completamente estructural. S = 0.00: el actor es completamente idiosincr\u00e1tico.</td></tr>' +
-    '<tr><td>Peso causal neto (R*_neta)</td><td>R* \u00d7 (1\u2212S)</td><td>Fracci\u00f3n del resultado atribuible espec\u00edficamente a este actor, descontando lo que cualquier otro en su lugar tambi\u00e9n habr\u00eda producido.</td></tr>' +
-    '<tr><td>Asunci\u00f3n (\u03b1)</td><td>Coeficiente de asunci\u00f3n</td><td>Grado en que el actor reconoci\u00f3 e integr\u00f3 su responsabilidad mediante acciones verificables. No mide intenci\u00f3n: mide conducta documentada.</td></tr>' +
-    '<tr><td>D\u00e9ficit (\u0394)</td><td>D\u00e9ficit de asunci\u00f3n</td><td>Brecha entre lo que el actor caus\u00f3 (R*) y lo que ha asumido (\u03b1). \u0394 positivo: caus\u00f3 m\u00e1s de lo que asumi\u00f3. \u0394 negativo: est\u00e1 asumiendo m\u00e1s de lo que caus\u00f3 (posible chivo expiatorio).</td></tr>' +
-    '<tr><td>Congruencia institucional (IIC)</td><td>\u00cdndice de Integridad Causal</td><td>Mide cu\u00e1n congruente fue lo que el nodo de dise\u00f1o declar\u00f3 que producir\u00eda con lo que realmente produjo. IIC = 1.00: congruencia total. IIC = 0.00: divergencia total.</td></tr>' +
-    '<tr><td>Incumplimiento agravado (Fraude annona)</td><td>Fraude annona</td><td>Producto de alta centralidad causal, baja asunci\u00f3n y baja congruencia. Es la posici\u00f3n m\u00e1s grave que el sistema puede medir en un nodo de dise\u00f1o.</td></tr>' +
-    '<tr><td>Robustez del an\u00e1lisis</td><td>Estabilidad del ranking \u03c3(R*)</td><td>Porcentaje de combinaciones de pesos plausibles en las que el ordenamiento de responsabilidad se mantiene igual. Base de la Declaraci\u00f3n A, B, C o D.</td></tr>' +
-    '<tr><td>Presión de consecuencias</td><td>Fobos (k=1)</td><td>El actor actuó principalmente por presión del entorno o miedo a consecuencias. Alta sustituibilidad: cualquier otro en esa posición habría actuado igual.</td></tr>' +
-    '<tr><td>Parálisis estructural</td><td>Deimos (k=2)</td><td>El actor actuó desde la incertidumbre o el vértigo ante las opciones disponibles. Alta sustituibilidad.</td></tr>' +
-    '<tr><td>Reciprocidad</td><td>Anteros (k=3)</td><td>El actor actuó desde la inercia o la costumbre del intercambio. Sustituibilidad media.</td></tr>' +
-    '<tr><td>Apertura</td><td>Eros (k=4)</td><td>El actor actuó desde una disposición de apertura genuina hacia el otro. Sustituibilidad media.</td></tr>' +
-    '<tr><td>Afirmaci\u00f3n propia</td><td>Pot\u00f3s (k=5)</td><td>El actor actuó desde una afirmación idiosincrática propia. Baja sustituibilidad: pocos otros habrían actuado igual.</td></tr>' +
-    '<tr><td>Integraci\u00f3n plena</td><td>Harmon\u00eda (k=6)</td><td>El actor actuó desde una integración completa de su identidad. Sustituibilidad mínima: el acto es genuinamente propio.</td></tr>' +
-    '<tr><td>Localización ontológica</td><td>DI-ECO + SDO</td><td>Diagnóstico de la disposición interna desde la que actuó cada actor, y su posición en el sistema de diagnóstico ontológico. Requiere entrevista presencial para confirmación.</td></tr>' +
-    '<tr><td>Acompañamiento ontológico</td><td>HISTOS</td><td>Protocolo de trabajo sobre la brecha entre lo que el actor causó y lo que ha integrado como propio. Opera cuando |Δ| > 0.10.</td></tr>' +
-    '</tbody></table></div>\n';
-}
-function deslinde(folio, fecha) {
-  return '<div class="deslinde">' +
-    '<strong>Deslinde de responsabilidad.</strong> ' +
-    'El Centro Multidisciplinario Meriadock Formaci\u00f3n y Asesor\u00eda A.C. se responsabiliza de la correcta aplicaci\u00f3n del M\u00e9todo Prometeo y de la precisi\u00f3n matem\u00e1tica del c\u00e1lculo. No se responsabiliza de los par\u00e1metros aportados por el usuario. Este expediente no constituye peritaje judicial, diagn\u00f3stico cl\u00ednico ni asesor\u00eda legal.' +
-    '</div>' +
-    '<div class="pie-pagina">Folio ' + folio + ' \u00b7 Generado el ' + fecha + ' \u00b7 M\u00e9todo Prometeo \u00b7 Centro Multidisciplinario Meriadock</div>\n';
+
+  var filasComp = [
+    ['Daño directo (T_invertido)',  dt.tInvertido,   dt.tInvertido.tieneDocumentos ? 'Documentado' : 'Estimación'],
+    ['Lucro cesante (T_impedido)',  dt.tImpedido,    dt.tImpedido.esEstimacion     ? 'Estimación'  : 'Documentado'],
+    ['Daño a la trayectoria',       dt.tTrayectoria, dt.tTrayectoria.aplica ? (dt.tTrayectoria.estimado ? 'Estimación — requiere pericia' : 'Documentado') : 'No aplica']
+  ].filter(function(f) { return f[1] && (f[1].monto > 0 || f[1].aplica); }).map(function(f) {
+    var comp = f[1];
+    return '<tr><td>' + f[0] + '</td>' +
+      '<td>' + formatMonto(comp.monto) + '</td>' +
+      '<td>' + escH(comp.nivelEvidencia || '—') + '</td>' +
+      '<td>' + f[2] + '</td>' +
+      '<td>' + escH(comp.descripcion || '') + '</td></tr>';
+  }).join('');
+
+  var filasAD = (ad || []).map(function(r) {
+    return '<tr><td class="highlight">' + escH(r.nodo) + '</td>' +
+      '<td class="highlight">' + pct(r.rStar) + '</td>' +
+      '<td>' + formatMonto(r.adMin) + '</td>' +
+      '<td>' + formatMonto(r.adConservador) + '</td>' +
+      '<td>' + formatMonto(r.adCentral) + '</td></tr>';
+  }).join('');
+
+  return `
+<div class="seccion" style="page-break-before:auto">
+<h2>Documento 4 · D_total y Ajuste Debitor</h2>
+<div class="nota">AD_i = R*_i × D_total. El ajuste debitor es la estimación causal del daño restaurador. No es la condena — es lo que la causalidad indica antes de cualquier ajuste procesal.</div>
+<h3>Componentes del D_total</h3>
+<table>
+  <thead><tr><th>Componente</th><th>Monto</th><th>Evidencia</th><th>Estado</th><th>Descripción</th></tr></thead>
+  <tbody>${filasComp}</tbody>
+</table>
+<p><strong>Mínimo:</strong> ${formatMonto(dt.dTotalMin)} &middot; <strong>Conservador:</strong> ${formatMonto(dt.dTotalConservador)} &middot; <strong>Completo:</strong> ${formatMonto(dt.dTotal)}</p>
+<h3>Ajuste debitor por nodo</h3>
+<table>
+  <thead><tr><th>Nodo</th><th>Índice de convergencia</th><th>AD mínimo</th><th>AD conservador</th><th>AD completo</th></tr></thead>
+  <tbody>${filasAD}</tbody>
+</table>
+</div>`;
 }
 
-function pie() { return ''; }
+var GLOSARIO = `
+<div class="seccion" style="page-break-before:auto"><h2>Glosario de términos</h2>
+<div class="nota">Este glosario conecta el lenguaje del análisis con la terminología técnica del sistema formal. No es necesario conocerlo para leer el expediente.</div>
+<table><thead><tr><th>Término en el documento</th><th>Término técnico</th><th>Definición operativa</th></tr></thead><tbody>
+<tr><td>Índice de convergencia de eventos (R*)</td><td>Vector de responsabilidad causal</td><td>Fracción del resultado total que se explica por la posición del nodo en el sistema. Calculado como la influencia causal total: suma ponderada de todos los caminos del nodo al resultado final.</td></tr>
+<tr><td>Índice de sustituibilidad (S)</td><td>Índice de sustituibilidad</td><td>Probabilidad de que cualquier otro actor en la misma posición hubiera producido el mismo resultado. S = 1.00: el resultado es completamente estructural. S = 0.00: el actor es completamente idiosincrático.</td></tr>
+<tr><td>Peso causal neto (R*_neta)</td><td>R* × (1−S)</td><td>Fracción del resultado atribuible específicamente a este actor, descontando lo que cualquier otro en su lugar también habría producido.</td></tr>
+<tr><td>Condiciones adversas atribuibles (α)</td><td>Coeficiente de asunción</td><td>Consecuencias adversas verificables que el evento produjo sobre el actor — voluntarias o impuestas. No mide intención: mide efecto documentado sobre el actor.</td></tr>
+<tr><td>Asimetría repercusiva (Δ)</td><td>Déficit de asunción</td><td>Diferencia entre el índice de convergencia (R*) y las condiciones adversas atribuibles (α). Valor positivo: el actor convergió más de lo que sufrió en consecuencias. Valor negativo: las consecuencias superan su convergencia — posible chivo expiatorio estructural.</td></tr>
+<tr><td>Congruencia institucional (IIC)</td><td>Índice de Integridad Causal</td><td>Mide cuán congruente fue lo que el nodo de diseño declaró que produciría con lo que realmente produjo. IIC = 1.00: congruencia total. IIC = 0.00: divergencia total.</td></tr>
+<tr><td>Incumplimiento agravado (Fraude annona)</td><td>Fraude annona</td><td>Producto de alta centralidad causal, baja asunción y baja congruencia. Es la posición más grave que el sistema puede medir en un nodo de diseño.</td></tr>
+<tr><td>Robustez del análisis</td><td>Estabilidad del ranking σ(R*)</td><td>Porcentaje de combinaciones de pesos plausibles en las que el ordenamiento de responsabilidad se mantiene igual. Base de la Declaración A, B, C o D.</td></tr>
+<tr><td>Presión de consecuencias</td><td>Fobos (k=1)</td><td>El actor actuó principalmente por presión del entorno o miedo a consecuencias. Alta sustituibilidad: cualquier otro en esa posición habría actuado igual.</td></tr>
+<tr><td>Parálisis estructural</td><td>Deimos (k=2)</td><td>El actor actuó desde la incertidumbre o el vértigo ante las opciones disponibles. Alta sustituibilidad.</td></tr>
+<tr><td>Reciprocidad</td><td>Anteros (k=3)</td><td>El actor actuó desde la inercia o la costumbre del intercambio. Sustituibilidad media.</td></tr>
+<tr><td>Apertura</td><td>Eros (k=4)</td><td>El actor actuó desde una disposición de apertura genuina hacia el otro. Sustituibilidad media.</td></tr>
+<tr><td>Convicción propia</td><td>Potós (k=5)</td><td>El actor actuó desde una afirmación idiosincrática propia. Baja sustituibilidad: pocos otros habrían actuado igual.</td></tr>
+<tr><td>Deliberación integrada</td><td>Harmonía (k=6)</td><td>El actor actuó desde una integración completa de su identidad. Sustituibilidad mínima: el acto es genuinamente propio.</td></tr>
+<tr><td>Localización ontológica</td><td>DI-ECO + SDO</td><td>Diagnóstico de la disposición interna desde la que actuó cada actor, y su posición en el sistema de diagnóstico ontológico. Requiere entrevista presencial para confirmación.</td></tr>
+<tr><td>Acompañamiento ontológico</td><td>HISTOS</td><td>Protocolo de trabajo sobre la brecha entre lo que el actor causó y lo que ha integrado como propio. Opera cuando |Δ| &gt; 0.10.</td></tr>
+</tbody></table></div>`;
+
+
+// ─── FUNCIÓN PRINCIPAL ──────────────────────────────────────
+
+exports.generarHTML = function(resultado, grafo, metadatos) {
+  metadatos = metadatos || {};
+  var folio  = metadatos.folio || 'EP-' + Date.now();
+  var fecha  = metadatos.fecha || new Date().toLocaleDateString('es-MX');
+
+  var deslinde = '<div class="deslinde"><strong>Deslinde de responsabilidad.</strong> El Centro Multidisciplinario Meriadock Formación y Asesoría A.C. se responsabiliza de la correcta aplicación del Método Prometeo y de la precisión matemática del cálculo. No se responsabiliza de los parámetros aportados por el usuario. Este expediente no constituye peritaje judicial, diagnóstico clínico ni asesoría legal.</div>';
+  var pie      = '<div class="pie-pagina">Folio ' + escH(folio) + ' · Generado el ' + escH(fecha) + ' · Método Prometeo · Centro Multidisciplinario Meriadock</div>';
+
+  return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>Expediente ' + escH(folio) + '</title>' +
+    '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">' +
+    '<style>' + CSS + '</style></head><body>' +
+    seccionHeader(grafo, metadatos) +
+    seccion1(grafo, resultado) +
+    seccion2(grafo, resultado) +
+    seccion3(grafo, resultado) +
+    seccion4(grafo, resultado) +
+    seccion5(grafo, resultado) +
+    seccionDTotal(resultado, grafo, metadatos) +
+    deslinde + pie +
+    GLOSARIO +
+    '</body></html>';
+};
+
+
+// ─── ESCAPE HTML ────────────────────────────────────────────
+
+function escH(str) {
+  if (str === undefined || str === null) return '';
+  return String(str)
+    .replace(/&/g,  '&amp;')
+    .replace(/</g,  '&lt;')
+    .replace(/>/g,  '&gt;')
+    .replace(/"/g,  '&quot;')
+    .replace(/'/g,  '&#39;');
+}
