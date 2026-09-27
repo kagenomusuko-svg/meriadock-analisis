@@ -1,0 +1,44 @@
+name: Auto Process Case
+
+on:
+  workflow_dispatch:
+    inputs:
+      case_id:
+        description: 'UUID del caso a procesar'
+        required: true
+        type: string
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Calculate
+        id: calculate
+        run: |
+          RESPONSE=$(curl -s -X POST "${{ secrets.APP_URL }}/api/calculate" \
+            -H "Content-Type: application/json" \
+            -d "{\"case_id\":\"${{ github.event.inputs.case_id }}\",\"mapa_output\":{}}")
+          echo "calculate_response=$RESPONSE"
+          echo "response=$RESPONSE" >> "$GITHUB_OUTPUT"
+
+      - name: Generate Declaration
+        id: declaration
+        run: |
+          RESPONSE=$(curl -s -X POST "${{ secrets.APP_URL }}/api/generate-declaration" \
+            -H "Content-Type: application/json" \
+            -d "{\"case_id\":\"${{ github.event.inputs.case_id }}\"}")
+          echo "declaration_response=$RESPONSE"
+          echo "response=$RESPONSE" >> "$GITHUB_OUTPUT"
+
+      - name: Log resultado
+        run: |
+          echo "=== Calculate result ==="
+          echo "${{ steps.calculate.outputs.response }}"
+          echo "=== Declaration result ==="
+          echo "${{ steps.declaration.outputs.response }}"
