@@ -1,0 +1,1432 @@
+[
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 569,
+    "titulo": "### El índice de sustituibilidad S"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 761,
+    "titulo": "### El coeficiente de asunción α"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 763,
+    "titulo": "### Definición 4.  Coeficiente de asunción — versión continua"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 777,
+    "titulo": "### Definición 4.1.  Coeficiente de asunción — versión discreta"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 1631,
+    "titulo": "### Definición 8.6 + Teorema 8.3.  Índice de inversión y monotonicidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 1657,
+    "titulo": "### Teorema 8.4 — Inevitabilidad del fraude annona"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 2959,
+    "titulo": "### D.3.  Operador contrafactual general"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 2963,
+    "titulo": "### Definición D.5.  Operador contrafactual \b (G, i, W'_i)"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 3013,
+    "titulo": "### El cambio en la componente neta R*_net(i) bajo el operador contrafactual satisface:"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "linea": 3159,
+    "titulo": "### Un nodo i □ N es un nodo de bifurcación causal si existe una fila alternativa W'_i tal que el soporte del operador contrafactual cambia:"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 415,
+    "titulo": "### §1.8 El fraude annona: el incumplimiento del contrato implícito de posición"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 951,
+    "titulo": "### 2.3.2 B*: la fracción del beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 1053,
+    "titulo": "### 2.4.1 S: el índice de sustituibilidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 1067,
+    "titulo": "### 2.4.2 α: el coeficiente de asunción"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 1893,
+    "titulo": "### 3.5.1 Identificar las fuentes de beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 1953,
+    "titulo": "### B*_i = Beneficio_neto_i / Beneficio_total. Para cada nodo sumamos los beneficios que le corresponden y los dividimos entre el beneficio total:"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 2347,
+    "titulo": "### 3.9.3 Documento 3: la declaración de robustez (para el expediente)"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 3521,
+    "titulo": "### §5.7 Los valores de Shapley: repartir la responsabilidad cuando nadie era indispensable por sí solo"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 3679,
+    "titulo": "### 5.7.4 La fórmula para el lector técnico"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 3697,
+    "titulo": "### 5.7.5 Cuándo usar Shapley y cuándo usar el método de las rondas"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 4211,
+    "titulo": "### §6.5 Paso 3b: Shapley para distribuir la responsabilidad entre las tres instituciones"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 4291,
+    "titulo": "### Sumamos los aportes de cada institución en los seis órdenes y dividimos entre 6. Eso da el aporte promedio de cada una — su valor de Shapley."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 4765,
+    "titulo": "### 6.10.3 Documento 3: la declaración de robustez"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 5131,
+    "titulo": "### 1. Citar el tipo de declaración de robustez explícitamente ('el análisis produce una Declaración B')."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "linea": 5143,
+    "titulo": "### §6.5 La declaración de robustez: forma, contenido y efecto procesal"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 33,
+    "titulo": "### La ontología del ego como fundamento del cálculo causal ÍNDICE TEMÁTICO"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 41,
+    "titulo": "### II. Las tres fórmulas del sistema 2"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 279,
+    "titulo": "### I. El punto de partida: la distribución de probabilidad sobre Hijos 214"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 335,
+    "titulo": "### Capítulo 5.2 El ECO como trabajo sobre φ₂: intervención en la brecha de Δ La tercera perspectiva: el proceso mismo"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 411,
+    "titulo": "### II.  Las tres fórmulas del sistema"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 1061,
+    "titulo": "### S es el índice de sustituibilidad: la fracción de la contribución causal de un actor que era estructural — lo que cualquier otro actor en su lugar habría producido."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 4135,
+    "titulo": "### VIII.  La pregunta diagnóstica: ¿cuál tipo de incertidumbre limita la robustez?"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 4173,
+    "titulo": "### IX.  Cuándo la incertidumbre ontológica no afecta la robustez"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 4287,
+    "titulo": "### I.  El punto de partida: la distribución de probabilidad sobre Hijos"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 5037,
+    "titulo": "### El ECO como trabajo sobre φ₂ Intervención en la brecha de Δ"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 5293,
+    "titulo": "### IV.  Segundo caso límite: cuando el SDO no es suficiente para producir robustez"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "linea": 5319,
+    "titulo": "### 0.65 con robustez completa, pero el sistema jurídico del caso no tiene una categoría de responsabilidad que corresponda a ese tipo de condición causal necesaria distal."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 597,
+    "titulo": "### I.  El problema de la medición: formulación técnica"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 643,
+    "titulo": "### II.  La tercera estructura: φ₁ como operador de medición interno"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 675,
+    "titulo": "### La primera mediación como operador de"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 681,
+    "titulo": "### I.  φ₁ en su formulación técnica completa"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 693,
+    "titulo": "### II.  Por qué φ₁ es el operador de medición del ego"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 733,
+    "titulo": "### Por qué el ego es el único sistema que incluye su propio operador de medición"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 787,
+    "titulo": "### I.  El problema difícil: formulación precisa"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 1227,
+    "titulo": "### del operador causal"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 1233,
+    "titulo": "### I.  φ₁ y φ₂ en su formulación técnica completa"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 1425,
+    "titulo": "### beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 1451,
+    "titulo": "### III.  La dualidad daño-beneficio y sus aplicaciones"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 1483,
+    "titulo": "### II.  S no es sustituibilidad ordinaria"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 1957,
+    "titulo": "### III.  El criterio de robustez y las cuatro declaraciones"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 2587,
+    "titulo": "### El IIC: Índice de Integridad Causal —"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3709,
+    "titulo": "### operadores de consulta"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3745,
+    "titulo": "### III.  Por qué los parámetros de consulta no son el operador"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3767,
+    "titulo": "### I.  La pregunta que la Serie I formula"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3851,
+    "titulo": "### El fraude annona como objeto de"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3871,
+    "titulo": "### II.  La formalización del fraude annona como Δ del nodo de diseño"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3883,
+    "titulo": "### III.  Por qué el fraude annona es el más invisibilizado de los Δ del sistema"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3919,
+    "titulo": "### I.  La pregunta que la Serie III formula"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 3961,
+    "titulo": "### operador"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 4703,
+    "titulo": "### II.  La extensión por valores de Shapley"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 4713,
+    "titulo": "### III.  Los límites de la extensión por Shapley"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 5339,
+    "titulo": "### La Declaración de robustez: las cuatro"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 5385,
+    "titulo": "### La Declaración de robustez: cómo leerla"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 5427,
+    "titulo": "### La Declaración de robustez ante"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 6295,
+    "titulo": "### II.  El fraude annona de la FRO formalizado"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 6625,
+    "titulo": "### I.  El método de potencias: formulación y convergencia"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 6865,
+    "titulo": "### beneficio: R* y R*_B"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 6871,
+    "titulo": "### I.  Los dos grafos y el mismo operador"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 6959,
+    "titulo": "### III.  La función de robustez y su relación con los puntos de quiebre"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "linea": 6991,
+    "titulo": "### Índice de referencias cruzadas"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 205,
+    "titulo": "### Concepto 4 · S (sustituibilidad)"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 865,
+    "titulo": "### 0.20 – 0.50 0.35 Sustituibilidad baja-media. El acto está orientado a algo que"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1031,
+    "titulo": "### 0.33 (gradable) Acciones preventivas, protocolos activados, controles implementados, reportes generados, intervenciones documentadas"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1081,
+    "titulo": "### Shapley"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1103,
+    "titulo": "### III.  El valor de Shapley: condición de aplicación"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1133,
+    "titulo": "### V.  Los casos mixtos y la conjetura del operador unificador"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1493,
+    "titulo": "### 0.1521 0.62 0.38 0.0578 Ruta B — Acción de supervisión parcialmente documentada. Tres oportunidades de intervención identificadas, una actuada."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1673,
+    "titulo": "### V.  Paso 4 · El fraude annona y el umbral de acción"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 1873,
+    "titulo": "### VI.  Paso 5 · La Declaración de robustez: niveles A, B, C, D"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 2965,
+    "titulo": "### II.  La definición de S como operador de descomposición"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3023,
+    "titulo": "### II.  La definición de α como operador de integración"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3107,
+    "titulo": "### Corolario III · El fraude annona"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3111,
+    "titulo": "### I.  El fraude annona como caso específico del Corolario II"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3153,
+    "titulo": "### 0.60 0.60 0.20 0.192 Posición moderada. Alta centralidad, asunción moderada. La congruencia sigue baja pero la asunción parcial reduce el fraude annona."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3201,
+    "titulo": "### III.  El valor de Shapley como distribución de responsabilidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3215,
+    "titulo": "### que no contribuyen a ninguna coalición reciben cero), y aditividad. En el caso acumulativo, estos axiomas determinan de manera única la distribución Shapley."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3217,
+    "titulo": "### IV.  El Shapley como caso límite del eigenvector"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3263,
+    "titulo": "### La conjetura del operador unificador"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3269,
+    "titulo": "### I.  El problema que la conjetura formula"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3281,
+    "titulo": "### (ii) Cuando ningún nodo de G es condición sine qua non individual: O(G) = valor de Shapley del juego cooperativo v(S) asociado a G."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3419,
+    "titulo": "### III.  Los dos formularios del protocolo"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3425,
+    "titulo": "### FORMULARIO A · Registro del operador"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3465,
+    "titulo": "### FORMULARIO B · Reporte del participante"
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 3489,
+    "titulo": "### Esta tabla nunca sale del equipo central. Es el motor que convierte los datos crudos de los formularios en parámetros del sistema. El operador y el participante nunca la ven."
+  },
+  {
+    "fuente": "Paradigma/corpus/fuentes/Metrología Causal Vol II.md",
+    "linea": 4005,
+    "titulo": "### VII.  Tabla maestra de equivalencias — Δ, IIC y Fraude annona"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-a.md",
+    "linea": 223,
+    "titulo": "### Argumento 3 — El ROI de la prevención: invertir donde R* × (1−S) es más alto"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-a.md",
+    "linea": 229,
+    "titulo": "### 3.1 La fórmula del ROI de prevención"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-a.md",
+    "linea": 247,
+    "titulo": "### Una reducción de 18.5 puntos porcentuales en la probabilidad de un evento que costó $50M produce un beneficio esperado de $9.25M. Si la intervención cuesta $1M, el ROI es 825%."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-a.md",
+    "linea": 249,
+    "titulo": "### 3.2 Tabla comparativa de ROI por tipo de intervención"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-a.md",
+    "linea": 305,
+    "titulo": "### 3.3 El presupuesto de prevención como problema de optimización"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-b.md",
+    "linea": 855,
+    "titulo": "### 0.60 E1 El formulario de idoneidad mal completado es E1 directo. El w es alto pero la S también es moderada (otro asesor bajo el mismo esquema habría actuado igual)."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-c.md",
+    "linea": 93,
+    "titulo": "### A.4 La derivación axiomática del valor de Shapley"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/apendice-e.md",
+    "linea": 183,
+    "titulo": "### ▌ Deportes/Beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-01.md",
+    "linea": 151,
+    "titulo": "### 3.3 El índice de sustituibilidad S como argumento defensivo"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-01.md",
+    "linea": 291,
+    "titulo": "### 3.7 El beneficio del daño: ¿quién ganó?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-01.md",
+    "linea": 431,
+    "titulo": "### Tras la convergencia del operador de responsabilidad, el vector R* estabilizado es:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-01.md",
+    "linea": 457,
+    "titulo": "### A.4 La sustituibilidad de Eichmann: formalizando a Arendt"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "linea": 235,
+    "titulo": "### 3.4 El índice de sustituibilidad S en operaciones de lavado"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "linea": 371,
+    "titulo": "### 3.8 El beneficio del esquema y la extinción de dominio"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "linea": 517,
+    "titulo": "### A.4 R* y el análisis de sustituibilidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "linea": 519,
+    "titulo": "### Aplicando el operador de responsabilidad con los pesos documentados en los informes del Senado norteamericano (Kerry Report, 1992) y de los liquidadores judiciales:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "linea": 937,
+    "titulo": "### La fórmula del α predicho en función del hijo dominante es:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "linea": 1035,
+    "titulo": "### 6.2 El índice de opacidad del esquema"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-03.md",
+    "linea": 65,
+    "titulo": "### 1.2 El fraude annona intergeneracional"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-03.md",
+    "linea": 313,
+    "titulo": "### 3.6 El B_total del sistema colonial: la herencia de beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-03.md",
+    "linea": 449,
+    "titulo": "### Tras la convergencia del operador de responsabilidad, el vector R* estabilizado sobre el grafo histórico (excluyendo N_suc que es el sucesor contemporáneo):"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-03.md",
+    "linea": 761,
+    "titulo": "### 6.1 El operador de herencia institucional H"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-04.md",
+    "linea": 147,
+    "titulo": "### 2.1 Índice de Justicia Estructural (J)"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-04.md",
+    "linea": 163,
+    "titulo": "### Aplicaciones inmediatas del Índice J:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-04.md",
+    "linea": 195,
+    "titulo": "### 2.2 Coeficiente de Impunidad del Diseñador (I_d)"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "linea": 179,
+    "titulo": "### 3.2 R* en clínica: el peso causal en el síntoma y las prioridades de intervención"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "linea": 191,
+    "titulo": "### 3.3 S en clínica: sustituibilidad del factor y genericidad del síntoma"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "linea": 441,
+    "titulo": "### específico, y verificó esa conexión mediante la intervención (verbalización del recuerdo → reducción del síntoma)."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "linea": 581,
+    "titulo": "### B.3 R*, S y Δ: el mapa de intervención"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "linea": 753,
+    "titulo": "### 6.3 La fórmula de los hijos como predictor del progreso terapéutico"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-06.md",
+    "linea": 93,
+    "titulo": "### 1.3 El fraude annona del Estado en salud pública"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-06.md",
+    "linea": 247,
+    "titulo": "### 3.3 El índice de sustituibilidad S en epidemiología"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-06.md",
+    "linea": 495,
+    "titulo": "### El índice de Justicia Estructural del sistema de salud pública de Londres en 1854:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-06.md",
+    "linea": 827,
+    "titulo": "### 6.3 El cálculo del fraude annona epidemiológico"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-07.md",
+    "linea": 327,
+    "titulo": "### 3.5 El D_total en tanatología: el daño sin beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 239,
+    "titulo": "### 3.3  El índice de sustituibilidad S en el crédito"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 589,
+    "titulo": "### La fórmula de imputación del R* del dataset al directivo:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 595,
+    "titulo": "### donde P(detección | auditoría) es la probabilidad de que una auditoría de disparate impact estándar habría detectado"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 675,
+    "titulo": "### 5.5 El uso predictivo del índice de causalidad del impago"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 683,
+    "titulo": "### Predictor 1: probabilidad de impago causal pre-evento"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 751,
+    "titulo": "### Predictor 3: ROI de la auditoría de equidad como intervención preventiva"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "linea": 807,
+    "titulo": "### 6.3 La fórmula de equidad crediticia ajustada por causalidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 35,
+    "titulo": "### 1.2 El índice de concentración de riesgo sistémico"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 191,
+    "titulo": "### 3.3 El índice de sustituibilidad S en el riesgo financiero"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 409,
+    "titulo": "### * R*_CDOs = 0.18 se imputa mediante la fórmula R*_efectivo de los nodos humanos que los diseñaron y certificaron (N1, N2, N4)."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 611,
+    "titulo": "### 5.5 El ICRS como predictor de quiebra y el ROI de las intervenciones"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 617,
+    "titulo": "### El modelo de probabilidad de quiebra en función del ICRS"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 647,
+    "titulo": "### ROI de cada intervención: la tabla de prioridades con retorno financiero"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 649,
+    "titulo": "### El ROI de una intervención de mitigación es el valor esperado del daño evitado menos el costo de la intervención, dividido entre el costo de la intervención:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 651,
+    "titulo": "### ROI_intervención_i = (D_total × ΔP(quiebra)_i −"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 709,
+    "titulo": "### Código de referencia: predictor de quiebra y ROI de intervenciones"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "linea": 759,
+    "titulo": "# facturación como proxy del D_total  res = analisis_quiebra(W_emp, alpha_antes, D_total_empresa, w_ref=8.0) nombres = ['N1-Cliente A','N2-Proveedor P','N3-Covenant','N4-Ciclo','Nf'] print(\"=== Empresa mediana — Análisis de riesgo de quiebra ===\") for i, (nm, icrs, si, di, pri) in enumerate(zip(     nombres, res['ICRS'], res['S'], res['Delta_provision'], res['riesgo_idiosincratico'])):     flag = ' ← ATENDER PRIMERO' if pri == max(res['riesgo_idiosincratico']) else '' print(f\"  {nm:18s} ICRS={icrs:.3f} S={si:.2f} Δ={di:+.3f} Prio={pri:.3f}{flag}\")  print(f\"\\nICRS total del sistema: {res['ICRS_total_sistema']:.3f}\") print(f\"J (justicia/mitigación): {res['J_sistema']:.3f}\")  # Proyección post-intervenciones mejoras = {1: 0.60, 0: 0.20, 2: 0.45}  # cert.P, diversif.A, renegoc.covenant proyeccion = proyectar_post_intervencion(W_emp, alpha_antes, mejoras, D_total_empresa) print(f\"\\n--- Proyección post-intervenciones ---\") print(f\"ICRS antes:     {proyeccion['ICRS_total_antes']:.3f}\") print(f\"ICRS después:   {proyeccion['ICRS_total_despues']:.3f}\") print(f\"Reducción:      {proyeccion['reduccion']:.3f} ({proyeccion['reduccion']/proyeccion['ICRS_total_antes']*100:.0f}%)\")"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-10.md",
+    "linea": 181,
+    "titulo": "### 3.2 R* en actuaría: de la probabilidad a la causalidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-10.md",
+    "linea": 239,
+    "titulo": "### 3.4 El índice de sustituibilidad S en el seguro"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-10.md",
+    "linea": 269,
+    "titulo": "### 3.6 El Δ_B: el beneficio del siniestro no asumido"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-10.md",
+    "linea": 605,
+    "titulo": "### 5.3 El límite de la detección del fraude al seguro"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-11.md",
+    "linea": 221,
+    "titulo": "### 3.3 S del directivo: ¿era idiosincrático el fraude?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-11.md",
+    "linea": 761,
+    "titulo": "### 6.2 El índice de integridad corporativa (IIC)"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-11.md",
+    "linea": 779,
+    "titulo": "### 6.3 La fórmula del consejo efectivo: R*_supervisión > umbral mínimo"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "linea": 41,
+    "titulo": "### 1.2 Por qué los hijos aplican solo a los operadores"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "linea": 275,
+    "titulo": "### 3.3 El índice de sustituibilidad S del operador en decisiones de seguridad"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "linea": 283,
+    "titulo": "### 3.4 α del operador: las formas de la contención del riesgo"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "linea": 289,
+    "titulo": "### En el dominio de la ingeniería de seguridad, α del operador tiene una escala específica que va desde la no intervención hasta la disidencia documentada y el paro del proceso:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "linea": 321,
+    "titulo": "### 3.5 Los hijos de los operadores: la disposición de la voluntad en la decisión crítica"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "linea": 727,
+    "titulo": "### 6.3 El Índice de Aprendizaje Sistémico (IAS)"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 31,
+    "titulo": "### es el valor de Shapley: el instrumento de la teoría de juegos cooperativos que distribuye correctamente la responsabilidad en ese escenario."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 219,
+    "titulo": "### 3.3 El índice de sustituibilidad S en el daño ambiental"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 259,
+    "titulo": "### 3.5 La extensión Shapley: cuando R* convencional falla"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 481,
+    "titulo": "### Cálculo del valor de Shapley para el Actor 1 (Texaco/Chevron):"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 497,
+    "titulo": "### El valor de Shapley de Texaco/Chevron es φ₁ ≈ 0.237: aproximadamente el 23.7% del daño total. Este es el resultado que el litigio debería haber establecido como base"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 503,
+    "titulo": "### Valores de Shapley para los tres actores (verificación de eficiencia):"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 519,
+    "titulo": "### 1.000 100% Propiedad de eficiencia de Shapley: la suma es exactamente el daño total."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 523,
+    "titulo": "### La verificación de eficiencia confirma que los valores de Shapley suman exactamente el 100% del D_total —una propiedad que R* convencional comparte pero que aquí"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 573,
+    "titulo": "### 5.5 El alcance de Shapley: hasta dónde llega la extensión"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "linea": 599,
+    "titulo": "### 6.3 Aproximación de Shapley por Monte Carlo"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-15.md",
+    "linea": 523,
+    "titulo": "### 6.1 La fórmula del valor agregado docente calibrado por R*"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-15.md",
+    "linea": 563,
+    "titulo": "### 6.3 El IAS educativo: el índice de aprendizaje sistémico del sistema escolar"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-16.md",
+    "linea": 643,
+    "titulo": "### 6.3 El Índice de Aprendizaje Sistémico en el análisis geopolítico"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-17.md",
+    "linea": 211,
+    "titulo": "### La sustituibilidad S_B de un jugador en el resultado deportivo puede estimarse con tres métodos complementarios:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-17.md",
+    "linea": 273,
+    "titulo": "### 3.4 B_total en el deporte: cómo cuantificar el beneficio del triunfo"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-17.md",
+    "linea": 917,
+    "titulo": "### 6.2 El valor de Shapley deportivo: cuando hay múltiples estrellas"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 469,
+    "titulo": "### 6.3 El coeficiente de resonancia narrativa"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 733,
+    "titulo": "### Arista w (N4 → N6) = 0 → R*_N4_en_fraude ="
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 737,
+    "titulo": "### D_total_hecho2 = 0 (fraude no consumado, cliente"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 747,
+    "titulo": "### §4.  B_total de la institución: el beneficio de la imputación"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 929,
+    "titulo": "### §7.  Fraude annona corporativo: el incumplimiento del contrato laboral implícito"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 933,
+    "titulo": "### 7.1 Los tres componentes del fraude annona en este caso"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 963,
+    "titulo": "### Δ_fraude_annona = FA1 + FA2 + FA3 = 0.43 + 0.30 +"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 975,
+    "titulo": "### 7.2 El coeficiente de α diferido disponible"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 977,
+    "titulo": "### La institución puede reducir su Δ_fraude_annona mediante acciones concretas que el análisis puede identificar:"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 1019,
+    "titulo": "### produce beneficio positivo incluso después de pagar el α diferido."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 1025,
+    "titulo": "### §8.  El Índice de Integridad Corporativa (IIC): la disforia de identidad institucional"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "linea": 1103,
+    "titulo": "### §9.  El Índice de Justicia Estructural del sistema"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/00-preliminares.md",
+    "linea": 39,
+    "titulo": "### Índice General"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-02.md",
+    "linea": 967,
+    "titulo": "### 4. ¿Hay fraude annona — el trabajador asumió consecuenci as que no le correspondí an causalment e?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-03.md",
+    "linea": 797,
+    "titulo": "### B_total y la herencia de beneficio"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 435,
+    "titulo": "### 0.21 – 0.45 El operador pagó multas o implementó medidas de remediación menores a lo que su R* indica. Hay acciones concretas pero la proporcionalidad"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 465,
+    "titulo": "### 0.71 – 0.89 El operador ha asumido la mayor parte de su posición. Las acciones de remediación son proporcionales a su R* aunque no perfectas."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 845,
+    "titulo": "### La primera pregunta del análisis ambiental — ¿R* o Shapley? — condiciona todo lo demás. El árbol de decisión comienza aquí."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 991,
+    "titulo": "### 5. ¿S del operador — las prácticas eran idiosincrát icas o estándar del sector?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 1029,
+    "titulo": "### 6. ¿v(S) de las coalicione s — para el cálculo de Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 1067,
+    "titulo": "### 7. ¿α del operador — qué remediaci ón real ha ocurrido?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "linea": 1081,
+    "titulo": "### El árbol comienza con la decisión entre R* y Shapley — que es la más importante y la que condiciona todo el análisis posterior."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-05.md",
+    "linea": 495,
+    "titulo": "### Δ y el fraude annona parental"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-06.md",
+    "linea": 955,
+    "titulo": "### 6. ¿Hay múltiples empresas coludidas — R* o Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-07.md",
+    "linea": 1001,
+    "titulo": "### 7. ¿Hay contribucion es no separables — R*_B o Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-08.md",
+    "linea": 425,
+    "titulo": "### Δ y el fraude annona en el sistema de salud"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-08.md",
+    "linea": 895,
+    "titulo": "### 4. ¿Hay fraude annona — la institución disciplinó al médico sin modificar el sistema?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-09.md",
+    "linea": 5,
+    "titulo": "### Derecho tributario — evasión, elusión y fraude fiscal"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-09.md",
+    "linea": 815,
+    "titulo": "### 1. ¿Cuál es el registro del caso — evasión directa, elusión agresiva o fraude offshore?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-11.md",
+    "linea": 7,
+    "titulo": "### fraude y colapso crediticio"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-11.md",
+    "linea": 423,
+    "titulo": "### §4.4 El índice de concentración de riesgo sistémico (ICRS) en el colapso financiero"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-13.md",
+    "linea": 157,
+    "titulo": "### Deimos); y diseñar la intervención correcta en reorganizaciones corporativas."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-13.md",
+    "linea": 429,
+    "titulo": "### 0.00 – 0.05 El directivo niega el fraude, obstaculiza la investigación, no ha restituido y no ha cooperado con ningún proceso de reforma."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-13.md",
+    "linea": 963,
+    "titulo": "### 4. ¿La cultura corporati va tiene R* — el IIC de la empresa en el período del fraude?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-15.md",
+    "linea": 5,
+    "titulo": "### Seguros — fraude, responsabilidad y valoración de"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-15.md",
+    "linea": 679,
+    "titulo": "### fraude del asegurado (Δ_B_asegurado positivo), o diseño predatorio de la aseguradora (Δ_B_aseguradora positivo). Cada análisis tiene prioridades de evidencia distintas."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-15.md",
+    "linea": 705,
+    "titulo": "### 1. ¿Cuál es el análisis principal — valoración , fraude del asegurado o diseño predatori o?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-18.md",
+    "linea": 1085,
+    "titulo": "### 6. ¿El daño en el nodo inicial es producto de la demanda acumulada de múltiples comprador es — aplica Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-20.md",
+    "linea": 165,
+    "titulo": "### §3  Firmas documentales por Hijo e información para S del fundador y del operador del exchange"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+    "linea": 651,
+    "titulo": "### El índice de sustituibilidad S en epidemiología: hacia dónde apunta la intervención"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+    "linea": 831,
+    "titulo": "### Distribución del AD entre los nodos del grafo y el fraude annona epidemiológico"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+    "linea": 959,
+    "titulo": "### 1. ¿El análisis es retrospectivo (responsabilidad por un brote ocurrido) o prospectivo (diseño de intervenciones)?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+    "linea": 1125,
+    "titulo": "### 6. [PROSPECTIV O] ¿Qué intervención tiene mayor impacto por unidad de recursos?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+    "linea": 1165,
+    "titulo": "### El árbol bifurca entre el análisis retrospectivo de responsabilidad y el análisis prospectivo de diseño de intervenciones."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-22.md",
+    "linea": 381,
+    "titulo": "### §5  Construcción del grafo oncológico y la extensión Shapley para factores concurrentes"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-22.md",
+    "linea": 483,
+    "titulo": "### La extensión Shapley para el cáncer con factores causales sinérgicos"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-22.md",
+    "linea": 849,
+    "titulo": "### 5. ¿Hay múltiples factores causales concurre ntes — se necesita Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-23.md",
+    "linea": 933,
+    "titulo": "### 5. ¿Hay múltiples sustancias adictivas concurrent es — se necesita Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-25.md",
+    "linea": 941,
+    "titulo": "### 5. ¿Hay múltiples empleador es con exposición acumulada — cómo se distribuye el R*?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-26.md",
+    "linea": 1007,
+    "titulo": "### 5. ¿Cuál es el D_total del daño sistémico — para los casos de fraude o datos incompleto s?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-26.md",
+    "linea": 1017,
+    "titulo": "### 6. ¿El estudio fue realizado en una población de alta vulnerabili dad estructural — hay fraude annona"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-29.md",
+    "linea": 505,
+    "titulo": "### intervención. La política educativa que no calcula esa distribución antes de diseñar los instrumentos de rendición de cuentas produce inevitablemente inversión causal."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-29.md",
+    "linea": 933,
+    "titulo": "### 1. ¿El caso es de responsabi lidad individual del docente o de fraude annona del sistema de evaluación ?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-29.md",
+    "linea": 981,
+    "titulo": "### 4. ¿El sistema de evaluación produce la inversión causal — cuál es el Hijo dominante del formulado r?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-30.md",
+    "linea": 1089,
+    "titulo": "### 4. ¿El sistema de evaluación produce el Fobos sistémico — cuál es el Hijo del formulador?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-30.md",
+    "linea": 1165,
+    "titulo": "### 6. ¿El formulador"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-32.md",
+    "linea": 1129,
+    "titulo": "### 4. ¿La institución tiene R* sobre el fraude"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-33.md",
+    "linea": 459,
+    "titulo": "### Los seis niveles de α_institución y el fraude annona educativo por negación del ajuste"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-41.md",
+    "linea": 1015,
+    "titulo": "### 6. ¿El D_sistémic o al mercado ESG es atribuible a esta organizació n o requiere Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-42.md",
+    "linea": 417,
+    "titulo": "### §4.2  El operador de herencia H y la posición heredada del sucesor institucional"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-42.md",
+    "linea": 923,
+    "titulo": "### 3. ¿Cuál es la Herencia de Beneficio — HB?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-45.md",
+    "linea": 597,
+    "titulo": "### Configuración 3 — Acción colectiva sin liderazgo identificable: el valor de Shapley en la responsabilidad difusa"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-45.md",
+    "linea": 873,
+    "titulo": "### 4. ¿La responsabi lidad es difusa — se requiere Shapley?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-46.md",
+    "linea": 475,
+    "titulo": "### 2. ¿El CLPI fue adecuado — cuál es el α pre-intervención ?"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-52.md",
+    "linea": 19,
+    "titulo": "### manera que algunas comunidades asumen los D de la transición mientras otras capturan sus beneficios."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-59.md",
+    "linea": 227,
+    "titulo": "### §3.2  R* en clínica: el peso causal y las prioridades de intervención"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-63.md",
+    "linea": 91,
+    "titulo": "### §3.1  S del infractor individual y el tipo de intervención criminal"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-63.md",
+    "linea": 93,
+    "titulo": "### El índice S del infractor individual en el dominio criminológico es el predictor más importante del tipo de intervención que el sistema de justicia debe diseñar. S alto del"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-64.md",
+    "linea": 101,
+    "titulo": "### §3  El protocolo Shapley para emisiones históricas"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-64.md",
+    "linea": 157,
+    "titulo": "### §4  Aplicación del Shapley climático: distribución de la responsabilidad histórica"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-64.md",
+    "linea": 245,
+    "titulo": "### §4.1  La responsabilidad de las empresas de combustibles fósiles: el Shapley de emisiones de producto"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-66.md",
+    "linea": 71,
+    "titulo": "### §3  Contaminación puntual: el INCF del operador y la cadena casa matriz-filial-regulador"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-66.md",
+    "linea": 133,
+    "titulo": "### §4  Contaminación difusa: el Shapley en cuencas y acuíferos compartidos"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-68.md",
+    "linea": 83,
+    "titulo": "### §3  Dispute de autoría: el Shapley autoral en obras colectivas"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-72.md",
+    "linea": 319,
+    "titulo": "### hijos menores que presenciaron la violencia durante 18 meses y cuyo IDD es causalmente atribuible a esa exposición."
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-73.md",
+    "linea": 15,
+    "titulo": "### §1  El fraude annona social: el Estado como diseñador del campo de la exclusión"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-73.md",
+    "linea": 169,
+    "titulo": "### §4  El fraude annona social en las políticas de vivienda, educación y salud"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-74.md",
+    "linea": 15,
+    "titulo": "### §1  El Estado como tutor: el fraude annona del sistema de protección"
+  },
+  {
+    "fuente": "Paradigma/corpus/libros/taxonomia-general-de-aplicaciones/capitulo-75.md",
+    "linea": 225,
+    "titulo": "### §5  Caso resuelto — El desplazamiento climático de los SIDS: la responsabilidad diferida del Shapley climático"
+  },
+  {
+    "fuente": "Paradigma/documentacion/auditoria-s-sustituibilidad.md",
+    "linea": 1,
+    "titulo": "# AUD-S-001 — Auditoría MANT del índice de sustituibilidad S"
+  },
+  {
+    "fuente": "Paradigma/documentacion/auditoria-s-sustituibilidad.md",
+    "linea": 144,
+    "titulo": "## 8. El cálculo — índice aplicado de tres criterios"
+  },
+  {
+    "fuente": "Paradigma/documentacion/precision-histos-prometeo-rstar.md",
+    "linea": 105,
+    "titulo": "### Capa B — sustituibilidad `S_P`"
+  },
+  {
+    "fuente": "Paradigma/documentacion/precision-histos-prometeo-rstar.md",
+    "linea": 277,
+    "titulo": "## 15. Fórmula de cierre"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-alpha.md",
+    "linea": 1,
+    "titulo": "# Resolución MANT — α, coeficiente de asunción"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-alpha.md",
+    "linea": 361,
+    "titulo": "## 16. Fórmula de recuperación corta"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 1,
+    "titulo": "# Resolución MANT — Δ_B, beneficio derivado del daño y reversión"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 55,
+    "titulo": "## 3. Daño y beneficio son distribuciones causales distintas"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 86,
+    "titulo": "## 4. Beneficio total"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 105,
+    "titulo": "## 5. Beneficio correspondiente a cada nodo"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 129,
+    "titulo": "## 6. Beneficio revertido"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 158,
+    "titulo": "## 7. Fórmula absoluta de Δ_B"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-deltab.md",
+    "linea": 174,
+    "titulo": "## 8. Fórmula normalizada"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-histos-prometeo.md",
+    "linea": 290,
+    "titulo": "## 9. Contaminación temporal por intervención"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-rstar.md",
+    "linea": 1,
+    "titulo": "# RES-RSTAR-001 — Resolución MANT vigente para R* y el operador de responsabilidad"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-rstar.md",
+    "linea": 46,
+    "titulo": "## 2. Genealogía desde la fórmula del ego"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-rstar.md",
+    "linea": 206,
+    "titulo": "## 8. Operador espectral de responsabilidad"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-rstar.md",
+    "linea": 495,
+    "titulo": "## 20. Fórmula vigente de R*"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-sdo-prometeo.md",
+    "linea": 309,
+    "titulo": "## 9. R* no es palanca de intervención"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-sdo-prometeo.md",
+    "linea": 389,
+    "titulo": "## 12. α_T es un índice local propuesto, no α formal ya calibrado"
+  },
+  {
+    "fuente": "Paradigma/documentacion/resolucion-sdo-prometeo.md",
+    "linea": 650,
+    "titulo": "## 21. Fórmula de lectura breve"
+  },
+  {
+    "fuente": "Paradigma/documentacion/segunda-edicion/2E-RSTAR-001.md",
+    "linea": 45,
+    "titulo": "## 2. Fórmula vigente"
+  },
+  {
+    "fuente": "Paradigma/documentacion/segunda-edicion/2E-RSTAR-001.md",
+    "linea": 348,
+    "titulo": "## 16. Fórmula editorial de referencia"
+  },
+  {
+    "fuente": "Paradigma/documentacion/segunda-edicion/2E-S-001.md",
+    "linea": 40,
+    "titulo": "## 3. Fórmulas históricas que no pueden trasladarse intactas"
+  },
+  {
+    "fuente": "Paradigma/documentacion/segunda-edicion/2E-S-001.md",
+    "linea": 85,
+    "titulo": "## 5. Requisitos mínimos de una nueva fórmula"
+  },
+  {
+    "fuente": "Paradigma/documentacion/validacion-candidato-rstar.md",
+    "linea": 12,
+    "titulo": "## 1. Fórmulas sometidas a prueba"
+  },
+  {
+    "fuente": "ideas/Especificacion_conceptual_del_calculador_de_metrologia_causal.md",
+    "linea": 336,
+    "titulo": "## X. Causalidad acumulativa y Shapley"
+  },
+  {
+    "fuente": "ideas/Especificacion_conceptual_del_calculador_de_metrologia_causal.md",
+    "linea": 506,
+    "titulo": "## Fórmula de bolsillo"
+  },
+  {
+    "fuente": "ideas/Postulado_de_clausura_causal_por_evento_determinado.md",
+    "linea": 58,
+    "titulo": "# III. Separación entre grafo causal completo y operador metrológico"
+  },
+  {
+    "fuente": "ideas/Postulado_de_clausura_causal_por_evento_determinado.md",
+    "linea": 285,
+    "titulo": "## Fórmula de bolsillo"
+  },
+  {
+    "fuente": "ideas/Postulado_del_cero_epistemico_y_limite_ontologico_de_la_matriz_causal.md",
+    "linea": 364,
+    "titulo": "# VIII. Robustez frente a la regularización"
+  }
+]

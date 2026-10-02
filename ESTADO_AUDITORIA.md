@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 5
+- Bloque activo: Auditoría 6
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -45,11 +45,11 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_OPERADORES_COMPLEMENTARIOS.md. — `7727975017a963a30e9ab0e7e5417cd653116370`
 
 ## Auditoría 5 — Robustez y sensibilidad
-- [ ] min/central/max.
-- [ ] A/B/C/D.
-- [ ] empates y frontera de 10 puntos.
-- [ ] sensibilidad extendida.
-- [ ] Crear AUDITORIA_ROBUSTEZ_SENSIBILIDAD.md.
+- [x] min/central/max. — `1dbcd6931533390bb3b9c00b08059593651bf07c`
+- [x] A/B/C/D. — `1dbcd6931533390bb3b9c00b08059593651bf07c`
+- [x] empates y frontera de 10 puntos. — `1dbcd6931533390bb3b9c00b08059593651bf07c`
+- [x] sensibilidad extendida. — `1dbcd6931533390bb3b9c00b08059593651bf07c`
+- [x] Crear AUDITORIA_ROBUSTEZ_SENSIBILIDAD.md. — `1dbcd6931533390bb3b9c00b08059593651bf07c`
 
 ## Auditoría 6 — Cobertura de operadores
 - [ ] Inventariar operadores del corpus.
@@ -118,3 +118,5 @@ Ninguna al inicio.
 - `9aa282fab7dbed9c6143c121143fcbb8a6c84439` — auditoría 3.
 
 - `7727975017a963a30e9ab0e7e5417cd653116370` — auditoría 4.
+
+- `1dbcd6931533390bb3b9c00b08059593651bf07c` — auditoría 5.
