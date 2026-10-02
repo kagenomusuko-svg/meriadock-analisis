@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 3
+- Bloque activo: Auditoría 4
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -30,11 +30,11 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_RSTAR_PERRON_FROBENIUS.md. — `5339c8b97988e760e20b234b36801f69f08a7a48`
 
 ## Auditoría 3 — Operadores derivados
-- [ ] S.
-- [ ] R*_neta.
-- [ ] alpha.
-- [ ] Delta.
-- [ ] Crear AUDITORIA_OPERADORES_DERIVADOS.md.
+- [x] S. — `9aa282fab7dbed9c6143c121143fcbb8a6c84439`
+- [x] R*_neta. — `9aa282fab7dbed9c6143c121143fcbb8a6c84439`
+- [x] alpha. — `9aa282fab7dbed9c6143c121143fcbb8a6c84439`
+- [x] Delta. — `9aa282fab7dbed9c6143c121143fcbb8a6c84439`
+- [x] Crear AUDITORIA_OPERADORES_DERIVADOS.md. — `9aa282fab7dbed9c6143c121143fcbb8a6c84439`
 
 ## Auditoría 4 — Operadores complementarios
 - [ ] IIC.
@@ -114,3 +114,5 @@ Ninguna al inicio.
 - `9a9690c07dec09035c98f00bdd464fafbe5999e0` — base y arquitectura.
 - `5339c8b97988e760e20b234b36801f69f08a7a48` — PF, casos de fuente y escala; 35 tests pasan.
 
+
+- `9aa282fab7dbed9c6143c121143fcbb8a6c84439` — auditoría 3.
