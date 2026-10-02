@@ -6,7 +6,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 
 - Estado: AUDITORÍA INDEPENDIENTE CERRADA — NO_ACEPTADO
 - Bloque activo: ninguno; todos los productos de auditoría comiteados
-- Próxima tarea: decisión del autor sobre I_inv; correcciones sólo bajo una orden posterior
+- Próxima tarea: correcciones post-auditoría sólo bajo una orden posterior; I_inv ya fue resuelto doctrinalmente
 
 ## Preparación
 - [x] Fijar commit exacto de main. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
@@ -108,7 +108,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 
 ## Decisiones pendientes
 
-I_inv: fórmula/interpretación/monotonicidad incompatibles; fichero DECISION_PENDIENTE_AUDITORIA_I_INV.md. Sólo afecta a operador futuro, no detiene bloques independientes.
+Ninguna. I_inv quedó resuelto en `RESOLUCION_AUDITORIA_I_INV.md`: se conserva \(I_{inv}=|\Delta(D)|/|\Delta(E)|\), definido como brecha del diseñador por unidad de exceso del ejecutor.
 
 ## Historial de commits
 
@@ -142,4 +142,4 @@ I_inv: fórmula/interpretación/monotonicidad incompatibles; fichero DECISION_PE
 
 Todos los productos se marcaron cerrados después de su commit. El SHA del producto final es cab523879bc41c337f51cb9552b313f09545fec4; este commit de estado lo sucede. La comparación remota completa respecto a baseline contiene 47 archivos documentales/de auditoría/pruebas y cero archivos de runtime modificados. Las 34 huellas de runtime coinciden localmente. Evidencia: auditoria/evidencia/conservacion-runtime.json.
 
-CI verificado: run37071552089, SHAce327f74, 44/44 y build/UI correctos; producción READY en ese SHA. Los productos posteriores son sólo documentales/diagnósticos, con runtime idéntico. La decisión I_inv sigue abierta y documentada; no queda trabajo de auditoría independiente pendiente ni se ejecutó el plan correctivo.
+CI verificado: run37071552089, SHAce327f74, 44/44 y build/UI correctos; producción READY en ese SHA. Los productos posteriores son sólo documentales/diagnósticos, con runtime idéntico. La decisión I_inv fue resuelta posteriormente y quedó documentada en `RESOLUCION_AUDITORIA_I_INV.md`; no queda trabajo de auditoría independiente pendiente ni se ejecutó el plan correctivo.
