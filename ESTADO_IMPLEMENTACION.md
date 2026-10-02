@@ -6,23 +6,23 @@ Regla: una tarea sólo puede marcarse [x] cuando su implementación y pruebas co
 
 ## Último punto seguro
 
-- Estado: NO INICIADO
-- Último commit de implementación: —
-- Bloque activo: Bloque 1
-- Próxima tarea: establecer baseline
+- Estado: EN EJECUCIÓN
+- Último commit de implementación: 5583296
+- Bloque activo: Bloque 2
+- Próxima tarea: separar D y el modelo estructurado
 
 ---
 
 ## Bloque 1 — Ejecutable sin servicios externos
 
-- [ ] Registrar baseline de dependencias, rutas y build.
-- [ ] Retirar autenticación y dependencia obligatoria de Supabase.
-- [ ] Hacer que / abra o redirija a /constructor.
-- [ ] Retirar Anthropic y APIs generativas.
-- [ ] Eliminar imports y dependencias huérfanas.
-- [ ] Verificar instalación limpia.
-- [ ] Verificar tests de humo.
-- [ ] Verificar build sin API keys ni variables Supabase.
+- [x] Registrar baseline de dependencias, rutas y build. — `5583296`
+- [x] Retirar autenticación y dependencia obligatoria de Supabase. — `5583296`
+- [x] Hacer que / abra o redirija a /constructor. — `5583296`
+- [x] Retirar Anthropic y APIs generativas. — `5583296`
+- [x] Eliminar imports y dependencias huérfanas. — `5583296`
+- [x] Verificar instalación limpia. — `5583296`
+- [x] Verificar tests de humo. — `5583296`
+- [x] Verificar build sin API keys ni variables Supabase. — `5583296`
 
 ## Bloque 2 — Modelo causal y evento determinado
 
@@ -139,4 +139,5 @@ Ninguna registrada.
 
 ## Historial de commits de implementación
 
-Se añadirá una línea por commit conforme avance Work.
+- `5583296` — Bloque 1: instalación limpia, humo y build verdes; sin servicios externos.
+
