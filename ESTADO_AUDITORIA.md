@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 7
+- Bloque activo: Auditoría 8
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -58,10 +58,10 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear INVENTARIO_OPERADORES_Y_COBERTURA.md. — `c513c784bf12082883a79c7f963840669c3cd767`
 
 ## Auditoría 7 — Frontera taxonómica
-- [ ] taxonomiaVersion, registry y loader.
-- [ ] hardcodes.
-- [ ] clasificación universal/piloto/deuda.
-- [ ] Crear AUDITORIA_FRONTERA_TAXONOMICA.md.
+- [x] taxonomiaVersion, registry y loader. — `45d99f03f43c6b690afb9aef0e8bebfdc459530f`
+- [x] hardcodes. — `45d99f03f43c6b690afb9aef0e8bebfdc459530f`
+- [x] clasificación universal/piloto/deuda. — `45d99f03f43c6b690afb9aef0e8bebfdc459530f`
+- [x] Crear AUDITORIA_FRONTERA_TAXONOMICA.md. — `45d99f03f43c6b690afb9aef0e8bebfdc459530f`
 
 ## Auditoría 8 — UI y semántica
 - [ ] Recorrer pantallas.
@@ -122,3 +122,5 @@ Ninguna al inicio.
 - `1dbcd6931533390bb3b9c00b08059593651bf07c` — auditoría 5.
 
 - `c513c784bf12082883a79c7f963840669c3cd767` — auditoría 6.
+
+- `45d99f03f43c6b690afb9aef0e8bebfdc459530f` — auditoría 7.

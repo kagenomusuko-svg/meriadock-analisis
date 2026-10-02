@@ -1,0 +1,18 @@
+{
+  "url": "https://meriadock-analisis.vercel.app/constructor",
+  "estado": "- 'heading \"Application error: a client-side exception has occurred (see the browser console for more information).\" [level=2]'\n- alert",
+  "errores": [
+    {
+      "level": "error",
+      "message": "Error: Relación duplicada: conserva múltiples soportes en una sola relación sin sumar pesos automáticamente\n    at crearAnalisis (https://meriadock-analisis.vercel.app/_next/static/chunks/621.f4487c28e5d59827.js:1:27620)\n    at mensajesAnalisis (https://meriadock-analisis.vercel.app/_next/static/chunks/621.f4487c28e5d59827.js:1:26268)\n    at b (https://meriadock-analisis.vercel.app/_next/static/chunks/621.f4487c28e5d59827.js:1:1911)\n    at ad (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:58495)\n    at ud (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:72825)\n    at i (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:120357)\n    at oO (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:99113)\n    at https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:98980\n    at oF (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:98987)\n    at ox (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:95739)",
+      "timestamp": "2026-10-02T21:53:45.484Z",
+      "url": "https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js"
+    },
+    {
+      "level": "error",
+      "message": "Error: Relación duplicada: conserva múltiples soportes en una sola relación sin sumar pesos automáticamente\n    at crearAnalisis (https://meriadock-analisis.vercel.app/_next/static/chunks/621.f4487c28e5d59827.js:1:27620)\n    at mensajesAnalisis (https://meriadock-analisis.vercel.app/_next/static/chunks/621.f4487c28e5d59827.js:1:26268)\n    at b (https://meriadock-analisis.vercel.app/_next/static/chunks/621.f4487c28e5d59827.js:1:1911)\n    at ad (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:58495)\n    at ud (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:72825)\n    at i (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:120357)\n    at oO (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:99113)\n    at https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:98980\n    at oF (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:98987)\n    at ox (https://meriadock-analisis.vercel.app/_next/static/chunks/framework-64ad27b21261a9ce.js:1:95739)",
+      "timestamp": "2026-10-02T21:53:45.485Z",
+      "url": "https://meriadock-analisis.vercel.app/_next/static/chunks/main-4b423ec82b590a3f.js"
+    }
+  ]
+}
