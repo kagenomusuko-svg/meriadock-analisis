@@ -77,3 +77,16 @@ No se verificaron empíricamente los hechos de los casos ni se realizó una demo
 ## 12. Conclusión de aceptación
 
 **NO_ACEPTADO.** Conservar el runtime durante la auditoría permitió mantener evidencia de los fallos. PLAN_CORRECCION_POST_AUDITORIA ordena trabajos por dependencia/severidad, sin ejecutarlos. ESTADO_AUDITORIA registra SHA por producto comiteado y cierra la revisión independiente. I_inv permanece como decisión explícita. No queda ninguna fila SIN_REVISAR ni discrepancia sin severidad.
+
+
+## Addendum posterior — resolución de I_inv
+
+El autor resolvió el conflicto doctrinal pendiente. Se conserva:
+
+[
+I_{inv}=rac{|Delta_{diseñador}|}{|Delta_{ejecutor}|}
+]
+
+como brecha del diseñador por unidad de exceso del ejecutor. En consecuencia, la interpretación histórica de (I_{inv}>1) y la monotonicidad positiva respecto del denominador deben corregirse. Véase `RESOLUCION_AUDITORIA_I_INV.md`.
+
+Esta resolución no altera la conclusión NO_ACEPTADO de la auditoría, sustentada en los hallazgos P1/P2 del runtime y la trazabilidad.
