@@ -1,0 +1,564 @@
+{
+  "fechaUTC": "2026-10-02T21:50:38.911Z",
+  "node": "v24.19.0",
+  "escala": [
+    {
+      "n": 1,
+      "aristas": 1,
+      "tiempoMs": 0.8650470000000041,
+      "heapDelta": 71560,
+      "rss": 41938944,
+      "iteraciones": 1,
+      "residuo": 0,
+      "estado": "calculado",
+      "suma": 1,
+      "entradaJSONBytes": 198,
+      "sinMatrizDensa": true,
+      "rondas": 2
+    },
+    {
+      "n": 2,
+      "aristas": 4,
+      "tiempoMs": 0.3356470000000087,
+      "heapDelta": 117728,
+      "rss": 42070016,
+      "iteraciones": 22,
+      "residuo": 4.43972636432477e-11,
+      "estado": "calculado",
+      "suma": 1,
+      "entradaJSONBytes": 380,
+      "sinMatrizDensa": true,
+      "rondas": 23
+    },
+    {
+      "n": 10,
+      "aristas": 20,
+      "tiempoMs": 3.357776000000001,
+      "heapDelta": 1525600,
+      "rss": 45084672,
+      "iteraciones": 457,
+      "residuo": 1.3998575909557331e-10,
+      "estado": "calculado",
+      "suma": 1.0000000000000002,
+      "entradaJSONBytes": 1372,
+      "sinMatrizDensa": true,
+      "rondas": 458
+    },
+    {
+      "n": 100,
+      "aristas": 200,
+      "tiempoMs": 8.63957099999999,
+      "heapDelta": 2317624,
+      "rss": 53899264,
+      "iteraciones": 1000,
+      "residuo": 0.0004107848551654237,
+      "estado": "indeterminado",
+      "suma": null,
+      "entradaJSONBytes": 13134,
+      "sinMatrizDensa": true,
+      "rondas": 0
+    },
+    {
+      "n": 1000,
+      "aristas": 2000,
+      "tiempoMs": 44.4444,
+      "heapDelta": 4637224,
+      "rss": 54562816,
+      "iteraciones": 1000,
+      "residuo": 0.00005151609540488748,
+      "estado": "indeterminado",
+      "suma": null,
+      "entradaJSONBytes": 137051,
+      "sinMatrizDensa": true,
+      "rondas": 0
+    },
+    {
+      "n": 10000,
+      "aristas": 20000,
+      "tiempoMs": 434.53175899999997,
+      "heapDelta": 29869040,
+      "rss": 126128128,
+      "iteraciones": 1000,
+      "residuo": 0.000010357027608057085,
+      "estado": "indeterminado",
+      "suma": null,
+      "entradaJSONBytes": 1439194,
+      "sinMatrizDensa": true,
+      "rondas": 0
+    }
+  ],
+  "casos": {
+    "canonica": {
+      "estado": "calculado",
+      "vector": [
+        0.7999999999650754,
+        0.2000000000349246
+      ],
+      "rho": 1,
+      "iteraciones": 33,
+      "residuo": 3.492464650811655e-11,
+      "error": 6.984918199393064e-11,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1
+      },
+      "condicionesSuficientes": true
+    },
+    "diagonal": {
+      "estado": "calculado",
+      "vector": [
+        0.9999999999708962,
+        2.910383045588667e-11
+      ],
+      "rho": 0.9999999999854481,
+      "iteraciones": 35,
+      "residuo": 2.910383045588667e-11,
+      "error": 5.820766091092631e-11,
+      "diagnostico": {
+        "irreducible": false,
+        "primitiva": false,
+        "periodo": null
+      },
+      "condicionesSuficientes": false
+    },
+    "identidad": {
+      "estado": "calculado",
+      "vector": [
+        0.5,
+        0.5
+      ],
+      "rho": 1,
+      "iteraciones": 1,
+      "residuo": 0,
+      "error": 0,
+      "diagnostico": {
+        "irreducible": false,
+        "primitiva": false,
+        "periodo": null
+      },
+      "condicionesSuficientes": false
+    },
+    "periodicaEquilibrada": {
+      "estado": "calculado",
+      "vector": [
+        0.5,
+        0.5
+      ],
+      "rho": 1,
+      "iteraciones": 1,
+      "residuo": 0,
+      "error": 0,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": false,
+        "periodo": 2
+      },
+      "condicionesSuficientes": false
+    },
+    "periodicaDesequilibrada": {
+      "estado": "indeterminado",
+      "vector": null,
+      "rho": 1.5,
+      "iteraciones": 100,
+      "residuo": 0.5,
+      "error": 0.3333333333333333,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": false,
+        "periodo": 2
+      },
+      "condicionesSuficientes": false
+    },
+    "nula": {
+      "estado": "indeterminado",
+      "vector": null,
+      "rho": 0,
+      "iteraciones": 0,
+      "residuo": 0,
+      "error": null,
+      "diagnostico": {
+        "irreducible": false,
+        "primitiva": false,
+        "periodo": null
+      },
+      "condicionesSuficientes": false
+    },
+    "nilpotente": {
+      "estado": "indeterminado",
+      "vector": null,
+      "rho": 0,
+      "iteraciones": 1,
+      "residuo": 0,
+      "error": 1,
+      "diagnostico": {
+        "irreducible": false,
+        "primitiva": false,
+        "periodo": null
+      },
+      "condicionesSuficientes": false
+    },
+    "unNodo": {
+      "estado": "calculado",
+      "vector": [
+        1
+      ],
+      "rho": 0.4,
+      "iteraciones": 1,
+      "residuo": 0,
+      "error": 0,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1
+      },
+      "condicionesSuficientes": true
+    },
+    "unNodoNulo": {
+      "estado": "indeterminado",
+      "vector": null,
+      "rho": 0,
+      "iteraciones": 0,
+      "residuo": 0,
+      "error": null,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": false,
+        "periodo": 0
+      },
+      "condicionesSuficientes": false
+    }
+  },
+  "epsilon": [
+    {
+      "epsilon": 0.1,
+      "estado": "calculado",
+      "vector": [
+        0.9099019513585871,
+        0.09009804864141281
+      ],
+      "rho": 1.1099019513585873,
+      "iteraciones": 11,
+      "residuo": 1.4099971190617566e-12,
+      "error": 1.5649717632904014e-11,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1,
+        "porRegularizacion": true
+      },
+      "condicionesSuficientes": true
+    },
+    {
+      "epsilon": 0.01,
+      "estado": "calculado",
+      "vector": [
+        0.9900999900019911,
+        0.00990000999800885
+      ],
+      "rho": 1.0100999900019911,
+      "iteraciones": 7,
+      "residuo": 1.6790388523979516e-14,
+      "error": 1.6868988844676025e-12,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1,
+        "porRegularizacion": true
+      },
+      "condicionesSuficientes": true
+    },
+    {
+      "epsilon": 0.001,
+      "estado": "calculado",
+      "vector": [
+        0.9990009999989992,
+        0.0009990000010009843
+      ],
+      "rho": 1.001000999998999,
+      "iteraciones": 5,
+      "residuo": 1.87436871579294e-15,
+      "error": 1.974182753036735e-12,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1,
+        "porRegularizacion": true
+      },
+      "condicionesSuficientes": true
+    },
+    {
+      "epsilon": 0.0001,
+      "estado": "calculado",
+      "vector": [
+        0.9999000099999998,
+        0.00009999000000019988
+      ],
+      "rho": 1.00010001,
+      "iteraciones": 4,
+      "residuo": 9.989567766738316e-17,
+      "error": 1.9978792790064856e-12,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1,
+        "porRegularizacion": true
+      },
+      "condicionesSuficientes": true
+    },
+    {
+      "epsilon": 0.00001,
+      "estado": "calculado",
+      "vector": [
+        0.9999900000999999,
+        0.00000999990000000002
+      ],
+      "rho": 1.0000100001,
+      "iteraciones": 4,
+      "residuo": 1.0164395367051604e-20,
+      "error": 1.9990892350784523e-15,
+      "diagnostico": {
+        "irreducible": true,
+        "primitiva": true,
+        "periodo": 1,
+        "porRegularizacion": true
+      },
+      "condicionesSuficientes": true
+    }
+  ],
+  "cierreE0": "calculado",
+  "sinCierre": "indeterminado",
+  "idsRelacionDuplicadosAceptados": [
+    "0",
+    "0",
+    "2",
+    "3"
+  ],
+  "expedienteBeneficio": {
+    "unidadConservadaEnRespuesta": "MXN",
+    "unidadEnHTML": false,
+    "totalEnHTML": false
+  },
+  "empateSecundario": {
+    "estado": "calculado",
+    "nivel": "A",
+    "mismoLider": true,
+    "ordenEstable": true,
+    "brechaCentral": 0.3999999999999999,
+    "lideres": [
+      [
+        0
+      ],
+      [
+        0
+      ],
+      [
+        0
+      ]
+    ],
+    "rankings": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    "metodo": "Tres escenarios mínimo/central/máximo",
+    "descripcion": "Mismo líder y mismo orden en los tres escenarios."
+  },
+  "beneficiosConPerdida": {
+    "estado": "calculado",
+    "valor": [
+      {
+        "id": "a",
+        "nodo": "A",
+        "valor": -1,
+        "beneficioNeto": -10
+      },
+      {
+        "id": "b",
+        "nodo": "B",
+        "valor": 2,
+        "beneficioNeto": 20
+      }
+    ],
+    "total": 10,
+    "unidad": "MXN"
+  },
+  "overflowBeneficio": {
+    "estado": "calculado",
+    "valor": [
+      {
+        "id": "a",
+        "nodo": "A",
+        "valor": 0,
+        "beneficioNeto": 1e+308
+      },
+      {
+        "id": "b",
+        "nodo": "B",
+        "valor": 0,
+        "beneficioNeto": 1e+308
+      }
+    ],
+    "total": null,
+    "unidad": "MXN"
+  },
+  "overflowDanio": {
+    "unidad": "MXN",
+    "tInvertido": {
+      "monto": 1e+308
+    },
+    "tImpedido": {
+      "monto": 1e+308
+    },
+    "tTrayectoria": {
+      "monto": 0
+    },
+    "dTotal": null,
+    "dTotalMin": 1e+308,
+    "dTotalConservador": null
+  },
+  "alphaExterno": [
+    {
+      "codigo": "ERR_DELTA_SIN_ALPHA",
+      "nivel": "ERROR",
+      "operadores": [
+        "delta"
+      ],
+      "nodo": "a",
+      "texto": "Δ requiere una estrategia y un valor de α para este nodo."
+    },
+    {
+      "codigo": "ERR_DELTA_SIN_ALPHA",
+      "nivel": "ERROR",
+      "operadores": [
+        "delta"
+      ],
+      "nodo": "b",
+      "texto": "Δ requiere una estrategia y un valor de α para este nodo."
+    },
+    {
+      "codigo": "INFO_S_DISPONIBLE",
+      "nivel": "INFO",
+      "operadores": [
+        "s"
+      ],
+      "nodo": "a",
+      "texto": "Puedes discriminar los componentes de S."
+    },
+    {
+      "codigo": "INFO_S_DISPONIBLE",
+      "nivel": "INFO",
+      "operadores": [
+        "s"
+      ],
+      "nodo": "b",
+      "texto": "Puedes discriminar los componentes de S."
+    }
+  ],
+  "sinDatos": {
+    "s": {
+      "estado": "indeterminado",
+      "valor": [
+        {
+          "id": "a",
+          "valor": null,
+          "componentes": null,
+          "pesos": null
+        }
+      ],
+      "motivo": "Uno o más nodos carecen de insumos; resultados parciales conservados",
+      "dependencias": [],
+      "inputs": [
+        "componentes S por nodo"
+      ]
+    },
+    "alpha": {
+      "estado": "indeterminado",
+      "valor": [
+        {
+          "id": "a",
+          "valor": null,
+          "contrato": null
+        }
+      ],
+      "motivo": "Uno o más nodos carecen de insumos; resultados parciales conservados",
+      "dependencias": [],
+      "inputs": [
+        "estrategia α explícita por nodo"
+      ]
+    },
+    "iic": {
+      "estado": "indeterminado",
+      "valor": [
+        {
+          "id": "a",
+          "valor": null,
+          "insumos": null
+        }
+      ],
+      "motivo": "Uno o más nodos carecen de insumos; resultados parciales conservados",
+      "dependencias": [],
+      "inputs": [
+        "declarado",
+        "observado",
+        "coincidencias"
+      ]
+    },
+    "bStar": {
+      "estado": "indeterminado",
+      "valor": null,
+      "motivo": "Beneficios y unidad no declarados",
+      "dependencias": [],
+      "inputs": [
+        "beneficios",
+        "unidad"
+      ]
+    },
+    "dTotal": {
+      "estado": "indeterminado",
+      "valor": null,
+      "motivo": "Componentes de daño o unidad ausentes/incomparables",
+      "dependencias": [],
+      "inputs": [
+        "danio y unidades comparables"
+      ]
+    },
+    "rStar": {
+      "estado": "indeterminado",
+      "valor": null,
+      "motivo": "Sin contribuciones declaradas al cierre del fenómeno",
+      "dependencias": [],
+      "inputs": [
+        "nodosActivos",
+        "relacionesInternas",
+        "conexionesCierre"
+      ]
+    },
+    "fraudeAnnona": {
+      "estado": "indeterminado",
+      "valor": null,
+      "motivo": "Falta protocolo canónico versionado de intervención/prevención",
+      "dependencias": [
+        "rStar",
+        "alpha",
+        "iic"
+      ],
+      "inputs": [
+        "protocolo versionado",
+        "intervención/prevención"
+      ]
+    }
+  }
+}

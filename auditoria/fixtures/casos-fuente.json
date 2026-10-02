@@ -1,0 +1,389 @@
+[
+  {
+    "id": "PROM-BANCO",
+    "fuente": "El método Prometeo",
+    "seccion": "§3.3.2–3.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "B",
+      "R",
+      "A",
+      "P"
+    ],
+    "aristas": [
+      {
+        "origen": "B",
+        "destino": "P",
+        "min": 0.85,
+        "max": 0.95
+      },
+      {
+        "origen": "B",
+        "destino": "R",
+        "min": 0.6,
+        "max": 0.78
+      },
+      {
+        "origen": "B",
+        "destino": "A",
+        "min": 0.8,
+        "max": 0.92
+      },
+      {
+        "origen": "P",
+        "destino": "A",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "R",
+        "destino": "D",
+        "min": 0.62,
+        "max": 0.78
+      },
+      {
+        "origen": "A",
+        "destino": "D",
+        "min": 0.4,
+        "max": 0.58
+      },
+      {
+        "origen": "P",
+        "destino": "D",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "B",
+        "destino": "D",
+        "min": 0.72,
+        "max": 0.88
+      }
+    ],
+    "resultadoFuente": {
+      "B": 0.58,
+      "R": 0.113,
+      "A": 0.172,
+      "P": 0.135
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "PROM-DIRECTIVOS",
+    "fuente": "El método Prometeo",
+    "seccion": "§4.2.2–4.2.5",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "DG",
+      "DC",
+      "DR",
+      "DJ",
+      "P",
+      "A"
+    ],
+    "aristas": [
+      {
+        "origen": "DG",
+        "destino": "DC",
+        "min": 0.7,
+        "max": 0.85
+      },
+      {
+        "origen": "DG",
+        "destino": "DR",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "DC",
+        "destino": "P",
+        "min": 0.88,
+        "max": 0.96
+      },
+      {
+        "origen": "DC",
+        "destino": "A",
+        "min": 0.78,
+        "max": 0.9
+      },
+      {
+        "origen": "DR",
+        "destino": "D",
+        "min": 0.58,
+        "max": 0.74
+      },
+      {
+        "origen": "DJ",
+        "destino": "D",
+        "min": 0.3,
+        "max": 0.48
+      },
+      {
+        "origen": "P",
+        "destino": "A",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "A",
+        "destino": "D",
+        "min": 0.4,
+        "max": 0.58
+      }
+    ],
+    "resultadoFuente": {
+      "DG": 0.432,
+      "DC": 0.072,
+      "DR": 0.079,
+      "DJ": 0.281,
+      "A": 0.137
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "PROM-MEDICO",
+    "fuente": "El método Prometeo",
+    "seccion": "§4.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "V",
+      "H",
+      "R"
+    ],
+    "aristas": [
+      {
+        "origen": "V",
+        "destino": "D",
+        "min": 0.85,
+        "max": 0.96
+      },
+      {
+        "origen": "H",
+        "destino": "V",
+        "min": 0.2,
+        "max": 0.38
+      },
+      {
+        "origen": "R",
+        "destino": "D",
+        "min": 0.08,
+        "max": 0.22
+      }
+    ],
+    "resultadoFuente": {
+      "V": 0.687,
+      "H": 0.199,
+      "R": 0.114
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "PROM-PLANTA",
+    "fuente": "El método Prometeo",
+    "seccion": "§4.5",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "E",
+      "S",
+      "O"
+    ],
+    "aristas": [
+      {
+        "origen": "E",
+        "destino": "O",
+        "min": 0.62,
+        "max": 0.78
+      },
+      {
+        "origen": "E",
+        "destino": "S",
+        "min": 0.65,
+        "max": 0.8
+      },
+      {
+        "origen": "E",
+        "destino": "D",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "S",
+        "destino": "O",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "O",
+        "destino": "D",
+        "min": 0.45,
+        "max": 0.62
+      }
+    ],
+    "resultadoFuente": {
+      "E": 0.576,
+      "S": 0.109,
+      "O": 0.315
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "PROM-PLD",
+    "fuente": "El método Prometeo",
+    "seccion": "§6.3.2–6.4.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "K",
+      "CI",
+      "IM",
+      "V",
+      "M"
+    ],
+    "aristas": [
+      {
+        "origen": "K",
+        "destino": "CI",
+        "min": 0.5,
+        "max": 0.7
+      },
+      {
+        "origen": "K",
+        "destino": "IM",
+        "min": 0.42,
+        "max": 0.62
+      },
+      {
+        "origen": "K",
+        "destino": "V",
+        "min": 0.4,
+        "max": 0.6
+      },
+      {
+        "origen": "CI",
+        "destino": "D",
+        "min": 0.72,
+        "max": 0.88
+      },
+      {
+        "origen": "IM",
+        "destino": "D",
+        "min": 0.68,
+        "max": 0.82
+      },
+      {
+        "origen": "V",
+        "destino": "D",
+        "min": 0.55,
+        "max": 0.72
+      },
+      {
+        "origen": "M",
+        "destino": "D",
+        "min": 0.35,
+        "max": 0.52
+      }
+    ],
+    "resultadoFuente": {
+      "K": 0.358,
+      "CI": 0.163,
+      "IM": 0.133,
+      "V": 0.108,
+      "M": 0.239
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "PROM-MERIDIANO",
+    "fuente": "El método Prometeo",
+    "seccion": "§7.3–7.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "PM",
+      "CD",
+      "MC",
+      "SS"
+    ],
+    "aristas": [
+      {
+        "origen": "PM",
+        "destino": "D",
+        "min": 0.45,
+        "max": 0.8
+      },
+      {
+        "origen": "CD",
+        "destino": "D",
+        "min": 0.7,
+        "max": 0.88
+      },
+      {
+        "origen": "MC",
+        "destino": "D",
+        "min": 0.6,
+        "max": 0.79
+      },
+      {
+        "origen": "SS",
+        "destino": "D",
+        "min": 0.28,
+        "max": 0.48
+      }
+    ],
+    "resultadoFuente": {
+      "PM": 0.251,
+      "CD": 0.317,
+      "MC": 0.279,
+      "SS": 0.153
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "MCII-REFERENCIA",
+    "fuente": "Metrología Causal Vol II",
+    "seccion": "Ejemplo numérico de referencia, 4 nodos",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "nodos": [
+      "ND",
+      "E",
+      "S"
+    ],
+    "aristas": [
+      {
+        "origen": "ND",
+        "destino": "D",
+        "min": 0.35,
+        "max": 0.55
+      },
+      {
+        "origen": "E",
+        "destino": "D",
+        "min": 0.2,
+        "max": 0.4
+      },
+      {
+        "origen": "S",
+        "destino": "D",
+        "min": 0.1,
+        "max": 0.24
+      },
+      {
+        "origen": "ND",
+        "destino": "E",
+        "min": 0.4,
+        "max": 0.6
+      },
+      {
+        "origen": "S",
+        "destino": "E",
+        "min": 0.25,
+        "max": 0.45
+      }
+    ],
+    "resultadoFuente": {
+      "ND": 0.4812,
+      "E": 0.3104,
+      "S": 0.1521,
+      "Nf": 0.0563
+    },
+    "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  }
+]

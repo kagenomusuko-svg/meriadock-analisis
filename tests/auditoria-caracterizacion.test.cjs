@@ -1,0 +1,16 @@
+'use strict';
+// Estas pruebas fijan los defectos observados. No equivalen a aceptación doctrinal.
+const {test}=require('node:test'),a=require('node:assert/strict');
+const {calcularSolicitud}=require('../dist-motor/entrada');
+const {calcularRStar}=require('../dist-motor/r_estrella');
+const {calcularBStar}=require('../dist-motor/b_estrella');
+const {generarHTML}=require('../dist-motor/expediente');
+const {construirSolicitud}=require('../components/constructor/entrada');
+function modelo(){return {titulo:'Auditoría',pregunta:'P',fenomeno:{descripcion:'F'},eventoDeterminado:{id:'D'},nodosActivos:[{id:'a'},{id:'b'}],relacionesInternas:[['a','a',.9],['a','b',.4],['b','a',.1],['b','b',.6]].map(([origen,destino,v],i)=>({id:String(i),origen,destino,rango:{min:v,max:v}})),conexionesCierre:[{origen:'a',destino:'D',evidenciaNivel:0}]};}
+test('AUD-01 caracteriza: cierre E0 permite R* y no pondera b_D',()=>{const m=modelo();const r=calcularSolicitud({analisis:m,medicionesSolicitadas:['rStar']});a.equal(r.resultados.rStar.estado,'calculado');a.ok(Math.abs(r.rStar[0].valor-.8)<1e-9);m.conexionesCierre=[];a.equal(calcularSolicitud({analisis:m,medicionesSolicitadas:['rStar']}).resultados.rStar.estado,'indeterminado');});
+test('AUD-02 caracteriza: unidad y total B* se pierden en HTML',()=>{const r=calcularSolicitud({analisis:modelo(),medicionesSolicitadas:['bStar'],insumos:{beneficios:{unidad:'MXN',valores:[{id:'a',valor:30},{id:'b',valor:10}]}}});a.equal(r.resultados.bStar.unidad,'MXN');a.equal(r.resultados.bStar.total,40);const h=generarHTML(r);a.equal(h.replace(/data:image[^" ]+/g,'').includes('MXN'),false);a.equal(h.includes('"total": 40'),false);});
+test('AUD-03 caracteriza: insumos externos α no llegan al linter',()=>{const r=calcularSolicitud({analisis:modelo(),medicionesSolicitadas:['delta'],insumos:{insumosAlpha:[{id:'a',estrategia:'discriminado',valor:.1},{id:'b',estrategia:'discriminado',valor:.2}]}});a.equal(r.resultados.delta.estado,'calculado');a.equal(r.mensajes.filter(m=>m.codigo==='ERR_DELTA_SIN_ALPHA').length,2);});
+test('AUD-04 caracteriza overflow de suma B*: calculado y suma de cuotas cero',()=>{const r=calcularBStar([{id:'a'},{id:'b'}],{unidad:'u',valores:[{id:'a',valor:1e308},{id:'b',valor:1e308}]});a.equal(r.estado,'calculado');a.equal(r.total,Infinity);a.deepEqual(r.valor.map(x=>x.valor),[0,0]);});
+test('AUD-05 límite: PF periódico puede converger con arranque equilibrado sin garantía primitiva',()=>{const r=calcularRStar([[0,1],[1,0]]);a.equal(r.estado,'calculado');a.equal(r.diagnostico.periodo,2);a.equal(r.condicionesSuficientes,false);});
+test('AUD-06 ausencia, E0, S límites y determinismo repetido',()=>{const q={analisis:modelo(),medicionesSolicitadas:['rStar','delta','s']};a.deepEqual(calcularSolicitud(q),calcularSolicitud(q));a.equal(calcularSolicitud(q).resultados.delta.estado,'indeterminado');const {calcularS}=require('../dist-motor/sustituibilidad'),{calcularContribucionAtribuible:c}=require('../dist-motor/derivados');a.equal(c(.8,0),.8);a.equal(c(.8,1),0);a.equal(calcularS([0,0,0]),0);a.equal(calcularS([1,1,1]),1);});
+test('AUD-07 caracteriza: adaptador fija generico@1 sin atender selección/version externa',()=>{const q=construirSolicitud({nodos:[],relaciones:[],mediciones:[],taxonomiaVersion:'otro@2',dominio:'otro'});a.equal(q.analisis.taxonomiaVersion,'generico@1');});
