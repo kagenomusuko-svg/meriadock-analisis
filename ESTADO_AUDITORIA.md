@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 9
+- Bloque activo: Auditoría 10
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -70,9 +70,9 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_UI_SEMANTICA.md. — `6f7f8dd3117992d8d0b44c98bcd882d683744e02`
 
 ## Auditoría 9 — Expediente y trazabilidad
-- [ ] Verificar que expediente no recalcula.
-- [ ] Prueba diferencial UI/API/expediente/JSON.
-- [ ] Crear AUDITORIA_EXPEDIENTE_TRAZABILIDAD.md.
+- [x] Verificar que expediente no recalcula. — `55861219d44d5f2654187140f3e7ef4f2fa20fa1`
+- [x] Prueba diferencial UI/API/expediente/JSON. — `55861219d44d5f2654187140f3e7ef4f2fa20fa1`
+- [x] Crear AUDITORIA_EXPEDIENTE_TRAZABILIDAD.md. — `55861219d44d5f2654187140f3e7ef4f2fa20fa1`
 
 ## Auditoría 10 — Determinismo
 - [ ] Buscar aleatoriedad, defaults, null→0, fallbacks y desempates silenciosos.
@@ -126,3 +126,5 @@ Ninguna al inicio.
 - `45d99f03f43c6b690afb9aef0e8bebfdc459530f` — auditoría 7.
 
 - `6f7f8dd3117992d8d0b44c98bcd882d683744e02` — auditoría 8.
+
+- `55861219d44d5f2654187140f3e7ef4f2fa20fa1` — auditoría 9.

@@ -1,0 +1,6 @@
+components/chat/Constructor.jsx:59:    : (v * 100).toFixed(2) + "%";
+components/chat/Constructor.jsx:115:          id: crypto.randomUUID(),
+components/chat/Constructor.jsx:150:          id: crypto.randomUUID(),
+components/chat/Constructor.jsx:1019:                              ?.resultado?.valor?.toFixed(6) ?? "Indeterminado"}
+dist-motor/r_estrella.js:26:    sumaVector:convergio?r.reduce((s,x)=>s+x,0):null,top:convergio?r.map((valor,i)=>({id:W.ids[i],valor})).sort((a,b)=>b.valor-a.valor).slice(0,10):[],
+dist-motor/hipercubo.js:3:function ranking(vector){return vector.map((v,i)=>({v,i})).sort((a,b)=>b.v-a.v||a.i-b.i).map(x=>x.i);}
