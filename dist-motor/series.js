@@ -7,7 +7,7 @@ const definido=x=>x!==null&&x!==undefined;
 const salida=(valor,motivo)=>({estado:definido(valor)?'calculado':'indeterminado',valor,motivo:definido(valor)?null:motivo});
 const REGISTRY={
  rStar:{dependencias:[],inputs:['nodosActivos','relacionesInternas','conexionesCierre'],calcular:c=>{
-  if(!c.modelo.conexionesCierre.length)return salida(null,'Sin contribuciones declaradas al cierre del fenómeno');
+  if(!c.modelo.conexionesCierre.some(e=>e.estadoClausura==='declarado_valido'))return salida(null,'Clausura no acreditada o incompleta: declara nivel E1–E8 y rango válido del cierre; E0 no niega causalidad');
   c.escenarios=Object.fromEntries(['min','central','max'].map(k=>[k,calcularRStar(construirMatrizEmpirica(c.modelo,k),c.configuracion.pf)]));
   const r=c.escenarios.central;return {...salida(r.vector,r.motivo),auditoria:r};
  }},

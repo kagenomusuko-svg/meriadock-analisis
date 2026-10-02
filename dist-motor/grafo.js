@@ -5,7 +5,7 @@ function construirMatrizEmpirica(input, escenario='central') {
   if (!['min','central','max'].includes(escenario)) throw new Error('Escenario inválido');
   const modelo=crearAnalisis(input), ids=modelo.nodosActivos.map(n=>n.id), indice=Object.fromEntries(ids.map((id,i)=>[id,i]));
   const entradas=modelo.relacionesInternas.map(e=>{
-    const r=rangoRelacion(e), valor=escenario==='min'?r.min:escenario==='max'?r.max:(r.min+r.max)/2;
+    const r=rangoRelacion(e), valor=escenario==='min'?r.min:escenario==='max'?r.max:r.min/2+r.max/2;
     return {fila:indice[e.origen],columna:indice[e.destino],valor,relacion:e.id,evidenciaNivel:e.evidenciaNivel};
   });
   return {representacion:'sparse-aristas',n:ids.length,ids,entradas,escenario,convencion:'W_ij = w(N_i → N_j)',empirica:true};

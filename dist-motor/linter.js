@@ -16,7 +16,7 @@ const REGLAS=[
  {codigo:'WARN_MODO_NO_LOCALIZADO',nivel:'WARN',operadores:[],porNodo:true,test:(m,s,n)=>!!n.observacionModo&&!n.modo||n.modo==='indeterminado'&&!!n.observacionModo,texto:'Observación modal conservada sin localización definitiva; protocolo taxonómico pendiente.'}
 ];
 function mensajesAnalisis(input,solicitadas=[]){
- const m=crearAnalisis(input),s=new Set(solicitadas);
+ let m;try{m=crearAnalisis(input);}catch(e){return [{codigo:'ERR_ESTRUCTURA_INVALIDA',nivel:'ERROR',operadores:['rStar'],texto:e.message}];}const s=new Set(solicitadas);
  if(['rStarNeta','delta','ajusteDebitor','robustez','sensibilidadExtendida','fraudeAnnona'].some(x=>s.has(x)))s.add('rStar');
  return REGLAS.flatMap(r=>(r.porNodo?m.nodosActivos:r.porRelacion?[...m.relacionesInternas,...m.conexionesCierre]:[null]).filter(x=>r.test(m,s,x)).map(x=>({codigo:r.codigo,nivel:r.nivel,operadores:r.operadores,nodo:r.porNodo?x.id:undefined,relacion:r.porRelacion?x.id:undefined,texto:r.texto})));
 }

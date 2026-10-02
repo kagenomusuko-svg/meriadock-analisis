@@ -1,6 +1,7 @@
 const {test}=require('node:test');const a=require('node:assert/strict');
 const {calcularSolicitud}=require('../dist-motor/entrada'); const {calcularIIC}=require('../dist-motor/iic');const {calcularBStar}=require('../dist-motor/b_estrella');const {calcularDTotal}=require('../dist-motor/danio');const {determinarDeclaracion,sensibilidadExtendida}=require('../dist-motor/hipercubo');
 const model={nodos:[{id:'a',nombre:'A',tipo:'ejecucion',s:{componentes:[0,.4,.1]},alpha:{valor:.08,estrategia:'discriminado'}},{id:'b',nombre:'B',alpha:{valor:.03,estrategia:'discriminado'}},{id:'D',tipo:'final'}],aristas:[{origen:'a',destino:'a',pesoMin:.9,pesoMax:.9},{origen:'a',destino:'b',pesoMin:.4,pesoMax:.4},{origen:'b',destino:'a',pesoMin:.1,pesoMax:.1},{origen:'b',destino:'b',pesoMin:.6,pesoMax:.6},{origen:'a',destino:'D',pesoMin:1,pesoMax:1}]};
+model.aristas.forEach(e=>e.evidenciaNivel=1);
 const damage={unidad:'MXN',tInvertido:{monto:100},tImpedido:{monto:20},tTrayectoria:{montoEstimado:30}};
 test('API → PF/α/Δ/IIC/B*/D_total/AD, sin restricción por tipo',()=>{
  const r=calcularSolicitud({grafo:model,medicionesSolicitadas:['delta','rStarNeta','iic','bStar','ajusteDebitor','robustez'],nodosIIC:[{id:'a',declarado:['x','y'],observado:['x'],coincidencias:1}],danio:damage,beneficios:{unidad:'MXN',valores:[{id:'a',valor:30},{id:'b',valor:10}]}});

@@ -1,15 +1,15 @@
 'use strict';
 const {construirMatrizEmpirica}=require('./grafo');const {calcularRStar}=require('./r_estrella');const {rangoRelacion}=require('./modelo');
-function ranking(vector){return vector.map((v,i)=>({v,i})).sort((a,b)=>b.v-a.v||a.i-b.i).map(x=>x.i);}
+function ranking(vector){const grupos=[];for(const [i,v] of vector.entries()){const grupo=grupos.find(g=>g.valor===v);if(grupo)grupo.indices.push(i);else grupos.push({valor:v,indices:[i]});}return grupos.sort((a,b)=>b.valor-a.valor).map(g=>g.indices);}
 // Empates se registran, sin inventar un líder mediante el orden de los identificadores.
 function lideres(vector){const m=Math.max(...vector);return vector.flatMap((v,i)=>v===m?[i]:[]);}
 function determinarDeclaracion(escenarios){
  const v=['min','central','max'].map(k=>escenarios[k]?.vector);
  if(v.some(x=>!x))return {estado:'indeterminado',nivel:null,motivo:'Algún escenario no converge'};
  const l=v.map(lideres),rk=v.map(ranking),igual=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
- if(l.some(x=>x.length!==1))return {estado:'indeterminado',nivel:null,motivo:'Empate en el liderazgo: el protocolo no define desempate',lideres:l,rankings:rk};
+ if(rk.some(grupos=>grupos.some(g=>g.length>1)))return {estado:'indeterminado',nivel:null,motivo:'Empate en el ranking: el protocolo no adjudica desempate principal ni secundario',lideres:l,rankings:rk};
  const mismoLider=l.every(x=>igual(x,l[0])),ordenEstable=rk.every(x=>igual(x,rk[0]));
- const central=rk[1], brecha=v[1].length>1?v[1][central[0]]-v[1][central[1]]:1;
+ const central=rk[1].flat(), brecha=v[1].length>1?v[1][central[0]]-v[1][central[1]]:1;
  const superaDiezPuntos=v[1].length>1&&v[1][central[0]]>v[1][central[1]]+.10;
  const nivel=mismoLider?(ordenEstable?'A':'B'):(superaDiezPuntos?'C':'D');
  return {estado:'calculado',nivel,mismoLider,ordenEstable,brechaCentral:brecha,lideres:l,rankings:rk,metodo:'Tres escenarios mínimo/central/máximo',descripcion:{A:'Mismo líder y mismo orden en los tres escenarios.',B:'Mismo líder; cambia el orden secundario.',C:'Cambia el líder; brecha central mayor de 10 puntos porcentuales.',D:'Cambia el líder; brecha central no mayor de 10 puntos porcentuales.'}[nivel]};

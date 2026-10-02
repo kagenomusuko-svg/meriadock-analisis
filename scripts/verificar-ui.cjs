@@ -16,6 +16,10 @@ let browser,page;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.o
   for(const [origen,destino,peso] of [['A','A','.9'],['A','B','.4'],['B','A','.1'],['B','B','.6'],['A','D — Evento D','1']]){
    await page.getByLabel('Origen',{exact:true}).selectOption({label:origen});await page.getByLabel('Destino',{exact:true}).selectOption({label:destino});await page.getByLabel('Nivel aplicable discriminado por el analista').selectOption('1');await page.getByLabel('Peso mínimo').fill(peso);await page.getByLabel('Peso máximo').fill(peso);await page.getByRole('button',{name:'Agregar relación',exact:true}).click();
   }
+  // AU-03: errores esperados conservan borrador y no rompen render.
+  await page.getByLabel('Origen',{exact:true}).selectOption({label:'A'});await page.getByLabel('Destino',{exact:true}).selectOption({label:'A'});await page.getByLabel('Nivel aplicable discriminado por el analista').selectOption('1');await page.getByLabel('Peso mínimo').fill('.9');await page.getByLabel('Peso máximo').fill('.9');await page.getByRole('button',{name:'Agregar relación',exact:true}).click();await page.getByRole('alert').filter({hasText:'Relación duplicada'}).waitFor();assert.equal(await page.getByLabel('Peso mínimo').inputValue(),'.9');
+  await page.getByLabel('Peso mínimo').fill('-.9');await page.getByRole('button',{name:'Agregar relación',exact:true}).click();await page.getByRole('alert').filter({hasText:'rango no negativo'}).waitFor();
+  await page.getByLabel('Origen',{exact:true}).evaluate(el=>el.add(new Option('ID inválido','id_inexistente')));await page.getByLabel('Origen',{exact:true}).selectOption('id_inexistente');await page.getByLabel('Peso mínimo').fill('.9');await page.getByRole('button',{name:'Agregar relación',exact:true}).click();await page.getByRole('alert').filter({hasText:'Identificadores'}).waitFor();await page.getByLabel('Origen',{exact:true}).selectOption({label:'A'});
   await tab('Discriminaciones');
   for(const [name,alpha,s] of [['A','.08',['0','.4','.1']],['B','.03',['.5','.5','.7']]]){
    const card=page.locator('article').filter({has:page.getByRole('heading',{name,exact:true})});

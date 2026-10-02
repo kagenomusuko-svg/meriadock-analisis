@@ -136,12 +136,16 @@ export default function Constructor() {
       formC.evidenciaNivel !== "0" &&
       (formC.min === "" ||
         formC.max === "" ||
+        !Number.isFinite(Number(formC.min)) ||
+        !Number.isFinite(Number(formC.max)) ||
         Number(formC.min) < 0 ||
         Number(formC.max) < Number(formC.min))
     ) {
       setError("Declara un rango no negativo y ordenado.");
       return;
     }
+    if(!estado.nodos.some(n=>n.id===formC.origen)||!(formC.destino==='D'||estado.nodos.some(n=>n.id===formC.destino))){setError('Identificadores de origen o destino inválidos.');return;}
+    if(estado.relaciones.some(e=>e.origen===formC.origen&&e.destino===formC.destino)){setError('Relación duplicada: conserva múltiples soportes en una sola relación.');return;}
     editar({
       relaciones: [
         ...estado.relaciones,
