@@ -1,0 +1,269 @@
+{
+  "analisis": {
+    "version": "metrologia-causal/1",
+    "taxonomiaVersion": "generico@1",
+    "familia": "contabilidad_ontologica",
+    "dominio": "Auditoría sintética",
+    "titulo": "AUD-W02-PRODUCCION",
+    "pregunta": "¿Se conserva el cálculo entre capas?",
+    "fenomeno": {
+      "descripcion": "Fixture sintético PF, sin hechos reales"
+    },
+    "eventoDeterminado": {
+      "id": "D",
+      "nombre": "D sintético",
+      "descripcion": "D sintético"
+    },
+    "nodosActivos": [
+      {
+        "id": "a",
+        "nombre": "A",
+        "componentesS": [
+          "0",
+          ".4",
+          ".1"
+        ],
+        "estrategiaAlpha": "discriminado",
+        "alphaValor": ".08",
+        "declarado": "x\ny",
+        "observado": "x",
+        "coincidencias": "1",
+        "beneficio": "30",
+        "tipo": "indeterminado",
+        "modo": "indeterminado",
+        "s": {
+          "componentes": [
+            0,
+            0.4,
+            0.1
+          ]
+        },
+        "alpha": {
+          "estrategia": "discriminado",
+          "valor": 0.08,
+          "montoEfectivamenteAsumido": null,
+          "baseComparativa": null,
+          "soportes": []
+        },
+        "iic": {
+          "declarado": [
+            "x",
+            "y"
+          ],
+          "observado": [
+            "x"
+          ],
+          "coincidencias": 1
+        },
+        "soportes": []
+      },
+      {
+        "id": "b",
+        "nombre": "B",
+        "componentesS": [
+          ".5",
+          ".5",
+          ".7"
+        ],
+        "estrategiaAlpha": "discriminado",
+        "alphaValor": ".03",
+        "declarado": "x\ny",
+        "observado": "x",
+        "coincidencias": "1",
+        "beneficio": "10",
+        "tipo": "indeterminado",
+        "modo": "indeterminado",
+        "s": {
+          "componentes": [
+            0.5,
+            0.5,
+            0.7
+          ]
+        },
+        "alpha": {
+          "estrategia": "discriminado",
+          "valor": 0.03,
+          "montoEfectivamenteAsumido": null,
+          "baseComparativa": null,
+          "soportes": []
+        },
+        "iic": {
+          "declarado": [
+            "x",
+            "y"
+          ],
+          "observado": [
+            "x"
+          ],
+          "coincidencias": 1
+        },
+        "soportes": []
+      }
+    ],
+    "relacionesInternas": [
+      {
+        "id": "0",
+        "origen": "a",
+        "destino": "a",
+        "evidenciaNivel": 1,
+        "min": ".9",
+        "max": ".9",
+        "rango": {
+          "min": 0.9,
+          "max": 0.9
+        },
+        "soportes": []
+      },
+      {
+        "id": "1",
+        "origen": "a",
+        "destino": "b",
+        "evidenciaNivel": 1,
+        "min": ".4",
+        "max": ".4",
+        "rango": {
+          "min": 0.4,
+          "max": 0.4
+        },
+        "soportes": []
+      },
+      {
+        "id": "2",
+        "origen": "b",
+        "destino": "a",
+        "evidenciaNivel": 1,
+        "min": ".1",
+        "max": ".1",
+        "rango": {
+          "min": 0.1,
+          "max": 0.1
+        },
+        "soportes": []
+      },
+      {
+        "id": "3",
+        "origen": "b",
+        "destino": "b",
+        "evidenciaNivel": 1,
+        "min": ".6",
+        "max": ".6",
+        "rango": {
+          "min": 0.6,
+          "max": 0.6
+        },
+        "soportes": []
+      }
+    ],
+    "conexionesCierre": [
+      {
+        "id": "4",
+        "origen": "a",
+        "destino": "D",
+        "evidenciaNivel": 1,
+        "min": "1",
+        "max": "1",
+        "rango": {
+          "min": 1,
+          "max": 1
+        },
+        "soportes": []
+      }
+    ],
+    "medicionesSolicitadas": [
+      "rStar",
+      "s",
+      "rStarNeta",
+      "alpha",
+      "delta",
+      "iic",
+      "bStar",
+      "dTotal",
+      "ajusteDebitor",
+      "robustez"
+    ]
+  },
+  "medicionesSolicitadas": [
+    "rStar",
+    "s",
+    "rStarNeta",
+    "alpha",
+    "delta",
+    "iic",
+    "bStar",
+    "dTotal",
+    "ajusteDebitor",
+    "robustez"
+  ],
+  "insumos": {
+    "nodosIIC": [
+      {
+        "id": "a",
+        "declarado": [
+          "x",
+          "y"
+        ],
+        "observado": [
+          "x"
+        ],
+        "coincidencias": 1
+      },
+      {
+        "id": "b",
+        "declarado": [
+          "x",
+          "y"
+        ],
+        "observado": [
+          "x"
+        ],
+        "coincidencias": 1
+      }
+    ],
+    "insumosAlpha": [
+      {
+        "id": "a",
+        "estrategia": "discriminado",
+        "valor": 0.08,
+        "montoEfectivamenteAsumido": null,
+        "baseComparativa": null,
+        "soportes": []
+      },
+      {
+        "id": "b",
+        "estrategia": "discriminado",
+        "valor": 0.03,
+        "montoEfectivamenteAsumido": null,
+        "baseComparativa": null,
+        "soportes": []
+      }
+    ],
+    "beneficios": {
+      "unidad": "MXN",
+      "valores": [
+        {
+          "id": "a",
+          "valor": 30
+        },
+        {
+          "id": "b",
+          "valor": 10
+        }
+      ]
+    },
+    "danio": {
+      "unidad": "MXN",
+      "tInvertido": {
+        "monto": 100
+      },
+      "tImpedido": {
+        "monto": 20
+      },
+      "tTrayectoria": {
+        "montoEstimado": 30
+      }
+    }
+  },
+  "configuracion": {
+    "pf": {}
+  }
+}
