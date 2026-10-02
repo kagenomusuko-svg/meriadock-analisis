@@ -1,40 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Meriadock — Calculador de Metrología causal
 
-## Getting Started
+Humano discrimina → programa orienta y valida → motor calcula → expediente explicita.
 
-First, run the development server:
+Aplicación Next.js con acceso directo a `/constructor`. No necesita login, Supabase, API keys ni modelos generativos. El texto libre permanece descriptivo; no se interpreta automáticamente.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Verificación
+
+```sh
+npm ci
+npm test
+npm run build
+npx playwright install --with-deps chromium
+npm run test:ui
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+GitHub Actions ejecuta instalación limpia, pruebas canónicas, build con lint y tipos y el recorrido en navegador hasta descargar el expediente. `npm run dev` inicia desarrollo.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Contrato
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+`POST /api/calcular` recibe `analisis`, `medicionesSolicitadas`, `insumos` y `configuracion`. Los operadores solicitados resuelven sus dependencias; los demás no son obligatorios. Los faltantes no se sustituyen por cero.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+D se almacena en `eventoDeterminado`; `nodosActivos` y `relacionesInternas` construyen W, y `conexionesCierre` conservan aportes descriptivos hacia D. Convención: W_ij = w(N_i → N_j), eigenvector derecho W R* = ρR*, norma L1.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+R* calcula escenarios mínimo, central y máximo por iteración de potencia sparse. El resultado incluye diagnósticos, error, residuo, eigenvalor, matrices separadas y rondas adaptativas. La regularización requiere ε y K explícitos. No hay normalización por origen/destino ni fallback uniforme.
 
-## Learn More
+S agrega componentes discriminados. α requiere estrategia explícita. IIC, B*, daño y AD conservan insumos y unidades. Robustez usa el árbol de tres escenarios. La sensibilidad extendida requiere método explícito.
 
-To learn more about Next.js, take a look at the following resources:
+`/api/expediente` y `/api/narrativa` reciben el mismo objeto `resultado` calculado. El expediente muestra la auditoría del motor sin reconstruir W; la narrativa usa plantillas deterministas. El constructor invalida resultados al editar entradas.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`taxonomia/protocolos.js` ofrece contrato, registry, versiones y cargador JSON. El protocolo genérico sólo contiene los componentes S autorizados. Las escalas históricas permanecen en `dist-motor/escalas.js`, marcadas legacy y sin imports en el núcleo.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Gobierno
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- `ESTADO_IMPLEMENTACION.md`: tablero y último punto seguro.
+- `ORDEN_WORK_01_EJECUCION_AUTONOMA.md`: mandato.
+- `INSTRUCCIONES_WORK_IMPLEMENTACION_METROLOGIA_CAUSAL.md` y `AUDITORIA_DEUDAS_IMPLEMENTACION.md`: fuentes de implementación.
+- `LIMITES_TECNICOS.md`: presupuestos y evidencia de verificación.
+- `DECISION_PENDIENTE_EMPATES_ROBUSTEZ.md`: decisión del autor que queda abierta.

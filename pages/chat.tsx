@@ -1,8 +1,2 @@
-import { useEffect } from 'react'
-import { useRouter } from 'next/router'
-
-export default function Chat() {
-  const router = useRouter()
-  useEffect(() => { router.replace('/constructor') }, [])
-  return null
-}
+export default function Chat() { return null }
+export function getServerSideProps() { return { redirect: { destination: "/constructor", permanent: false } } }

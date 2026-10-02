@@ -13,7 +13,7 @@ function calcularRStar(input,{tolerancia=1e-10,maxIteraciones=10000,regularizaci
     const producto=multiplicar(W,r),suma=producto.reduce((a,b)=>a+b,0);
     if(!Number.isFinite(suma)||suma<=0){motivo='Producto nulo o no finito; no existe distribución calculable por esta iteración';break;}
     const siguiente=producto.map(x=>x/suma);errorFinal=siguiente.reduce((s,x,i)=>s+Math.abs(x-r[i]),0);iteraciones=t;
-    if(detalle)rondas.push({ronda:t,anterior:[...r],producto,suma,vector:[...siguiente],error:errorFinal});
+    if(detalle)rondas.push({ronda:t,anterior:[...r],terminosEmpiricos:W.entradas.map(e=>({fila:e.fila,columna:e.columna,peso:e.valor,coordenada:r[e.columna],producto:e.valor*r[e.columna]})),regularizacion:W.regularizacion?{...W.regularizacion,sumaVectorAnterior:r.reduce((s,x)=>s+x,0)}:null,producto,suma,vector:[...siguiente],error:errorFinal});
     r=siguiente;if(errorFinal<tolerancia){convergio=true;break;}
   }
   const wr=multiplicar(W,r),rho=wr.reduce((s,x)=>s+x,0),residuo=wr.reduce((s,x,i)=>s+Math.abs(x-rho*r[i]),0);
@@ -23,6 +23,7 @@ function calcularRStar(input,{tolerancia=1e-10,maxIteraciones=10000,regularizaci
     motivo:motivo||(!convergio?'No convergente con los parámetros declarados':null),
     regularizacionAplicada:!!regularizacion,epsilon:regularizacion?.epsilon??null,
     diagnostico,diagnosticoEmpirico,W_E,W_epsilon:regularizacion?W:null,rondas,
+    sumaVector:convergio?r.reduce((s,x)=>s+x,0):null,top:convergio?r.map((valor,i)=>({id:W.ids[i],valor})).sort((a,b)=>b.valor-a.valor).slice(0,10):[],
     condicionesSuficientes:diagnostico.primitiva,metodo:'Perron–Frobenius, iteración de potencia; W r, norma L1'};
 }
 module.exports={calcularRStar};

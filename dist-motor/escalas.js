@@ -1,3 +1,5 @@
+// LEGACY: evidencia histórica del prototipo; no es autoridad del motor ni de la interfaz.
+// E0: transición no materialmente acreditada; no afirma inexistencia causal.
 "use strict";
 
 // Escalas de evidencia por dominio — Taxonomia General de Aplicaciones
@@ -474,3 +476,4 @@ exports.midpoint = function(dominio, nivel) {
 exports.DOMINIOS = Object.keys(ESCALAS);
 
 exports.ESCALAS = ESCALAS;
+

@@ -11,9 +11,13 @@ function crearAnalisis(input = {}) {
   if (ids.size !== nodosActivos.length || nodosActivos.some(n => !n.id)) throw new Error('Identificadores de nodo únicos y no vacíos requeridos');
   if (eventoDeterminado && ids.has(eventoDeterminado.id)) throw new Error('D no puede ser un nodo activo');
   const todas = fuente.relacionesInternas || fuente.relaciones || fuente.aristas || [];
+  const parejas = new Set();
   const relacionesInternas = [], conexionesCierre = [...(fuente.conexionesCierre || [])];
   for (const [i, raw] of todas.entries()) {
     const e = { ...raw, id: raw.id || `relacion_${i}`, evidenciaNivel: raw.evidenciaNivel ?? raw.nivelEvidencia };
+    const pareja = JSON.stringify([e.origen,e.destino]);
+    if(parejas.has(pareja)) throw new Error('Relación duplicada: conserva múltiples soportes en una sola relación sin sumar pesos automáticamente');
+    parejas.add(pareja);
     if (!ids.has(e.origen)) throw new Error(`Origen desconocido: ${e.origen}`);
     if (eventoDeterminado && e.destino === eventoDeterminado.id) conexionesCierre.push(e);
     else if (ids.has(e.destino)) relacionesInternas.push(e);

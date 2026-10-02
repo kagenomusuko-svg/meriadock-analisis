@@ -1,0 +1,33 @@
+'use strict';
+const {chromium}=require('playwright');const {spawn}=require('node:child_process');const assert=require('node:assert/strict');
+const server=spawn(process.execPath,['node_modules/next/dist/bin/next','start','--port','3100'],{stdio:['ignore','pipe','pipe']});
+let browser;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.on('data',d=>logs+=d);
+(async()=>{
+ try{
+  await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Servidor no arrancó: '+logs)),30000);server.stdout.on('data',()=>{if(logs.includes('Ready')){clearTimeout(timer);resolve();}});server.on('exit',c=>{clearTimeout(timer);reject(Error('Servidor terminó '+c+': '+logs));});});
+  const redirect=await fetch('http://127.0.0.1:3100/',{redirect:'manual'});assert.equal(redirect.status,307);assert.equal(redirect.headers.get('location'),'/constructor');
+  browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1024,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  await page.goto('http://127.0.0.1:3100/');await page.getByRole('heading',{name:'¿Qué quieres hacer con este análisis?'}).waitFor();
+  await page.getByRole('radio',{name:/Describir y medir/}).check();await page.getByLabel('¿Qué estás analizando? Dominio').fill('Genérico');
+  async function tab(name){await page.getByRole('button',{name:new RegExp(name)}).click();}
+  await tab('Fenómeno y pregunta');await page.getByLabel('Título del análisis').fill('Fixture PF');await page.getByLabel('Pregunta del análisis',{exact:true}).fill('¿Cómo converge?');await page.getByLabel('Describe el fenómeno, evento o estructura que quieres analizar.').fill('Sistema de dos nodos');await page.getByLabel('Evento determinado / punto de cierre (D)').fill('Evento D');
+  await tab('Nodos');for(const name of ['A','B']){await page.getByLabel('Nombre del nuevo nodo').fill(name);await page.getByRole('button',{name:'Agregar nodo',exact:true}).click();}
+  await tab('Relaciones y soportes');
+  for(const [origen,destino,peso] of [['A','A','.9'],['A','B','.4'],['B','A','.1'],['B','B','.6'],['A','D — Evento D','1']]){
+   await page.getByLabel('Origen',{exact:true}).selectOption({label:origen});await page.getByLabel('Destino',{exact:true}).selectOption({label:destino});await page.getByLabel('Nivel aplicable discriminado por el analista').selectOption('1');await page.getByLabel('Peso mínimo').fill(peso);await page.getByLabel('Peso máximo').fill(peso);await page.getByRole('button',{name:'Agregar relación',exact:true}).click();
+  }
+  await tab('Discriminaciones');
+  for(const [name,alpha,s] of [['A','.08',['0','.4','.1']],['B','.03',['.5','.5','.7']]]){
+   const card=page.locator('article').filter({has:page.getByRole('heading',{name,exact:true})});
+   for(const [i,label] of ['Formalización / procedimiento','Sustituibilidad del actor en la posición','Determinación por sistema / incentivos'].entries())await card.getByLabel(label,{exact:true}).fill(s[i]);
+   await card.getByLabel('Estrategia de α (asunción efectiva)').selectOption('discriminado');await card.getByLabel('α entre 0 y 1').fill(alpha);
+   await card.locator('summary').filter({hasText:'Índice de integridad causal'}).click();await card.getByLabel('Declaraciones / compromisos (uno por línea)').fill('x\ny');await card.getByLabel('Observaciones (una por línea)').fill('x');await card.getByLabel('Coincidencias identificadas').fill('1');
+  }
+  await tab('Medidas adicionales');await page.getByLabel('Unidad de los beneficios netos').fill('MXN');await page.getByLabel('A: beneficio neto (0 si expresamente no hay beneficio)').fill('30');await page.getByLabel('B: beneficio neto (0 si expresamente no hay beneficio)').fill('10');await page.getByLabel('Unidad común del daño').fill('MXN');for(const [label,v]of [['T_invertido','100'],['T_impedido','20'],['ΔT_trayectoria','30']])await page.getByLabel(label,{exact:true}).fill(v);
+  await tab('Calcular');for(const label of ['Índice de convergencia de eventos','Índice de sustituibilidad','Contribución atribuible','Condiciones adversas atribuibles','Asimetría repercusiva','Índice de integridad causal','Distribución de beneficio (B*)','Daño total','Ajuste debitor','Robustez de tres escenarios'])await page.getByRole('checkbox',{name:label,exact:true}).check();
+  const response=page.waitForResponse(r=>r.url().endsWith('/api/calcular'));await page.getByRole('button',{name:'Calcular mediciones seleccionadas'}).click();const data=await (await response).json();assert.equal(data.dTotal.dTotal,150);assert.ok(Math.abs(data.rStar[0].valor-.8)<1e-9);assert.equal(data.serieII[0].valor,.5);assert.equal(data.bStar[0].valor,.75);assert.equal(data.declaracion.nivel,'A');assert.equal(data.rStar.length,2);
+  await page.getByText('Declaración A',{exact:true}).waitFor();assert.ok((await page.locator('table').first().innerText()).includes('80.00%'));
+  const download=page.waitForEvent('download');await page.getByRole('button',{name:'Descargar expediente',exact:true}).click();const file=await download;assert.ok(file.suggestedFilename().endsWith('.html'));const fs=require('node:fs');const html=fs.readFileSync(await file.path(),'utf8');assert.ok(html.includes('150'));assert.ok(html.includes('120'));assert.ok(!html.includes('Tres Series'));
+  await page.screenshot({path:'/tmp/meriadock-verificacion.png',fullPage:true});assert.deepEqual(errors,[]);console.log('UI → API → PF/IIC/B*/D_total/AD → resultados → descarga: VERDE; sin errores de página.');
+ }finally{if(browser)await browser.close();server.kill();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
