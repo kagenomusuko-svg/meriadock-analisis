@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 12
+- Bloque activo: Productos transversales
 - Próxima tarea: consolidar productos finales y verificar conservación runtime
 
 ## Preparación
@@ -85,10 +85,10 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear MATRIZ_COBERTURA_PRUEBAS.md. — `ce327f74baea8c1a53c36969799c409192ddea4e`
 
 ## Auditoría 12 — CI y producción
-- [ ] Verificar install/test/build/UI.
-- [ ] Verificar deployment y commit.
-- [ ] Recorrer producción.
-- [ ] Crear AUDITORIA_ENTORNO_EJECUCION.md.
+- [x] Verificar install/test/build/UI. — `db188d63b47f8660c2355f09315bfe1e3350a450`
+- [x] Verificar deployment y commit. — `db188d63b47f8660c2355f09315bfe1e3350a450`
+- [x] Recorrer producción. — `db188d63b47f8660c2355f09315bfe1e3350a450`
+- [x] Crear AUDITORIA_ENTORNO_EJECUCION.md. — `db188d63b47f8660c2355f09315bfe1e3350a450`
 
 ## Productos transversales
 - [ ] MATRIZ_TRAZABILIDAD_DOCTRINA_CODIGO.md.
@@ -132,3 +132,5 @@ I_inv: fórmula/interpretación/monotonicidad incompatibles; fichero DECISION_PE
 - `68be7fb4f5a7d2dddd0b9741ac2ee988412282eb` — auditoría 10.
 
 - `ce327f74baea8c1a53c36969799c409192ddea4e` — cobertura44pruebas, casos completos y contradicciones; auditoría11.
+
+- `db188d63b47f8660c2355f09315bfe1e3350a450` — entorno CI44/build/UI verde y producción READY.

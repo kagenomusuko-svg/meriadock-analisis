@@ -42,7 +42,7 @@ Representación/recorridos O(N+E) por ronda, resumen grande sin rondas por defec
 
 ## Fuente y contradicción matemática
 
-RES-RSTAR-001/2E-RSTAR-001 adjudican para el corpus un operador diferente: `r=(I−Q_D)^−1 b_D`, normalización única; PF sobre `M_R=Q+ηb1ᵀ`. RECALCULO-001 difiere recálculos, no revoca esa resolución. Sobre DAG este operador entrega positivos y el PF raw W actual es nilpotente/indeterminado. Conflicto D/E real, **resuelto para esta implementación por mandato explícito de orden 02 §4.12–15**. No se oculta como mero cambio de notación ni se instala la segunda edición durante auditoría. Ver CONTRADICCIONES_FUENTES y MATRIZ_CASOS_CANONICOS.
+RES-RSTAR-001/2E-RSTAR-001 adjudican para el corpus un operador diferente: `r=(I−Q_D)^−1 b_D`, normalización única; PF sobre `M_R=Q+ηb1ᵀ`. RECALCULO-001 difiere recálculos, no revoca esa resolución. Sobre DAG este operador entrega positivos y el PF raw W actual es nilpotente/indeterminado. Conflicto D/E real, **resuelto para esta implementación por mandato explícito de orden 02 §4.12–15**. No se oculta como mero cambio de notación ni se instala la segunda edición durante auditoría. Ver CONTRADICCIONES_ENTRE_FUENTES y MATRIZ_CASOS_CANONICOS.
 
 Siete casos transcritos de Prometeo/Vol II reproducen precisamente esa diferencia. Cifras pedagógicas impresas no son oracle numérico del PF actual. Los casos con instrumentalidad no definen una reasignación universal al diseñador; no se infiere una en el motor.
 

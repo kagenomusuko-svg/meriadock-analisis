@@ -1,7 +1,8 @@
 # Extrae únicamente arrays numéricos explícitos, no ejecuta código del corpus.
-import re, json, ast, hashlib
+import re, json, ast, sys
 from pathlib import Path
-root=Path('/workspace/scratch/09c308d4205c/audit-sources')
+root=Path(sys.argv[1]) if len(sys.argv)>1 else Path('../audit-sources')
+if not root.is_dir(): raise SystemExit('Uso: python auditoria/extraer_matrices.py /ruta/a/corpus-obtenido')
 out=[]
 for p in sorted(root.rglob('*.md')):
  t=p.read_text()

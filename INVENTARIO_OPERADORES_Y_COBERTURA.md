@@ -57,7 +57,7 @@ Todos los faltantes relevantes al repertorio ampliado se agrupan en AU-17 P2; no
 
 | ID / operador / fuente | Contrato o inputs mínimos | REGISTRY / estado | Clase / severidad / decisión |
 |---|---|---|---|
-| OP41 Índice de inversión I_inv / Axiom Def8.6, Teo8.3 | |Δ_diseñador|/|Δ_ejecutor|, denominador no cero, clasificación de roles | NO_IMPLEMENTADO; DECISION_REQUERIDA para interpretar monotonicidad | MAT/CON; contradicción D/E pendiente; sin defecto runtime activo |
+| OP41 Índice de inversión I_inv / Axiom Def8.6, Teo8.3 | abs(Δ_diseñador)/abs(Δ_ejecutor), denominador no cero, clasificación de roles | NO_IMPLEMENTADO; DECISION_REQUERIDA para interpretar monotonicidad | MAT/CON; contradicción D/E pendiente; sin defecto runtime activo |
 | OP42 V(G,G′) / Axiom ApD6 | distancia L1 entre vectores comparables después de cambio, IDs alineados | NO_IMPLEMENTADO | MAT, AU-17 P2; distinto de visibilidad V del TIC |
 | OP43 REC / Axiom VII, RES-REC-001 | estimación Bernoulli/Fisher/CRLB, n, τ; ΔIΔh≥τ/n bajo hipótesis | NO_APLICABLE al núcleo aplicado | FUERA; REC no significa recurrencia; constante publicada 4τ₀² corregida a τ₀; no modelo general validado |
 | OP44 RSC / RES-RSC-IT-001, Axiom II | registro histórico de eventos marcados; I(t) es otra magnitud | NO_APLICABLE al núcleo aplicado | FUERA/CON; secuencia o multiconjunto no adjudicados para implementación futura |
