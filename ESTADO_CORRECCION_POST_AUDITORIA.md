@@ -4,21 +4,22 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 
 ## Último punto seguro
 
-- Estado: NO INICIADO
+- Estado: EN EJECUCIÓN
 - Base doctrinal: RESOLUCION_AUDITORIA_I_INV.md
 - Base de hallazgos: REGISTRO_DISCREPANCIAS_AUDITORIA.md
-- Bloque activo: Fase 1
-- Próxima tarea: AU-01/AU-02
+- Bloque activo: Fase 2
+- Próxima tarea: snapshot y estados efectivos
 
 ## Fase 1 — P1 estructurales y numéricos
 
-- [ ] AU-01 validar clausura.
-- [ ] AU-02 validar schema de relaciones.
-- [ ] AU-04 impedir resultados no finitos etiquetados como calculados.
-- [ ] AU-14 hacer robustez invariante a orden/permutación.
-- [ ] AU-03 hacer errores de UI recuperables.
-- [ ] Tests de regresión Fase 1.
-- [ ] CI/build/UI verde Fase 1.
+- [x] AU-01 validar clausura. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+- [x] AU-02 validar schema de relaciones. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+- [x] AU-04 impedir resultados no finitos etiquetados como calculados. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+- [x] AU-14 hacer robustez invariante a orden/permutación. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+- [x] AU-03 hacer errores de UI recuperables. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+- [x] Tests de regresión Fase 1. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+- [x] CI/build/UI verde Fase 1. — `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1`
+
 
 ## Fase 2 — trazabilidad y coherencia entre capas
 
@@ -72,4 +73,5 @@ Ninguna al inicio. I_inv ya está resuelto.
 
 ## Historial de commits
 
-Se completará durante la ejecución.
+- `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1` — Fase 1, 56 pruebas y build local; CI37079739386 SUCCESS con Chromium/Playwright. UI local bloqueado por navegador no instalado; CI prueba el flujo completo y adverso.
+

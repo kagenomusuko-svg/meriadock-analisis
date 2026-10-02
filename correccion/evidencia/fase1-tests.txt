@@ -1,0 +1,69 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> meriadock-analisis@0.1.0 test
+> node --test tests/*.test.cjs
+
+✔ PROM-BANCO: transcripción fuente ≠ procedimiento PF actual (4.575055ms)
+✔ PROM-DIRECTIVOS: transcripción fuente ≠ procedimiento PF actual (0.983973ms)
+✔ PROM-MEDICO: transcripción fuente ≠ procedimiento PF actual (0.42471ms)
+✔ PROM-PLANTA: transcripción fuente ≠ procedimiento PF actual (1.684509ms)
+✔ PROM-PLD: transcripción fuente ≠ procedimiento PF actual (0.580745ms)
+✔ PROM-MERIDIANO: transcripción fuente ≠ procedimiento PF actual (0.342426ms)
+✔ MCII-REFERENCIA: transcripción fuente ≠ procedimiento PF actual (0.536578ms)
+✔ PF formal actual: orientación derecha difiere de izquierda (0.67698ms)
+✔ RES-RSTAR-001: ejemplo médico por rutas, contraste independiente sin cambiar motor (0.248946ms)
+✔ MCII IIC por correlaciones y fraude histórico: no convertirlos en contrato actual (0.323097ms)
+✔ Altamirano: PF actual registra reducibilidad y no reproduce el vector histórico (119.816181ms)
+✔ CF12 Chevron: enumeración independiente de Shapley localiza errata de porcentajes (0.547375ms)
+✔ CF16 I_inv: bajo numerador fijo, denominador creciente implica cociente decreciente (0.119881ms)
+✔ AU-01 regresión: cierre E0 no acredita clausura y D queda externo (3.046451ms)
+✔ AUD-02 caracteriza: unidad y total B* se pierden en HTML (1.97741ms)
+✔ AUD-03 caracteriza: insumos externos α no llegan al linter (0.830331ms)
+✔ AUD-04 caracteriza overflow de suma B*: calculado y suma de cuotas cero (0.260182ms)
+✔ AUD-05 límite: PF periódico puede converger con arranque equilibrado sin garantía primitiva (0.282115ms)
+✔ AUD-06 ausencia, E0, S límites y determinismo repetido (6.437932ms)
+✔ AUD-07 caracteriza: adaptador fija generico@1 sin atender selección/version externa (0.281775ms)
+✔ AUD-10 diferencial exacto de valores: solicitud→respuesta→JSON→HTML, sin redondeo oculto (19.765918ms)
+✔ AUD-11 caracteriza: insumos externos incompletos/configuración no conservados en respuesta (1.02243ms)
+✔ AUD-12 caracteriza: duplicate válido para formulario provoca excepción no atrapada del linter (0.256046ms)
+✔ AUD-13 caracteriza: rango inválido de cierre nunca validado como evidencia de D (0.429828ms)
+✔ AUD-08 caracteriza: empate secundario cambia A/B al permutar mismo input por nodo (1.531438ms)
+✔ AUD-09 hipercubo usa presupuesto declarado y E0 permanece cero (10.160753ms)
+✔ AU-01/02 cierre inválido: nivel -1 (1.376244ms)
+✔ AU-01/02 cierre inválido: nivel 9 (0.208134ms)
+✔ AU-01/02 cierre inválido: nivel 1.1 (0.263568ms)
+✔ AU-01/02 cierre inválido: rango -1 (0.156967ms)
+✔ AU-01/02 cierre inválido: rango Infinity (0.210307ms)
+✔ AU-01/02 cierre inválido: rango NaN (0.161374ms)
+✔ AU-02 IDs únicos globales para relaciones internas y cierres (0.511181ms)
+✔ AU-01 cierre ausente, declarado y E0 no se equiparan a acreditado ni a inexistencia causal (4.546141ms)
+✔ AU-04 suma signed robusta ante cancelaciones grandes (0.770101ms)
+✔ AU-04 subnormales y total cero explícito (0.341304ms)
+✔ AU-04 daño y AD no entregan resultados no finitos (0.243828ms)
+✔ AU-14 seis permutaciones conservan indeterminación del empate secundario (0.440273ms)
+✔ S discriminado y contribución canónicos (1.351607ms)
+✔ α conserva soporte; Δ sin umbrales ni defaults (0.73694ms)
+✔ Constructor → solicitud → motor → expediente con mismo daño/IIC/B* (18.724638ms)
+✔ familias no bloquean repertorio; campos vacíos se conservan como null (1.975077ms)
+✔ linter determinista y E0 epistémico (0.947888ms)
+✔ Taxonomía versionada se añade sin cambiar fórmulas (0.408406ms)
+✔ linter α ausente aunque la estrategia haya sido seleccionada (0.25276ms)
+✔ D separado, cierre y E0 no eliminan nodos (1.591027ms)
+✔ modelo rechaza D activo y destinos inexistentes (0.234563ms)
+✔ API → PF/α/Δ/IIC/B*/D_total/AD, sin restricción por tipo (4.064295ms)
+✔ operadores independientes; datos ausentes ≠ cero (0.45115ms)
+✔ declaraciones canónicas A/B/C/D, umbral exacto y empates explícitos (1.535334ms)
+✔ sensibilidad marginal determinista: método explícito, aristas identificadas (7.684901ms)
+✔ fixture canónico eigenvector derecho (.8,.2), residuo y rondas (1.606972ms)
+✔ D excluido, pesos empíricos sin normalización; E0 conserva coordenada (1.036763ms)
+✔ reducible, periódica y regularización explícita separada (7.989861ms)
+✔ 1000 nodos sparse deterministas, memoria O(E+N) (18.068159ms)
+✔ acceso directo sin servicios externos (1.302432ms)
+ℹ tests 56
+ℹ suites 0
+ℹ pass 56
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 242.578112
