@@ -1,12 +1,12 @@
 'use strict';
 const {chromium}=require('playwright');const {spawn}=require('node:child_process');const assert=require('node:assert/strict');
 const server=spawn(process.execPath,['node_modules/next/dist/bin/next','start','--port','3100'],{stdio:['ignore','pipe','pipe']});
-let browser;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.on('data',d=>logs+=d);
+let browser,page;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.on('data',d=>logs+=d);
 (async()=>{
  try{
   await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Servidor no arrancó: '+logs)),30000);server.stdout.on('data',()=>{if(logs.includes('Ready')){clearTimeout(timer);resolve();}});server.on('exit',c=>{clearTimeout(timer);reject(Error('Servidor terminó '+c+': '+logs));});});
   const redirect=await fetch('http://127.0.0.1:3100/',{redirect:'manual'});assert.equal(redirect.status,307);assert.equal(redirect.headers.get('location'),'/constructor');
-  browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1024,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  browser=await chromium.launch({headless:true});page=await browser.newPage({viewport:{width:1024,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('http://127.0.0.1:3100/');await page.getByRole('heading',{name:'¿Qué quieres hacer con este análisis?'}).waitFor();
   await page.getByRole('radio',{name:/Describir y medir/}).check();await page.getByLabel('¿Qué estás analizando? Dominio').fill('Genérico');
   async function tab(name){await page.getByRole('button',{name:new RegExp(name)}).click();}
@@ -29,5 +29,5 @@ let browser;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.on('da
   await page.getByText('Declaración A',{exact:true}).waitFor();assert.ok((await page.locator('table').first().innerText()).includes('80.00%'));
   const download=page.waitForEvent('download');await page.getByRole('button',{name:'Descargar expediente',exact:true}).click();const file=await download;assert.ok(file.suggestedFilename().endsWith('.html'));const fs=require('node:fs');const html=fs.readFileSync(await file.path(),'utf8');assert.ok(html.includes('150'));assert.ok(html.includes('120'));assert.ok(!html.includes('Tres Series'));
   await page.screenshot({path:'/tmp/meriadock-verificacion.png',fullPage:true});assert.deepEqual(errors,[]);console.log('UI → API → PF/IIC/B*/D_total/AD → resultados → descarga: VERDE; sin errores de página.');
- }finally{if(browser)await browser.close();server.kill();}
+ }catch(e){if(page){console.error('Estado de interfaz:',await page.locator('body').innerText());await page.screenshot({path:'/tmp/meriadock-error.png',fullPage:true}).catch(()=>{});}throw e;}finally{if(browser)await browser.close();server.kill();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -5,7 +5,7 @@
 // Escalas de evidencia por dominio — Taxonomia General de Aplicaciones
 // Cada escala tiene niveles 0-8 con rango [min, max]
 // El midpoint se calcula como (min + max) / 2
-// Nivel 0 en todos los dominios = ausencia de evidencia o arista nula, peso 0.00
+// Nivel 0 en todos los dominios = transición no materialmente acreditada (cero epistémico), peso 0.00
 
 var ESCALAS = {
 

@@ -16,3 +16,6 @@ test('linter determinista y E0 epistémico',()=>{
 test('Taxonomía versionada se añade sin cambiar fórmulas',()=>{
  const p={id:'nuevo',version:'1',dominios:['otro'],componentesS:[{id:'x',texto:'Componente X'}],preguntas:[],rangos:[]};cargarJSON(JSON.stringify(p));a.deepEqual(cargarProtocolo('nuevo','1'),p);a.throws(()=>cargarJSON(JSON.stringify(p)));a.throws(()=>cargarProtocolo('nuevo','2'));
 });
+test('linter α ausente aunque la estrategia haya sido seleccionada',()=>{
+ const f=fixture();f.nodos[0].alphaValor='';const q=construirSolicitud(f);a.ok(mensajesAnalisis(q.analisis,q.medicionesSolicitadas).some(m=>m.codigo==='ERR_DELTA_SIN_ALPHA'&&m.nodo==='a'));
+});

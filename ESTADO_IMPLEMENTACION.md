@@ -9,7 +9,7 @@ Regla: una tarea sólo puede marcarse [x] cuando su implementación y pruebas co
 - Estado: EN EJECUCIÓN
 - Último commit de implementación: 6e172b0
 - Bloque activo: Bloques 7–9; cierre de conexiones en UI y exportación
-- Próxima tarea: verificar constructor y descarga en GitHub Actions; registrar empates A/B/C/D
+- Próxima tarea: corregir etiquetas accesibles de selectores y repetir navegador en GitHub Actions
 
 ---
 
@@ -148,3 +148,5 @@ DECISION_PENDIENTE_EMPATES_ROBUSTEZ.md — árbol A/B/C/D no define empates de l
 - `6e172b0` — Núcleo PF y operadores independientes; 13 pruebas y CI verde (run 37061970463).
 
 La interfaz/expediente/Taxonomía están implementadas y verificadas por 17 pruebas locales y build; cierre pendiente de commit y prueba de navegador en CI.
+
+- `90ab817` — Constructor, expediente determinista y Taxonomía; install/tests/build verdes. Prueba UI detectó selector sin nombre accesible exacto (run 37063380468), corrección en curso. Vercel READY (dpl_Bdb4obtTk11GxJfpyZuSjRMxoXsA).

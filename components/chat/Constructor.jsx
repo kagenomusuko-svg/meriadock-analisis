@@ -524,6 +524,7 @@ export default function Constructor() {
                 <label style={fld}>
                   <span style={lbl}>Tipo discriminado</span>
                   <select
+                    aria-label="Tipo discriminado"
                     style={sel}
                     value={n.tipo}
                     onChange={(e) => nodo(n.id, { tipo: e.target.value })}
@@ -614,6 +615,7 @@ export default function Constructor() {
                       {k === "origen" ? "Origen" : "Destino"}
                     </span>
                     <select
+                      aria-label={k === "origen" ? "Origen" : "Destino"}
                       style={sel}
                       value={formC[k]}
                       onChange={(e) =>
@@ -654,6 +656,7 @@ export default function Constructor() {
                       Nivel aplicable discriminado por el analista
                     </span>
                     <select
+                      aria-label="Nivel aplicable discriminado por el analista"
                       style={sel}
                       value={formC.evidenciaNivel}
                       onChange={(e) =>
@@ -732,6 +735,7 @@ export default function Constructor() {
                 <label style={fld}>
                   <span style={lbl}>Estrategia de α (asunción efectiva)</span>
                   <select
+                    aria-label="Estrategia de α (asunción efectiva)"
                     style={sel}
                     value={n.estrategiaAlpha || ""}
                     onChange={(e) =>
@@ -898,6 +902,7 @@ export default function Constructor() {
               <label style={fld}>
                 <span style={lbl}>Método de sensibilidad extendida</span>
                 <select
+                  aria-label="Método de sensibilidad extendida"
                   style={sel}
                   value={estado.metodoExtendido}
                   onChange={(e) => editar({ metodoExtendido: e.target.value })}
