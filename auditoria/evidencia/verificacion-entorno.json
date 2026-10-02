@@ -1,0 +1,437 @@
+{
+  "baseline": "14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+  "checkedHead": "ce327f74baea8c1a53c36969799c409192ddea4e",
+  "ci": {
+    "run": 37071552089,
+    "jobs": [
+      {
+        "id": 111051922579,
+        "conclusion": "success",
+        "steps": [
+          {
+            "name": "Set up job",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/setup-node@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm ci --no-audit --no-fund",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm test",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run build",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npx playwright install --with-deps chromium",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run npm run test:ui",
+            "conclusion": "success"
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/setup-node@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "conclusion": "success"
+          },
+          {
+            "name": "Complete job",
+            "conclusion": "success"
+          }
+        ]
+      }
+    ],
+    "logs": [
+      "2026-10-02T22:16:24.7182938Z ℹ tests 44",
+      "2026-10-02T22:16:24.7184379Z ℹ pass 44",
+      "2026-10-02T22:16:24.7185051Z ℹ fail 0",
+      "2026-10-02T22:16:35.1858109Z  ✓ Compiled successfully",
+      "2026-10-02T22:17:08.8976521Z UI → API → PF/IIC/B*/D_total/AD → resultados → descarga: VERDE; sin errores de página."
+    ]
+  },
+  "production": [
+    {
+      "id": "dpl_Dr2B9hZvv9JvhxN3GhdxbtYFUayv",
+      "state": "READY",
+      "target": "production",
+      "url": "meriadock-analisis-adayktpem-hilario-olveras-projects.vercel.app",
+      "sha": "ce327f74baea8c1a53c36969799c409192ddea4e"
+    },
+    {
+      "id": "dpl_4z9MJKEALFsBqpj7BARiW9QjUaCn",
+      "state": "READY",
+      "target": "production",
+      "url": "meriadock-analisis-9cc3ajzno-hilario-olveras-projects.vercel.app",
+      "sha": "68be7fb4f5a7d2dddd0b9741ac2ee988412282eb"
+    }
+  ],
+  "compare": {
+    "repository_full_name": "kagenomusuko-svg/meriadock-analisis",
+    "base": "14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+    "head": "ce327f74baea8c1a53c36969799c409192ddea4e",
+    "status": "ahead",
+    "ahead_by": 11,
+    "behind_by": 0,
+    "total_commits": 11,
+    "too_large": null,
+    "base_commit": {
+      "sha": "14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+      "url": "https://api.github.com/repos/kagenomusuko-svg/meriadock-analisis/commits/14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+      "html_url": "https://github.com/kagenomusuko-svg/meriadock-analisis/commit/14a5e64e69fab44bdc757900d49f2e7e0f56d9f3"
+    },
+    "merge_base_commit": {
+      "sha": "14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+      "url": "https://api.github.com/repos/kagenomusuko-svg/meriadock-analisis/commits/14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+      "html_url": "https://github.com/kagenomusuko-svg/meriadock-analisis/commit/14a5e64e69fab44bdc757900d49f2e7e0f56d9f3"
+    },
+    "files": [
+      {
+        "filename": "AUDITORIA_DETERMINISMO.md",
+        "status": "added",
+        "additions": 24,
+        "deletions": 0,
+        "changes": 24,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_EXPEDIENTE_TRAZABILIDAD.md",
+        "status": "added",
+        "additions": 24,
+        "deletions": 0,
+        "changes": 24,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_FRONTERA_TAXONOMICA.md",
+        "status": "added",
+        "additions": 23,
+        "deletions": 0,
+        "changes": 23,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_OPERADORES_COMPLEMENTARIOS.md",
+        "status": "added",
+        "additions": 29,
+        "deletions": 0,
+        "changes": 29,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_OPERADORES_DERIVADOS.md",
+        "status": "added",
+        "additions": 26,
+        "deletions": 0,
+        "changes": 26,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_ROBUSTEZ_SENSIBILIDAD.md",
+        "status": "added",
+        "additions": 24,
+        "deletions": 0,
+        "changes": 24,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_RSTAR_PERRON_FROBENIUS.md",
+        "status": "added",
+        "additions": 55,
+        "deletions": 0,
+        "changes": 55,
+        "previous_filename": null
+      },
+      {
+        "filename": "AUDITORIA_UI_SEMANTICA.md",
+        "status": "added",
+        "additions": 28,
+        "deletions": 0,
+        "changes": 28,
+        "previous_filename": null
+      },
+      {
+        "filename": "CONTRADICCIONES_ENTRE_FUENTES.md",
+        "status": "added",
+        "additions": 25,
+        "deletions": 0,
+        "changes": 25,
+        "previous_filename": null
+      },
+      {
+        "filename": "DECISION_PENDIENTE_AUDITORIA_I_INV.md",
+        "status": "added",
+        "additions": 14,
+        "deletions": 0,
+        "changes": 14,
+        "previous_filename": null
+      },
+      {
+        "filename": "ESTADO_AUDITORIA.md",
+        "status": "modified",
+        "additions": 70,
+        "deletions": 52,
+        "changes": 122,
+        "previous_filename": null
+      },
+      {
+        "filename": "INVENTARIO_OPERADORES_Y_COBERTURA.md",
+        "status": "added",
+        "additions": 66,
+        "deletions": 0,
+        "changes": 66,
+        "previous_filename": null
+      },
+      {
+        "filename": "MATRIZ_ARQUITECTURA_CONCEPTUAL.md",
+        "status": "added",
+        "additions": 25,
+        "deletions": 0,
+        "changes": 25,
+        "previous_filename": null
+      },
+      {
+        "filename": "MATRIZ_CASOS_CANONICOS.md",
+        "status": "added",
+        "additions": 43,
+        "deletions": 0,
+        "changes": 43,
+        "previous_filename": null
+      },
+      {
+        "filename": "MATRIZ_COBERTURA_PRUEBAS.md",
+        "status": "added",
+        "additions": 37,
+        "deletions": 0,
+        "changes": 37,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/BASE_Y_FUENTES.md",
+        "status": "added",
+        "additions": 23,
+        "deletions": 0,
+        "changes": 23,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/comparar_corpus.cjs",
+        "status": "added",
+        "additions": 10,
+        "deletions": 0,
+        "changes": 10,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/diagnostico.cjs",
+        "status": "added",
+        "additions": 44,
+        "deletions": 0,
+        "changes": 44,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/diferencial.cjs",
+        "status": "added",
+        "additions": 11,
+        "deletions": 0,
+        "changes": 11,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/busqueda-determinismo.txt",
+        "status": "added",
+        "additions": 6,
+        "deletions": 0,
+        "changes": 6,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/catalogo-casos-historicos.json",
+        "status": "added",
+        "additions": 761,
+        "deletions": 0,
+        "changes": 761,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/comparacion-corpus.json",
+        "status": "added",
+        "additions": 837,
+        "deletions": 0,
+        "changes": 837,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/diagnostico.json",
+        "status": "added",
+        "additions": 564,
+        "deletions": 0,
+        "changes": 564,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/diferencial.json",
+        "status": "added",
+        "additions": 12658,
+        "deletions": 0,
+        "changes": 12658,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/fuentes.json",
+        "status": "added",
+        "additions": 940,
+        "deletions": 0,
+        "changes": 940,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/indice-casos.json",
+        "status": "added",
+        "additions": 192,
+        "deletions": 0,
+        "changes": 192,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/indice-operadores.json",
+        "status": "added",
+        "additions": 1432,
+        "deletions": 0,
+        "changes": 1432,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/runtime.json",
+        "status": "added",
+        "additions": 206,
+        "deletions": 0,
+        "changes": 206,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/tests.txt",
+        "status": "added",
+        "additions": 57,
+        "deletions": 0,
+        "changes": 57,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/ui-duplicado.json",
+        "status": "added",
+        "additions": 18,
+        "deletions": 0,
+        "changes": 18,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/evidencia/ui-produccion.json",
+        "status": "added",
+        "additions": 1,
+        "deletions": 0,
+        "changes": 1,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/extraer_matrices.py",
+        "status": "added",
+        "additions": 24,
+        "deletions": 0,
+        "changes": 24,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/fixtures/aritmetica-fuente.json",
+        "status": "added",
+        "additions": 9,
+        "deletions": 0,
+        "changes": 9,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/fixtures/casos-fuente.json",
+        "status": "added",
+        "additions": 451,
+        "deletions": 0,
+        "changes": 451,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/fixtures/diferencial.json",
+        "status": "added",
+        "additions": 269,
+        "deletions": 0,
+        "changes": 269,
+        "previous_filename": null
+      },
+      {
+        "filename": "auditoria/fixtures/matrices-corpus.json",
+        "status": "added",
+        "additions": 300,
+        "deletions": 0,
+        "changes": 300,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/auditoria-canonicos.test.cjs",
+        "status": "added",
+        "additions": 20,
+        "deletions": 0,
+        "changes": 20,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/auditoria-caracterizacion.test.cjs",
+        "status": "added",
+        "additions": 16,
+        "deletions": 0,
+        "changes": 16,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/auditoria-diferencial.test.cjs",
+        "status": "added",
+        "additions": 9,
+        "deletions": 0,
+        "changes": 9,
+        "previous_filename": null
+      },
+      {
+        "filename": "tests/auditoria-robustez.test.cjs",
+        "status": "added",
+        "additions": 6,
+        "deletions": 0,
+        "changes": 6,
+        "previous_filename": null
+      }
+    ]
+  },
+  "runtimeChanged": false,
+  "local": {
+    "npmCi": "PASS",
+    "npmTest": "44/44 PASS",
+    "build": "PASS",
+    "ui": "BLOCKED missing browser/install truncated",
+    "browserProduction": "8 screens + duplicate crash reproduced",
+    "downloadCloud": "TIMEOUT; not certified"
+  }
+}

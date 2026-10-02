@@ -5,8 +5,8 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 11
-- Próxima tarea: operadores derivados y complementarios
+- Bloque activo: Auditoría 12
+- Próxima tarea: consolidar productos finales y verificar conservación runtime
 
 ## Preparación
 - [x] Fijar commit exacto de main. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
@@ -79,10 +79,10 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_DETERMINISMO.md. — `68be7fb4f5a7d2dddd0b9741ac2ee988412282eb`
 
 ## Auditoría 11 — Pruebas
-- [ ] Construir requisito→test→fixture.
-- [ ] Añadir tests de caracterización.
-- [ ] Identificar huecos.
-- [ ] Crear MATRIZ_COBERTURA_PRUEBAS.md.
+- [x] Construir requisito→test→fixture. — `ce327f74baea8c1a53c36969799c409192ddea4e`
+- [x] Añadir tests de caracterización. — `ce327f74baea8c1a53c36969799c409192ddea4e`
+- [x] Identificar huecos. — `ce327f74baea8c1a53c36969799c409192ddea4e`
+- [x] Crear MATRIZ_COBERTURA_PRUEBAS.md. — `ce327f74baea8c1a53c36969799c409192ddea4e`
 
 ## Auditoría 12 — CI y producción
 - [ ] Verificar install/test/build/UI.
@@ -107,7 +107,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 
 ## Decisiones pendientes
 
-Ninguna al inicio.
+I_inv: fórmula/interpretación/monotonicidad incompatibles; fichero DECISION_PENDIENTE_AUDITORIA_I_INV.md. Sólo afecta a operador futuro, no detiene bloques independientes.
 
 ## Historial de commits
 
@@ -130,3 +130,5 @@ Ninguna al inicio.
 - `55861219d44d5f2654187140f3e7ef4f2fa20fa1` — auditoría 9.
 
 - `68be7fb4f5a7d2dddd0b9741ac2ee988412282eb` — auditoría 10.
+
+- `ce327f74baea8c1a53c36969799c409192ddea4e` — cobertura44pruebas, casos completos y contradicciones; auditoría11.
