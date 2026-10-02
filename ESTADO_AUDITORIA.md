@@ -4,9 +4,9 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 
 ## Último punto seguro
 
-- Estado: EN CURSO
-- Bloque activo: Productos transversales
-- Próxima tarea: consolidar productos finales y verificar conservación runtime
+- Estado: AUDITORÍA INDEPENDIENTE CERRADA — NO_ACEPTADO
+- Bloque activo: ninguno; todos los productos de auditoría comiteados
+- Próxima tarea: decisión del autor sobre I_inv; correcciones sólo bajo una orden posterior
 
 ## Preparación
 - [x] Fijar commit exacto de main. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
@@ -91,19 +91,20 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_ENTORNO_EJECUCION.md. — `db188d63b47f8660c2355f09315bfe1e3350a450`
 
 ## Productos transversales
-- [ ] MATRIZ_TRAZABILIDAD_DOCTRINA_CODIGO.md.
-- [ ] REGISTRO_DISCREPANCIAS_AUDITORIA.md.
-- [ ] MATRIZ_CASOS_CANONICOS.md.
-- [ ] Clasificar contradicciones entre fuentes.
-- [ ] AUDITORIA_EXHAUSTIVA_METROLOGIA_CAUSAL.md.
-- [ ] PLAN_CORRECCION_POST_AUDITORIA.md.
+- [x] MATRIZ_TRAZABILIDAD_DOCTRINA_CODIGO.md. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] REGISTRO_DISCREPANCIAS_AUDITORIA.md. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] MATRIZ_CASOS_CANONICOS.md. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] Clasificar contradicciones entre fuentes. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] AUDITORIA_EXHAUSTIVA_METROLOGIA_CAUSAL.md. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] PLAN_CORRECCION_POST_AUDITORIA.md. — `cab523879bc41c337f51cb9552b313f09545fec4`
 
 ## Cierre
-- [ ] Cero filas SIN_REVISAR.
-- [ ] Cero discrepancias sin severidad.
-- [ ] Todas las decisiones obligatorias documentadas.
-- [ ] Conclusión final registrada.
-- [ ] Registrar último commit y cerrar tablero.
+- [x] Cero filas SIN_REVISAR. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] Cero discrepancias sin severidad. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] Todas las decisiones obligatorias documentadas. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] Conclusión final registrada. — `cab523879bc41c337f51cb9552b313f09545fec4`
+- [x] Registrar último commit y cerrar tablero. — `cab523879bc41c337f51cb9552b313f09545fec4`
+
 
 ## Decisiones pendientes
 
@@ -134,3 +135,11 @@ I_inv: fórmula/interpretación/monotonicidad incompatibles; fichero DECISION_PE
 - `ce327f74baea8c1a53c36969799c409192ddea4e` — cobertura44pruebas, casos completos y contradicciones; auditoría11.
 
 - `db188d63b47f8660c2355f09315bfe1e3350a450` — entorno CI44/build/UI verde y producción READY.
+
+- `cab523879bc41c337f51cb9552b313f09545fec4` — matriz maestra, 45 fichas de operadores, 16 conceptos, discrepancias, conclusión NO_ACEPTADO y plan no ejecutado.
+
+## Comprobación final de cierre
+
+Todos los productos se marcaron cerrados después de su commit. El SHA del producto final es cab523879bc41c337f51cb9552b313f09545fec4; este commit de estado lo sucede. La comparación remota completa respecto a baseline contiene 47 archivos documentales/de auditoría/pruebas y cero archivos de runtime modificados. Las 34 huellas de runtime coinciden localmente. Evidencia: auditoria/evidencia/conservacion-runtime.json.
+
+CI verificado: run37071552089, SHAce327f74, 44/44 y build/UI correctos; producción READY en ese SHA. Los productos posteriores son sólo documentales/diagnósticos, con runtime idéntico. La decisión I_inv sigue abierta y documentada; no queda trabajo de auditoría independiente pendiente ni se ejecutó el plan correctivo.

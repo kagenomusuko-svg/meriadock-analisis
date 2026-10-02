@@ -1,0 +1,198 @@
+{
+  "baseline": "14a5e64e69fab44bdc757900d49f2e7e0f56d9f3",
+  "productHead": "cab523879bc41c337f51cb9552b313f09545fec4",
+  "compareComplete": true,
+  "changedFiles": [
+    {
+      "path": "AUDITORIA_DETERMINISMO.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_ENTORNO_EJECUCION.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_EXHAUSTIVA_METROLOGIA_CAUSAL.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_EXPEDIENTE_TRAZABILIDAD.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_FRONTERA_TAXONOMICA.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_OPERADORES_COMPLEMENTARIOS.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_OPERADORES_DERIVADOS.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_ROBUSTEZ_SENSIBILIDAD.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_RSTAR_PERRON_FROBENIUS.md",
+      "status": "added"
+    },
+    {
+      "path": "AUDITORIA_UI_SEMANTICA.md",
+      "status": "added"
+    },
+    {
+      "path": "CONTRADICCIONES_ENTRE_FUENTES.md",
+      "status": "added"
+    },
+    {
+      "path": "DECISION_PENDIENTE_AUDITORIA_I_INV.md",
+      "status": "added"
+    },
+    {
+      "path": "ESTADO_AUDITORIA.md",
+      "status": "modified"
+    },
+    {
+      "path": "FICHAS_AUDITORIA.md",
+      "status": "added"
+    },
+    {
+      "path": "INVENTARIO_OPERADORES_Y_COBERTURA.md",
+      "status": "added"
+    },
+    {
+      "path": "MATRIZ_ARQUITECTURA_CONCEPTUAL.md",
+      "status": "added"
+    },
+    {
+      "path": "MATRIZ_CASOS_CANONICOS.md",
+      "status": "added"
+    },
+    {
+      "path": "MATRIZ_COBERTURA_PRUEBAS.md",
+      "status": "added"
+    },
+    {
+      "path": "MATRIZ_TRAZABILIDAD_DOCTRINA_CODIGO.md",
+      "status": "added"
+    },
+    {
+      "path": "PLAN_CORRECCION_POST_AUDITORIA.md",
+      "status": "added"
+    },
+    {
+      "path": "REGISTRO_DISCREPANCIAS_AUDITORIA.md",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/BASE_Y_FUENTES.md",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/comparar_corpus.cjs",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/diagnostico.cjs",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/diferencial.cjs",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/busqueda-determinismo.txt",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/catalogo-casos-historicos.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/comparacion-corpus.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/diagnostico.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/diferencial.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/fuentes.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/indice-casos.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/indice-operadores.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/runtime.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/tests.txt",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/ui-duplicado.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/ui-produccion.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/evidencia/verificacion-entorno.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/extraer_matrices.py",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/fixtures/aritmetica-fuente.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/fixtures/casos-fuente.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/fixtures/diferencial.json",
+      "status": "added"
+    },
+    {
+      "path": "auditoria/fixtures/matrices-corpus.json",
+      "status": "added"
+    },
+    {
+      "path": "tests/auditoria-canonicos.test.cjs",
+      "status": "added"
+    },
+    {
+      "path": "tests/auditoria-caracterizacion.test.cjs",
+      "status": "added"
+    },
+    {
+      "path": "tests/auditoria-diferencial.test.cjs",
+      "status": "added"
+    },
+    {
+      "path": "tests/auditoria-robustez.test.cjs",
+      "status": "added"
+    }
+  ],
+  "runtimeFilesChanged": [],
+  "criterion": "Only audit documents, diagnostics, fixtures, evidence and tests/auditoria-* changed; production source/configuration/assets preserved.",
+  "verifiedAt": "2026-10-02T22:38:07.355105+00:00"
+}
