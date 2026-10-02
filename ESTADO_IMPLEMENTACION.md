@@ -7,9 +7,9 @@ Regla: una tarea sólo puede marcarse [x] cuando su implementación y pruebas co
 ## Último punto seguro
 
 - Estado: CIERRE VERIFICADO — sin decisiones obligatorias
-- Último commit de implementación: 7e50e97
+- Último commit de implementación: 6212675
 - Bloque activo: ninguno; bloques 1–9 completos
-- Próxima tarea: consolidar prueba de frontera estricta de 10 puntos y evidencia visual en CI.
+- Próxima tarea: ninguna; el tablero está cerrado. Nuevos protocolos corresponden a ampliaciones futuras.
 
 ---
 
@@ -152,3 +152,5 @@ La interfaz, el expediente y la Taxonomía están comiteados. Verificación comp
 - `90ab817` — Constructor, expediente determinista y Taxonomía; install/tests/build verdes. Prueba UI detectó selector sin nombre accesible exacto (run 37063380468), corrección en curso. Vercel READY (dpl_Bdb4obtTk11GxJfpyZuSjRMxoXsA).
 
 - `7e50e97` — Etiquetas accesibles y α vacío; CI completo verde (run 37063742223).
+
+- `6212675` — Frontera estricta de 10 puntos, reserva no bloqueante de empates y cierre del tablero. 18 pruebas locales y build con lint/tipos verdes. Verificación final y captura: https://github.com/kagenomusuko-svg/meriadock-analisis/actions/runs/37064025902.
