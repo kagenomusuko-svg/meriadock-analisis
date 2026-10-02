@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 6
+- Bloque activo: Auditoría 7
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -52,10 +52,10 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_ROBUSTEZ_SENSIBILIDAD.md. — `1dbcd6931533390bb3b9c00b08059593651bf07c`
 
 ## Auditoría 6 — Cobertura de operadores
-- [ ] Inventariar operadores del corpus.
-- [ ] Comparar contra REGISTRY.
-- [ ] Clasificar faltantes.
-- [ ] Crear INVENTARIO_OPERADORES_Y_COBERTURA.md.
+- [x] Inventariar operadores del corpus. — `c513c784bf12082883a79c7f963840669c3cd767`
+- [x] Comparar contra REGISTRY. — `c513c784bf12082883a79c7f963840669c3cd767`
+- [x] Clasificar faltantes. — `c513c784bf12082883a79c7f963840669c3cd767`
+- [x] Crear INVENTARIO_OPERADORES_Y_COBERTURA.md. — `c513c784bf12082883a79c7f963840669c3cd767`
 
 ## Auditoría 7 — Frontera taxonómica
 - [ ] taxonomiaVersion, registry y loader.
@@ -120,3 +120,5 @@ Ninguna al inicio.
 - `7727975017a963a30e9ab0e7e5417cd653116370` — auditoría 4.
 
 - `1dbcd6931533390bb3b9c00b08059593651bf07c` — auditoría 5.
+
+- `c513c784bf12082883a79c7f963840669c3cd767` — auditoría 6.
