@@ -278,45 +278,6 @@ export default function Constructor() {
     }
   }
 
-  async function descargarNarrativa() {
-    if (narrUsada || !calcData) return;
-    setNS("generando");
-    try {
-      const res = await fetch("/api/narrativa", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          resultado: calcData,
-          grafo: {
-            ...grafo,
-            nodos: grafo.nodos.map(function(nd) {
-              const actor = actores.find(function(a) { return a.id === nd.id; });
-              return actor ? { ...nd, dist: actor.dist, marco: actor.marco } : nd;
-            }),
-          },
-          metadatos: {
-            titulo: caso.titulo || "Análisis causal",
-            folio: "EN-" + Date.now(),
-            fecha: new Date().toLocaleDateString("es-MX"),
-          },
-        }),
-      });
-      const html = await res.text();
-      const blob = new Blob([html], { type: "text/html" });
-      const url  = URL.createObjectURL(blob);
-      const a    = document.createElement("a");
-      a.href     = url;
-      a.download = (caso.titulo || "narrativa").replace(/[^a-zA-Z0-9]/g, "_") + "_narrativa.html";
-      a.click();
-      URL.revokeObjectURL(url);
-      setNS("listo");
-      setNU(true); // bloquear — solo una vez por análisis
-    } catch (e) {
-      console.error(e);
-      setNS("error");
-    }
-  }
-
   async function calcular() {
     setCS("calculando"); setCD(null); setCE("");
     try {
@@ -849,29 +810,12 @@ export default function Constructor() {
                     >
                       {expStatus === "generando" ? "Generando expediente..." : "↓ Descargar expediente"}
                     </button>
-                    <button
-                      onClick={descargarNarrativa}
-                      disabled={narrUsada || narrStatus === "generando"}
-                      title={narrUsada ? "El análisis narrativo ya fue generado para este caso. Inicia un nuevo análisis para generarlo de nuevo." : ""}
-                      style={{
-                        ...bSec,
-                        opacity: narrUsada ? 0.45 : narrStatus === "generando" ? 0.7 : 1,
-                        cursor: narrUsada ? "not-allowed" : "pointer",
-                        position: "relative",
-                      }}
-                    >
-                      {narrStatus === "generando" ? "Generando narrativa..." : narrUsada ? "Narrativa ya generada" : "↓ Análisis narrativo"}
-                    </button>
                     {expStatus === "error" && (
                       <span style={{ fontSize: "13px", color: "#8a1a1a", alignSelf: "center" }}>
                         Error al generar el expediente
                       </span>
                     )}
-                    {narrStatus === "error" && (
-                      <span style={{ fontSize: "13px", color: "#8a1a1a", alignSelf: "center" }}>
-                        Error al generar la narrativa
-                      </span>
-                    )}
+
                   </div>
                 </div>
               );
