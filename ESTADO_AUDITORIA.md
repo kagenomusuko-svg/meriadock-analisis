@@ -4,30 +4,30 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 
 ## Último punto seguro
 
-- Estado: NO INICIADO
-- Bloque activo: Auditoría 1
-- Próxima tarea: fijar commit base e inventariar fuentes
+- Estado: EN CURSO
+- Bloque activo: Auditoría 3
+- Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
-- [ ] Fijar commit exacto de main.
-- [ ] Inventariar archivos runtime.
-- [ ] Inventariar fuentes doctrinales.
-- [ ] Registrar CI y deployment de referencia.
+- [x] Fijar commit exacto de main. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
+- [x] Inventariar archivos runtime. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
+- [x] Inventariar fuentes doctrinales. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
+- [x] Registrar CI y deployment de referencia. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
 
 ## Auditoría 1 — Arquitectura conceptual
-- [ ] Revisar análisis, fenómeno, D, nodo, relación, discriminación, soporte y expediente.
-- [ ] Revisar familia, dominio, protocolo y asistente determinista.
-- [ ] Crear MATRIZ_ARQUITECTURA_CONCEPTUAL.md.
+- [x] Revisar análisis, fenómeno, D, nodo, relación, discriminación, soporte y expediente. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
+- [x] Revisar familia, dominio, protocolo y asistente determinista. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
+- [x] Crear MATRIZ_ARQUITECTURA_CONCEPTUAL.md. — `9a9690c07dec09035c98f00bdd464fafbe5999e0`
 
 ## Auditoría 2 — R* y Perron–Frobenius
-- [ ] Convención W_ij y orientación.
-- [ ] Normalización L1, rho, residuo y tolerancia.
-- [ ] D fuera de W y R*.
-- [ ] Irreducibilidad, periodicidad y primitividad.
-- [ ] Regularización.
-- [ ] Sparse y escalabilidad.
-- [ ] Casos canónicos.
-- [ ] Crear AUDITORIA_RSTAR_PERRON_FROBENIUS.md.
+- [x] Convención W_ij y orientación. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] Normalización L1, rho, residuo y tolerancia. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] D fuera de W y R*. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] Irreducibilidad, periodicidad y primitividad. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] Regularización. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] Sparse y escalabilidad. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] Casos canónicos. — `5339c8b97988e760e20b234b36801f69f08a7a48`
+- [x] Crear AUDITORIA_RSTAR_PERRON_FROBENIUS.md. — `5339c8b97988e760e20b234b36801f69f08a7a48`
 
 ## Auditoría 3 — Operadores derivados
 - [ ] S.
@@ -111,4 +111,6 @@ Ninguna al inicio.
 
 ## Historial de commits
 
-Se completará durante la auditoría.
+- `9a9690c07dec09035c98f00bdd464fafbe5999e0` — base y arquitectura.
+- `5339c8b97988e760e20b234b36801f69f08a7a48` — PF, casos de fuente y escala; 35 tests pasan.
+
