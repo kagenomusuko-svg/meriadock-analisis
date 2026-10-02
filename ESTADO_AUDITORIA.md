@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 4
+- Bloque activo: Auditoría 5
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -37,12 +37,12 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_OPERADORES_DERIVADOS.md. — `9aa282fab7dbed9c6143c121143fcbb8a6c84439`
 
 ## Auditoría 4 — Operadores complementarios
-- [ ] IIC.
-- [ ] Fraude annona.
-- [ ] B*.
-- [ ] D_total.
-- [ ] AD.
-- [ ] Crear AUDITORIA_OPERADORES_COMPLEMENTARIOS.md.
+- [x] IIC. — `7727975017a963a30e9ab0e7e5417cd653116370`
+- [x] Fraude annona. — `7727975017a963a30e9ab0e7e5417cd653116370`
+- [x] B*. — `7727975017a963a30e9ab0e7e5417cd653116370`
+- [x] D_total. — `7727975017a963a30e9ab0e7e5417cd653116370`
+- [x] AD. — `7727975017a963a30e9ab0e7e5417cd653116370`
+- [x] Crear AUDITORIA_OPERADORES_COMPLEMENTARIOS.md. — `7727975017a963a30e9ab0e7e5417cd653116370`
 
 ## Auditoría 5 — Robustez y sensibilidad
 - [ ] min/central/max.
@@ -116,3 +116,5 @@ Ninguna al inicio.
 
 
 - `9aa282fab7dbed9c6143c121143fcbb8a6c84439` — auditoría 3.
+
+- `7727975017a963a30e9ab0e7e5417cd653116370` — auditoría 4.
