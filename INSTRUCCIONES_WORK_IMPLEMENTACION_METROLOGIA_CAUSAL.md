@@ -1348,3 +1348,23 @@ La implementación se considera correcta cuando:
 La regla de producto es:
 
 El humano trabaja donde debe trabajar; el programa le quita deuda mecánica, le recuerda los puentes que faltan y calcula exactamente las consecuencias de lo que el humano declaró.
+
+
+---
+
+# 31. Auditoría técnica obligatoria del repositorio
+
+Antes de modificar archivos, lee también:
+
+AUDITORIA_DEUDAS_IMPLEMENTACION.md
+
+Ese documento forma parte normativa de estas instrucciones y contiene la cirugía concreta por archivo detectada sobre el estado actual del repositorio.
+
+En caso de conflicto entre una descripción genérica de este documento y una deuda concreta descrita en la auditoría:
+
+1. conserva las invariantes matemáticas y ontológicas fijadas aquí;
+2. usa la auditoría para localizar el archivo, bug o conexión específica;
+3. no mantengas una implementación vieja sólo porque ya existe;
+4. si la contradicción afecta una regla matemática canónica y no puede resolverse con las fuentes, registra una decisión pendiente en vez de improvisarla.
+
+Work debe usar ambos documentos como un único contrato de implementación.
