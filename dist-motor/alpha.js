@@ -1,15 +1,19 @@
-"use strict";
-var N_REF = {0:0,1:1,2:2,3:3,4:4,5:6,6:8,7:11,8:15};
-exports.calcularF = function(nDoc, nivel) {
-  var nRef = N_REF[nivel] || 1;
-  return Math.min(1, nDoc/nRef);
-};
-exports.calcularG = function(nDom, nI) {
-  if (!nI) return 0;
-  return Math.min(1, nDom/nI);
-};
-exports.calcularAlpha = function(ins) {
-  if (!ins.integrado) return 0;
-  return exports.calcularF(ins.nDoc, ins.nivelEvidencia) *
-         exports.calcularG(ins.nDom, ins.nI);
-};
+'use strict';
+function calcularAlpha(input, protocolo) {
+ if(!input)return null;
+ let valor;
+ if(input.estrategia==='discriminado')valor=input.valor;
+ else if(input.estrategia==='proporcion_monetaria'){
+  const {montoEfectivamenteAsumido:m,baseComparativa:b,unidad}=input;
+  if(m===null||m===undefined||b===null||b===undefined||!unidad)return null;
+  if(!Number.isFinite(m)||m<0||!Number.isFinite(b)||b<=0)throw new Error('Proporción α inválida');
+  valor=Math.min(1,m/b);
+ }else if(input.estrategia==='taxonomico'){
+  if(!protocolo)return null;
+  valor=protocolo(input);
+ }else return null;
+ if(valor===null||valor===undefined)return null;
+ if(!Number.isFinite(valor)||valor<0||valor>1)throw new Error('α fuera de [0,1]');
+ return {...input,valor,soportes:input.soportes||[]};
+}
+module.exports={calcularAlpha};

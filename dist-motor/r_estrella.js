@@ -1,194 +1,28 @@
-"use strict";
-
-// ============================================================
-// BLOQUE 7 — Vector de responsabilidad causal R*
-//
-// ALGORITMO: Influencia causal total por todos los caminos
-//
-// Para cada nodo actor i, R*(i) = suma sobre todos los caminos
-// dirigidos desde i hasta Nf del producto de los midpoints
-// de las aristas en ese camino.
-//
-// Ejemplo: D→Nf(0.45) y D→E(0.50)→Nf(0.30):
-//   influencia(D) = 0.45 + 0.50×0.30 = 0.60
-//
-// Esto captura la contribución directa e indirecta de cada
-// actor al resultado sin los problemas de eigenvector en DAGs
-// (donde el nodo sumidero absorbe toda la probabilidad).
-//
-// El nodo final (Nf) nunca aparece en el vector resultante.
-//
-// Referencia: Axiomatización §VI, Metrología Causal Vol. II
-// ============================================================
-
-// ─── ORDENAMIENTO TOPOLÓGICO ─────────────────────────────────
-// Devuelve los nodos en orden topológico (fuentes primero, sumideros al final).
-// Garantiza que al procesar en orden INVERSO, cada nodo i es
-// procesado antes de los nodos que lo preceden causalmente.
-function ordenarTopologicamente(nodos, aristas) {
-  var permanente = {};
-  var visitado   = {};
-  var orden      = [];
-
-  // Lista de adjacencia: salientes[id] = [id_destino, ...]
-  var salientes = {};
-  nodos.forEach(function(n) { salientes[n.id] = []; });
-  aristas.forEach(function(a) {
-    if (salientes[a.origen]) salientes[a.origen].push(a.destino);
-  });
-
-  function visitar(id) {
-    if (permanente[id]) return;
-    if (visitado[id])   return; // protección ante ciclos
-    visitado[id] = true;
-    (salientes[id] || []).forEach(visitar);
-    permanente[id] = true;
-    orden.unshift(id);
+'use strict';
+const {desdeDensa,multiplicar,regularizarMatriz,diagnosticar}=require('./grafo');
+function calcularRStar(input,{tolerancia=1e-10,maxIteraciones=10000,regularizacion,detalleCompleto=false}={}) {
+  const W_E=Array.isArray(input)?desdeDensa(input):input;
+  if(!W_E || !Number.isInteger(W_E.n) || W_E.n<1) return {estado:'indeterminado',vector:null,convergio:false,motivo:'Sin nodos activos'};
+  if(!Number.isFinite(tolerancia)||tolerancia<=0||!Number.isInteger(maxIteraciones)||maxIteraciones<1)throw new Error('Parámetros numéricos inválidos');
+  const W=regularizacion?regularizarMatriz(W_E,regularizacion):W_E;
+  const diagnostico=diagnosticar(W), diagnosticoEmpirico=diagnosticar(W_E);
+  let r=new Array(W.n).fill(1/W.n),errorFinal=null,iteraciones=0,convergio=false;
+  const detalle=detalleCompleto||W.n<=12, rondas=detalle?[{ronda:0,vector:[...r]}]:[];
+  let motivo=null;
+  for(let t=1;t<=maxIteraciones;t++){
+    const producto=multiplicar(W,r),suma=producto.reduce((a,b)=>a+b,0);
+    if(!Number.isFinite(suma)||suma<=0){motivo='Producto nulo o no finito; no existe distribución calculable por esta iteración';break;}
+    const siguiente=producto.map(x=>x/suma);errorFinal=siguiente.reduce((s,x,i)=>s+Math.abs(x-r[i]),0);iteraciones=t;
+    if(detalle)rondas.push({ronda:t,anterior:[...r],producto,suma,vector:[...siguiente],error:errorFinal});
+    r=siguiente;if(errorFinal<tolerancia){convergio=true;break;}
   }
-
-  nodos.forEach(function(n) {
-    if (!permanente[n.id]) visitar(n.id);
-  });
-
-  return orden;
+  const wr=multiplicar(W,r),rho=wr.reduce((s,x)=>s+x,0),residuo=wr.reduce((s,x,i)=>s+Math.abs(x-rho*r[i]),0);
+  convergio=convergio&&rho>0&&residuo<tolerancia*Math.max(1,rho);
+  return {estado:convergio?'calculado':'indeterminado',vector:convergio?r:null,aproximacion:convergio?null:r,
+    eigenvalorDominante:rho,iteraciones,convergio,errorFinal,residuo,tolerancia,maxIteraciones,
+    motivo:motivo||(!convergio?'No convergente con los parámetros declarados':null),
+    regularizacionAplicada:!!regularizacion,epsilon:regularizacion?.epsilon??null,
+    diagnostico,diagnosticoEmpirico,W_E,W_epsilon:regularizacion?W:null,rondas,
+    condicionesSuficientes:diagnostico.primitiva,metodo:'Perron–Frobenius, iteración de potencia; W r, norma L1'};
 }
-
-// ─── NÚCLEO: INFLUENCIA CAUSAL TOTAL ─────────────────────────
-// Calcula la influencia causal total de cada nodo sobre Nf.
-// Procesa el DAG en orden topológico inverso (de Nf hacia las fuentes).
-function calcularInfluenciaCausal(g) {
-  var nodos   = g.nodos;
-  var aristas = g.aristas;
-
-  // Identificar el nodo final
-  var nodoFinalId = null;
-  nodos.forEach(function(n) {
-    if (n.tipo === 'final') nodoFinalId = n.id;
-  });
-
-  // Construir lista de aristas salientes por nodo (con midpoints)
-  var salientes = {};
-  nodos.forEach(function(n) { salientes[n.id] = []; });
-  aristas.forEach(function(a) {
-    if (salientes[a.origen]) {
-      salientes[a.origen].push({
-        destino:  a.destino,
-        midpoint: (a.pesoMin + a.pesoMax) / 2
-      });
-    }
-  });
-
-  // Inicializar influencias en 0; el nodo final tiene influencia = 1
-  var influencia = {};
-  nodos.forEach(function(n) { influencia[n.id] = 0; });
-  if (nodoFinalId) influencia[nodoFinalId] = 1.0;
-
-  // Procesar en orden INVERSO al topológico:
-  //   → cuando calculamos influencia[i], todos los destinos de i
-  //     ya tienen su influencia calculada
-  var ordenReverso = ordenarTopologicamente(nodos, aristas).slice().reverse();
-  ordenReverso.forEach(function(nId) {
-    if (nId === nodoFinalId) return; // Nf ya está fijado en 1.0
-
-    var inf = 0;
-    (salientes[nId] || []).forEach(function(arista) {
-      inf += arista.midpoint * (influencia[arista.destino] || 0);
-    });
-    influencia[nId] = inf;
-  });
-
-  // Colectar nodos actores (todos excepto el final) y normalizar
-  var actores = nodos.filter(function(n) { return n.tipo !== 'final'; });
-  var valores  = actores.map(function(n) { return Math.max(0, influencia[n.id] || 0); });
-  var suma     = valores.reduce(function(s, v) { return s + v; }, 0);
-
-  var vectorNorm;
-  if (suma < 1e-10) {
-    // Sin caminos al resultado: distribución uniforme como fallback
-    vectorNorm = actores.map(function() { return 1 / Math.max(actores.length, 1); });
-  } else {
-    vectorNorm = valores.map(function(v) { return v / suma; });
-  }
-
-  return {
-    vector:       vectorNorm,          // índice = posición en actores[]
-    nombresNodos: actores.map(function(n) { return n.nombre; }),
-    convergio:    true,
-    iteraciones:  0,
-    eigenvalor:   1,
-    metodo:       'influencia-causal'
-  };
-}
-
-// ─── EXPORT PRINCIPAL ────────────────────────────────────────
-// Usado por series.js para calcular R* del caso completo.
-// Devuelve vector sobre nodos ACTORES (excluye nodo final).
-// series.js reconstruye el vector completo con el loop actorIdx.
-exports.calcularRStarDesdeGrafo = function(g) {
-  return calcularInfluenciaCausal(g);
-};
-
-// ─── EXPORT PARA HIPERCUBO ───────────────────────────────────
-// Calcula R* usando pesos explícitos por arista (para análisis
-// de estabilidad del hipercubo). Devuelve vector de longitud
-// completa (nodos.length) con 0 en la posición del nodo final,
-// para que hipercubo.calcularRanking pueda usarlo directamente.
-exports.calcularRStarVectorCompleto = function(g, pesosVertice) {
-  // Construir grafo temporal con pesos explícitos o midpoints
-  var aristasConPeso = g.aristas.map(function(a, idx) {
-    var p = (pesosVertice && pesosVertice[idx] !== undefined)
-      ? pesosVertice[idx]
-      : (a.pesoMin + a.pesoMax) / 2;
-    return Object.assign({}, a, { pesoMin: p, pesoMax: p });
-  });
-  var grafoTemp = Object.assign({}, g, { aristas: aristasConPeso });
-  var res = calcularInfluenciaCausal(grafoTemp);
-
-  // Reconstruir vector de longitud = nodos.length con 0 en final
-  var fullVector = new Array(g.nodos.length).fill(0);
-  var actorIdx = 0;
-  g.nodos.forEach(function(n, i) {
-    if (n.tipo !== 'final') {
-      fullVector[i] = res.vector[actorIdx] || 0;
-      actorIdx++;
-    }
-  });
-
-  return { vector: fullVector, metodo: 'influencia-causal' };
-};
-
-// ─── KEPT FOR BACKWARD COMPATIBILITY ────────────────────────
-// calcularRStar (eigenvector clásico) ya no se usa en el pipeline
-// principal pero se conserva por si algún script de diagnóstico
-// externo lo llama directamente.
-exports.calcularRStar = function(W, maxIter, tol) {
-  maxIter = maxIter || 1000;
-  tol     = tol     || 1e-9;
-  var n   = W.length;
-  var r   = new Array(n).fill(1 / n);
-  var iter = 0, conv = false;
-
-  function multWtR(W, r) {
-    var res = new Array(n).fill(0);
-    for (var j = 0; j < n; j++)
-      for (var i = 0; i < n; i++)
-        res[j] += W[i][j] * r[i];
-    return res;
-  }
-
-  function normL1(v) {
-    var s = v.reduce(function(a, x) { return a + Math.abs(x); }, 0);
-    if (s < 1e-10) return v.map(function() { return 1 / v.length; });
-    return v.map(function(x) { return x / s; });
-  }
-
-  for (var k = 0; k < maxIter; k++) {
-    iter++;
-    var rN = normL1(multWtR(W, r));
-    var d  = rN.reduce(function(s, v, i) { return s + Math.abs(v - r[i]); }, 0);
-    r = rN;
-    if (d < tol) { conv = true; break; }
-  }
-
-  return { vector: r, iteraciones: iter, convergio: conv };
-};
+module.exports={calcularRStar};

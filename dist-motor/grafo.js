@@ -1,122 +1,56 @@
-"use strict";
-
-// ============================================================
-// GRAFO — Construcción de la matriz de pesos W
-// Normalización por DESTINO (suma de pesos entrantes al nodo j)
-//
-// Justificación teórica:
-// En el marco de Metrología Causal, el peso de una arista representa
-// la contribución causal del nodo origen hacia el resultado.
-// La normalización correcta preserva esos pesos relativos midiendo
-// cuánto aporta cada fuente al nodo destino — no cómo distribuye
-// su flujo el nodo origen.
-//
-// Normalización anterior (por origen — INCORRECTA para este marco):
-//   W[i][j] = midpoint(arista_ij) / suma_salientes_de_i
-//   → Todos los nodos con una sola arista de salida obtienen W=1.0
-//   → Los pesos de evidencia desaparecen
-//   → R* resulta uniforme sin importar la evidencia
-//
-// Normalización actual (por destino — CORRECTA):
-//   W[i][j] = midpoint(arista_ij) / suma_entrantes_a_j
-//   → Un nodo con arista 0.65 compite contra uno con 0.35
-//   → W[i][j] = 0.65 y W[k][j] = 0.35 respectivamente
-//   → R* refleja la evidencia real del expediente
-// ============================================================
-
-exports.midpoint = function(a) {
-  return (a.pesoMin + a.pesoMax) / 2;
-};
-
-// Construye la matriz de transición W normalizada por columna (destino).
-// Para cada nodo destino j, la suma de W[i][j] sobre todos los i = 1.
-// Los nodos sin aristas entrantes quedan en cero (no son sumideros activos).
-exports.construirMatrizW = function(grafo) {
-  var n = grafo.nodos.length;
-  var indice = {};
-  grafo.nodos.forEach(function(nd, i) { indice[nd.id] = i; });
-
-  var W = Array.from({ length: n }, function() { return new Array(n).fill(0); });
-
-  // Agrupar aristas por DESTINO
-  var porDestino = {};
-  grafo.aristas.forEach(function(a) {
-    if (!porDestino[a.destino]) porDestino[a.destino] = [];
-    porDestino[a.destino].push(a);
+'use strict';
+const {crearAnalisis,rangoRelacion}=require('./modelo');
+// Convención canónica: W_ij = w(N_i → N_j); multiplicación DERECHA W r.
+function construirMatrizEmpirica(input, escenario='central') {
+  if (!['min','central','max'].includes(escenario)) throw new Error('Escenario inválido');
+  const modelo=crearAnalisis(input), ids=modelo.nodosActivos.map(n=>n.id), indice=Object.fromEntries(ids.map((id,i)=>[id,i]));
+  const entradas=modelo.relacionesInternas.map(e=>{
+    const r=rangoRelacion(e), valor=escenario==='min'?r.min:escenario==='max'?r.max:(r.min+r.max)/2;
+    return {fila:indice[e.origen],columna:indice[e.destino],valor,relacion:e.id,evidenciaNivel:e.evidenciaNivel};
   });
-
-  // Para cada nodo destino: normalizar los pesos entrantes
-  Object.keys(porDestino).forEach(function(destId) {
-    var ars = porDestino[destId];
-
-    // Suma de midpoints de todas las aristas que llegan a este destino
-    var suma = ars.reduce(function(s, a) { return s + exports.midpoint(a); }, 0);
-
-    ars.forEach(function(a) {
-      var i = indice[a.origen];
-      var j = indice[a.destino];
-      if (i !== undefined && j !== undefined && suma > 0) {
-        W[i][j] = exports.midpoint(a) / suma;
-      }
-    });
-  });
-
-  return W;
-};
-
-// Construye W con un vector de pesos explícito (usado por hipercubo.js).
-// También normaliza por destino para mantener consistencia.
-exports.construirWConPesos = function(grafo, pesosVertice) {
-  var n = grafo.nodos.length;
-  var indice = {};
-  grafo.nodos.forEach(function(nd, i) { indice[nd.id] = i; });
-
-  var W = Array.from({ length: n }, function() { return new Array(n).fill(0); });
-
-  // Asociar el peso del vértice a cada arista
-  var aristasConPeso = grafo.aristas.map(function(a, idx) {
-    return Object.assign({}, a, { pesoVertice: pesosVertice[idx] });
-  });
-
-  // Agrupar por destino
-  var porDestino = {};
-  aristasConPeso.forEach(function(a) {
-    if (!porDestino[a.destino]) porDestino[a.destino] = [];
-    porDestino[a.destino].push(a);
-  });
-
-  Object.keys(porDestino).forEach(function(destId) {
-    var ars = porDestino[destId];
-    var suma = ars.reduce(function(s, a) { return s + a.pesoVertice; }, 0);
-    ars.forEach(function(a) {
-      var i = indice[a.origen];
-      var j = indice[a.destino];
-      if (i !== undefined && j !== undefined && suma > 0) {
-        W[i][j] = a.pesoVertice / suma;
-      }
-    });
-  });
-
-  return W;
-};
-
-// Perturbación ergódica: garantiza que la cadena de Markov sea irreducible.
-// Mezcla W con la matriz uniforme en proporción eps.
-// Sin esta perturbación, nodos sin aristas entrantes pueden quedar
-// con columna cero y el eigenvector no converge.
-exports.pertrubarMatriz = function(W, eps) {
-  eps = eps || 0.01;
-  var n = W.length;
-  return W.map(function(fila) {
-    return fila.map(function(v) { return (1 - eps) * v + eps / n; });
-  });
-};
-
-// Utilidades de inspección del grafo
-exports.tieneNodoFinal = function(g) {
-  return g.nodos.some(function(n) { return n.tipo === 'final'; });
-};
-
-exports.indiceNodoFinal = function(g) {
-  return g.nodos.findIndex(function(n) { return n.tipo === 'final'; });
-};
+  return {representacion:'sparse-aristas',n:ids.length,ids,entradas,escenario,convencion:'W_ij = w(N_i → N_j)',empirica:true};
+}
+function desdeDensa(W) {
+  const n=W.length, entradas=[];
+  if (!n || W.some(r=>!Array.isArray(r)||r.length!==n)) throw new Error('Matriz cuadrada no vacía requerida');
+  W.forEach((r,i)=>r.forEach((valor,j)=>{if(!Number.isFinite(valor)||valor<0)throw new Error('Matriz no negativa requerida');if(valor)entradas.push({fila:i,columna:j,valor});}));
+  return {representacion:'sparse-aristas',n,ids:Array.from({length:n},(_,i)=>String(i)),entradas,empirica:true};
+}
+function multiplicar(W,r) {
+  const v=new Array(W.n).fill(0);
+  for(const e of W.entradas) v[e.fila]+=e.valor*r[e.columna];
+  if(W.regularizacion){const {epsilon,K}=W.regularizacion;
+    if(K.tipo==='constante'){const aporte=epsilon*K.valor*r.reduce((s,x)=>s+x,0);for(let i=0;i<W.n;i++)v[i]+=aporte;}
+    else for(const e of K.entradas)v[e.fila]+=epsilon*e.valor*r[e.columna];
+  }
+  return v;
+}
+function regularizarMatriz(W,config) {
+  if(!config||!Number.isFinite(config.epsilon)||config.epsilon<=0||!config.K)throw new Error('Regularización exige epsilon positivo y K explícitos');
+  const K=config.K;
+  if(K.tipo==='constante'){if(!Number.isFinite(K.valor)||K.valor<=0)throw new Error('K constante positiva requerida');}
+  else if(K.tipo==='sparse'){if(!Array.isArray(K.entradas)||K.entradas.some(e=>!Number.isInteger(e.fila)||!Number.isInteger(e.columna)||e.fila<0||e.columna<0||e.fila>=W.n||e.columna>=W.n||!Number.isFinite(e.valor)||e.valor<0))throw new Error('K sparse inválida');}
+  else throw new Error('K no soportada');
+  return {...W,empirica:false,regularizacion:{epsilon:config.epsilon,K:structuredClone(K),esEvidencia:false}};
+}
+function diagnosticar(W) {
+  const n=W.n;
+  if(!n)return {irreducible:false,primitiva:false,periodo:null};
+  if(W.regularizacion?.K.tipo==='constante')return {irreducible:true,primitiva:true,periodo:1,porRegularizacion:true};
+  const ady=Array.from({length:n},()=>[]), rev=Array.from({length:n},()=>[]);
+  const edges=[...W.entradas,...(W.regularizacion?.K.entradas||[])];
+  for(const e of edges)if(e.valor>0){ady[e.fila].push(e.columna);rev[e.columna].push(e.fila);}
+  function visitar(g){const seen=new Set([0]),stack=[0];while(stack.length){for(const j of g[stack.pop()])if(!seen.has(j)){seen.add(j);stack.push(j);}}return seen.size===n;}
+  const irreducible=visitar(ady)&&visitar(rev);
+  if(!irreducible)return {irreducible:false,primitiva:false,periodo:null};
+  const dist=new Array(n).fill(-1),q=[0];dist[0]=0;
+  for(let i=0;i<q.length;i++)for(const j of ady[q[i]])if(dist[j]<0){dist[j]=dist[q[i]]+1;q.push(j);}
+  function gcd(a,b){while(b){[a,b]=[b,a%b];}return a;}
+  let periodo=0;for(let i=0;i<n;i++)for(const j of ady[i])periodo=gcd(periodo,Math.abs(dist[i]+1-dist[j]));
+  return {irreducible,primitiva:periodo===1,periodo};
+}
+function matrizDensa(W){return Array.from({length:W.n},(_,i)=>Array.from({length:W.n},(_,j)=>{
+ let v=W.entradas.filter(e=>e.fila===i&&e.columna===j).reduce((s,e)=>s+e.valor,0);
+ const c=W.regularizacion;if(c)v+=c.epsilon*(c.K.tipo==='constante'?c.K.valor:c.K.entradas.filter(e=>e.fila===i&&e.columna===j).reduce((s,e)=>s+e.valor,0));return v;
+}));}
+module.exports={construirMatrizEmpirica,desdeDensa,multiplicar,regularizarMatriz,diagnosticar,matrizDensa};
