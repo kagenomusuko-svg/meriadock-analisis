@@ -1112,13 +1112,12 @@ cuando el programa no tuvo acceso al expediente fuente.
 
 ---
 
-# 26. Añade vista de auditoría
+# 26. Añade vista de auditoría adaptativa
 
 La vista normal debe ser sencilla.
 
 La vista técnica debe permitir inspeccionar:
 
-- pesos min/central/max;
 - matriz empírica y, si aplica, matriz regularizada;
 - iteraciones de potencia;
 - error de convergencia;
@@ -1135,7 +1134,66 @@ La vista técnica debe permitir inspeccionar:
 
 Automatización no significa opacidad.
 
----
+La cantidad de detalle visible debe adaptarse al tamaño del sistema, sin cambiar la matemática.
+
+## 26.1 Grafos pequeños
+
+Cuando el número de nodos y aristas permita una lectura humana razonable, muestra la aritmética completa:
+
+- vector inicial;
+- cada iteración o ronda;
+- multiplicaciones;
+- sumas;
+- normalizaciones;
+- diferencia entre iteraciones;
+- criterio de convergencia.
+
+El propósito es pedagógico y probatorio: hacer visible el razonamiento que conduce a \(R^*\).
+
+## 26.2 Grafos medianos y grandes
+
+Cuando el detalle completo sea impracticable en pantalla, no reduzcas ni cambies el cálculo.
+
+Muestra un resumen auditable:
+
+- número de nodos;
+- número de aristas;
+- representación sparse utilizada;
+- número de iteraciones;
+- tolerancia;
+- error final;
+- residuo espectral;
+- eigenvalor dominante;
+- suma de \(R^*\);
+- top de nodos por \(R^*\);
+- advertencias de reducibilidad, periodicidad o regularización.
+
+Permite exportar o desplegar el detalle iterativo completo si el usuario lo solicita.
+
+## 26.3 Regla de escalabilidad
+
+No establezcas un límite conceptual pequeño de nodos porque los ejemplos pedagógicos utilicen pocos actores.
+
+La implementación debe diseñarse para que el mismo operador funcione desde grafos pequeños hasta redes de al menos 1,000 nodos, y debe evitar barreras artificiales en la interfaz.
+
+Si aparece un límite técnico real por memoria, tiempo o infraestructura:
+
+- documenta el límite;
+- mide el punto de falla;
+- no lo presentes como límite teórico de la Metrología causal;
+- prioriza optimización sparse antes que reducción arbitraria del universo causal.
+
+La regla es:
+
+\[
+\boxed{
+\text{mismo operador}
+\;+\;
+\text{distinta escala de representación}
+}
+\]
+
+No implementes “modo simple” y “modo complejo” como matemáticas distintas para \(R^*\).
 
 # 27. Pruebas obligatorias
 
