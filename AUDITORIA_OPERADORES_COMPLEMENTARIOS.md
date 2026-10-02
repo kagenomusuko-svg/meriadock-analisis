@@ -23,3 +23,7 @@ Prometeo describe distribución de beneficios positivos que suma100%; instruccio
 ## AD y daño futuro
 
 El cálculo usa R*_neta en algunos análisis de reparación/priorización; Metrología II usa «ajuste debitor» también para reforma cualitativa de tres componentes. Orden actual adjudica AD monetario con R* bruto. Es variación de objeto/contexto, sin permiso para sustituir AD con neta. Reservas de causalidad de daños futuros y estimaciones no son errores matemáticos si el analista declara su monto, unidad y carácter estimado.
+
+## Resolución adicional obligatoria de IIC
+
+Paradigma/documentacion/resolucion-iic.md, RES-IIC-001, diferencia expresamente IIC_cong∈[0,1] de la correlación estadística signed∈[−1,1]. Esta resolución, junto con instrucciones actuales, impide tratar una correlación negativa histórica como el IIC aplicado. El conteo actual cumple el intervalo; su estimador no es universal por ello. Las composiciones ponderadas/arquitectónicas y el ajuste secuencial de W no están calibrados universalmente. No hay decisión pendiente sobre el intervalo canónico de IIC.

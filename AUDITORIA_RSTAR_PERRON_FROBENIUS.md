@@ -47,3 +47,9 @@ RES-RSTAR-001/2E-RSTAR-001 adjudican para el corpus un operador diferente: `r=(I
 Siete casos transcritos de Prometeo/Vol II reproducen precisamente esa diferencia. Cifras pedagógicas impresas no son oracle numérico del PF actual. Los casos con instrumentalidad no definen una reasignación universal al diseñador; no se infiere una en el motor.
 
 Conclusión: CONFORME_CON_RESERVA para algoritmo formal actual; PARCIAL en validación de cierre y comunicación de garantías. Sin decisión obligatoria adicional para seguir la auditoría.
+
+## Ampliación de casos y conflicto E0
+
+comparacion-corpus.json añade Altamirano (Metrología I), además de seis matrices numéricas literales de El cálculo: PLD, Congo, caso clínico, Snow, Lincoln y empresa. Se extraen sin ejecutar Python de las fuentes. La última fila/columna D se excluye conforme a su construcción histórica y la orden actual; el contrato actual devuelve indeterminado en los catorce casos (ocho transcripciones y seis matrices), sin sustituirlo por porcentajes de libro. Altamirano contiene un ciclo dentro de un grafo reducible; el diagnóstico global de período es null, no 2. El vector histórico no es un oracle del eigenvector derecho actual.
+
+RES-EVID-001 (documentacion/resolucion-e0-e8.md) reserva E0 a evidencia positiva de ausencia y rechaza equiparar hipótesis no acreditada con w=0. Ello contradice explícitamente el postulado de cero epistémico y la invariante 11 de la orden actual. Clasificación D/E, resuelta para esta auditoría por autoridad inmediata explícita: se conserva E0 epistémico del mandato. No se adjudica que ambas definiciones sean equivalentes; ninguna tabla histórica E1–E8 autoriza convertir nivel en magnitud. Véase CONTRADICCIONES_ENTRE_FUENTES.md.

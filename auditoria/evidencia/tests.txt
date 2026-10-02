@@ -1,0 +1,57 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> meriadock-analisis@0.1.0 test
+> node --test tests/*.test.cjs
+
+✔ PROM-BANCO: transcripción fuente ≠ procedimiento PF actual (5.489035ms)
+✔ PROM-DIRECTIVOS: transcripción fuente ≠ procedimiento PF actual (1.146182ms)
+✔ PROM-MEDICO: transcripción fuente ≠ procedimiento PF actual (0.54248ms)
+✔ PROM-PLANTA: transcripción fuente ≠ procedimiento PF actual (1.711727ms)
+✔ PROM-PLD: transcripción fuente ≠ procedimiento PF actual (0.439955ms)
+✔ PROM-MERIDIANO: transcripción fuente ≠ procedimiento PF actual (0.255636ms)
+✔ MCII-REFERENCIA: transcripción fuente ≠ procedimiento PF actual (0.300714ms)
+✔ PF formal actual: orientación derecha difiere de izquierda (0.988825ms)
+✔ RES-RSTAR-001: ejemplo médico por rutas, contraste independiente sin cambiar motor (0.327885ms)
+✔ MCII IIC por correlaciones y fraude histórico: no convertirlos en contrato actual (0.459274ms)
+✔ Altamirano: PF actual registra reducibilidad y no reproduce el vector histórico (163.688171ms)
+✔ CF12 Chevron: enumeración independiente de Shapley localiza errata de porcentajes (14.153691ms)
+✔ CF16 I_inv: bajo numerador fijo, denominador creciente implica cociente decreciente (0.187023ms)
+✔ AUD-01 caracteriza: cierre E0 permite R* y no pondera b_D (3.736707ms)
+✔ AUD-02 caracteriza: unidad y total B* se pierden en HTML (4.535244ms)
+✔ AUD-03 caracteriza: insumos externos α no llegan al linter (3.392767ms)
+✔ AUD-04 caracteriza overflow de suma B*: calculado y suma de cuotas cero (1.264421ms)
+✔ AUD-05 límite: PF periódico puede converger con arranque equilibrado sin garantía primitiva (0.579536ms)
+✔ AUD-06 ausencia, E0, S límites y determinismo repetido (16.949235ms)
+✔ AUD-07 caracteriza: adaptador fija generico@1 sin atender selección/version externa (0.48284ms)
+✔ AUD-10 diferencial exacto de valores: solicitud→respuesta→JSON→HTML, sin redondeo oculto (37.183686ms)
+✔ AUD-11 caracteriza: insumos externos incompletos/configuración no conservados en respuesta (0.978649ms)
+✔ AUD-12 caracteriza: duplicate válido para formulario provoca excepción no atrapada del linter (0.558204ms)
+✔ AUD-13 caracteriza: rango inválido de cierre nunca validado como evidencia de D (2.306716ms)
+✔ AUD-08 caracteriza: empate secundario cambia A/B al permutar mismo input por nodo (4.174279ms)
+✔ AUD-09 hipercubo usa presupuesto declarado y E0 permanece cero (16.325973ms)
+✔ S discriminado y contribución canónicos (1.544193ms)
+✔ α conserva soporte; Δ sin umbrales ni defaults (1.450012ms)
+✔ Constructor → solicitud → motor → expediente con mismo daño/IIC/B* (26.743066ms)
+✔ familias no bloquean repertorio; campos vacíos se conservan como null (2.249269ms)
+✔ linter determinista y E0 epistémico (0.983466ms)
+✔ Taxonomía versionada se añade sin cambiar fórmulas (0.406795ms)
+✔ linter α ausente aunque la estrategia haya sido seleccionada (0.242847ms)
+✔ D separado, cierre y E0 no eliminan nodos (2.905551ms)
+✔ modelo rechaza D activo y destinos inexistentes (0.28466ms)
+✔ API → PF/α/Δ/IIC/B*/D_total/AD, sin restricción por tipo (4.99554ms)
+✔ operadores independientes; datos ausentes ≠ cero (0.548549ms)
+✔ declaraciones canónicas A/B/C/D, umbral exacto y empates explícitos (0.673458ms)
+✔ sensibilidad marginal determinista: método explícito, aristas identificadas (8.254244ms)
+✔ fixture canónico eigenvector derecho (.8,.2), residuo y rondas (8.404661ms)
+✔ D excluido, pesos empíricos sin normalización; E0 conserva coordenada (1.397713ms)
+✔ reducible, periódica y regularización explícita separada (6.958837ms)
+✔ 1000 nodos sparse deterministas, memoria O(E+N) (18.49434ms)
+✔ acceso directo sin servicios externos (1.613318ms)
+ℹ tests 44
+ℹ suites 0
+ℹ pass 44
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 332.602795

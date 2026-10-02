@@ -52,3 +52,15 @@ Clases de faltante: MAT = matemáticamente definido con inputs explícitos; CON 
 No se marca una fórmula como verdad empírica por estar escrita o en código Python. El corpus contiene relaciones de predicción y heurísticas de prioridad con coeficientes ilustrativos; no son funciones autorizadas para inferir valores desde perfiles. La conjetura unificadora y la reconstrucción de S siguen abiertas en segunda edición. La auditoría puede documentar esa deuda sin elegir una solución ni bloquear los doce bloques.
 
 Todos los faltantes relevantes al repertorio ampliado se agrupan en AU-17 P2; no representan defectos de fórmula activa por sí solos. La implementación anterior cerrada no equivale a «todos los operadores de las obras implementados».
+
+## Ampliación tras las resoluciones y apéndices
+
+| ID / operador / fuente | Contrato o inputs mínimos | REGISTRY / estado | Clase / severidad / decisión |
+|---|---|---|---|
+| OP41 Índice de inversión I_inv / Axiom Def8.6, Teo8.3 | |Δ_diseñador|/|Δ_ejecutor|, denominador no cero, clasificación de roles | NO_IMPLEMENTADO; DECISION_REQUERIDA para interpretar monotonicidad | MAT/CON; contradicción D/E pendiente; sin defecto runtime activo |
+| OP42 V(G,G′) / Axiom ApD6 | distancia L1 entre vectores comparables después de cambio, IDs alineados | NO_IMPLEMENTADO | MAT, AU-17 P2; distinto de visibilidad V del TIC |
+| OP43 REC / Axiom VII, RES-REC-001 | estimación Bernoulli/Fisher/CRLB, n, τ; ΔIΔh≥τ/n bajo hipótesis | NO_APLICABLE al núcleo aplicado | FUERA; REC no significa recurrencia; constante publicada 4τ₀² corregida a τ₀; no modelo general validado |
+| OP44 RSC / RES-RSC-IT-001, Axiom II | registro histórico de eventos marcados; I(t) es otra magnitud | NO_APLICABLE al núcleo aplicado | FUERA/CON; secuencia o multiconjunto no adjudicados para implementación futura |
+| OP45 Contribución contrafactual R−R_ablación / Axiom ApD | dos análisis comparables, regla de ablación explicitada | NO_IMPLEMENTADO | MAT/TAX; estimando distinto de R*(1−S), AU-17 P2 |
+
+REC y RSC se clasifican fuera del calculador aplicado, sin elegir representación futura. La resolución específica de IIC fija [0,1]; mantiene incertidumbre de operacionalización por dominio. Se rectifica cualquier lectura del inventario inicial que equiparase REC a recurrencia.

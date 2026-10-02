@@ -1,0 +1,837 @@
+[
+  {
+    "id": "PROM-BANCO",
+    "fuente": "El método Prometeo",
+    "seccion": "§3.3.2–3.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "B": 0.58,
+      "R": 0.113,
+      "A": 0.172,
+      "P": 0.135
+    },
+    "resultadoMotor": [
+      {
+        "id": "B",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "R",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "A",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "P",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "PROM-DIRECTIVOS",
+    "fuente": "El método Prometeo",
+    "seccion": "§4.2.2–4.2.5",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "DG": 0.432,
+      "DC": 0.072,
+      "DR": 0.079,
+      "DJ": 0.281,
+      "A": 0.137
+    },
+    "resultadoMotor": [
+      {
+        "id": "DG",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "DC",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "DR",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "DJ",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "P",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "A",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "PROM-MEDICO",
+    "fuente": "El método Prometeo",
+    "seccion": "§4.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "V": 0.687,
+      "H": 0.199,
+      "R": 0.114
+    },
+    "resultadoMotor": [
+      {
+        "id": "V",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "H",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "R",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "PROM-PLANTA",
+    "fuente": "El método Prometeo",
+    "seccion": "§4.5",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "E": 0.576,
+      "S": 0.109,
+      "O": 0.315
+    },
+    "resultadoMotor": [
+      {
+        "id": "E",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "S",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "O",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "PROM-PLD",
+    "fuente": "El método Prometeo",
+    "seccion": "§6.3.2–6.4.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "K": 0.358,
+      "CI": 0.163,
+      "IM": 0.133,
+      "V": 0.108,
+      "M": 0.239
+    },
+    "resultadoMotor": [
+      {
+        "id": "K",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "CI",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "IM",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "V",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "M",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "PROM-MERIDIANO",
+    "fuente": "El método Prometeo",
+    "seccion": "§7.3–7.4",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "PM": 0.251,
+      "CD": 0.317,
+      "MC": 0.279,
+      "SS": 0.153
+    },
+    "resultadoMotor": [
+      {
+        "id": "PM",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "CD",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "MC",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "SS",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "MCII-REFERENCIA",
+    "fuente": "Metrología Causal Vol II",
+    "seccion": "Ejemplo numérico de referencia, 4 nodos",
+    "clase": "pedagógico/histórico, no igualdad PF actual",
+    "resultadoFuente": {
+      "ND": 0.4812,
+      "E": 0.3104,
+      "S": 0.1521,
+      "Nf": 0.0563
+    },
+    "resultadoMotor": [
+      {
+        "id": "ND",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "E",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "S",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "MCI-ALTAMIRANO",
+    "fuente": "Metrología Causal I",
+    "seccion": "Caso de cierre C·4–C·8",
+    "clase": "ejemplo formal histórico, procedimiento incompatible con orden actual",
+    "resultadoFuente": {
+      "ECP": 0.308,
+      "PSM": 0.118,
+      "FRO": 0.381,
+      "BM": 0.193
+    },
+    "resultadoMotor": [
+      {
+        "id": "ECP",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "PSM",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "FRO",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "BM",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0.08181759374393556,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "No convergente con los parámetros declarados"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0.14230804053260201,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "No convergente con los parámetros declarados"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0.20111836664660954,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "No convergente con los parámetros declarados"
+      }
+    }
+  },
+  {
+    "id": "MAT-001",
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "seccion": "línea 1015, W_solicitud",
+    "clase": "código ilustrativo de fuente; último índice tratado como final sólo para contraste con su algoritmo explícito",
+    "resultadoFuente": "Ver tabla/código de la sección; no se inventa oracle PF actual",
+    "resultadoMotor": [
+      {
+        "id": "N1",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N2",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N3",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {
+      "min": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "central": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      },
+      "max": {
+        "vector": null,
+        "residuo": 0,
+        "diagnostico": {
+          "irreducible": false,
+          "primitiva": false,
+          "periodo": null
+        },
+        "motivo": "Producto nulo o no finito; no existe distribución calculable por esta iteración"
+      }
+    }
+  },
+  {
+    "id": "MAT-002",
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-03.md",
+    "seccion": "línea 823, W_congo",
+    "clase": "código ilustrativo de fuente; último índice tratado como final sólo para contraste con su algoritmo explícito",
+    "resultadoFuente": "Ver tabla/código de la sección; no se inventa oracle PF actual",
+    "resultadoMotor": [
+      {
+        "id": "N1",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N2",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N3",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N4",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N5",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {}
+  },
+  {
+    "id": "MAT-003",
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "seccion": "línea 771, W_caso",
+    "clase": "código ilustrativo de fuente; último índice tratado como final sólo para contraste con su algoritmo explícito",
+    "resultadoFuente": "Ver tabla/código de la sección; no se inventa oracle PF actual",
+    "resultadoMotor": [
+      {
+        "id": "N1",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N2",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N3",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N4",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N5",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {}
+  },
+  {
+    "id": "MAT-004",
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-06.md",
+    "seccion": "línea 841, W_snow",
+    "clase": "código ilustrativo de fuente; último índice tratado como final sólo para contraste con su algoritmo explícito",
+    "resultadoFuente": "Ver tabla/código de la sección; no se inventa oracle PF actual",
+    "resultadoMotor": [
+      {
+        "id": "N1",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N2",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N3",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N4",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N5",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {}
+  },
+  {
+    "id": "MAT-005",
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-07.md",
+    "seccion": "línea 683, W_lincoln",
+    "clase": "código ilustrativo de fuente; último índice tratado como final sólo para contraste con su algoritmo explícito",
+    "resultadoFuente": "Ver tabla/código de la sección; no se inventa oracle PF actual",
+    "resultadoMotor": [
+      {
+        "id": "N1",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N2",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N3",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N4",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {}
+  },
+  {
+    "id": "MAT-006",
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "seccion": "línea 755, W_emp",
+    "clase": "código ilustrativo de fuente; último índice tratado como final sólo para contraste con su algoritmo explícito",
+    "resultadoFuente": "Ver tabla/código de la sección; no se inventa oracle PF actual",
+    "resultadoMotor": [
+      {
+        "id": "N1",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N2",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N3",
+        "valor": null,
+        "s": null,
+        "neta": null
+      },
+      {
+        "id": "N4",
+        "valor": null,
+        "s": null,
+        "neta": null
+      }
+    ],
+    "estado": "indeterminado",
+    "declaracion": null,
+    "escenarios": {}
+  }
+]

@@ -11,7 +11,7 @@
     "ruta": "corpus/fuentes/El cálculo de la responsabilidad una ontología matemática para sistemas causales complejos.md",
     "bytes": 1,
     "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "lectura": "integral local"
+    "lectura": "NO_ENTREGADO por conector; sustituido por capítulos desagregados; no leído como integral"
   },
   {
     "repositorio": "Paradigma",
@@ -46,7 +46,7 @@
     "ruta": "corpus/fuentes/Taxonomía General de Aplicaciones.md",
     "bytes": 1,
     "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
-    "lectura": "integral local"
+    "lectura": "NO_ENTREGADO por conector; sustituido por capítulos desagregados; no leído como integral"
   },
   {
     "repositorio": "Paradigma",
@@ -908,5 +908,33 @@
     "bytes": 8819,
     "sha256": "3dcd64f31da6bed8e3e58be32e3320fe20be4e9e87afbe94955c2abc48cc8c6b",
     "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-rsc-it.md",
+    "bytes": 5096,
+    "sha256": "d737a8d232c8388c7f4252c3d665d147009b2fdb9a41997b2875e83df9df8b7b",
+    "lectura": "texto obtenido y revisado; resolución específica"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-e0-e8.md",
+    "bytes": 13964,
+    "sha256": "9cf11b7742a2ee1742cd9e497d7675f84a926da85beec6febe6c7275ec6b1ed4",
+    "lectura": "texto obtenido y revisado; resolución específica"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-iic.md",
+    "bytes": 9715,
+    "sha256": "1dd6536f3e965c49a2db953ee190c849f9e80997a01f566ca94a1086f16e6a68",
+    "lectura": "texto obtenido y revisado; resolución específica"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-rec.md",
+    "bytes": 8202,
+    "sha256": "f199aab38200dd24f3d252318c408925a6813ca9f70d9ba9589fbdd941f47a53",
+    "lectura": "texto obtenido y revisado; resolución específica"
   }
 ]

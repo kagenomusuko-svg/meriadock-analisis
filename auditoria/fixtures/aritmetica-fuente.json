@@ -1,0 +1,9 @@
+{
+  "chevron": {
+    "fuente": "Paradigma/corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md, §3.5/6.3",
+    "coaliciones": {"":0,"1":0.22,"2":0.40,"3":0.15,"12":0.70,"13":0.42,"23":0.58,"123":1},
+    "impreso":[0.237,0.488,0.275],
+    "marginalesExactos":[0.30833333333333335,0.47833333333333333,0.21333333333333335]
+  },
+  "inversion": {"fuente":"Axiomatización Def8.6/Teo8.3", "brechaDisenador":0.6,"excesoEjecutorAntes":0.3,"excesoEjecutorDespues":0.4,"cocienteAntes":2,"cocienteDespues":1.5}
+}

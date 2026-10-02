@@ -385,5 +385,67 @@
       "Nf": 0.0563
     },
     "esperadoMotorActual": "indeterminado sin regularización: W activo acíclico/nulo"
+  },
+  {
+    "id": "MCI-ALTAMIRANO",
+    "fuente": "Metrología Causal I",
+    "seccion": "Caso de cierre C·4–C·8",
+    "clase": "ejemplo formal histórico, procedimiento incompatible con orden actual",
+    "nodos": [
+      "ECP",
+      "PSM",
+      "FRO",
+      "BM"
+    ],
+    "aristas": [
+      {
+        "origen": "FRO",
+        "destino": "ECP",
+        "min": 0.45,
+        "max": 0.75
+      },
+      {
+        "origen": "FRO",
+        "destino": "PSM",
+        "min": 0.4,
+        "max": 0.7
+      },
+      {
+        "origen": "ECP",
+        "destino": "BM",
+        "min": 0.5,
+        "max": 0.85
+      },
+      {
+        "origen": "ECP",
+        "destino": "FRO",
+        "min": 0.2,
+        "max": 0.45
+      },
+      {
+        "origen": "PSM",
+        "destino": "FRO",
+        "min": 0.25,
+        "max": 0.5
+      },
+      {
+        "origen": "FRO",
+        "destino": "BM",
+        "min": 0.3,
+        "max": 0.6
+      },
+      {
+        "origen": "BM",
+        "destino": "D",
+        "min": 0.65,
+        "max": 0.85
+      }
+    ],
+    "resultadoFuente": {
+      "ECP": 0.308,
+      "PSM": 0.118,
+      "FRO": 0.381,
+      "BM": 0.193
+    }
   }
 ]

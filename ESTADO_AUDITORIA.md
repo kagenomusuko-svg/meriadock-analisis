@@ -5,7 +5,7 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 ## Último punto seguro
 
 - Estado: EN CURSO
-- Bloque activo: Auditoría 10
+- Bloque activo: Auditoría 11
 - Próxima tarea: operadores derivados y complementarios
 
 ## Preparación
@@ -75,8 +75,8 @@ Regla: una tarea sólo se marca [x] después de que su producto haya sido comite
 - [x] Crear AUDITORIA_EXPEDIENTE_TRAZABILIDAD.md. — `55861219d44d5f2654187140f3e7ef4f2fa20fa1`
 
 ## Auditoría 10 — Determinismo
-- [ ] Buscar aleatoriedad, defaults, null→0, fallbacks y desempates silenciosos.
-- [ ] Crear AUDITORIA_DETERMINISMO.md.
+- [x] Buscar aleatoriedad, defaults, null→0, fallbacks y desempates silenciosos. — `68be7fb4f5a7d2dddd0b9741ac2ee988412282eb`
+- [x] Crear AUDITORIA_DETERMINISMO.md. — `68be7fb4f5a7d2dddd0b9741ac2ee988412282eb`
 
 ## Auditoría 11 — Pruebas
 - [ ] Construir requisito→test→fixture.
@@ -128,3 +128,5 @@ Ninguna al inicio.
 - `6f7f8dd3117992d8d0b44c98bcd882d683744e02` — auditoría 8.
 
 - `55861219d44d5f2654187140f3e7ef4f2fa20fa1` — auditoría 9.
+
+- `68be7fb4f5a7d2dddd0b9741ac2ee988412282eb` — auditoría 10.
