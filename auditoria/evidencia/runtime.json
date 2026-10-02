@@ -1,0 +1,206 @@
+[
+  {
+    "ruta": "components/chat/Constructor.jsx",
+    "sha256": "ddea49643223920a904a1745d95bb76358f01a12d9cb0a3092c412385c74ab7a",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "components/constructor/entrada.js",
+    "sha256": "9d6e13dc672abb2c6d02171a96782d1265f767b4082c2b0ff503bf6aba31fb4a",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/alpha.js",
+    "sha256": "4cf0164669ec7f5e39016d59c6eac132fe5ee3b8f7e1016e7596dd10ec24eb4f",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/b_estrella.js",
+    "sha256": "04653c591a3a27065c1de7113a0810f70e66ec33378b4b4e83adf8214d839d7d",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/danio.js",
+    "sha256": "7f04fdaa7cdd59f928ce8ce25cadefb5c455de8db9598b4d469d35f91fec26a6",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/delta.js",
+    "sha256": "cf9d0708537a167bd1fc50f9918736ebd8d88435a2b0b8e18e18ec008837b9dd",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/derivados.js",
+    "sha256": "1ee08cdb83b7b24fc415c90ca4f8a52d9fece101a967416a72c3cf7a85693016",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/entrada.js",
+    "sha256": "e782128716d982ecdc607131bd0165bd025bcbc674ad71dfe78cdc65b39ecfed",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/escalas.js",
+    "sha256": "7f1bdd9e9e6f84b53e9501ee13120fee94a416f61af7dc7434222aa7af43da78",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/espacio.js",
+    "sha256": "55d621b5766d5a0c5164c3881dd5b800ed2ca1fb14b0e576c1965cc431e99643",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/expediente.js",
+    "sha256": "9aa181cd0c5811dc5896ec3b535af9b37080495b6881fa32673f00e64830b56e",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/fraude_annona.js",
+    "sha256": "0541d68ce2464a895a70e20f267d91b8873d026296ee5cee15558da0e88c0cf9",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/grafo.js",
+    "sha256": "3c74bbb1bf7b1728d009d22a609400d8ef1554885898919ba2975c158df2fff3",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/hipercubo.js",
+    "sha256": "d926e65d59678b5007d8624cd268c00e84122f2d10b3c742ba1ed8b7e24c16ed",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/iic.js",
+    "sha256": "d07894acf927f6781ab91445e8d50ed26dce35a16edf9dc998d60a13a5baaca8",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/linter.js",
+    "sha256": "ff9cba5026b43a0ec307737fe5a5f16723f197c1663e325414b4bf982f2cbb95",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/logo_b64.js",
+    "sha256": "4b8f07dc33245ca608f280c48d1e3dcb08dd39c31bed1bc02126ab9d7ded949c",
+    "estado": "REVISADO",
+    "tipo": "recurso de marca, sin regla matem\u00e1tica"
+  },
+  {
+    "ruta": "dist-motor/modelo.js",
+    "sha256": "bcdc559ca39429dc91ade6e01e3409a0e1e29b91dcddbe0eb5777695f523f14c",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/nomenclatura.js",
+    "sha256": "a41ce719eceb3d22bca31487e228a9aec669d5d24a8aee5e7cc8dd4e5e0eec05",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/phi1.js",
+    "sha256": "a251ca2d2e561cca180776c33bde7efe4619eaafcc40ab9b4d09a042ebb81428",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/r_estrella.js",
+    "sha256": "4d195292fa5c70bcac46dfe7e42287cd529888d8e39054da54b2efdcce0f40ff",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/series.js",
+    "sha256": "5c8c12130a9b06d091e2602a2612a510140d72ee8c3330e616d7e017ac6d0767",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "dist-motor/sustituibilidad.js",
+    "sha256": "5f555368f6ac72c116b7689c5c8911156a10d9811a4376e27a85837b2d69b902",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/_app.tsx",
+    "sha256": "1f583617583bc241540c1867222e0d4bbc9ae2f1fbe0200c541d648990f75bea",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/_document.tsx",
+    "sha256": "1b3c293f422a42dad050f55c14cac85385ce7212cf03ff9393a4591a98e3deff",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/api/calcular.js",
+    "sha256": "d0e2f4a1b8f6109c3bd7c4f6245c99014ab4f0b45504166b9b0fd1faa7ed426f",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/api/expediente.js",
+    "sha256": "16c6d2e376e61ff3c61a181f4fbfc9e459d1802e32c06792333ac6ec62be142f",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/api/hello.ts",
+    "sha256": "546a4296c534a6f7a6f63ee24ad8216f39a7344d7b6e5fc39a23110dc7be4351",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/api/narrativa.js",
+    "sha256": "68fc82d14a979a70bdcd74a5aef8bb10d9a329e70227d64c312e3b85e33be05b",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/chat.tsx",
+    "sha256": "5f2a30a53b99c8b516b5c5188eb0f4234eb4b06ceb95fbe28899fc261fde753f",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/constructor.tsx",
+    "sha256": "c5b37f01eb3fbd361b7fb65c79d2de9cde273019c49aca5a3e609126fee95dbf",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "pages/index.tsx",
+    "sha256": "15c03d2eb90980a299a34bbec577a80363d182dfd70d2e9fa3802aa2e5a4ca90",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "styles/globals.css",
+    "sha256": "829a1a933cadb4ade17c52f3940c7ce30420c90037e299e842d1b9327d73c277",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  },
+  {
+    "ruta": "taxonomia/protocolos.js",
+    "sha256": "ebfda6de1348ad039bcddb3d4b30ff3b1f4b17d42878fb6e55dd4657e5826344",
+    "estado": "REVISADO",
+    "tipo": "c\u00f3digo/configuraci\u00f3n/presentaci\u00f3n"
+  }
+]

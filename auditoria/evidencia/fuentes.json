@@ -1,0 +1,912 @@
+[
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/Axiomatización del sistema de la doble mediación.md",
+    "bytes": 183005,
+    "sha256": "356d2a93f6307e60768ceb0cd9f5bdb32f11911b22ad31c4402dbd2b3e23369c",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/El cálculo de la responsabilidad una ontología matemática para sistemas causales complejos.md",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/El método Prometeo imputación causal para juristas y abogados.md",
+    "bytes": 401912,
+    "sha256": "d4b8d7c132ee6cf2cd9b5d1eec8dd5e3b766af16b2e26732d621f474fb779c5f",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/La transformación formal la ontología del ego como fundamento del cálculo causal.md",
+    "bytes": 639299,
+    "sha256": "c73f7da9ec25497ba92bb39eb0a2b39f13c9e8857ebf6e21cccab1f8cd53bb89",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/Metrología Causal La ciencia de la medición causal.md",
+    "bytes": 631554,
+    "sha256": "cef0c225c4e39475fa801994ca9b5214e82ce65008a5900b34eb3d7fbbc7db0c",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/Metrología Causal Vol II.md",
+    "bytes": 245164,
+    "sha256": "e87542f4f0330a3fa6d60c69a23335d9c38c88505692b1ecd729f8989fb81595",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/fuentes/Taxonomía General de Aplicaciones.md",
+    "bytes": 1,
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/00-preliminares.md",
+    "bytes": 1236,
+    "sha256": "6e5cc915a4d1cdc953239c246a7ba27ac24df7fd10bbaa3f245eaa39c4cbc07f",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/01-prologo.md",
+    "bytes": 10943,
+    "sha256": "e616bd467fc395c52509d84662c44164f4290a181a401b82e35c616568e4e9af",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/apendice-a.md",
+    "bytes": 24133,
+    "sha256": "5e9ad6100786a342f80eee6a1fdebb993741b306a3fb4a13189d08b1b842a1db",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/apendice-b.md",
+    "bytes": 39248,
+    "sha256": "bdc194c67a2aae8a3cec816509aee77f631921289b26aca9e926251182fdc3a8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/apendice-c.md",
+    "bytes": 11035,
+    "sha256": "a0a4b2ca559518c08409863f43a25063cefdbbfadea29b9c5f2b57eca87d861a",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/apendice-d.md",
+    "bytes": 19363,
+    "sha256": "cc4373c6cd4ffe402af29309db52882d917120159ed82c6b1546b12634ab7f3e",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/apendice-e.md",
+    "bytes": 13882,
+    "sha256": "d8ce85213c1801e13cd3a31acd71b6ecf8dd6124bc0470f161b7f831a6089571",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-01.md",
+    "bytes": 52869,
+    "sha256": "b1ab09fb7473e59242a41d17fc62e2c4946506df826fcaf075e79f191058d8dc",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-02.md",
+    "bytes": 73299,
+    "sha256": "01d848b25427686fdb194bf538f31ac93fd9f8828181a0283d1dac65f14ec485",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-03.md",
+    "bytes": 58877,
+    "sha256": "2d782f53c75c0f51af38f4e14cb99fec0c80512fd1b6288207f3b9edcc72b8b1",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-04.md",
+    "bytes": 25557,
+    "sha256": "eff0ddab4deec8f02cf5c65d6d1705f96a07f22f8aa0672449d9d75f7d987cd3",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-05.md",
+    "bytes": 61064,
+    "sha256": "27f7361ef62ae7e4bffd48c42ff92fd227a32d0bb89434e9d8702142ba86afa0",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-06.md",
+    "bytes": 57816,
+    "sha256": "66648b19fc18c61c14baedec953abf9bf1bacb2f1f704499ad8b605e42cccfdf",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-07.md",
+    "bytes": 59322,
+    "sha256": "9cabe5b17905215ff93ec914477a3cff828499f2ab6fab11c9a64e3d00672389",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-08.md",
+    "bytes": 59374,
+    "sha256": "ce40e233fd754fd49e2ecf8092a9e9ef5fd5720cf3eda1f6893764b10152e2ff",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-09.md",
+    "bytes": 57312,
+    "sha256": "b512e179605e55e3f09608165549393e2d5f5b8eba89392fed3cf66aa9b4d480",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-10.md",
+    "bytes": 57927,
+    "sha256": "20a49087831ff7dfd6b7e738015d7c44e87704fd711c5bb431e581524aa22deb",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-11.md",
+    "bytes": 62408,
+    "sha256": "475b7fd2e4171292c762ca9c2a17e389d27ac7cbb475dc3ce66d221f800435ad",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-12.md",
+    "bytes": 51080,
+    "sha256": "fc37b5016df142b73ba6a6ac955962f68ed9f4d89568ebd37e9d0125de8cbd40",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-13.md",
+    "bytes": 52055,
+    "sha256": "420ffc81152e723b8a0ef7d62a456fe04809b8eff42936595afdb845ecd39458",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-14.md",
+    "bytes": 48804,
+    "sha256": "4189fbbec8bab179ba3e72ddd38f358043717a60a60dc82f0923f3a8307293e5",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-15.md",
+    "bytes": 48775,
+    "sha256": "dba1e9f24df491782e9b43419adcf45a6cc7cad89f97dd0ad5f52f2a647b30d7",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-16.md",
+    "bytes": 48484,
+    "sha256": "038c1cb200105230a80bb52f90fe3312d8c6b773b0976d5b5ef1f03beaa2d5a4",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-17.md",
+    "bytes": 62637,
+    "sha256": "3faf309aa3c8452b6cfcf6a7d1f9985a21424f9b8fda85afdd7ed3c5058842cf",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/calculo-de-la-responsabilidad/capitulo-18.md",
+    "bytes": 97223,
+    "sha256": "aa3f61c1f87cc7bc03175747a6e3d09003a3d1209ea3ab4fdfc6f8fa7d7d9751",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/00-preliminares.md",
+    "bytes": 8638,
+    "sha256": "9624e5b4164db8a721cadac7a73a38008c4d57ec38e070a863050b92cf3b072d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+    "bytes": 43743,
+    "sha256": "c76c1c2c6584a6a305f9e06590d7c627042dbf9712ed9b912635a74cbb09d2fb",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-02.md",
+    "bytes": 55764,
+    "sha256": "40a77741c269a8631157f1b3cd11ed5748b1d21f060ab7484915df2126cbbe05",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-03.md",
+    "bytes": 63390,
+    "sha256": "0e3035eb80a65f77cfa6cb59007bb6f5b4a785a3bae1fa55ec129408aa8d5b91",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+    "bytes": 56369,
+    "sha256": "a06bc55948f17fbf96c153f1c88649fea4715a395fd7ce131af3b6a1aeadf3fe",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-05.md",
+    "bytes": 56017,
+    "sha256": "0b0c03b9a41c2eb5394988bbca0dcc4e09f53208d1d6dc9aa803e26ec13f0a45",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-06.md",
+    "bytes": 53987,
+    "sha256": "556f387be1258e8428f4b232154862ac529d9c903471685e632cd8e609009243",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-07.md",
+    "bytes": 51077,
+    "sha256": "38468097db51b0617a2519a762890d9b8257a1f0cc6bd90d26e5805c0206b3ec",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-08.md",
+    "bytes": 54980,
+    "sha256": "9122e107a88fcd041e8d44b0b4a304dbf9543b1911b3857aa0707d6715f8d728",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-09.md",
+    "bytes": 56395,
+    "sha256": "81c227108b867820303b810a0bf794c67e8146704e17b3056d47a9e08fe9c528",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-10.md",
+    "bytes": 57571,
+    "sha256": "433a5d9bc42fff3aa3c493c3340db84fa8a85bcfbb3b03afa2314b3b86b4a575",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-11.md",
+    "bytes": 53443,
+    "sha256": "cd030496d71f7ef05b7a846fd45ce5cb6ccc8c58554400ed5752b0a710226a46",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-12.md",
+    "bytes": 57609,
+    "sha256": "9af2250c3379d1d0d1890c5bcc534c48344a502fc2343ae2c61f4702d5910522",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-13.md",
+    "bytes": 57290,
+    "sha256": "7056a97b5978350d5cf0fa002fac2f8ad47d87dddb8887bdba0875325dcac459",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-14.md",
+    "bytes": 56609,
+    "sha256": "c7ba3ad9410400d815a064dd5026c4be94d0bdcdb177ad5f9d728fb9e75709b6",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-15.md",
+    "bytes": 51081,
+    "sha256": "afc778d0996211e0bf5d672a58e8329040c7ee12ee0415ae7122809978fcd12c",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-16.md",
+    "bytes": 51030,
+    "sha256": "c335a0be4a5c8024e0faaf3ec16935b8410b26056346758e431f15b98ef83da9",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-17.md",
+    "bytes": 57071,
+    "sha256": "9cbe7c91f3da3c6c91ceaec7b4b999b7292ac533e383a9e85008c639904ebdbc",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-18.md",
+    "bytes": 59450,
+    "sha256": "33b4e5ec2dd1bcd2e197480b04b32e323043ee4cbcd1d9a267703b46001d5d25",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-19.md",
+    "bytes": 62601,
+    "sha256": "529115d2f368b6eb202afc4c1a4dce65dee2efe8bf85364996b3c0f51b1b2920",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-20.md",
+    "bytes": 61844,
+    "sha256": "39fed3d0167e496b9f5244c422cb887d8430ce091971768d8f411f4c40a6c2cb",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+    "bytes": 56937,
+    "sha256": "f34ccdf07729ea571be4784fd6df9f5b52b95d7aae758e1398e2888f2993fd4d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-22.md",
+    "bytes": 45653,
+    "sha256": "8955c6fda4bb05076b751f0c21c2fe8b7b9dbba573629bb44a4c425a247d9b4e",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-23.md",
+    "bytes": 52128,
+    "sha256": "48ef91cf545301f7cf50cb4af7a3d01023ba1962134852f498de273db00b162c",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-24.md",
+    "bytes": 59748,
+    "sha256": "4359ccb0f30b3b52c81d0bf53bccf5cec631309421d73dc2d195fd1d4cf24c44",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-25.md",
+    "bytes": 59891,
+    "sha256": "968955f22ca539f7bad596b1d17ffbe0a3e1d00b5a74aea365baa610cd735641",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-26.md",
+    "bytes": 61044,
+    "sha256": "91e8cf78fa2e68b7c903bb637ad875f41c6d06bc533fa13e7f16cb9ff474d421",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-27.md",
+    "bytes": 62136,
+    "sha256": "922c26e821943ba1bec218dba6b8ec3ae6a711c248ba344addf5eb3ac1c85ce5",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-28.md",
+    "bytes": 60784,
+    "sha256": "acdc840bda9984f3dce970f65009822760b7aa57c43897b1bf03e3528b35b60c",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-29.md",
+    "bytes": 65292,
+    "sha256": "31d8a67e5fffb59558175d3a98f0f6611ade50bd4d5eb80b93de100733630f34",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-30.md",
+    "bytes": 67874,
+    "sha256": "8a3725aadd5ed02b48bb86976cd1a33385454bfe7e78f4368a68697e3838dc67",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-31.md",
+    "bytes": 70169,
+    "sha256": "1981548068b4f42059edbb8ea7db4a43d20c24a52ef724436cbb186db665c483",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-32.md",
+    "bytes": 70576,
+    "sha256": "265d239a8c0aa7e1202d6b27cf4c5020e5352aec9ab2e0eebed6c816b3897302",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-33.md",
+    "bytes": 62445,
+    "sha256": "fcbe126783b4de087892a6d57ad3556988b375888ffe3ecbdd9178266ddf9b08",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-34.md",
+    "bytes": 66363,
+    "sha256": "f05b19854aa907886aa76bdf6dceea15c6487c825e8e347ee618e263d4dabf58",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-35.md",
+    "bytes": 58657,
+    "sha256": "9dc226ab26f8e580e1f958c11cdc5e9e696f05206fc683eed11939407b796fa0",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-36.md",
+    "bytes": 60527,
+    "sha256": "fa1ff7b0f776b9beba7d5979fb3db7c30627ea7e0307ba4b7b525bf1932e32d7",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-37.md",
+    "bytes": 56949,
+    "sha256": "670b0176dd825f0eff3d0041542eca848cba11946c33decc701b1a85ddf6aa2f",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-38.md",
+    "bytes": 64963,
+    "sha256": "25a60389f863f20707c62a6067f104b1be4bf68f88893ef0d68e2460efdaf083",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-39.md",
+    "bytes": 61215,
+    "sha256": "4a33edad6369f3780385c4e9e7dce5285237d8d64c9037c0df1380099c18468e",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-40.md",
+    "bytes": 58477,
+    "sha256": "6b7ab66344e0b3e3d98567e8ef612b8527405694964e09ac33ca3988ded5688a",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-41.md",
+    "bytes": 56342,
+    "sha256": "7fe20b56daa01a046dbcb836e74b13bbdf4e28731ebe4bec1bbbd8c6e148a7d8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-42.md",
+    "bytes": 62736,
+    "sha256": "43eabd2fab3a10ceefdfb54d42e9c245ae83ad5fc40ff370647ff0f21fe467b7",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-43.md",
+    "bytes": 49570,
+    "sha256": "1d5c3927e0cc70b2bc2586acac782463f0ad4214f7ea6f6669418bb36fa3894c",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-44.md",
+    "bytes": 51434,
+    "sha256": "fc49255cba080722dac92def2bc1206837db05d0fd584a3cf19f6b2b7880a01e",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-45.md",
+    "bytes": 50807,
+    "sha256": "a640b507357a5d3f3a188dbdb9f4953866e7e81e84da35c67e390f06470be3f5",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-46.md",
+    "bytes": 31764,
+    "sha256": "ce7ceb24d430be1d4c5a8e6afde54043aa2382dbcc59e1a6c101d728a268f2f7",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-47.md",
+    "bytes": 47211,
+    "sha256": "5b1e2f06f1d0d308faa3b11b58dbc297172f4fc2a4c3860681f5d35a7c34fdb5",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-48.md",
+    "bytes": 31696,
+    "sha256": "59ce2aa30b5163af5bd036fd7ec269b11fdec023916ea03245bbcea95dc74505",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-49.md",
+    "bytes": 61946,
+    "sha256": "ebe21742444c3894e09953ccf9264c43dfa89613ed5203ca7cfd47851f2d4814",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-50.md",
+    "bytes": 10475,
+    "sha256": "3b5a2f184097cee1a8387575c38e1209010cfef60581f61be252841c2c7665ad",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-51.md",
+    "bytes": 7717,
+    "sha256": "0472d5b4b28f54a1b1bbaa7ec49277904d44ef522cabb9022a964d5bd59d513d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-52.md",
+    "bytes": 8260,
+    "sha256": "fc33a6577be3965d998aa6afa820815617f872937af83f2273514d9e17969a0b",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-53.md",
+    "bytes": 7183,
+    "sha256": "7b5a61458ca6a2b7b85eec9e33bed65e28b5dd9f923e2df060d4ae08e4aa8c6d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-54.md",
+    "bytes": 12734,
+    "sha256": "eaa510195491ba4dbae709b73e0c9960c311b5e03ca15c74fd1d1a5eb978e62d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-55.md",
+    "bytes": 26883,
+    "sha256": "7133133c84df1e37a956db6dda10699a4996b023f4e1b9f559fc0b73b0471f53",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-56.md",
+    "bytes": 17812,
+    "sha256": "23d0f6ea942d24726b6344dc0bb4c64ab51a8cca54f2160734d9194e8684b1e7",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-57.md",
+    "bytes": 15748,
+    "sha256": "1ae7be8b35818f6618f4355674f3ca0629ed5decaf4a9ba6d2ff802fc49baa56",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-58.md",
+    "bytes": 15572,
+    "sha256": "92f10b47122c6f9e92ff7abbfcdb555ae4cd934c0d7d9b07f1e6996bf8479d32",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-59.md",
+    "bytes": 44740,
+    "sha256": "f7bd8ddb6bcb8b77e86ce40391c800bd2ebfcd07691f4a5675da8b202cf42b9e",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-60.md",
+    "bytes": 33537,
+    "sha256": "02fd8563378e85459f0e14f7c1019c8d7bfd3705876a18849cb8a8de9809fb89",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-61.md",
+    "bytes": 23834,
+    "sha256": "361ce48e2f1a3934b61fdfda9fba4d00e8f5a0e0fb07d75a42b8dd7de4403ca5",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-62.md",
+    "bytes": 18358,
+    "sha256": "9f06e382bbdbfa425639d6a13750b9e7699fd5f05c417c0e80d6fb2d2704ea60",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-63.md",
+    "bytes": 19723,
+    "sha256": "b1176935f58a1fbdf595bf73381d1530941ce052bc19612ef6e259f9ccd9db2b",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-64.md",
+    "bytes": 23224,
+    "sha256": "7c29245c50f62bbe9a29d7b8c922ed99305160774a6e96f66cd6c5966e0570a0",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-65.md",
+    "bytes": 14119,
+    "sha256": "69f248ff967cd36782eee1c47ddac083c68fde6f715f880d94082afdf1f5c54e",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-66.md",
+    "bytes": 13484,
+    "sha256": "8a34311e72923ca329e3e2f5b5b4cb149390c0392ff313b45600825d4802037d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-67.md",
+    "bytes": 15498,
+    "sha256": "588d640615a4d384fa503d997bd828fb1acee8204328daef01a9847ea3fea90a",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-68.md",
+    "bytes": 16639,
+    "sha256": "5625ff12376bfa1bd806a50f099e9fe03725522fd97b136f86cb3a657e569fd8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-69.md",
+    "bytes": 15431,
+    "sha256": "9d5c67a4a783e3a1be00f3ca94d9b0c10eb2efa804f882569785246a11cdbba9",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-70.md",
+    "bytes": 15619,
+    "sha256": "f7952bcd13e9b32b2c96d65d4fb33a9bbe9e037ed7f1e92e3d990ac4cc1532dc",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-71.md",
+    "bytes": 15370,
+    "sha256": "4edf3eacfdf72e64a92a02f21f77a165f8cf5a3bdbc894202eb0d1d786e9c87d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-72.md",
+    "bytes": 18501,
+    "sha256": "140eb80b7f3fa3f18eab14e5495030a86dd0997560c6671eb06455da560e0969",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-73.md",
+    "bytes": 14952,
+    "sha256": "25d6e6d9bed226c376795f238631d1b1b0e41dc0fc8b8b6d0f502e757f3ba5a3",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-74.md",
+    "bytes": 11333,
+    "sha256": "94e05a2c936efde92201f03c6fb4eb78a1eadd6da3f387ddba9a4641bc266154",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-75.md",
+    "bytes": 14085,
+    "sha256": "dd738aaf9fedf4b0acc06a34bba38845cccf2aaf1406e471bfc55715d38f94c9",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-76.md",
+    "bytes": 17395,
+    "sha256": "ace70a723b4102d5e22eed0753caa2093e6fb4a947bfedeea2725ffd1215fbb8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-77.md",
+    "bytes": 13594,
+    "sha256": "9d421515f4212b7b7b1522822a8d98c09d3744d94d8d7cfb3f06df7bc9a34dfc",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-78.md",
+    "bytes": 17383,
+    "sha256": "22159130f83765bb7bbd875fd67aa2997ef1ea7a17c75e97b6fc471ee923bf4a",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+    "bytes": 21370,
+    "sha256": "0f26a2b4672d9b19bcc4e11442c7e24a160a3bae430447a673b72799949f6da4",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+    "bytes": 18231,
+    "sha256": "67c39257c312ef9905fb23ced08c939a35360f644c6b32effc2860bbe351b8b8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+    "bytes": 19843,
+    "sha256": "b1773c9cf7c02f0f11bc737314f70868d67ba30affa8db99646d00ef94ba440f",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+    "bytes": 19915,
+    "sha256": "36b1a8cfda27ed24877f24c94d624eb3098cae8c9dd46f2feffbbb4ed0c9e130",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/auditoria-s-sustituibilidad.md",
+    "bytes": 11073,
+    "sha256": "668360739b6be669d0b38fdfeea8c7f2948a3cc62b5f44ef416969ef9b0e73df",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/precision-histos-prometeo-rstar.md",
+    "bytes": 11542,
+    "sha256": "452945654633bd563c1c34bed7510c8f8709472887dc5596c01509ccb2f0ede2",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-alpha.md",
+    "bytes": 17434,
+    "sha256": "60ea69c3d1bd024207fd25da7108cf6345ab269f5754b595e7180397f3faa0ed",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-delta.md",
+    "bytes": 9481,
+    "sha256": "c419d31bd107c72c7a96992455a3610eee5568e195aff470b2724f486eccdf6f",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-deltab.md",
+    "bytes": 10208,
+    "sha256": "7a8b939861b178627a58128917735a3c19043318d5b5bee1e019333b11e0d5ba",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-histos-prometeo.md",
+    "bytes": 19631,
+    "sha256": "22a12d25973343e61ef8305009032cf8869cb37f17d69644d4a48c49445c8765",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-rstar.md",
+    "bytes": 14277,
+    "sha256": "18980b567822d479a9df233be1e7e1af60e94fa88ba1fa7cb30c3a92e00186c8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/resolucion-sdo-prometeo.md",
+    "bytes": 21264,
+    "sha256": "75ba8a49899ece3e98665e551abd4a15eeb467dbba6ac4b5841238fd05e0def7",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/segunda-edicion/2E-RSTAR-001.md",
+    "bytes": 9535,
+    "sha256": "7c0c4459cbd65c7e7053657d9d754a0c8b6f300c8c61dc9899520b95a1bee78d",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/segunda-edicion/2E-RSTAR-RECALCULO-001.md",
+    "bytes": 2047,
+    "sha256": "61ce2e61d3555d0bc4f454ac1f31ebdd4e5ee2053eaf54c2966f31e2181a35c8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/segunda-edicion/2E-S-001.md",
+    "bytes": 6681,
+    "sha256": "d079f19e4dba20d2f2ac9008001ddcf60b7f406eb3b23d5ed541eb5be24ded4a",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "Paradigma",
+    "ruta": "documentacion/validacion-candidato-rstar.md",
+    "bytes": 10567,
+    "sha256": "8c8573e5496f76093af5846d56b93e41503243b05857f27328e9ca0fbb92461b",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "ideas",
+    "ruta": "Especificacion_conceptual_del_calculador_de_metrologia_causal.md",
+    "bytes": 13641,
+    "sha256": "f2321f0235620464c390411cb36e58685db038db7aaceb76f1a33f9f928c7ea4",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "ideas",
+    "ruta": "Postulado_de_clausura_causal_por_evento_determinado.md",
+    "bytes": 8814,
+    "sha256": "528ada3299253b841d3cbc3ad775be36ed22281708b1fc1f5bbb1c2b750f52d8",
+    "lectura": "integral local"
+  },
+  {
+    "repositorio": "ideas",
+    "ruta": "Postulado_del_cero_epistemico_y_limite_ontologico_de_la_matriz_causal.md",
+    "bytes": 8819,
+    "sha256": "3dcd64f31da6bed8e3e58be32e3320fe20be4e9e87afbe94955c2abc48cc8c6b",
+    "lectura": "integral local"
+  }
+]
