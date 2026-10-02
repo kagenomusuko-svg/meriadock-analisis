@@ -7,5 +7,5 @@
 - Grafos de hasta 12 nodos conservan las rondas completas; redes mayores conservan el resumen por defecto. La opción de detalle completo exporta rondas a costa de memoria O(iteraciones × (E+N)). Esto cambia la representación, no el operador.
 - El hipercubo exige método y presupuesto de vértices explícitos. No hay selección silenciosa ni aleatoriedad.
 - En este entorno no hay Chromium disponible y su descarga no produjo un archivo válido. La verificación de interfaz se ejecuta en GitHub Actions con Playwright fijado y Chromium instalado en el runner. No se afirma verificación visual local.
-- El protocolo A/B/C/D para líderes empatados requiere decisión: DECISION_PENDIENTE_EMPATES_ROBUSTEZ.md.
+- El protocolo A/B/C/D para líderes empatados no emite una letra; véase RESERVA_PROTOCOLO_EMPATES.md.
 - Fraude annona y α taxonómico sin protocolo versionado devuelven indeterminado. La variante antigua de Fraude annona se conserva fuera de la ruta canónica, sin emitir diagnósticos de fraude.

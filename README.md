@@ -36,4 +36,4 @@ S agrega componentes discriminados. α requiere estrategia explícita. IIC, B*, 
 - `ORDEN_WORK_01_EJECUCION_AUTONOMA.md`: mandato.
 - `INSTRUCCIONES_WORK_IMPLEMENTACION_METROLOGIA_CAUSAL.md` y `AUDITORIA_DEUDAS_IMPLEMENTACION.md`: fuentes de implementación.
 - `LIMITES_TECNICOS.md`: presupuestos y evidencia de verificación.
-- `DECISION_PENDIENTE_EMPATES_ROBUSTEZ.md`: decisión del autor que queda abierta.
+- `RESERVA_PROTOCOLO_EMPATES.md`: reserva futura; empates actuales se conservan indeterminados.

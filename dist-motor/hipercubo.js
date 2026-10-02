@@ -10,7 +10,8 @@ function determinarDeclaracion(escenarios){
  if(l.some(x=>x.length!==1))return {estado:'indeterminado',nivel:null,motivo:'Empate en el liderazgo: el protocolo no define desempate',lideres:l,rankings:rk};
  const mismoLider=l.every(x=>igual(x,l[0])),ordenEstable=rk.every(x=>igual(x,rk[0]));
  const central=rk[1], brecha=v[1].length>1?v[1][central[0]]-v[1][central[1]]:1;
- const nivel=mismoLider?(ordenEstable?'A':'B'):(brecha>.10?'C':'D');
+ const superaDiezPuntos=v[1].length>1&&v[1][central[0]]>v[1][central[1]]+.10;
+ const nivel=mismoLider?(ordenEstable?'A':'B'):(superaDiezPuntos?'C':'D');
  return {estado:'calculado',nivel,mismoLider,ordenEstable,brechaCentral:brecha,lideres:l,rankings:rk,metodo:'Tres escenarios mínimo/central/máximo',descripcion:{A:'Mismo líder y mismo orden en los tres escenarios.',B:'Mismo líder; cambia el orden secundario.',C:'Cambia el líder; brecha central mayor de 10 puntos porcentuales.',D:'Cambia el líder; brecha central no mayor de 10 puntos porcentuales.'}[nivel]};
 }
 function sensibilidadExtendida(modelo,config,opcionesPF={}){

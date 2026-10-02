@@ -14,7 +14,7 @@ test('operadores independientes; datos ausentes ≠ cero',()=>{
 });
 test('declaraciones canónicas A/B/C/D, umbral exacto y empates explícitos',()=>{
  const d=(min,central,max)=>determinarDeclaracion({min:{vector:min},central:{vector:central},max:{vector:max}});
- a.equal(d([.6,.3,.1],[.6,.3,.1],[.7,.2,.1]).nivel,'A');a.equal(d([.6,.3,.1],[.6,.3,.1],[.6,.1,.3]).nivel,'B');a.equal(d([.3,.7],[.7,.3],[.7,.3]).nivel,'C');a.equal(d([.4,.6],[.54,.46],[.6,.4]).nivel,'D');a.equal(d([.5,.5],[.5,.5],[.5,.5]).estado,'indeterminado');
+ a.equal(d([.6,.3,.1],[.6,.3,.1],[.7,.2,.1]).nivel,'A');a.equal(d([.6,.3,.1],[.6,.3,.1],[.6,.1,.3]).nivel,'B');a.equal(d([.3,.7],[.7,.3],[.7,.3]).nivel,'C');a.equal(d([.4,.6],[.54,.46],[.6,.4]).nivel,'D');a.equal(d([.4,.6],[.55,.45],[.6,.4]).nivel,'D');a.equal(d([.5,.5],[.5,.5],[.5,.5]).estado,'indeterminado');
 });
 test('sensibilidad marginal determinista: método explícito, aristas identificadas',()=>{
  const {crearAnalisis}=require('../dist-motor/modelo'); const m=crearAnalisis(model);

@@ -16,3 +16,9 @@ jobs:
           NEXT_TELEMETRY_DISABLED: '1'
       - run: npx playwright install --with-deps chromium
       - run: npm run test:ui
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: verificacion-interfaz
+          path: /tmp/meriadock-*.png
+          if-no-files-found: ignore
