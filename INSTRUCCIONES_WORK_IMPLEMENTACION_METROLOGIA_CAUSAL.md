@@ -245,7 +245,7 @@ Puedes mantener una función de compatibilidad correrAnalisisCompleto mientras m
 
 ---
 
-# 10. Programa R* como “Índice de convergencia de eventos”
+# 10. Programa R* como “Índice de convergencia de eventos” mediante Perron–Frobenius
 
 Nombre interno:
 rStar
@@ -255,97 +255,267 @@ Nombre visible:
 
 No uses “vector de responsabilidad causal” como etiqueta general de interfaz.
 
-## 10.1 Escenarios
+La regla matemática canónica es:
 
-Toda arista con rango debe poder evaluarse en:
+\[
+W_D R^* = \rho(W_D)R^*
+\]
 
-- mínimo;
-- central;
-- máximo.
+con:
 
-Central = punto medio del rango.
+\[
+R^*_i \ge 0,
+\qquad
+\sum_i R^*_i = 1.
+\]
 
-La función principal debe permitir:
+Perron–Frobenius es el operador central para obtener la distribución estable de convergencia en sistemas complejos. No lo sustituyas por una normalización directa de aristas ni por un recorrido finito de caminos como algoritmo general.
 
-calcularRStar(grafo, escenario)
+## 10.1 Construcción de \(W_D\)
 
-y devolver:
+Construye \(W_D\) exclusivamente con los nodos causalmente relevantes respecto del evento determinado \(D\).
+
+Reglas:
+
+- \(D\) no entra en \(W_D\);
+- \(D\) no recibe coordenada en \(R^*\);
+- \(W_D\) contiene sólo relaciones entre antecedentes;
+- si la convención del repositorio conserva \(W_{ij}=w(N_i\to N_j)\), implementa el eigenvector derecho de \(W_D\), no el de \(W_D^\top\), salvo que una fuente canónica posterior ordene explícitamente la convención transpuesta;
+- documenta la convención en código y pruebas para impedir cambios silenciosos.
+
+No normalices por origen o destino sólo porque una biblioteca de Markov lo espere. La normalización de \(W_D\) debe seguir la especificación metrológica, no transformar el problema en una cadena de Markov distinta.
+
+## 10.2 Cálculo de \(R^*\)
+
+Implementa Perron–Frobenius mediante iteración de potencia para la ruta ordinaria:
+
+1. inicializa un vector positivo, por ejemplo:
+
+\[
+r^{(0)}_i=\frac1n;
+\]
+
+2. itera:
+
+\[
+\tilde r^{(t+1)}=W_D r^{(t)};
+\]
+
+3. normaliza en norma \(L^1\):
+
+\[
+r^{(t+1)}
+=
+\frac{\tilde r^{(t+1)}}
+{\sum_i \tilde r^{(t+1)}_i};
+\]
+
+4. calcula el error:
+
+\[
+e_t=
+\left\|
+r^{(t+1)}-r^{(t)}
+\right\|_1;
+\]
+
+5. detén cuando:
+
+\[
+e_t<\text{tol};
+\]
+
+6. calcula y registra el residuo espectral:
+
+\[
+\left\|
+W_D R^*-\rho R^*
+\right\|;
+\]
+
+7. devuelve también el eigenvalor dominante estimado \(\rho\), número de iteraciones y estado de convergencia.
+
+Firma sugerida:
+
+calcularRStar(W, {
+  tolerancia,
+  maxIteraciones,
+  regularizacion
+})
+
+Salida:
 
 {
   vector,
-  metodo,
-  escenario,
-  pasosAuditoria
+  eigenvalorDominante,
+  iteraciones,
+  convergio,
+  errorFinal,
+  residuo,
+  regularizacionAplicada,
+  epsilon
 }
 
-## 10.2 Caso directo
+No uses distribución uniforme como fallback si el cálculo falla. Devuelve estado no convergente o no calculable.
 
-Si los nodos activos no tienen mediaciones internas entre ellos y cada uno tiene una contribución directa al cierre:
+## 10.3 Matrices grandes: representación dispersa
 
-aporte_i = peso_i_al_cierre
+El motor debe poder operar con al menos 1,000 nodos sin construir innecesariamente una matriz densa.
 
-R*_i = aporte_i / suma(aportes)
+Usa representación dispersa por aristas o una estructura equivalente:
 
-No uses eigenvector.
+- lista de adyacencia ponderada;
+- CSR/CSC;
+- u otra representación sparse.
 
-## 10.3 Caso con mediaciones
+La multiplicación matriz-vector debe recorrer únicamente aristas existentes.
 
-Implementa el método de rondas.
+Complejidad objetivo por iteración:
 
-Reglas mínimas:
+\[
+O(|E|)
+\]
 
-1. Excluye el nodo final del conjunto activo.
-2. Ronda 0:
-   reparte 1/n entre los nodos activos.
-3. En cada ronda interna:
-   para cada nodo receptor j calcula:
+y memoria:
 
-   influencia_j = suma sobre i de:
-   participación_i × peso(i→j)
+\[
+O(|E|+|N|).
+\]
 
-4. Normaliza las influencias no nulas para obtener la distribución de la ronda.
-5. Repite las rondas necesarias según la profundidad del DAG hasta que la influencia haya recorrido las mediaciones internas pertinentes.
-6. En la ronda de cierre:
-   - para un nodo fuente con contribución directa al cierre, usa su peso directo al cierre;
-   - para un nodo cuya posición ya incorpora mediaciones, multiplica su participación de la última ronda pertinente por su peso al cierre.
-7. Normaliza los aportes de cierre.
-8. La suma final de R* debe ser 1 salvo redondeo de presentación.
+No implementes Perron–Frobenius mediante descomposición completa de eigenvalores de una matriz densa para la ruta ordinaria.
 
-No introduzcas D dentro de la matriz para facilitar este cálculo.
+## 10.4 Regularización
 
-## 10.4 Caso canónico de prueba
+Conserva separadas:
 
-Crea un fixture con el caso del banco del método Prometeo.
+\[
+W_E
+\]
 
-Pesos centrales:
+y:
 
-B→P = 0.90
-B→R = 0.69
-B→A = 0.86
-P→A = 0.64
-R→C = 0.70
-A→C = 0.49
-P→C = 0.64
-B→C = 0.80
+\[
+W_\varepsilon.
+\]
 
-Resultado esperado:
+Si \(W_E\) no satisface las condiciones requeridas para una convergencia estable, aplica la regularización metrológica definida por el sistema:
 
-B = 0.580 aproximadamente
-R = 0.113 aproximadamente
-A = 0.172 aproximadamente
-P = 0.135 aproximadamente
+\[
+W_\varepsilon = W_E+\varepsilon K.
+\]
 
-Este fixture es criterio de aceptación.
+Reglas:
 
-## 10.5 Instrumentales
+- \(\varepsilon\) no es evidencia;
+- \(K\) no crea una arista empíricamente acreditada;
+- registra el valor de \(\varepsilon\);
+- permite calcular \(R^*(\varepsilon)\);
+- permite análisis de sensibilidad cuando \(\varepsilon\to0^+\);
+- nunca sobrescribas \(W_E\) con la versión regularizada.
 
-Un nodo instrumental puede tener R* visible.
+Si \(K\) es densa pero estructuralmente simple, impleméntala de forma implícita para no convertir una red sparse de 1,000 o más nodos en una matriz densa.
 
-No le atribuyas automáticamente voluntad ni S ni α.
+## 10.5 Irreducibilidad, primitividad y diagnóstico
 
-Su resultado debe poder marcarse como influencia derivada.
+Antes o durante el cálculo:
 
----
+- diagnostica reducibilidad;
+- diagnostica periodicidad cuando sea pertinente;
+- registra si la matriz cumple las condiciones suficientes usadas por el motor;
+- si no las cumple, no cambies la causalidad para satisfacer la matemática;
+- aplica únicamente la regularización metrológica autorizada o devuelve un diagnóstico explícito.
+
+No interpretes irreducibilidad como “todos llegan a D”. \(D\) no pertenece a la matriz.
+
+## 10.6 Escenarios de evidencia
+
+Para cada escenario:
+
+- mínimo;
+- central;
+- máximo;
+
+construye la correspondiente matriz empírica:
+
+\[
+W_{\min},\quad
+W_{\mathrm{central}},\quad
+W_{\max}
+\]
+
+y calcula Perron–Frobenius independientemente en cada una.
+
+Central = punto medio del rango cuando ésa sea la regla vigente para el operador.
+
+La sensibilidad compara los tres vectores obtenidos.
+
+## 10.7 Método de rondas
+
+No elimines el método de rondas de la documentación ni de la vista de auditoría.
+
+Pero no lo uses como sustituto conceptual de Perron–Frobenius.
+
+Cuando se utilice como iteración sucesiva:
+
+\[
+r^{(t+1)}
+=
+\frac{W_D r^{(t)}}{\|W_D r^{(t)}\|_1},
+\]
+
+las “rondas” son precisamente las iteraciones de potencia mediante las cuales el software aproxima \(R^*\).
+
+La interfaz ordinaria no obliga al usuario a ejecutarlas manualmente.
+
+En ejemplos pedagógicos o grafos pequeños puedes mostrar ronda 0, ronda 1, ronda 2, etc.; en grafos grandes muestra iteraciones resumidas, error de convergencia y residuo.
+
+## 10.8 Pruebas canónicas de Perron–Frobenius
+
+Añade un caso mínimo con:
+
+\[
+W=
+\begin{pmatrix}
+0.9 & 0.4\\
+0.1 & 0.6
+\end{pmatrix}.
+\]
+
+El eigenvector derecho dominante normalizado debe ser aproximadamente:
+
+\[
+R^*=(0.8,0.2).
+\]
+
+Añade también:
+
+- una matriz reducible;
+- una matriz periódica;
+- una matriz regularizada;
+- un grafo sparse determinista de al menos 1,000 nodos.
+
+Para el caso de 1,000 nodos verifica:
+
+- convergencia o diagnóstico explícito;
+- \(R_i^*\ge0\);
+- \(\sum_iR_i^*=1\);
+- ausencia de matriz densa innecesaria;
+- tiempo y memoria razonables para CI.
+
+## 10.9 Compatibilidad con el repositorio actual
+
+dist-motor/r_estrella.js contiene actualmente dos rutas:
+
+- una ruta principal de “influencia causal total por todos los caminos”;
+- una implementación de iteración de eigenvector conservada sólo por compatibilidad.
+
+Invierte esa situación.
+
+La implementación de Perron–Frobenius debe convertirse en la ruta principal de \(R^*\).
+
+La suma de productos de caminos puede conservarse únicamente como diagnóstico o cálculo especializado si tiene una función separada y explícitamente nombrada. No debe presentarse como \(R^*\) canónico.
+
+Corrige además la multiplicación transpuesta actual si contradice la convención canónica \(W_D R^*=\rho(W_D)R^*\).
 
 # 11. Mantén el hipercubo sólo como análisis extendido
 
@@ -949,10 +1119,12 @@ La vista normal debe ser sencilla.
 La vista técnica debe permitir inspeccionar:
 
 - pesos min/central/max;
-- rondas;
-- productos;
-- sumas;
-- normalizaciones;
+- matriz empírica y, si aplica, matriz regularizada;
+- iteraciones de potencia;
+- error de convergencia;
+- eigenvalor dominante estimado;
+- residuo espectral;
+- normalización L1;
 - vector final;
 - componentes de S;
 - valor de α y estrategia;
@@ -973,22 +1145,24 @@ Crea pruebas automáticas al menos para:
 2. build sin API keys;
 3. D fuera de W;
 4. D fuera de R*;
-5. R* directo por normalización;
-6. R* por rondas con el caso canónico del banco;
-7. S por promedio;
-8. contribución atribuible;
-9. α discriminado;
-10. Δ;
-11. E0 conserva el nodo;
-12. IIC;
-13. B*;
-14. D_total;
-15. AD;
-16. escenarios mínimo/central/máximo;
-17. declaraciones A/B/C/D;
-18. danio llega correctamente desde Constructor → API → motor → expediente;
-19. nodosIIC dejan de estar hardcodeados como [];
-20. ausencia de un dato requerido produce “no calculable” y no un valor inventado.
+5. R* por Perron–Frobenius en matriz canónica pequeña;
+6. R* por Perron–Frobenius en grafo sparse de al menos 1,000 nodos;
+7. diagnóstico de matriz reducible/periódica y regularización;
+8. separación entre W_E y W_epsilon;
+9. S por promedio;
+10. contribución atribuible;
+11. α discriminado;
+12. Δ;
+13. E0 conserva el nodo;
+14. IIC;
+15. B*;
+16. D_total;
+17. AD;
+18. escenarios mínimo/central/máximo con R* por Perron–Frobenius;
+19. declaraciones A/B/C/D;
+20. danio llega correctamente desde Constructor → API → motor → expediente;
+21. nodosIIC dejan de estar hardcodeados como [];
+22. ausencia de un dato requerido produce “no calculable” y no un valor inventado.
 
 ---
 
