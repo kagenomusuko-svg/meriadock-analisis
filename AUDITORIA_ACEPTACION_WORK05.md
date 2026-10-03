@@ -31,6 +31,6 @@ OP13–OP15, OP17–OP18, OP22–OP25, OP32, OP34–OP35, OP39–OP40 y OP45 no 
 ## Verificación
 
 - `npm test`: 93/93.
-- `npm run build`: correcto localmente; la ejecución exacta queda en el commit de aceptación.
+- `npm run build`: correcto localmente; CI 37095045137 verificó pruebas/build y detectó una excepción cliente en Playwright antes del flujo UI. Se corrigió el cargado inicial de disponibilidad en `b523bacf`; la aceptación exacta se relanza después de ese fix.
 - Playwright/API/producción: pendiente de CI final.
 - Auditoría reproducible: matriz, catálogo, reservas, metadata JSON y pruebas Work05.

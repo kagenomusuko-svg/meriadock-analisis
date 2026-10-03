@@ -60,7 +60,7 @@
 
 - [x] `npm ci` / `npm test` local: 93/93.
 - [x] `npm run build` local.
-- [ ] Playwright y producción exacta: commit `acceptance:` en ejecución.
+- [ ] Playwright y producción exacta: CI 37095045137 detectó excepción cliente; fix b523bacf publicado, aceptación en relanzamiento.
 - [x] Crear catálogo, auditoría y matriz.
 - [x] Actualizar mapa maestro y repertorio.
 - [ ] Cerrar tablero: requiere CI/producción final.
