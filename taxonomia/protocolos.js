@@ -1,7 +1,10 @@
 'use strict';
+const {validarDeclarativo,fusionar,validarFuente}=require('./schema');
+const {protocolos:UNIVERSALES}=require('./universal');
 // Sólo orientación y componentes explícitamente aprobados en instrucciones §12.
 const GENERICO={id:'generico',version:'1',dominios:['generico'],dominioLibre:true,alcance:'piloto_generico',estrategiasAlpha:[{id:'alpha_directa',texto:'Valor discriminado — protocolo genérico',regla:'discriminado'},{id:'alpha_monetaria',texto:'Proporción comparable — protocolo genérico',regla:'proporcion_monetaria'}],componentesS:[{id:'formalizacion',texto:'Formalización / procedimiento'},{id:'sustituibilidad_actor',texto:'Sustituibilidad del actor en la posición'},{id:'sistema_incentivos',texto:'Determinación por sistema / incentivos'}],preguntas:[],rangos:[]};
 function validarProtocolo(p){
+ if(p?.schemaVersion){validarDeclarativo(p);for(const f of [...p.componentesS,...p.preguntas,...p.rangos,...(p.estrategiasAlpha||[])]){validarFuente(f.sourceRef);if(f.estado!==f.sourceRef.estado)throw Error('Campo sin estado trazable');}}
  if(!p||typeof p.id!=='string'||!p.id||typeof p.version!=='string'||!p.version||!Array.isArray(p.dominios)||!Array.isArray(p.componentesS)||!Array.isArray(p.preguntas)||!Array.isArray(p.rangos))throw new Error('Contrato taxonómico inválido');
  if(new Set(p.componentesS.map(x=>x.id)).size!==p.componentesS.length||new Set(p.preguntas.map(x=>x.id)).size!==p.preguntas.length)throw new Error('IDs de campos taxonómicos repetidos');
  if(new Set((p.estrategiasAlpha||[]).map(x=>x.id)).size!==(p.estrategiasAlpha||[]).length)throw new Error('IDs de estrategias repetidos');
@@ -16,6 +19,7 @@ function registrarProtocolo(p){const v=validarProtocolo(p),k=`${v.id}@${v.versio
 function cargarProtocolo(id,version){const p=REGISTRY.get(`${id}@${version}`);if(!p)throw new Error('Protocolo/version desconocidos');return structuredClone(p);}
 function cargarJSON(texto){return registrarProtocolo(JSON.parse(texto));}
 registrarProtocolo(GENERICO);
+for(const p of require('./datos/dominios.v1.json'))registrarProtocolo(fusionar(UNIVERSALES,p));
 function resolverProtocolo(version,dominio){
  if(version===null||version===undefined)return null;
  if(typeof version!=='string'||version.split('@').length!==2)throw new Error('Versión taxonómica inválida');

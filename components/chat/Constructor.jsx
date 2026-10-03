@@ -98,12 +98,13 @@ export default function Constructor() {
     [exportando, setExportando] = useState(false);
   const [errorVersion,setErrorVersion]=useState(0);
   function setError(texto){setErrorTexto(texto);if(texto)setErrorVersion(v=>v+1);}
-  const protocolo=protocolos.find(p=>`${p.id}@${p.version}`===estado.taxonomiaVersion)||GENERICO;
+  const seleccionado=protocolos.find(p=>`${p.id}@${p.version}`===estado.taxonomiaVersion);
+  const protocolo=seleccionado||{id:'no-resuelto',version:'',componentesS:[],preguntas:[],rangos:[],estrategiasAlpha:[]};
   const headingRef=useRef(null),errorRef=useRef(null);
   useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
   useEffect(()=>{headingRef.current?.focus();},[paso]);
   useEffect(()=>{if(error)errorRef.current?.focus();},[error,errorVersion]);
-  function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:''}))});}
+  function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,dominio:p.dominioLibre?estado.dominio:p.dominios[0],nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:'',confirmadoS:false,referenciaS:'',respuestasTaxonomicas:{}}))});}
   const reglaAlpha=n=>n.estrategiaAlpha?.startsWith('taxonomico:')?protocolo.estrategiasAlpha?.find(a=>a.id===n.estrategiaAlpha.split(':')[1])?.regla:n.estrategiaAlpha;
   function editar(patch) {
     setEstado((e) => ({ ...e, ...patch }));
@@ -182,6 +183,7 @@ export default function Constructor() {
   const solicitud = construirSolicitud(estado);
   const mensajes = mensajesAnalisis({...solicitud.analisis,nodosActivos:solicitud.analisis.nodosActivos.map(n=>({...n,alpha:solicitud.insumos.insumosAlpha.find(a=>a.id===n.id)||n.alpha}))}, estado.mediciones,protocolo);
   async function calcular() {
+    if(!seleccionado){setError("Protocolo solicitado no resuelto; selecciona una versión existente.");return;}
     setCalculando(true);
     setError("");
     try {
@@ -497,8 +499,10 @@ export default function Constructor() {
                 {t}
               </label>
             ))}
-            <label style={fld}><span style={lbl}>Protocolo taxonómico versionado</span><select aria-label="Protocolo taxonómico versionado" style={sel} value={estado.taxonomiaVersion} onChange={e=>cambiarProtocolo(e.target.value)}>{protocolos.map(p=><option key={p.id+'@'+p.version} value={p.id+'@'+p.version}>{p.id}@{p.version} — {p.alcance||'dominio-específico'}</option>)}</select></label>
+            <label style={fld}><span style={lbl}>Protocolo taxonómico versionado</span><select aria-label="Protocolo taxonómico versionado" style={sel} value={estado.taxonomiaVersion} onChange={e=>cambiarProtocolo(e.target.value)}>{protocolos.map(p=><option key={p.id+'@'+p.version} value={p.id+'@'+p.version}>{p.titulo||p.id} ({p.id}@{p.version}) — {p.alcance||'dominio-específico'}</option>)}</select></label>
             <p>Protocolo {protocolo.id}@{protocolo.version}: {protocolo.alcance||'dominio-específico'}. La versión genérica es piloto; no agota la Taxonomía ni calibra automáticamente el dominio declarado.</p>
+            {protocolo.sourceRef&&<p>Fuente: {protocolo.sourceRef.repositorio}, revisión {protocolo.sourceRef.sha}, capítulo {protocolo.sourceRef.capitulo}. Estado: {protocolo.sourceRef.estado}.</p>}
+            {protocolo.reglasEfectivas&&<details><summary>Orientaciones, límites y estados del protocolo</summary>{protocolo.reglasEfectivas.map(r=><div key={r.id} style={{marginBottom:12}}><strong>{r.id} — {r.estado}</strong><p>{r.texto}</p>{r.valor!==undefined&&<pre style={{whiteSpace:'pre-wrap'}}>{JSON.stringify(r.valor,null,2)}</pre>}<small>{r.sourceRef.capitulo} {r.sourceRef.seccion} · {r.efecto}</small></div>)}</details>}
             {campo("¿Qué estás analizando? Dominio", estado.dominio, (v) =>
               editar({ dominio: v }),
             )}
@@ -690,6 +694,7 @@ export default function Constructor() {
                       ))}
                     </select>
                   </label>
+                  {protocolo.rangos?.filter(r=>r.nivel===Number(formC.evidenciaNivel)).map(r=><div key={r.id}><p>Sugerencia {r.estado}: [{r.min}, {r.max}] — {r.texto}. Fuente {r.sourceRef?.capitulo} {r.sourceRef?.seccion}.</p><button type="button" style={ghost} onClick={()=>setFC(c=>({...c,min:String(r.min),max:String(r.max),reglaTaxonomica:r.id,confirmacionTaxonomica:true}))}>Confirmar intervalo sugerido</button></div>)}
                   <div style={row2}>
                     {numero(
                       "Peso mínimo",
@@ -751,6 +756,7 @@ export default function Constructor() {
                     ),
                   )
                 )}
+                {protocolo.requiereConfirmacionS&&n.tipo!=='instrumental'&&<><CheckRow checked={n.confirmadoS===true} onChange={()=>nodo(n.id,{confirmadoS:n.confirmadoS!==true})}>Confirmo el S efectivo de {n.nombre} tras revisar las orientaciones</CheckRow>{campo('Justificación de S efectivo — '+n.nombre,n.referenciaS,v=>nodo(n.id,{referenciaS:v}))}</>}
                 <h3>{OPERADORES.alpha}</h3>
                 <label style={fld}>
                   <span style={lbl}>Estrategia de α (asunción efectiva)</span>

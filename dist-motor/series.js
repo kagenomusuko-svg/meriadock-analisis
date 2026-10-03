@@ -13,7 +13,7 @@ const REGISTRY={
   c.escenarios=Object.fromEntries(['min','central','max'].map(k=>[k,calcularRStar(construirMatrizEmpirica(c.modelo,k),c.configuracion.pf)]));
   const r=c.escenarios.central;return {...salida(r.vector,r.motivo),auditoria:r};
  }},
- s:{dependencias:[],inputs:['componentes S por nodo'],calcular:c=>salida(c.nodos.map(n=>({id:n.id,nodo:n.nombre,valor:n.tipo==='instrumental'||c.protocolo&&n.s?.componentes?.length!==c.protocolo.componentesS.length?null:calcularS(n.s?.componentes,n.s?.pesos),componentes:n.s?.componentes??null,pesos:n.s?.pesos??null})))},
+ s:{dependencias:[],inputs:['componentes S por nodo'],calcular:c=>salida(c.nodos.map(n=>({id:n.id,nodo:n.nombre,valor:n.tipo==='instrumental'||c.protocolo&&n.s?.componentes?.length!==c.protocolo.componentesS.length||c.protocolo?.requiereConfirmacionS&&(!n.s?.confirmado||!n.s?.referencia)?null:calcularS(n.s?.componentes,n.s?.pesos),componentes:n.s?.componentes??null,pesos:n.s?.pesos??null})))},
  alpha:{dependencias:[],inputs:['estrategia α explícita por nodo'],calcular:c=>salida(c.nodos.map(n=>{const datos=c.insumos.insumosAlpha?.find(x=>x.id===n.id)||n.alpha;const a=calcularAlpha(datos,c.protocolo);return {id:n.id,nodo:n.nombre,valor:a?.valor??null,contrato:a};}))},
  rStarNeta:{dependencias:['rStar','s'],inputs:[],calcular:c=>salida(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,valor:calcularContribucionAtribuible(c.resultados.rStar.valor?.[i],c.resultados.s.valor[i].valor)})))},
  delta:{dependencias:['rStar','alpha'],inputs:[],calcular:c=>salida(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,resultado:calcularDelta(c.resultados.rStar.valor?.[i],c.resultados.alpha.valor[i].valor)})))},

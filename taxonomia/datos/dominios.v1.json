@@ -1,0 +1,1200 @@
+[
+  {
+    "schemaVersion": "taxonomia/1",
+    "capa": "dominio",
+    "id": "tax-cap01",
+    "version": "1",
+    "titulo": "Derecho penal y civil — responsabilidad individual y colectiva",
+    "parte": "I · Derecho y Justicia",
+    "dominios": [
+      "penal_civil"
+    ],
+    "aliases": [
+      "derecho penal",
+      "derecho civil"
+    ],
+    "dominioLibre": false,
+    "alcance": "orientacion_taxonomica_trazable",
+    "hereda": [
+      "universal-u1@1",
+      "universal-u2@1",
+      "universal-u3@1",
+      "universal-u4@1"
+    ],
+    "sourceRef": {
+      "repositorio": "kagenomusuko-svg/Paradigma",
+      "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+      "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+      "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+      "capitulo": "1",
+      "seccion": "§1–9",
+      "reglaId": "cap01.protocolo",
+      "estado": "CANONICO"
+    },
+    "reglas": [
+      {
+        "id": "cap01.e1",
+        "texto": "Documento directo con instrucción/acuerdo explícito",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e1",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.75,
+          0.95
+        ]
+      },
+      {
+        "id": "cap01.e2",
+        "texto": "Peritaje forense/técnico especializado",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e2",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.7,
+          0.9
+        ]
+      },
+      {
+        "id": "cap01.e3",
+        "texto": "Testimonios independientes convergentes y corroboración documental",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e3",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.45,
+          0.65
+        ]
+      },
+      {
+        "id": "cap01.e4",
+        "texto": "Correlación estadística/patrón documentado",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e4",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.38,
+          0.58
+        ]
+      },
+      {
+        "id": "cap01.e5",
+        "texto": "Testimonio único con corroboración parcial",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e5",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.28,
+          0.48
+        ]
+      },
+      {
+        "id": "cap01.e6",
+        "texto": "Inferencia estructural por posición",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e6",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.18,
+          0.38
+        ]
+      },
+      {
+        "id": "cap01.e7",
+        "texto": "Contigüidad temporal/espacial sin mecanismo",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e7",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.08,
+          0.28
+        ]
+      },
+      {
+        "id": "cap01.e8",
+        "texto": "Dicho único sin corroboración",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e8",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.03,
+          0.18
+        ]
+      },
+      {
+        "id": "cap01.e0-historico",
+        "texto": "La descripción histórica de E0 como evidencia positiva de inexistencia queda desplazada por el cero epistémico vigente; nodo se conserva.",
+        "tipo": "orientacion",
+        "estado": "HISTORICO",
+        "efecto": "documentacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e0-historico",
+          "estado": "HISTORICO"
+        }
+      },
+      {
+        "id": "cap01.limite-juridico",
+        "texto": "El método orienta atribución causal; no determina tipo penal, dolo ni culpabilidad jurídica.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§1/8",
+          "reglaId": "cap01.limite-juridico",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.firmas",
+        "texto": "Fobos: presión y sanciones documentadas; Deimos: alertas sin atender, aprobaciones sin análisis; Anteros: iniciativa propia sostenida. Potós/Eros hipótesis; Harmonía requiere ECO.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§3",
+          "reglaId": "cap01.firmas",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.alpha-efectiva",
+        "texto": "Asunción voluntaria, forzada e impuesta producen el mismo efecto sobre Δ. Dolo, defensa legal e inocencia procesal no calculan α.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha-efectiva",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.alpha.0",
+        "texto": "Negación/evasión: escala penal/civil; selección y valor discriminados, sin inferencia desde texto.",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha.0",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0,
+          0.05
+        ]
+      },
+      {
+        "id": "cap01.alpha.1",
+        "texto": "Reconocimiento nominal: escala penal/civil; selección y valor discriminados, sin inferencia desde texto.",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha.1",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.06,
+          0.2
+        ]
+      },
+      {
+        "id": "cap01.alpha.2",
+        "texto": "Asunción parcial: escala penal/civil; selección y valor discriminados, sin inferencia desde texto.",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha.2",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.21,
+          0.45
+        ]
+      },
+      {
+        "id": "cap01.alpha.3",
+        "texto": "Asunción activa: escala penal/civil; selección y valor discriminados, sin inferencia desde texto.",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha.3",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.46,
+          0.7
+        ]
+      },
+      {
+        "id": "cap01.alpha.4",
+        "texto": "Asunción funcional: escala penal/civil; selección y valor discriminados, sin inferencia desde texto.",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha.4",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.71,
+          0.89
+        ]
+      },
+      {
+        "id": "cap01.alpha.5",
+        "texto": "Asunción plena: escala penal/civil; selección y valor discriminados, sin inferencia desde texto.",
+        "tipo": "rango",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha.5",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.9,
+          1
+        ]
+      },
+      {
+        "id": "cap01.alpha-tension",
+        "texto": "El texto dice que un lamento sin acción no modifica α; tabla admite reconocimiento nominal sin consecuencias (.06–.20). Debe distinguirse reconocimiento de posición causal de lamento: no asignación automática.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "documentacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha-tension",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.fraude-firma",
+        "texto": "Tres condiciones sectoriales discriminadas: S alto ejecutor, α impuesto significativo ejecutor, α próximo a cero diseñador; orientan investigación y no reemplazan el producto canónico.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.fraude-firma",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.rol.diseno",
+        "texto": "Rol diseno: intervalo S típico, no derivación automática del rol.",
+        "tipo": "rango",
+        "estado": "DERIVADO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5",
+          "reglaId": "cap01.rol.diseno",
+          "estado": "DERIVADO"
+        },
+        "valor": [
+          0.05,
+          0.35
+        ]
+      },
+      {
+        "id": "cap01.rol.ejecucion",
+        "texto": "Rol ejecucion: intervalo S típico, no derivación automática del rol.",
+        "tipo": "rango",
+        "estado": "DERIVADO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5",
+          "reglaId": "cap01.rol.ejecucion",
+          "estado": "DERIVADO"
+        },
+        "valor": [
+          0.2,
+          0.9
+        ]
+      },
+      {
+        "id": "cap01.rol.omision",
+        "texto": "Rol omision: intervalo S típico, no derivación automática del rol.",
+        "tipo": "rango",
+        "estado": "DERIVADO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5",
+          "reglaId": "cap01.rol.omision",
+          "estado": "DERIVADO"
+        },
+        "valor": [
+          0.55,
+          0.9
+        ]
+      },
+      {
+        "id": "cap01.instrumental-historico",
+        "texto": "Fuente describe nodo instrumental sin R* propio; no se cambia el universo activo PF desde la etiqueta. S instrumental sigue N/A.",
+        "tipo": "orientacion",
+        "estado": "HISTORICO",
+        "efecto": "documentacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5",
+          "reglaId": "cap01.instrumental-historico",
+          "estado": "HISTORICO"
+        }
+      },
+      {
+        "id": "cap01.omision",
+        "texto": "Arista de omisión exige deber documentado y conocimiento/inacción discriminados. Víctima solo activa si contribuyó causalmente.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5",
+          "reglaId": "cap01.omision",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.iic-ajuste",
+        "texto": "Referencia U3 de ajuste estructural pendiente de calibración; no recalibración automática de W. Variante correlación permanece histórica.",
+        "tipo": "orientacion",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5",
+          "reglaId": "cap01.iic-ajuste",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        }
+      },
+      {
+        "id": "cap01.pregunta.diseno",
+        "texto": "¿El diseño de incentivos tuvo mayor contribución atribuible que la ejecución?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.diseno",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.omision",
+        "texto": "¿Existía deber documentado y conocimiento de la situación para la omisión?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.omision",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.presion",
+        "texto": "¿Qué protocolos, sanciones y precedentes determinaron la acción?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.presion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.asuncion",
+        "texto": "¿Qué consecuencias voluntarias, forzadas o impuestas se asumieron?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.asuncion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.inversion",
+        "texto": "¿Hay sobreasunción del ejecutor y déficit del diseñador?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.inversion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.coalicion",
+        "texto": "¿Son no separables las contribuciones? Declare juego v(S) si solicita Shapley.",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.coalicion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.iic",
+        "texto": "¿Las políticas declaradas corresponden a lo que se premia y sanciona?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.iic",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.pregunta.victima",
+        "texto": "¿La víctima tenía información disponible y contribuyó causalmente?",
+        "tipo": "pregunta",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.victima",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.danio",
+        "texto": "T_invertido: pérdida y gastos documentados; T_impedido: ingresos/oportunidades perdidas con base contrafactual externa; ΔT_trayectoria: diferencia futura documentada. No estimación automática de descuento, daño moral o años de vida.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§7",
+          "reglaId": "cap01.danio",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.operadores",
+        "texto": "R*, S, R*_neta, α, Δ, IIC, Fraude, D_total, AD, conversión vital, Shapley; familias no restringen. Shapley requiere decisión y juego completo, no selector automático.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6–8",
+          "reglaId": "cap01.operadores",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          "rStar",
+          "s",
+          "rStarNeta",
+          "alpha",
+          "delta",
+          "iic",
+          "fraudeAnnona",
+          "dTotal",
+          "ajusteDebitor",
+          "conversionVital",
+          "shapley"
+        ]
+      },
+      {
+        "id": "cap01.prioridades",
+        "texto": "Presión: sanciones por desobediencia; peso de instrucción: obligatoriedad; diseñador invisible: políticas vs presupuesto/sanciones; omisión: deber+notificación; α: pagos/cambios/sanciones; víctima: advertencias; coaliciones: redundancia documentada.",
+        "tipo": "orientacion",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§9",
+          "reglaId": "cap01.prioridades",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.s-confirmado",
+        "texto": "Valor S efectivo elegido y confirmado por el analista después de orientación; promedio de un componente preserva agregación.",
+        "tipo": "campo",
+        "estado": "CANONICO",
+        "efecto": "entrada_confirmada",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "U3/§3",
+          "reglaId": "cap01.s-confirmado",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.alpha_directa",
+        "texto": "Valor α discriminado — penal/civil",
+        "tipo": "estrategia",
+        "estado": "DERIVADO",
+        "efecto": "entrada_confirmada",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha_directa",
+          "estado": "DERIVADO"
+        }
+      },
+      {
+        "id": "cap01.alpha_monetaria",
+        "texto": "Proporción comparable seleccionada — penal/civil",
+        "tipo": "estrategia",
+        "estado": "DERIVADO",
+        "efecto": "entrada_confirmada",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha_monetaria",
+          "estado": "DERIVADO"
+        }
+      }
+    ],
+    "componentesS": [
+      {
+        "id": "s_confirmado",
+        "texto": "S efectivo discriminado (confirmación obligatoria)",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "U3/§3",
+          "reglaId": "cap01.s-confirmado",
+          "estado": "CANONICO"
+        }
+      }
+    ],
+    "preguntas": [
+      {
+        "id": "diseno",
+        "texto": "¿El diseño de incentivos tuvo mayor contribución atribuible que la ejecución?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.diseno",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "omision",
+        "texto": "¿Existía deber documentado y conocimiento de la situación para la omisión?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.omision",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "presion",
+        "texto": "¿Qué protocolos, sanciones y precedentes determinaron la acción?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.presion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "asuncion",
+        "texto": "¿Qué consecuencias voluntarias, forzadas o impuestas se asumieron?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.asuncion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "inversion",
+        "texto": "¿Hay sobreasunción del ejecutor y déficit del diseñador?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.inversion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "coalicion",
+        "texto": "¿Son no separables las contribuciones? Declare juego v(S) si solicita Shapley.",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.coalicion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "iic",
+        "texto": "¿Las políticas declaradas corresponden a lo que se premia y sanciona?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.iic",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "victima",
+        "texto": "¿La víctima tenía información disponible y contribuyó causalmente?",
+        "tipo": "texto",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§6",
+          "reglaId": "cap01.pregunta.victima",
+          "estado": "CANONICO"
+        }
+      }
+    ],
+    "rangos": [
+      {
+        "id": "cap01.e1",
+        "nivel": 1,
+        "min": 0.75,
+        "max": 0.95,
+        "texto": "Documento directo con instrucción/acuerdo explícito",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e1",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e2",
+        "nivel": 2,
+        "min": 0.7,
+        "max": 0.9,
+        "texto": "Peritaje forense/técnico especializado",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e2",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e3",
+        "nivel": 3,
+        "min": 0.45,
+        "max": 0.65,
+        "texto": "Testimonios independientes convergentes y corroboración documental",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e3",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e4",
+        "nivel": 4,
+        "min": 0.38,
+        "max": 0.58,
+        "texto": "Correlación estadística/patrón documentado",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e4",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e5",
+        "nivel": 5,
+        "min": 0.28,
+        "max": 0.48,
+        "texto": "Testimonio único con corroboración parcial",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e5",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e6",
+        "nivel": 6,
+        "min": 0.18,
+        "max": 0.38,
+        "texto": "Inferencia estructural por posición",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e6",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e7",
+        "nivel": 7,
+        "min": 0.08,
+        "max": 0.28,
+        "texto": "Contigüidad temporal/espacial sin mecanismo",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e7",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "cap01.e8",
+        "nivel": 8,
+        "min": 0.03,
+        "max": 0.18,
+        "texto": "Dicho único sin corroboración",
+        "estado": "CANONICO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§2",
+          "reglaId": "cap01.e8",
+          "estado": "CANONICO"
+        }
+      }
+    ],
+    "estrategiasAlpha": [
+      {
+        "id": "alpha_directa",
+        "texto": "Valor α discriminado — penal/civil",
+        "regla": "discriminado",
+        "estado": "DERIVADO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha_directa",
+          "estado": "DERIVADO"
+        }
+      },
+      {
+        "id": "alpha_monetaria",
+        "texto": "Proporción comparable seleccionada — penal/civil",
+        "regla": "proporcion_monetaria",
+        "estado": "DERIVADO",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§4",
+          "reglaId": "cap01.alpha_monetaria",
+          "estado": "DERIVADO"
+        }
+      }
+    ],
+    "variantesIIC": [
+      {
+        "id": "congruencia@1",
+        "estado": "DERIVADO",
+        "formula": "coincidencias/totalDeclarado",
+        "aplicabilidad": "declaraciones/observaciones identificadas",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5 / contrato vigente Work03 §17",
+          "reglaId": "cap01.iic.congruencia",
+          "estado": "DERIVADO"
+        }
+      },
+      {
+        "id": "correlacion-historica@1",
+        "estado": "HISTORICO",
+        "formula": "correlación entre valores declarados y comportamiento",
+        "aplicabilidad": "histórica; no sustituir congruencia",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+          "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237",
+          "capitulo": "1",
+          "seccion": "§5 / contrato vigente Work03 §17",
+          "reglaId": "cap01.iic.correlacion-historica",
+          "estado": "HISTORICO"
+        }
+      }
+    ],
+    "requiereConfirmacionS": true
+  }
+]

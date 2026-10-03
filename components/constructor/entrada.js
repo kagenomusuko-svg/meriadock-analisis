@@ -4,7 +4,7 @@ function numero(v){if(v===''||v===null||v===undefined)return null;return Number(
 function lineas(v){return String(v||'').split('\n').map(x=>x.trim()).filter(Boolean);}
 function construirSolicitud(estado){
  const nodos=estado.nodos.map(n=>({...n,tipo:n.tipo||'indeterminado',modo:n.modo||'indeterminado',
-  s:{componentes:(n.componentesS||['','','']).map(numero)},
+  s:{componentes:(n.componentesS||['','','']).map(numero),confirmado:n.confirmadoS===true,referencia:n.referenciaS||null},
   alpha:n.estrategiaAlpha?{estrategia:n.estrategiaAlpha.startsWith('taxonomico:')?'taxonomico':n.estrategiaAlpha,estrategiaId:n.estrategiaAlpha.startsWith('taxonomico:')?n.estrategiaAlpha.split(':')[1]:undefined,valor:numero(n.alphaValor),montoEfectivamenteAsumido:numero(n.alphaMonto),baseComparativa:numero(n.alphaBase),unidad:n.alphaUnidad,soportes:lineas(n.soportesAlpha),referenciaOpcional:n.referenciaAlpha}:null,
   iic:{declarado:lineas(n.declarado),observado:lineas(n.observado),coincidencias:numero(n.coincidencias)},soportes:lineas(n.soportes)}));
  const todas=estado.relaciones.map(e=>({...e,evidenciaNivel:numero(e.evidenciaNivel),rango:{min:numero(e.min),max:numero(e.max)},soportes:lineas(e.soportes)}));
