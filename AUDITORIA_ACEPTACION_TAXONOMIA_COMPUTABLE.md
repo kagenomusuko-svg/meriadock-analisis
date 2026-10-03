@@ -24,7 +24,7 @@ La fórmula activa es `R*(1-α)*(1-IIC)`, con `R*`, α e IIC del diseñador expl
 - `npm test`: 90/90 pruebas.
 - `npm run build`: correcto.
 - `scripts/verificar-ui.cjs`: cubre selector de catálogo, orientación dinámica, confirmación de S, casos Fraude annona, snapshot y expediente.
-- CI 37094194998 terminó SUCCESS en `verificar` para `7375dedc`. El primer commit usó un prefijo distinto al trigger histórico y su job `produccion` fue omitido; se dispara una segunda corrida con prefijo `acceptance:` para cotejar el SHA exacto, Vercel, UI/API/snapshot/HTML y artifact persistente.
+- CI 37094294566 terminó SUCCESS en `verificar` y `produccion` para `389737c6d3d0d014b176972129483f449b2bd7f6`. La reaceptación de producción cotejó el SHA exacto, UI/API/snapshot/HTML y los casos canónicos; artifact `11263409407` (`work04-reaceptacion-389737c6.zip`) queda registrado en `work04/evidencia-produccion.json`.
 
 ## Dictamen
 

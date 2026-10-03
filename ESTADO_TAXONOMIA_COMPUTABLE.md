@@ -74,8 +74,8 @@
 - [x] npm run build.
 - [x] Playwright flujo completo.
 - [x] Pruebas adversas.
-- [ ] Deployment producción exacta (CI 37094194998 verificó; segundo commit `acceptance:` en ejecución).
-- [ ] Recorrido real (segundo job `produccion` pendiente).
+- [x] Deployment producción exacta. — CI 37094294566, SHA 389737c6, artifact 11263409407.
+- [x] Recorrido real. — producción exacta, UI/API/snapshot/HTML y Fraude annona canónico.
 
 ## Productos finales
 
@@ -132,3 +132,8 @@ Se revisaron y compilaron 20 overlays adicionales (`tax-cap41@1`…`tax-cap60@1`
 ### Lote capítulos 61–78
 
 Se revisaron y compilaron 18 overlays finales (`tax-cap61@1`…`tax-cap78@1`). Cada protocolo conserva la referencia exacta al blob de Paradigma y separa reglas CANONICO/DERIVADO/PROPUESTA_PENDIENTE_CALIBRACION/ILUSTRATIVO/HISTORICO/NO_COMPUTABLE; ninguna sugerencia altera el núcleo sin confirmación. Cobertura declarativa: **82/82**, capítulos numéricos sin `SIN_REVISAR`.
+
+
+### Reaceptación integral
+
+CI `37094294566` terminó SUCCESS en ambos jobs. Producción verificó la revisión exacta `389737c6d3d0d014b176972129483f449b2bd7f6`, con artifact `11263409407`; los 16 casos adversos y canónicos, selector/UI, API, snapshot y HTML quedaron registrados en `work04/evidencia-produccion.json`.
