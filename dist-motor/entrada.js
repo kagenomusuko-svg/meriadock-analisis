@@ -9,7 +9,7 @@ function calcularSolicitud(body){
  const estructura=body.analisis||body.estructura||body.grafo;
  if(!estructura)throw new Error('Análisis estructurado requerido');
  const protocolo=resolverProtocolo(estructura.taxonomiaVersion,estructura.dominio);
- const parametrosProvisionales=prepararParametros(body.parametrosProvisionales||body.configuracion?.parametrosProvisionales);
+ const parametrosProvisionales=prepararParametros(body.parametrosProvisionales||estructura.parametrosProvisionales||body.configuracion?.parametrosProvisionales);
  const resultado=correrAnalisis({estructura,insumos:body.insumos||{insumosAlpha:body.insumosAlpha,nodosIIC:body.nodosIIC,danio:body.danio,beneficios:body.beneficios},medicionesSolicitadas:body.medicionesSolicitadas||estructura.medicionesSolicitadas||[],configuracion:body.configuracion||estructura.configuracion||{},protocolo});
  resultado.mensajes=mensajesAnalisis(resultado.validacion.estructuraValida?{...resultado.modelo,nodosActivos:resultado.modelo.nodosActivos.map(n=>({...n,alpha:resultado.resultados.alpha?.valor?.find(x=>x.id===n.id)?.contrato||n.alpha}))}:estructura,resultado.medicionesSolicitadas,protocolo);
  const normalizados={analisis:estructura,insumos:body.insumos||{insumosAlpha:body.insumosAlpha,nodosIIC:body.nodosIIC,danio:body.danio,beneficios:body.beneficios},medicionesSolicitadas:resultado.medicionesSolicitadas,configuracion:body.configuracion||estructura.configuracion||{},parametrosProvisionales};
