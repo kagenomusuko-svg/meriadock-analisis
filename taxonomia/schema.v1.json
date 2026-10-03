@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:meriadock:taxonomia:1",
+  "title": "Protocolo declarativo de Taxonomía computable",
+  "type": "object",
+  "required": ["schemaVersion", "capa", "id", "version", "sourceRef", "reglas"],
+  "properties": {
+    "schemaVersion": {"const": "taxonomia/1"},
+    "capa": {"enum": ["universal", "dominio", "operador"]},
+    "id": {"type": "string", "minLength": 1},
+    "version": {"type": "string", "minLength": 1},
+    "sourceRef": {"$ref": "#/$defs/sourceRef"},
+    "hereda": {"type": "array", "items": {"type": "string"}, "uniqueItems": true},
+    "reglas": {"type": "array", "items": {"$ref": "#/$defs/regla"}}
+  },
+  "$defs": {
+    "estado": {"enum": ["CANONICO", "DERIVADO", "PROPUESTA_PENDIENTE_CALIBRACION", "ILUSTRATIVO", "HISTORICO", "RESERVADO", "NO_COMPUTABLE"]},
+    "sourceRef": {
+      "type": "object",
+      "required": ["repositorio", "sha", "path", "capitulo", "seccion", "reglaId", "estado"],
+      "properties": {
+        "repositorio": {"type": "string", "minLength": 1},
+        "sha": {"type": "string", "pattern": "^[a-f0-9]{40}$"},
+        "path": {"type": "string", "minLength": 1},
+        "capitulo": {"type": "string", "minLength": 1},
+        "seccion": {"type": "string", "minLength": 1},
+        "reglaId": {"type": "string", "minLength": 1},
+        "estado": {"$ref": "#/$defs/estado"}
+      }
+    },
+    "regla": {
+      "type": "object",
+      "required": ["id", "tipo", "texto", "estado", "efecto", "condiciones", "sourceRef"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "tipo": {"type": "string", "minLength": 1},
+        "texto": {"type": "string", "minLength": 1},
+        "estado": {"$ref": "#/$defs/estado"},
+        "efecto": {"enum": ["orientacion", "sugerencia", "validacion", "entrada_confirmada", "documentacion", "reserva"]},
+        "condiciones": {"type": "array"},
+        "sourceRef": {"$ref": "#/$defs/sourceRef"},
+        "requiereConfirmacion": {"type": "boolean"}
+      }
+    }
+  }
+}

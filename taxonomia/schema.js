@@ -1,9 +1,9 @@
 'use strict';
 const ESTADOS=Object.freeze(['CANONICO','DERIVADO','PROPUESTA_PENDIENTE_CALIBRACION','ILUSTRATIVO','HISTORICO','RESERVADO','NO_COMPUTABLE']);
 const EFECTOS=Object.freeze(['orientacion','sugerencia','validacion','entrada_confirmada','documentacion','reserva']);
-function validarFuente(f){if(!f||!f.repositorio||! /^[a-f0-9]{40}$/.test(f.sha)||!f.path||!f.capitulo||!f.seccion||!f.reglaId||!ESTADOS.includes(f.estado))throw Error('sourceRef incompleto');}
+function validarFuente(f){if(!f||['repositorio','sha','path','capitulo','seccion','reglaId'].some(k=>typeof f[k]!=='string'||!f[k].trim())||! /^[a-f0-9]{40}$/.test(f.sha)||!ESTADOS.includes(f.estado))throw Error('sourceRef incompleto');}
 function validarDeclarativo(p){
- if(p.schemaVersion!=='taxonomia/1'||!['universal','dominio','operador'].includes(p.capa)||!p.id||!p.version||!Array.isArray(p.reglas))throw Error('Schema declarativo inválido');
+ if(p.schemaVersion!=='taxonomia/1'||!['universal','dominio','operador'].includes(p.capa)||typeof p.id!=='string'||!p.id.trim()||typeof p.version!=='string'||!p.version.trim()||!Array.isArray(p.reglas))throw Error('Schema declarativo inválido');
  validarFuente(p.sourceRef);const ids=new Set();
  for(const r of p.reglas){if(!r.id||ids.has(r.id))throw Error('Regla duplicada o sin ID');ids.add(r.id);if(!ESTADOS.includes(r.estado)||!EFECTOS.includes(r.efecto)||!r.tipo||!r.texto||!Array.isArray(r.condiciones))throw Error('Regla sin contrato epistemológico');validarFuente(r.sourceRef);if(r.sourceRef.reglaId!==r.id||r.sourceRef.estado!==r.estado)throw Error('Proveniencia/estado discordantes');if(['HISTORICO','ILUSTRATIVO','RESERVADO','NO_COMPUTABLE'].includes(r.estado)&&r.efecto==='entrada_confirmada')throw Error('Regla no efectiva aplicada');if(r.estado==='PROPUESTA_PENDIENTE_CALIBRACION'&&r.efecto==='entrada_confirmada'&&!r.requiereConfirmacion)throw Error('Calibración pendiente sin confirmación');}
  return structuredClone(p);
