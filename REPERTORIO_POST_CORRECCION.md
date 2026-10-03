@@ -74,3 +74,7 @@ Toda suma/producto debe terminar finito para etiquetarse calculado. Inputs ausen
 ## Cierre Work04
 
 La Taxonomía General de Aplicaciones queda disponible como 78 overlays declarativos (`tax-cap01@1`…`tax-cap78@1`) fusionados con U·1–U·4. Los estados pendientes de calibración, históricos, ilustrativos, no computables y reservados se conservan en el registro y no se ejecutan como defaults. La UI obtiene preguntas, rangos y componentes S desde el protocolo seleccionado. La única reserva doctrinal vigente es `cap02.alpha.1`; Fraude annona permanece activo con su fórmula canónica y sus precondiciones.
+
+## Reevaluación Work05
+
+Los 45 registros del repertorio fueron confrontados con los overlays `tax-cap01@1`…`tax-cap78@1` y U·1–U·4. Work05 activa 20 contratos deterministas y los enlaza con `REGISTRY`, UI, API, snapshot y expediente. La disponibilidad de todos los registros, incluidos los que siguen reservados, se publica con estado, inputs y causa en `dist-motor/operadores-taxonomicos.json` y `MATRIZ_SUFICIENCIA_OPERADORES_WORK05.md`. Ninguna mención taxonómica se convirtió por sí sola en una fórmula.
