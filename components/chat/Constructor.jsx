@@ -848,6 +848,33 @@ export default function Constructor() {
         )}
         {paso === 5 && (
           <section>
+            <details style={card}><summary>Índice de inversión — roles explícitos</summary><p>Brecha del diseñador por unidad de exceso del ejecutor. Se conservan los signos de Δ; denominador cero queda indeterminado. Los nombres de los nodos no asignan roles.</p>
+              {['disenadorId','ejecutorId'].map((rol,i)=><label key={rol} style={fld}><span style={lbl}>{i===0?'Nodo diseñador':'Nodo ejecutor'}</span><select aria-label={i===0?'Nodo diseñador':'Nodo ejecutor'} style={sel} value={estado[rol]||''} onChange={e=>editar({[rol]:e.target.value})}><option value="">Sin discriminar</option>{estado.nodos.map(n=><option key={n.id} value={n.id}>{n.nombre}</option>)}</select></label>)}
+              {numero('Δ del diseñador (signo original)',estado.deltaDisenador,v=>editar({deltaDisenador:v}))}
+              {numero('Δ del ejecutor (signo original)',estado.deltaEjecutor,v=>editar({deltaEjecutor:v}))}
+            </details>
+            <details style={card}><summary>Juego cooperativo — Shapley exacto</summary><p>Declara v(S) para cada coalición y v(vacío)=0. No se estima ninguna coalición ausente ni se elige Shapley por la familia. El formulario genera hasta 1024 filas por presupuesto de presentación; el motor admite un presupuesto técnico explícito distinto.</p>
+              {campo('Unidad del juego cooperativo',estado.unidadShapley,v=>editar({unidadShapley:v}))}
+              <button style={btn} disabled={!estado.nodos.length||2**estado.nodos.length>1024} onClick={()=>editar({coaliciones:Array.from({length:2**estado.nodos.length},(_,mask)=>({miembros:estado.nodos.filter((n,i)=>mask&(2**i)).map(n=>n.id),valor:''}))})}>Preparar coaliciones del universo activo</button>
+              {(estado.coaliciones||[]).map(c=><div key={JSON.stringify(c.miembros)}>{numero('v('+ (c.miembros.map(id=>estado.nodos.find(n=>n.id===id)?.nombre||id).join(' + ')||'vacío') +')',c.valor,v=>editar({coaliciones:estado.coaliciones.map(x=>JSON.stringify(x.miembros)===JSON.stringify(c.miembros)?{...x,valor:v}:x)}))}</div>)}
+            </details>
+            <details style={card}><summary>ROI neto de prevención — probabilidad externa</summary><p>(D_total × ΔP − costo) / costo. ΔP debe discriminarse con su propia base; no se deduce de R* ni de S. D_total y costo usan la misma unidad; este ROI neto se distingue del retorno bruto.</p>{campo('Unidad común de daño y costo ROI',estado.unidadROI,v=>editar({unidadROI:v}))}{numero('Daño total para ROI',estado.danioROI,v=>editar({danioROI:v}),0)}{numero('Costo de intervención',estado.costoROI,v=>editar({costoROI:v}),0)}{numero('ΔP externo discriminado',estado.deltaPROI,v=>editar({deltaPROI:v}),-1,1)}{texto('Base de la diferencia de probabilidad',estado.baseDeltaPROI,v=>editar({baseDeltaPROI:v}))}</details>
+            <details style={card}><summary>Conversión vital — referencia explícita</summary><p>Conversión del monto discriminado a horas según salario social declarado; no aplica un salario universal.</p>
+              {campo('Moneda común del monto y salario',estado.monedaVital,v=>editar({monedaVital:v}))}
+              {numero('Monto para conversión vital',estado.montoVital,v=>editar({montoVital:v}),0)}
+              {numero('Salario social de referencia por hora',estado.salarioReferencia,v=>editar({salarioReferencia:v}),0)}
+            </details>
+            <details style={card}><summary>Comparar análisis — impacto V y aprendizaje IAS</summary><p>Discrimina el mismo objeto y universo de nodos en ambos análisis. V compara los vectores R* por distancia L1; IAS compara J después menos J antes. No predice recurrencia ni infiere eficacia preventiva.</p>
+              {campo('Referencia del análisis anterior',estado.referenciaAntes,v=>editar({referenciaAntes:v}))}
+              {campo('Referencia del análisis posterior',estado.referenciaDespues,v=>editar({referenciaDespues:v}))}
+              {texto('Base de comparabilidad discriminada',estado.baseComparabilidad,v=>editar({baseComparabilidad:v}))}
+              {estado.nodos.map(n=><fieldset key={n.id}><legend>{n.nombre}</legend>{[['rAntes','R* anterior'],['rDespues','R* posterior'],['alphaAntes','α anterior'],['alphaDespues','α posterior']].map(([k,t])=><div key={k}>{numero(n.nombre+': '+t,n[k],v=>nodo(n.id,{[k]:v}),0,1)}</div>)}</fieldset>)}
+            </details>
+            <details style={card}><summary>Brecha de beneficio — magnitudes absolutas</summary><p>B_i recibido menos β_i efectivamente revertido. No se deriva de α ni de cuotas B*, y no califica jurídicamente el beneficio.</p>
+              {campo('Unidad común de beneficio y reversión',estado.unidadReversion,v=>editar({unidadReversion:v}))}
+              {estado.nodos.map(n=><div key={n.id}>{numero(n.nombre+': beneficio causalmente recibido',n.beneficioRecibido,v=>nodo(n.id,{beneficioRecibido:v}),0)}{numero(n.nombre+': beneficio efectivamente revertido',n.beneficioRevertido,v=>nodo(n.id,{beneficioRevertido:v}),0)}</div>)}
+            </details>
+            <p>Fraude annona permanece reservado: falta un contrato canónico de intervención/prevención; su fórmula histórica no está activa.</p>
             <div style={card}>
               <h2 style={secH}>{OPERADORES.bStar}</h2>
               {campo(
@@ -996,6 +1023,8 @@ export default function Constructor() {
                   {resultado.versionMotor}.
                 </p>
                 {resultado.escenarios.central && <div style={card}><strong>Garantías PF — {resultado.escenarios.central.estado}</strong><p>Convergencia: {String(resultado.escenarios.central.convergio)} · Residuo: {String(resultado.escenarios.central.residuo)} · Tolerancia: {resultado.escenarios.central.tolerancia} · Primitividad: {String(resultado.escenarios.central.diagnostico.primitiva)} · Regularización: {String(resultado.escenarios.central.regularizacionAplicada)} · Estimación de rho: {String(resultado.escenarios.central.estimacionRho)}</p></div>}
+                {resultado.resultados.bStar.estado!=='no_solicitado'&&<div style={card}><h2>{OPERADORES.bStar}</h2><p>Estado: {resultado.resultados.bStar.estado.replaceAll('_',' ')} · Total: {resultado.resultados.bStar.total??'indeterminado'} · Unidad: {resultado.resultados.bStar.unidad||'ausente'}</p>{resultado.resultados.bStar.motivo&&<p>{resultado.resultados.bStar.motivo}</p>}<ul>{(resultado.resultados.bStar.valor||[]).map(b=><li key={b.id}>{b.nodo||b.id}: cuota {b.valor} · Beneficio neto declarado {b.beneficioNeto} {resultado.resultados.bStar.unidad}</li>)}</ul></div>}
+                {resultado.resultados.indiceInversion.estado!=='no_solicitado'&&<div style={card}><h2>Índice de inversión</h2><p>Brecha del diseñador por unidad de exceso del ejecutor.</p><p>Estado: {resultado.resultados.indiceInversion.estado.replaceAll('_',' ')} · Cociente: {resultado.resultados.indiceInversion.valor??'indeterminado'}</p><p>{resultado.resultados.indiceInversion.interpretacion||resultado.resultados.indiceInversion.motivo}</p><p>Diseñador: {resultado.resultados.indiceInversion.auditoria?.disenadorId||'sin discriminar'} · Δ original: {resultado.resultados.indiceInversion.auditoria?.deltaDisenador??'ausente'} · Ejecutor: {resultado.resultados.indiceInversion.auditoria?.ejecutorId||'sin discriminar'} · Δ original: {resultado.resultados.indiceInversion.auditoria?.deltaEjecutor??'ausente'}</p></div>}
                 {resultado.declaracion && (
                   <div style={aOk}>
                     <strong>Declaración {resultado.declaracion.nivel}</strong> —{" "}
@@ -1026,9 +1055,7 @@ export default function Constructor() {
                           <td>{r.s==null?resultado.resultados.s.estado.replaceAll('_',' '):pct(r.s)}</td>
                           <td>{r.neta==null?resultado.resultados.rStarNeta.estado.replaceAll('_',' '):pct(r.neta)}</td>
                           <td>
-                            {pct(
-                              resultado.alpha.find((a) => a.id === r.id)?.valor,
-                            )}
+                            {resultado.alpha.find(a=>a.id===r.id)?.valor==null?resultado.resultados.alpha.estado.replaceAll('_',' '):pct(resultado.alpha.find(a=>a.id===r.id).valor)}
                           </td>
                           <td>
                             {resultado.delta

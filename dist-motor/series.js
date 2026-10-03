@@ -3,6 +3,7 @@ const {crearAnalisis,VERSION}=require('./modelo');
 const {construirMatrizEmpirica}=require('./grafo');const {calcularRStar}=require('./r_estrella');
 const {calcularS}=require('./sustituibilidad');const {calcularAlpha}=require('./alpha');const {calcularDelta}=require('./delta');const {calcularContribucionAtribuible}=require('./derivados');
 const {calcularIIC}=require('./iic');const {calcularBStar}=require('./b_estrella');const {calcularDTotal,calcularAjusteDebitor}=require('./danio');const {calcularFraudeAnnona}=require('./fraude_annona');const {determinarDeclaracion,sensibilidadExtendida}=require('./hipercubo');
+const ampliacion=require('./ampliacion');
 const {exigirFinitud}=require('./numerica');
 const definido=x=>x!==null&&x!==undefined;
 const salida=(valor,motivo)=>({estado:definido(valor)?'calculado':'indeterminado',valor,motivo:definido(valor)?null:motivo});
@@ -22,7 +23,15 @@ const REGISTRY={
  ajusteDebitor:{dependencias:['rStar','dTotal'],inputs:[],calcular:c=>salida(calcularAjusteDebitor(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,valor:c.resultados.rStar.valor?.[i]??null})),c.resultados.dTotal.valor),'Falta R* o D_total')},
  robustez:{dependencias:['rStar'],inputs:[],calcular:c=>{const v=determinarDeclaracion(c.escenarios);return {...v,valor:v.estado==='calculado'?v:null};}},
  sensibilidadExtendida:{dependencias:['rStar'],inputs:['método explícito'],calcular:c=>sensibilidadExtendida(c.modelo,c.configuracion.sensibilidadExtendida,c.configuracion.pf)},
- fraudeAnnona:{dependencias:['rStar','alpha','iic'],inputs:['protocolo versionado','intervención/prevención'],calcular:c=>calcularFraudeAnnona(c.insumos.fraudeAnnona,c.configuracion.protocoloFraude)}
+ roiPrevencion:{dependencias:[],inputs:['D_total','costo','deltaP externo','unidad y base'],calcular:c=>ampliacion.roiPrevencion(c.insumos.roiPrevencion)},
+ indiceInversion:{dependencias:[],inputs:['roles explícitos','Delta diseñador/ejecutor'],calcular:c=>ampliacion.indiceInversion(c.insumos.indiceInversion,c.nodos)},
+ shapley:{dependencias:[],inputs:['juego v(S) completo','unidad'],calcular:c=>ampliacion.shapley(c.insumos.shapley,c.nodos,c.configuracion.shapley)},
+ justiciaEstructural:{dependencias:['delta'],inputs:[],calcular:c=>ampliacion.justicia(c.nodos.map(n=>c.resultados.delta.valor?.find(x=>x.id===n.id)?.resultado?.valor??null))},
+ conversionVital:{dependencias:[],inputs:['monto','salario de referencia por hora','moneda'],calcular:c=>ampliacion.conversionVital(c.insumos.conversionVital)},
+ impactoCausal:{dependencias:[],inputs:['dos vectores comparables','referencias','IDs'],calcular:c=>ampliacion.impacto(c.insumos.comparacion,c.nodos)},
+ aprendizajeSistemico:{dependencias:[],inputs:['R*/alpha antes/después','referencias'],calcular:c=>ampliacion.aprendizaje(c.insumos.comparacion,c.nodos)},
+ brechaBeneficio:{dependencias:[],inputs:['B_i absoluto','beta absoluto','unidad'],calcular:c=>ampliacion.brechaBeneficio(c.insumos.brechaBeneficio,c.nodos)},
+ fraudeAnnona:{dependencias:[],inputs:['protocolo versionado','intervención/prevención'],calcular:c=>calcularFraudeAnnona(c.insumos.fraudeAnnona,c.configuracion.protocoloFraude)}
 };
 function correrAnalisis({estructura,grafo,insumos={},medicionesSolicitadas=[],configuracion={},protocolo=null}){
  const fuente=estructura||grafo;if(!Array.isArray(medicionesSolicitadas)||medicionesSolicitadas.some(x=>typeof x!=='string'))throw new Error('Lista de operadores inválida');
