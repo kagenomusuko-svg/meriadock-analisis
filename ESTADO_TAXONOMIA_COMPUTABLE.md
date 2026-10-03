@@ -37,7 +37,7 @@
 - [x] Revisar/compilar capítulos 3–20.
 - [x] Revisar/compilar capítulos 21–40.
 - [x] Revisar/compilar capítulos 41–60.
-- [ ] Revisar/compilar ningún capítulo pendiente.
+- [x] Revisar/compilar ningún capítulo pendiente.
 - [x] Extraer escalas de evidencia.
 - [x] Extraer preguntas/observables.
 - [x] Extraer reglas S/alpha/IIC.
