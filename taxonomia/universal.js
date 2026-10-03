@@ -19,6 +19,7 @@ function orientarHijo(r={}){
  return r.orientacion==='no_clara'?salida('REQUIERE_ECO'):salida('INDETERMINADO');
 }
 function validarDistribucion(p,{presencia=false,noDisponible=false,confirmado=false,justificaciones={}}={}){
+ if(presencia===true&&noDisponible===true)return {estado:'error',motivo:'Presencia y actor no disponible son incompatibles'};
  const hs=['fobos','deimos','anteros','eros','potos','harmonia'];if(confirmado!==true||!p||hs.some(h=>!Number.isFinite(p[h])||p[h]<0||p[h]>1)||Math.abs(hs.reduce((s,h)=>s+p[h],0)-1)>1e-12)return {estado:'indeterminado',motivo:'Distribución completa y confirmación requeridas'};
  if(presencia!==true&&p.harmonia!==0||noDisponible===true&&['eros','potos','harmonia'].some(h=>p[h]!==0))return {estado:'error',motivo:'Localización inaccesible'};
  if(hs.some(h=>p[h]>0&&!justificaciones[h]))return {estado:'indeterminado',motivo:'Justificación observacional por peso requerida'};
