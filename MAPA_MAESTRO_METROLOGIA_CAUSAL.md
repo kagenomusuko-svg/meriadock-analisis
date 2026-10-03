@@ -701,3 +701,33 @@ primero busca en:
 
 Sólo escala al autor cuando la cuestión siga siendo doctrinalmente indeterminada después de esa revisión.
 
+
+
+---
+
+# 28. Etapa F — Work 04: Taxonomía computable y Fraude annona
+
+Siguiente frente autorizado en preparación:
+
+- `ORDEN_WORK_04_TAXONOMIA_COMPUTABLE_Y_FRAUDE_ANNONA.md`
+- `ESTADO_TAXONOMIA_COMPUTABLE.md`
+
+Objetivo:
+
+1. compilar U·1–U·4 y capítulos 1–78 de la Taxonomía General de Aplicaciones como protocolos declarativos versionados y trazables;
+2. mantener la separación entre motor universal y protocolo de dominio;
+3. hacer que la UI consuma preguntas/rangos/estrategias desde protocolos, no desde hardcodes;
+4. preservar el estatus epistemológico de cada regla (canónica, derivada, pendiente de calibración, ilustrativa, histórica, reservada, no computable);
+5. activar Fraude annona como operador matemático canónico:
+
+[
+F_A = R^*(1-alpha)(1-IIC)
+]
+
+con nodo de diseño e IIC explícitamente discriminados.
+
+Regla de seguridad: no sustituir esta fórmula por (Delta(1-IIC)), porque con la definición vigente (Delta=R^*-alpha) no son algebraicamente equivalentes.
+
+El umbral 0.20, cuando aparezca en la fuente, no se convierte en umbral universal del motor: sólo puede entrar como interpretación protocolaria de dominio con procedencia y estatus explícitos.
+
+Estado al crear esta etapa: Work03 permanece ACEPTADO_CON_RESERVAS; Work04 aún no ejecutado.
