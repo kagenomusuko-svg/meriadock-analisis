@@ -60,7 +60,7 @@
 
 - [x] `npm ci` / `npm test` local: 93/93.
 - [x] `npm run build` local.
-- [ ] Playwright y producción exacta: CI 37095045137 detectó excepción cliente; fixes b523bacf y 580de8c publicados, aceptación en relanzamiento.
+- [ ] Playwright y producción exacta: CI 37095045137 detectó excepción cliente; fixes b523bacf y 580de8c publicados, aceptación en relanzamiento con diagnóstico explícito de Playwright.
 - [x] Crear catálogo, auditoría y matriz.
 - [x] Actualizar mapa maestro y repertorio.
 - [ ] Cerrar tablero: requiere CI/producción final.
