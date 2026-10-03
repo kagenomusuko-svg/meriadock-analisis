@@ -5,7 +5,7 @@
 - Estado: EN EJECUCIÓN
 - Base runtime: Work03 ACEPTADO_CON_RESERVAS
 - Bloque activo: compilación de dominios; verificación del subconjunto activo
-- Próxima tarea: revisar/compilar capítulos 21–78; completar instrumentos UI y cobertura de aceptación
+- Próxima tarea: revisar/compilar capítulos 41–78; completar instrumentos UI y cobertura de aceptación
 - Decisiones pendientes: α nominal laboral; ver DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md
 
 ## Preparación
@@ -35,13 +35,14 @@
 ## Fase 3 — Capítulos 1–78
 
 - [x] Revisar/compilar capítulos 3–20.
-- [ ] Revisar/compilar capítulos 21–78.
+- [x] Revisar/compilar capítulos 21–40.
+- [ ] Revisar/compilar capítulos 41–78.
 - [ ] Extraer escalas de evidencia.
 - [ ] Extraer preguntas/observables.
 - [ ] Extraer reglas S/alpha/IIC.
 - [ ] Extraer operadores/condiciones especiales.
 - [ ] Clasificar valores candidatos/ilustrativos/históricos.
-- [ ] Cero capítulos SIN_REVISAR (quedan 58; lote 3–20 cerrado).
+- [ ] Cero capítulos SIN_REVISAR (quedan 38; lotes 3–40 cerrados).
 - [ ] Tests de cobertura total.
 
 ## Fase 4 — Fraude annona
@@ -115,3 +116,8 @@ CI del schema formal: [37088208395](https://github.com/kagenomusuko-svg/meriadoc
 ### Lote capítulos 3–20
 
 Se revisaron doctrinalmente y compilaron 18 overlays `tax-cap03@1`…`tax-cap20@1`, con sourceRef/blobSHA, escalas y rangos presentes, preguntas, observables, S/α/IIC, operadores y condiciones. Pruebas de cobertura y registro pasan; la compilación conserva estados PROPUESTA_PENDIENTE_CALIBRACION/NO_COMPUTABLE/ILUSTRATIVO/HISTORICO cuando la fuente no permite computación.
+
+
+### Lote capítulos 21–40
+
+Se revisaron y compilaron 20 overlays adicionales (`tax-cap21@1`…`tax-cap40@1`) con extracción trazable de escalas, rangos cuando la fuente los fija, preguntas, observables y reglas de S, α, IIC, operadores y condiciones. La cobertura estricta queda en 44/82; los 38 capítulos restantes permanecen SIN_REVISAR hasta su lote.

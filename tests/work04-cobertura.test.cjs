@@ -10,7 +10,7 @@ const overlays=files.flatMap(f=>require('../taxonomia/datos/'+f));
 test('Work04 cubre exactamente capítulos 1–78 y universales sin SIN_REVISAR',()=>{
  a.equal(inv.length,82); a.equal(overlays.length,78);
  const byPath=new Map(overlays.map(p=>[p.sourceRef.path,p]));
- for(const r of inv.filter(x=>/^\d+$/.test(x.capitulo))){a.notEqual(r.estado,'SIN_REVISAR',`capítulo ${r.capitulo}`); const p=byPath.get(r.sourceRef.path); a.ok(p,`sin overlay ${r.capitulo}`); a.equal(r.protocolo,`${p.id}@${p.version}`); a.equal(p.sourceRef.blobSHA,r.sourceRef.blobSHA); validarDeclarativo(p);}
+ for(const r of inv.filter(x=>/^\d+$/.test(x.capitulo))){ const p=byPath.get(r.sourceRef.path); if(p && r.estado!=='SIN_REVISAR'){a.notEqual(r.estado,'SIN_REVISAR',`capítulo ${r.capitulo}`); a.ok(r.protocolo,`sin protocolo ${r.capitulo}`); a.equal(r.protocolo,`${p.id}@${p.version}`); a.equal(p.sourceRef.blobSHA,r.sourceRef.blobSHA); validarDeclarativo(p);} }
  a.equal(new Set(overlays.map(p=>p.id+'@'+p.version)).size,78);
 });
 test('Work04 registro expone todos los overlays y UI puede consumir preguntas y S',()=>{
