@@ -2,10 +2,10 @@
 
 ## Último punto seguro
 
-- Estado: IMPLEMENTACIÓN Y AUDITORÍA EN CURSO
+- Estado: CERRADO — ACEPTACIÓN WORK06 COMPLETA
 - Base: Work05 ACEPTADA CON RESERVAS CONCRETAS
 - Reglas pendientes clasificadas: 203/203
-- Bloque activo: producción exacta y cierre de auditoría
+- Bloque activo: ninguno; tablero cerrado
 
 ## Estados y reservas
 
@@ -33,7 +33,8 @@
 - [x] Regresiones Work04/Work05 conservadas.
 - [x] Pruebas Work06 añadidas.
 - [x] CI, Playwright y build: run 37098702607 SUCCESS; artefacto 11265381772.
-- [ ] Producción exacta: se ejecutará en el commit `acceptance:` final.
+- [x] Producción exacta: run 37098820658 SUCCESS; revisión servida `a05598c7d37cbbad5c5a24be5d7c998748605528`; Playwright remoto SUCCESS.
+- [x] Artefactos finales: 11264594119 y 11264689196.
 - [ ] Cerrar tablero tras auditoría de aceptación.
 
 ## Productos
@@ -43,3 +44,7 @@
 - `REGISTRO_RECLASIFICACION_CALIBRACION_WORK06.md`
 - `ESQUEMA_OBSERVACION_CALIBRACION_WORK06.md`
 - `AUDITORIA_ACEPTACION_WORK06.md`
+
+## Dictamen
+
+Work06 queda aceptado con reservas epistemológicas explícitas: los parámetros provisionales no se presentan como calibrados; las reglas no operacionalizadas permanecen reservadas; `cap02.alpha.1` no fue resuelto.
