@@ -11,7 +11,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
         "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap01@1"
     },
     {
       "capitulo": "2",
@@ -869,7 +870,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
         "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "universal-u1@1"
     },
     {
       "capitulo": "U·2",
@@ -880,7 +882,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
         "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "universal-u2@1"
     },
     {
       "capitulo": "U·3",
@@ -891,7 +894,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
         "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "universal-u3@1"
     },
     {
       "capitulo": "U·4",
@@ -902,7 +906,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
         "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "universal-u4@1"
     }
   ]
 }

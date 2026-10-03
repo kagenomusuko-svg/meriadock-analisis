@@ -4,7 +4,7 @@ Inventario congelado: 82 capítulos. Estado de revisión pendiente; inventariar 
 
 | Capítulo | Dominio / título | Fuente SHA | Escala E | S | α | IIC | Operadores | Reglas especiales | Protocolo | Pruebas | Estado |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | Derecho penal y civil — responsabilidad individual y colectiva | 3db9cc1fbd71319d26a8d8849913d14414fa5237 | — | — | — | — | — | — | — | — | SIN_REVISAR |
+| 1 | Derecho penal y civil — responsabilidad individual y colectiva | 3db9cc1fbd71319d26a8d8849913d14414fa5237 | E0 vigente / escalas trazadas | Rutas A/B; confirmación | Orientación / estrategia explícita | Variantes separadas | Sin bloqueo familiar | Estados y límites trazados | tax-cap01@1 | work04-universal / loader | REVISADO_COMPILADO |
 | 2 | Derecho laboral — relaciones de poder y responsabilidad | 7cd206b404cdc3efdc5464ab1aa168ddfa0d9acb | — | — | — | — | — | — | — | — | SIN_REVISAR |
 | 3 | Derecho penal internacional y | 579d56362af45445d8fad5ed52ca149c5773cefe | — | — | — | — | — | — | — | — | SIN_REVISAR |
 | 4 | Derecho ambiental — responsabilidad por daño ecológico | ed2ccb1704a1c332ccc04504717b182465b73807 | — | — | — | — | — | — | — | — | SIN_REVISAR |
@@ -82,7 +82,7 @@ Inventario congelado: 82 capítulos. Estado de revisión pendiente; inventariar 
 | 76 | Teorías de justicia — formalización en | 8c701381401c7ff2c16afd210c54d3fca84379dd | — | — | — | — | — | — | — | — | SIN_REVISAR |
 | 77 | Ética aplicada — responsabilidad moral y | 35d368530772f86fbc31834f44b9134a87f32344 | — | — | — | — | — | — | — | — | SIN_REVISAR |
 | 78 | Pensamiento sistémico y causalidad circular | 839ba9d329b900a02805404edc4eb860f5ad7a68 | — | — | — | — | — | — | — | — | SIN_REVISAR |
-| U·1 | El árbol de decisión para el Hijo | 9a3e8d37601cebabbab286de5c9d1961f1f42ef6 | — | — | — | — | — | — | — | — | SIN_REVISAR |
-| U·2 | El protocolo de decisión para evidencia | 05441182cf4babe981e4a566cd3821c7588ae218 | — | — | — | — | — | — | — | — | SIN_REVISAR |
-| U·3 | Las dos rutas hacia S y el mapa SDO → | a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec | — | — | — | — | — | — | — | — | SIN_REVISAR |
-| U·4 | La Declaración y los resultados del | 9c55aa0d98c1947f2912f0b2bb442fe8c6f20180 | — | — | — | — | — | — | — | — | SIN_REVISAR |
+| U·1 | El árbol de decisión para el Hijo | 9a3e8d37601cebabbab286de5c9d1961f1f42ef6 | E0 vigente / escalas trazadas | Rutas A/B; confirmación | Orientación / estrategia explícita | Variantes separadas | Sin bloqueo familiar | Estados y límites trazados | universal-u1@1 | work04-universal / loader | REVISADO_COMPILADO |
+| U·2 | El protocolo de decisión para evidencia | 05441182cf4babe981e4a566cd3821c7588ae218 | E0 vigente / escalas trazadas | Rutas A/B; confirmación | Orientación / estrategia explícita | Variantes separadas | Sin bloqueo familiar | Estados y límites trazados | universal-u2@1 | work04-universal / loader | REVISADO_COMPILADO |
+| U·3 | Las dos rutas hacia S y el mapa SDO → | a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec | E0 vigente / escalas trazadas | Rutas A/B; confirmación | Orientación / estrategia explícita | Variantes separadas | Sin bloqueo familiar | Estados y límites trazados | universal-u3@1 | work04-universal / loader | REVISADO_COMPILADO |
+| U·4 | La Declaración y los resultados del | 9c55aa0d98c1947f2912f0b2bb442fe8c6f20180 | E0 vigente / escalas trazadas | Rutas A/B; confirmación | Orientación / estrategia explícita | Variantes separadas | Sin bloqueo familiar | Estados y límites trazados | universal-u4@1 | work04-universal / loader | REVISADO_COMPILADO; U4 extensión reservada |
