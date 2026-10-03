@@ -70,3 +70,7 @@ Toda suma/producto debe terminar finito para etiquetarse calculado. Inputs ausen
 
 - ROI neto: contrato del inventario/plan y Calculo9 §5.5; daño no negativo, costo positivo, ΔP externo en [−1,1], moneda común, base declarada. No descuento automático, modelo predictivo, recomendación ni equivalencia con retorno bruto; conserva beneficio bruto y neto como montos en auditoría. Caso ApA: 50M×.185 y costo 1M → 8.25 (825%).
 
+
+## Cierre Work04
+
+La Taxonomía General de Aplicaciones queda disponible como 78 overlays declarativos (`tax-cap01@1`…`tax-cap78@1`) fusionados con U·1–U·4. Los estados pendientes de calibración, históricos, ilustrativos, no computables y reservados se conservan en el registro y no se ejecutan como defaults. La UI obtiene preguntas, rangos y componentes S desde el protocolo seleccionado. La única reserva doctrinal vigente es `cap02.alpha.1`; Fraude annona permanece activo con su fórmula canónica y sus precondiciones.

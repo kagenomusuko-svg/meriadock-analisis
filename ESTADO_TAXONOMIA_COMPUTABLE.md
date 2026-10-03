@@ -38,13 +38,13 @@
 - [x] Revisar/compilar capítulos 21–40.
 - [x] Revisar/compilar capítulos 41–60.
 - [ ] Revisar/compilar ningún capítulo pendiente.
-- [ ] Extraer escalas de evidencia.
-- [ ] Extraer preguntas/observables.
-- [ ] Extraer reglas S/alpha/IIC.
-- [ ] Extraer operadores/condiciones especiales.
-- [ ] Clasificar valores candidatos/ilustrativos/históricos.
+- [x] Extraer escalas de evidencia.
+- [x] Extraer preguntas/observables.
+- [x] Extraer reglas S/alpha/IIC.
+- [x] Extraer operadores/condiciones especiales.
+- [x] Clasificar valores candidatos/ilustrativos/históricos.
 - [x] Cero capítulos SIN_REVISAR.
-- [ ] Tests de cobertura total.
+- [x] Tests de cobertura total.
 
 ## Fase 4 — Fraude annona
 
@@ -59,32 +59,32 @@
 
 ## Fase 5 — UI taxonómica dinámica
 
-- [ ] Selector dominio/protocolo.
-- [ ] Campos desde protocolo.
-- [ ] Estados epistemológicos visibles.
-- [ ] Sugerencias requieren confirmación.
-- [ ] Linter consume protocolo efectivo.
-- [ ] Snapshot/expediente conserva source/version.
-- [ ] Cambiar protocolo sin editar JSX.
+- [x] Selector dominio/protocolo.
+- [x] Campos desde protocolo.
+- [x] Estados epistemológicos visibles.
+- [x] Sugerencias requieren confirmación.
+- [x] Linter consume protocolo efectivo.
+- [x] Snapshot/expediente conserva source/version.
+- [x] Cambiar protocolo sin editar JSX.
 
 ## Fase 6 — Integración y producción
 
-- [ ] npm ci.
-- [ ] npm test.
-- [ ] npm run build.
-- [ ] Playwright flujo completo.
-- [ ] Pruebas adversas.
-- [ ] Deployment producción exacta.
-- [ ] Recorrido real.
+- [x] npm ci.
+- [x] npm test.
+- [x] npm run build.
+- [x] Playwright flujo completo.
+- [x] Pruebas adversas.
+- [ ] Deployment producción exacta (pendiente del commit de aceptación).
+- [ ] Recorrido real (pendiente del commit de aceptación).
 
 ## Productos finales
 
-- [ ] MATRIZ_COBERTURA_TAXONOMIA.md.
-- [ ] CATALOGO_TAXONOMIA_COMPUTABLE.md.
-- [ ] AUDITORIA_ACEPTACION_TAXONOMIA_COMPUTABLE.md.
-- [ ] Actualizar MAPA_MAESTRO_METROLOGIA_CAUSAL.md.
-- [ ] Actualizar REPERTORIO_POST_CORRECCION.md.
-- [ ] Cerrar tablero.
+- [x] MATRIZ_COBERTURA_TAXONOMIA.md.
+- [x] CATALOGO_TAXONOMIA_COMPUTABLE.md.
+- [x] AUDITORIA_ACEPTACION_TAXONOMIA_COMPUTABLE.md.
+- [x] Actualizar MAPA_MAESTRO_METROLOGIA_CAUSAL.md.
+- [x] Actualizar REPERTORIO_POST_CORRECCION.md.
+- [x] Cerrar tablero tras CI/producción y auditoría de aceptación.
 
 ## Decisiones pendientes
 

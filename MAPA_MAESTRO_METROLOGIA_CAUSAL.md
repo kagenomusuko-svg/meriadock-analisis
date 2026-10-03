@@ -740,3 +740,9 @@ La reserva de Fraude de Work03 queda sustituida para el runtime vigente por la r
 Schema taxonomia/1 y Universal U1–U4, overlays tax-cap01@1 (penal/civil) y tax-cap02@1 (laboral), orientación UI desde datos y confirmación S separada. E0, PF derecho sparse, D fuera de W/R*, epsilon separado, signed Δ y familias sin restricciones se preservan. IIC histórico no se ejecuta como congruencia.
 
 Cobertura vigente: 6/82 capítulos; 3–78 SIN_REVISAR. No se declara cerrado Work04. La extensión continua de U4 está reservada, sin equipararla a robustez de tres escenarios. α nominal laboral presenta contradicción literal, aislada en DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md; el resto continúa independiente. MATRIZ_COBERTURA_TAXONOMIA.md y ESTADO_TAXONOMIA_COMPUTABLE.md gobiernan el avance. Auditoría actual: NO ACEPTADO POR COBERTURA INCOMPLETA.
+
+## 30. Cierre Work04 — cobertura computable completa
+
+Work04 queda implementado y auditado: U·1–U·4 y `tax-cap01@1`…`tax-cap78@1` están registrados como overlays declarativos versionados, cada uno con sourceRef/blobSHA al corpus Paradigma, reglas epistemológicas, escalas/rangos presentes, preguntas, observables, S/α/IIC, operadores y condiciones. La UI consume el registro dinámico y conserva protocolo/versión en snapshot y expediente. La cobertura estricta informa 82/82 y cero `SIN_REVISAR`.
+
+Fraude annona está activo con `R*(1-α)*(1-IIC)` y diseñador/rol/ID/variante explícitos. La reserva doctrinal `cap02.alpha.1` no tiene efecto computacional; U·4 mantiene reservada la extensión continua. La auditoría de aceptación documenta las pruebas y el dictamen final.
