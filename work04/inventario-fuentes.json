@@ -1,0 +1,908 @@
+{
+  "baseAplicacion": "280ef5490e62618c7f6909b388dea30b2b129667",
+  "fuenteSHA": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+  "capitulos": [
+    {
+      "capitulo": "1",
+      "titulo": "Derecho penal y civil — responsabilidad individual y colectiva",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-01.md",
+        "blobSHA": "3db9cc1fbd71319d26a8d8849913d14414fa5237"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "2",
+      "titulo": "Derecho laboral — relaciones de poder y responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-02.md",
+        "blobSHA": "7cd206b404cdc3efdc5464ab1aa168ddfa0d9acb"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "3",
+      "titulo": "Derecho penal internacional y",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-03.md",
+        "blobSHA": "579d56362af45445d8fad5ed52ca149c5773cefe"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "4",
+      "titulo": "Derecho ambiental — responsabilidad por daño ecológico",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-04.md",
+        "blobSHA": "ed2ccb1704a1c332ccc04504717b182465b73807"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "5",
+      "titulo": "Derecho de familia — responsabilidad parental y protección del",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-05.md",
+        "blobSHA": "6770a1e456dd514ad0f4f8a8a698c445a813830e"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "6",
+      "titulo": "Derecho de la competencia —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-06.md",
+        "blobSHA": "19840fe9b6971a91ec4373c48247b344e531b9e7"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "7",
+      "titulo": "Propiedad intelectual —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-07.md",
+        "blobSHA": "f3f01bdcdb2aae8a117f8e8e698b574a0cb4ab33"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "8",
+      "titulo": "Responsabilidad médica — mala praxis y daño iatrogénico",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-08.md",
+        "blobSHA": "d7a0ccd8a210852be537f27a5bc57c9b850c4bfc"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "9",
+      "titulo": "Derecho tributario — evasión, elusión y fraude fiscal",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-09.md",
+        "blobSHA": "6714d2299852e2d076646a76fe348a881359d4ae"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "10",
+      "titulo": "Arbitraje e inversión extranjera",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-10.md",
+        "blobSHA": "6a24cd878af2e3c0d7506a969dd5c8c3f3227437"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "11",
+      "titulo": "Crédito y sistema financiero —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-11.md",
+        "blobSHA": "6a1e42fb4369e15b774831c579cfd55f52cb4664"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "12",
+      "titulo": "Insolvencia y quiebra — responsabilidad de administradores",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-12.md",
+        "blobSHA": "bc616e94c4538348faf70743fcf4b038f3c51243"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "13",
+      "titulo": "Gobierno corporativo — responsabilidad de directivos",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-13.md",
+        "blobSHA": "0d445ee1c8b8d2b0acb67cc1ab6a9acbad337aea"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "14",
+      "titulo": "Finanzas de mercado — manipulación y asimetría de información",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-14.md",
+        "blobSHA": "25860e7791485d0af0ba030ba71a0df22c0b352f"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "15",
+      "titulo": "Seguros — fraude, responsabilidad y valoración de",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-15.md",
+        "blobSHA": "9575ed0e51ef12decb205fb136daaab869a18090"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "16",
+      "titulo": "Economía del comportamiento — sesgos sistemáticos y decisión bajo",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-16.md",
+        "blobSHA": "7fd3e37164474d0368d2f67c15faf4e0589f8e32"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "17",
+      "titulo": "Plataformas digitales — economía de datos y responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-17.md",
+        "blobSHA": "6d3230fce293fd401aac24a994403f4a550293ce"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "18",
+      "titulo": "Comercio internacional — cadenas de suministro y responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-18.md",
+        "blobSHA": "35da4f6601d223855b087dc74eeff63d7b69594d"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "19",
+      "titulo": "Economía de la salud —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-19.md",
+        "blobSHA": "9e399228c2fe9ed34deea9b45a7815159a411315"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "20",
+      "titulo": "Criptoeconomía y activos digitales — protocolos, exchanges y responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-20.md",
+        "blobSHA": "8929dcbc29c0b7d89b523f0ab53d6111f2cf539d"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "21",
+      "titulo": "Epidemiología y salud pública —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-21.md",
+        "blobSHA": "78bd1602dc430e54e45f6ea0f5dbac97916f4319"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "22",
+      "titulo": "Oncología — causalidad en enfermedades",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-22.md",
+        "blobSHA": "779155ec333a9526ec8059ec3e3ea2b7f83d0cac"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "23",
+      "titulo": "Adicciones — responsabilidad de la",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-23.md",
+        "blobSHA": "24c93e69f22186d3df4aa9d06cdeb8abddcf8ac3"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "24",
+      "titulo": "Salud mental — responsabilidad clínica",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-24.md",
+        "blobSHA": "4499bbf439f8aaedee7f20a02fddcc7893336299"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "25",
+      "titulo": "Medicina laboral y enfermedades",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-25.md",
+        "blobSHA": "dbf8dd9f19de4f7d823912b2b055d3c3a4c66176"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "26",
+      "titulo": "Bioética y experimentación — consentimiento y daño en investigación",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-26.md",
+        "blobSHA": "17477db7fe1fe51e39875e7c929b7aa69e2f1f31"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "27",
+      "titulo": "Sistemas de salud y política sanitaria",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-27.md",
+        "blobSHA": "30cddd78ac702fd4be6776d0d007a709a556ed83"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "28",
+      "titulo": "Trasplantes y donación — responsabilidad en sistemas de",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-28.md",
+        "blobSHA": "288d293b79821b34b06dac7eba1f37e7aa4e68ed"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "29",
+      "titulo": "Evaluación docente y responsabilidad en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-29.md",
+        "blobSHA": "ac4feffaba39aed5cc06991d35dd81d732e64e34"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "30",
+      "titulo": "Políticas educativas — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-30.md",
+        "blobSHA": "e525a8cb19cb8bd6c0fe715ee057d18933cbe064"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "31",
+      "titulo": "Acoso escolar y violencia en entornos",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-31.md",
+        "blobSHA": "adf8144edbcca8c15e794e6ec5bc6d2e2c605cf1"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "32",
+      "titulo": "Educación superior — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-32.md",
+        "blobSHA": "13290fbb03de13d92072faf8268556f61310a0af"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "33",
+      "titulo": "Educación especial e inclusión",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-33.md",
+        "blobSHA": "5d0c5e141d77cdaf4a4c1c030bdea2f4c43ca33b"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "34",
+      "titulo": "Formación profesional y certificaciones",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-34.md",
+        "blobSHA": "ba71c557bccba5172dff24a4dede37566dd6e975"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "35",
+      "titulo": "Responsabilidad organizacional y cultura institucional — el IIC aplicado",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-35.md",
+        "blobSHA": "c4f2100a83f48da15f1203bfd500d2a27dec8545"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "36",
+      "titulo": "Gestión de proyectos — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-36.md",
+        "blobSHA": "75e9e9171a6624e9d86b38939457201a28600faf"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "37",
+      "titulo": "Recursos humanos — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-37.md",
+        "blobSHA": "8cdd61bf672a784551f398cc1d5f85268d0c97ec"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "38",
+      "titulo": "Liderazgo y decisión estratégica —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-38.md",
+        "blobSHA": "afea90c1eaa5eb9e1c3fe18866ef63a4bff713e8"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "39",
+      "titulo": "Cambio organizacional — fusiones,",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-39.md",
+        "blobSHA": "8610abd99a239776a611b7b09e17405ebc7628f5"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "40",
+      "titulo": "Innovación y emprendimiento — responsabilidad en startups y proyectos",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-40.md",
+        "blobSHA": "90b1569b08d81ed90b6c9f06ac7ff38ff1b97987"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "41",
+      "titulo": "Responsabilidad ambiental corporativa",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-41.md",
+        "blobSHA": "ccb022c55f210481e19db057011be539834cad21"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "42",
+      "titulo": "Historia — causalidad en procesos históricos y responsabilidad de actores",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-42.md",
+        "blobSHA": "102fa6e5b216cc892cd40f7c51b46217be5fcc4f"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "43",
+      "titulo": "Geopolítica — responsabilidad de Estados en conflictos internacionales",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-43.md",
+        "blobSHA": "859b4f1b3ee0939db4ea0cc343a4c900689dd9ff"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "44",
+      "titulo": "Ciencia política y procesos electorales",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-44.md",
+        "blobSHA": "57ff71fd1872647f264160dc58c8418db6833200"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "45",
+      "titulo": "Sociología de las organizaciones — responsabilidad colectiva y movimientos",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-45.md",
+        "blobSHA": "1228619cbfe126f8071b38bebabcc62cf4e72d94"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "46",
+      "titulo": "Antropología y comunidades indígenas",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-46.md",
+        "blobSHA": "5a8e1c85524627626252e0859f054eea2996da32"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "47",
+      "titulo": "Literatura y análisis cultural — lectura",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-47.md",
+        "blobSHA": "078178bf8a94b9cb1695e8744231fa7d2d3b59aa"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "48",
+      "titulo": "Ciberseguridad — responsabilidad en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-48.md",
+        "blobSHA": "e3523755ca4413559181bb667656a4f92ea26a66"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "49",
+      "titulo": "Inteligencia artificial y sistemas",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-49.md",
+        "blobSHA": "9d496aad177ceab7ab0e90c5f8faecdba001af4f"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "50",
+      "titulo": "Ingeniería civil — responsabilidad en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-50.md",
+        "blobSHA": "42883ce0ab480af3de3b6c75be6c021735db7d92"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "51",
+      "titulo": "Transporte — accidentes, responsabilidad de sistemas y regulación",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-51.md",
+        "blobSHA": "c7ed8150b4a8735f3e881a29d5d77b9c7ae59f5e"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "52",
+      "titulo": "Energía y transición energética — responsabilidad en cambio de sistemas",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-52.md",
+        "blobSHA": "3e0c18dad3a4f178846ec3c4f222cb349f1f1184"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "53",
+      "titulo": "Telecomunicaciones y medios — responsabilidad de plataformas y redes",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-53.md",
+        "blobSHA": "51232fde682b6046055970b5fc03f9893993c6ac"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "54",
+      "titulo": "Diseño de productos — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-54.md",
+        "blobSHA": "e8f58e1b0de776a24c429add1bafd09d58c62295"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "55",
+      "titulo": "Valoración de jugadores y distribución",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-55.md",
+        "blobSHA": "e7ad6fc4d6ebd1e14fae65492d61975c187f75f1"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "56",
+      "titulo": "Análisis de equipos y responsabilidad del",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-56.md",
+        "blobSHA": "b2725f6802d445d7f98fe55b966225e01e6c82d7"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "57",
+      "titulo": "Dopaje y sustancias prohibidas — responsabilidad individual y sistémica",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-57.md",
+        "blobSHA": "95335ba5971fcbc6ae79bd507c38071e61cb5be5"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "58",
+      "titulo": "Lesiones y seguridad en el deporte — responsabilidad en el diseño de reglas",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-58.md",
+        "blobSHA": "d5d68fe722c6a64c385a2a202ba074976ec22454"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "59",
+      "titulo": "Psicología clínica — responsabilidad en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-59.md",
+        "blobSHA": "ba1f0eb5bf7b26ef9e62c2f2fc2daec098b5ebeb"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "60",
+      "titulo": "Duelo y pérdida — el eje V del SDO en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-60.md",
+        "blobSHA": "922fcd196bf910c05c5b7a2187a6df0bce403835"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "61",
+      "titulo": "Psicología del desarrollo — responsabilidad en daño en la infancia y",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-61.md",
+        "blobSHA": "d91fcae6374c535b003baa7f3506cec499bc1420"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "62",
+      "titulo": "Psicología forense — evaluación de",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-62.md",
+        "blobSHA": "71deac728d4c53b71a0a9a077edc76f42608cc88"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "63",
+      "titulo": "Criminología — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-63.md",
+        "blobSHA": "55aeb5eb0e4803e67e70441bcf76b60efbb60f91"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "64",
+      "titulo": "Cambio climático — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-64.md",
+        "blobSHA": "5ae94a351bce8b2e3e36a8005fa46c2724d0db53"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "65",
+      "titulo": "Ecología y biodiversidad — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-65.md",
+        "blobSHA": "28d3b1cbcd6dd0a8beaca2ab1f3d59613948d3dc"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "66",
+      "titulo": "Agua y suelo — contaminación y responsabilidad ambiental específica",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-66.md",
+        "blobSHA": "4325d63e218891463d6ba4cce62edeae59e1bb7b"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "67",
+      "titulo": "Energía nuclear — responsabilidad en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-67.md",
+        "blobSHA": "63f5c749aadc665cff22c56a0eb4b40696f7d210"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "68",
+      "titulo": "Industrias creativas — responsabilidad en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-68.md",
+        "blobSHA": "e3815c91ff72079b0a9723896232e90f002129b3"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "69",
+      "titulo": "Videojuegos y diseño de sistemas adictivos",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-69.md",
+        "blobSHA": "a2a742ce7567119d9188df3423a74231d37266c5"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "70",
+      "titulo": "Publicidad y marketing — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-70.md",
+        "blobSHA": "18bd8a8b0f799780e637fbb51d720d85b2c5a148"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "71",
+      "titulo": "Medios de comunicación y periodismo —",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-71.md",
+        "blobSHA": "4ecc9d6fb720621289aba959105cc51a07aceac2"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "72",
+      "titulo": "Violencia de género — responsabilidad",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-72.md",
+        "blobSHA": "db8aa99f0a38db50905e040d17e5f1b6ee2564cf"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "73",
+      "titulo": "Exclusión social y pobreza — responsabilidad del Estado y las",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-73.md",
+        "blobSHA": "260445cd0ae72874f9909c6282cdc0b57105f431"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "74",
+      "titulo": "Sistemas de protección de infancia y",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-74.md",
+        "blobSHA": "98818656a2acbfb12acb0438db92d4e6269bdffe"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "75",
+      "titulo": "Migraciones forzadas y refugio — responsabilidad de Estados y actores",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-75.md",
+        "blobSHA": "331a4e389a5e0ee7a42b1c7bc08ee563548b80d2"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "76",
+      "titulo": "Teorías de justicia — formalización en",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-76.md",
+        "blobSHA": "8c701381401c7ff2c16afd210c54d3fca84379dd"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "77",
+      "titulo": "Ética aplicada — responsabilidad moral y",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-77.md",
+        "blobSHA": "35d368530772f86fbc31834f44b9134a87f32344"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "78",
+      "titulo": "Pensamiento sistémico y causalidad circular",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-78.md",
+        "blobSHA": "839ba9d329b900a02805404edc4eb860f5ad7a68"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "U·1",
+      "titulo": "El árbol de decisión para el Hijo",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+        "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "U·2",
+      "titulo": "El protocolo de decisión para evidencia",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+        "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "U·3",
+      "titulo": "Las dos rutas hacia S y el mapa SDO →",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+        "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec"
+      },
+      "estado": "SIN_REVISAR"
+    },
+    {
+      "capitulo": "U·4",
+      "titulo": "La Declaración y los resultados del",
+      "sourceRef": {
+        "repositorio": "kagenomusuko-svg/Paradigma",
+        "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+        "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+        "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180"
+      },
+      "estado": "SIN_REVISAR"
+    }
+  ]
+}
