@@ -2,67 +2,43 @@
 
 ## Último punto seguro
 
-- Estado: NO INICIADO
+- Estado: IMPLEMENTACIÓN Y AUDITORÍA EN CURSO
 - Base: Work05 ACEPTADA CON RESERVAS CONCRETAS
-- Bloque activo: reevaluación epistemológica
-- Próxima tarea: revisar REQUIERE_CALIBRACION y reglas PROPUESTA_PENDIENTE_CALIBRACION
+- Reglas pendientes clasificadas: 203/203
+- Bloque activo: verificación CI, producción y auditoría final
 
-## Fase 1 — Estados epistemológicos
+## Estados y reservas
 
-- [ ] Implementar estados FORMALMENTE_DEFINIDO / PARAMETRIZABLE / PARAMETRIZADO_PROVISIONALMENTE / CALIBRADO / VALIDADO_EXTERNAMENTE / NO_OPERACIONALIZADO.
-- [ ] Separar falta de calibración de falta de definición.
-- [ ] Tests de estados.
+- [x] Estados FORMALMENTE_DEFINIDO / PARAMETRIZABLE / PARAMETRIZADO_PROVISIONALMENTE / CALIBRADO / VALIDADO_EXTERNAMENTE / NO_OPERACIONALIZADO.
+- [x] Separación explícita entre falta de calibración y falta de definición.
+- [x] OP13/OP14/OP32 → NO_OPERACIONALIZADO; OP24/OP25 → PARAMETRIZABLE.
+- [x] `cap02.alpha.1` permanece reservado y separado.
 
-## Fase 2 — Revisión de operadores
+## Reglas taxonómicas
 
-- [ ] OP13 Recurrencia.
-- [ ] OP14 Exposición.
-- [ ] OP24 Opacidad.
-- [ ] OP25 Probabilidad sectorial.
-- [ ] OP32 Shapley deportivo / S_B.
-- [ ] Revisar si algún REQUIERE_DECISION era sólo falta de parámetros.
-- [ ] Cero reservas por calibración usadas como sinónimo de incalculable.
+- [x] 203/203 `PROPUESTA_PENDIENTE_CALIBRACION` clasificadas.
+- [x] 119 rangos, 1 coeficiente/tabla, 56 orientaciones no numéricas, 27 no operacionalizadas.
+- [x] Ningún default silencioso ni aplicación automática de sugerencias.
 
-## Fase 3 — Revisión de reglas taxonómicas
+## Runtime/UI/snapshot/expediente
 
-- [ ] Clasificar las 203 PROPUESTA_PENDIENTE_CALIBRACION.
-- [ ] Identificar parámetros/rangos/coefs utilizables provisionalmente.
-- [ ] Identificar reglas sólo orientativas.
-- [ ] Identificar verdaderos NO_OPERACIONALIZADO.
-- [ ] Cero SIN_REVISAR.
+- [x] Parámetros explícitos con valor/rango, `sourceRef` y confirmación humana.
+- [x] Sensibilidad de rangos conservada.
+- [x] Estado provisional distinguido de calibrado/validado.
+- [x] `/api/calibracion` y esquema exportable de observación.
+- [x] Snapshot y expediente reproducibles.
 
-## Fase 4 — Runtime/UI
+## Aceptación
 
-- [ ] Permitir parámetros explícitos no calibrados.
-- [ ] Permitir rangos provisionales confirmados.
-- [ ] Mostrar sensibilidad.
-- [ ] Etiquetar resultados provisionales.
-- [ ] No aplicar sugerencias sin confirmación.
-- [ ] Conservar source/version/estado.
+- [x] Regresiones Work04/Work05 conservadas.
+- [x] Pruebas Work06 añadidas.
+- [ ] CI, Playwright y producción exacta: pendientes sobre el commit final.
+- [ ] Cerrar tablero tras auditoría de aceptación.
 
-## Fase 5 — Snapshot/expediente/exportación
+## Productos
 
-- [ ] Conservar parámetros efectivos.
-- [ ] Conservar rango original.
-- [ ] Conservar confirmación humana.
-- [ ] Crear esquema exportable de observación.
-- [ ] Verificar reproducibilidad.
-
-## Fase 6 — Aceptación
-
-- [ ] npm ci.
-- [ ] npm test.
-- [ ] npm run build.
-- [ ] Playwright.
-- [ ] Producción exacta.
-- [ ] Crear matrices y auditoría Work06.
-- [ ] Actualizar mapa/repertorio/reservas.
-- [ ] Cerrar tablero.
-
-## Decisiones pendientes
-
-- cap02.alpha.1 — conflicto doctrinal independiente; no bloquear Work06.
-
-## Historial de commits
-
-Se completará durante Work06.
+- `MATRIZ_ESTADOS_EPISTEMOLOGICOS_WORK06.md`
+- `MATRIZ_PARAMETRIZACION_PROVISIONAL_WORK06.md`
+- `REGISTRO_RECLASIFICACION_CALIBRACION_WORK06.md`
+- `ESQUEMA_OBSERVACION_CALIBRACION_WORK06.md`
+- `AUDITORIA_ACEPTACION_WORK06.md`

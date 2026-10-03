@@ -30,3 +30,7 @@ Work05 reevalúa **45/45** registros. Hay **20 activos**, 1 con suficiencia taxo
 La UI/API también publican operadores pendientes de calibración, decisión, conceptuales y fuera del calculador. Aparecen con causa e inputs faltantes y no pueden seleccionarse como mediciones hasta que exista contrato suficiente. `OP26` sólo normaliza aliases taxonómicos; no introduce una fórmula nueva.
 
 Fraude annona conserva `R*(1−α)*(1−IIC)` y `cap02.alpha.1` permanece reservado sin efecto computacional.
+
+## Versión Work06
+
+La disponibilidad Work05 se conserva históricamente. Work06 añade estados epistemológicos: OP24 y OP25 aceptan parámetros explícitos con fuente y confirmación; OP13, OP14 y OP32 siguen no operacionalizados. Ningún resultado histórico se sobrescribe.

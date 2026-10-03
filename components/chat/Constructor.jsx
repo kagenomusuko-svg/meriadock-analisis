@@ -81,6 +81,7 @@ function CheckRow({ checked, onChange, children, disabled=false, ariaLabel }) {
 export default function Constructor() {
   const [protocolos,setProtocolos]=useState([GENERICO]);
   const [operadoresDisponibles,setOperadoresDisponibles]=useState([]);
+  const [calibracion,setCalibracion]=useState(null);
 
   const [paso, setPaso] = useState(0),
     [estado, setEstado] = useState(vacio),
@@ -105,6 +106,7 @@ export default function Constructor() {
   const headingRef=useRef(null),errorRef=useRef(null);
   useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
   useEffect(()=>{if(paso!==6||operadoresDisponibles.length)return;let activo=true;fetch('/api/operadores').then(r=>{if(!r.ok)throw Error('No se pudo cargar disponibilidad de operadores');return r.json();}).then(d=>{if(activo)setOperadoresDisponibles(Array.isArray(d.operadores)?d.operadores:[]);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[paso,operadoresDisponibles.length]);
+  useEffect(()=>{if(paso!==6||calibracion)return;let activo=true;fetch('/api/calibracion').then(r=>{if(!r.ok)throw Error('No se pudo cargar el circuito de calibración');return r.json();}).then(d=>{if(activo)setCalibracion(d);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[paso,calibracion]);
   useEffect(()=>{headingRef.current?.focus();},[paso]);
   useEffect(()=>{if(error)errorRef.current?.focus();},[error,errorVersion]);
   function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,dominio:p.dominioLibre?estado.dominio:p.dominios[0],nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:'',confirmadoS:false,referenciaS:'',respuestasTaxonomicas:{},orientacionTaxonomica:{}}))});}
@@ -998,6 +1000,7 @@ export default function Constructor() {
               Selecciona las mediciones solicitadas. Los errores de un operador
               se registran sin impedir resultados independientes.
             </p>
+            {calibracion&&<details style={card}><summary>Parametrización provisional y calibración futura</summary><p>Las sugerencias taxonómicas no se aplican automáticamente. Un parámetro provisional sólo entra al expediente con valor o rango, sourceRef y confirmación humana.</p><p><strong>{calibracion.resumen?.RANGO_PROVISIONAL_UTILIZABLE||0}</strong> rangos provisionales · <strong>{calibracion.resumen?.COEFICIENTE_PROVISIONAL_UTILIZABLE||0}</strong> coeficientes provisionales · <strong>{calibracion.resumen?.ORIENTACION_NO_NUMERICA||0}</strong> orientaciones no numéricas · <strong>{calibracion.resumen?.NO_OPERACIONALIZADO||0}</strong> no operacionalizadas.</p><p>Estado de resultado: PARAMETRIZADO_PROVISIONALMENTE; nunca se presenta como CALIBRADO o VALIDADO_EXTERNAMENTE.</p><small>Catálogo {calibracion.version}. Las observaciones futuras pueden exportarse mediante /api/calibracion.</small></details>}
             <div style={card}>
               {operadoresDisponibles.map((op) => {
                 const id=op.registro;

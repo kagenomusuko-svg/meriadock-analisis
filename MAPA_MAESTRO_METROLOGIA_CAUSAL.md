@@ -753,52 +753,8 @@ Work05 reevalúa OP01–OP45 contra la Taxonomía completa de Work04. Se activan
 
 Los restantes operadores quedan clasificados como pendientes de calibración, decisión doctrinal, conceptuales o fuera del calculador en `MATRIZ_SUFICIENCIA_OPERADORES_WORK05.md` y `REGISTRO_RESERVAS_POST_WORK05.md`. `cap02.alpha.1` sigue reservado y no bloquea ningún contrato independiente. U·4 continuo permanece como reserva matemática.
 
+## 32. Work06 — parametrización provisional y calibración futura
 
-## 32. Work06 — parametrización provisional y medición pre-calibración
+Work06 distingue formalización, parametrización provisional, calibración y validación externa. Las 203 reglas `PROPUESTA_PENDIENTE_CALIBRACION` de Work04 están clasificadas en las matrices Work06; `dist-motor/calibracion.js` conserva cada ID, valor, estado y `sourceRef`.
 
-Work06 corrige una distinción epistemológica importante: **pendiente de calibración no equivale a incalculable**.
-
-La secuencia metrológica autorizada es:
-
-[
-	ext{formalización}
-ightarrow
-	ext{parametrización provisional}
-ightarrow
-	ext{medición}
-ightarrow
-	ext{contraste}
-ightarrow
-	ext{calibración}
-ightarrow
-	ext{validación externa}
-]
-
-No debe exigirse calibración empírica como condición previa para toda medición si esa calibración necesita precisamente resultados medidos.
-
-Estados nuevos de referencia:
-
-- FORMALMENTE_DEFINIDO;
-- PARAMETRIZABLE;
-- PARAMETRIZADO_PROVISIONALMENTE;
-- CALIBRADO;
-- VALIDADO_EXTERNAMENTE;
-- NO_OPERACIONALIZADO.
-
-Regla:
-
-[
-	ext{NO CALIBRADO} 
-eq 	ext{NO OPERACIONALIZADO}
-]
-
-Work06 reevaluará las reservas de OP13, OP14, OP24, OP25 y OP32, y las 203 reglas `PROPUESTA_PENDIENTE_CALIBRACION` de Work04.
-
-Un operador formalmente definido debe poder calcularse con parámetros explícitos aunque éstos todavía no estén calibrados, siempre que el resultado conserve procedencia, estatus provisional y confirmación humana.
-
-Documento operativo:
-
-- `ORDEN_WORK_06_PARAMETRIZACION_PROVISIONAL_Y_CALIBRACION.md`
-- `ESTADO_WORK06_PARAMETRIZACION_PROVISIONAL.md`
-
-`cap02.alpha.1` permanece reservado por contradicción doctrinal y no pertenece al problema de calibración.
+Un rango o coeficiente no se aplica silenciosamente: exige valor/rango, fuente y confirmación humana. El resultado queda `PARAMETRIZADO_PROVISIONALMENTE`, conserva sensibilidad y puede exportarse como observación para una futura versión calibrada. OP24 y OP25 son `PARAMETRIZABLE`; OP13, OP14 y OP32 permanecen `NO_OPERACIONALIZADO`. `cap02.alpha.1` continúa independiente.

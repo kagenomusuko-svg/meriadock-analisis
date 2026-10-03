@@ -35,3 +35,7 @@ Estas reservas son deliberadamente locales a cada operador; no bloquean los cont
 - `cap02.alpha.1`: tensión nominal laboral documentada en Work04; no participa en ninguna activación Work05.
 - U·4 continuo: muestras/escenarios no garantizan el producto cartesiano continuo; extensión matemática reservada.
 - No se infiere recurrencia, exposición, eficacia, probabilidad, tributación o contrafactual desde R*, S, α o IIC.
+
+## Reclasificación Work06
+
+La reserva histórica `REQUIERE_CALIBRACION` no implica bloqueo computacional. OP24/OP25 son parametrizables con confirmación y fuente; OP13/OP14/OP32 son no operacionalizados por falta de función/estimando, no por mera falta de calibración.

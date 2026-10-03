@@ -90,12 +90,18 @@ function seccionAuditoria(r){
   return '<h3>Escenario '+escH(id)+'</h3>'+json(resumen)+(small?'<h3>W_E: entradas empíricas, sin D</h3>'+tabla(['Fila (origen)','Columna (destino)','Peso','Relación','Nivel'],W.entradas.map(e=>[W.ids[e.fila],W.ids[e.columna],e.valor,e.relacion,e.evidenciaNivel])):'<p>Representación sparse; el detalle por aristas está en la auditoría exportable.</p>')+(pf.W_epsilon?'<h3>W_ε = W_E + εK</h3>'+json(pf.W_epsilon.regularizacion):'')+(pf.rondas?.length?'<details><summary>Rondas de potencia: productos, sumas, normalización y error</summary>'+json(pf.rondas)+'</details>':'<p>Rondas resumidas por tamaño del grafo. El constructor permite solicitar el registro completo.</p>');
  }).join(''));
 }
+function seccionParametrizacion(r){
+ const p=r.parametrizacion||r.snapshot?.parametrizacion;
+ if(!p)return '';
+ return bloque('Parametrización provisional y ciclo de calibración',
+   '<p><strong>Estado epistemológico:</strong> '+escH(p.estado)+'. La etiqueta provisional no equivale a calibrado ni a validado externamente.</p>'+json(p));
+}
 function generarHTML(resultado,grafo,metadatos={}){
  if(!resultado?.modelo||!resultado?.resultados||!resultado?.auditoria)throw new Error('Resultado auditable del motor requerido');
  const m=resultado.modelo;
  const glosario=tabla(['Operador','Definición'],[['R*','Eigenvector derecho no negativo, normalizado L1: W R* = ρ R*.'],['S','Promedio simple o ponderado de componentes discriminados.'],['R*_neta','R* × (1 − S).'],['α','Condiciones adversas atribuibles; estrategia explícita.'],['Δ','R* − α; signo matemático sin umbrales universales.'],['IIC','Coincidencias identificadas / elementos declarados.'],['B*','Beneficio neto / beneficio total, con unidad declarada.'],['D_total','T_invertido + T_impedido + ΔT_trayectoria, unidades comparables.'],['AD','R*_i × D_total.'],['I_inv','abs(Delta diseñador)/abs(Delta ejecutor), roles discriminados; denominador cero indeterminado.'],['Robustez','Comparación de PF mínimo, central y máximo.']]);
  const resumen='<p>Según los insumos declarados por el analista. Motor '+escH(resultado.versionMotor)+'. Las mediciones ausentes permanecen indeterminadas.</p>';
- return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escH(metadatos.titulo||m.titulo||'Expediente metrológico')+'</title><style>'+CSS+'pre{white-space:pre-wrap;overflow-wrap:anywhere}body{max-width:1100px;margin:auto;padding:24px}</style></head><body>'+seccionHeader(m,metadatos)+resumen+seccionAnalisis(m)+seccionEstructura(m)+seccionOperadores(resultado)+bloque('Deudas y advertencias',json(resultado.mensajes||[]))+seccionAuditoria(resultado)+bloque('Snapshot reproducible: solicitud, estructura efectiva, insumos y configuración',json(resultado.snapshot))+bloque('Glosario de operadores',glosario)+'</body></html>';
+ return '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>'+escH(metadatos.titulo||m.titulo||'Expediente metrológico')+'</title><style>'+CSS+'pre{white-space:pre-wrap;overflow-wrap:anywhere}body{max-width:1100px;margin:auto;padding:24px}</style></head><body>'+seccionHeader(m,metadatos)+resumen+seccionAnalisis(m)+seccionEstructura(m)+seccionOperadores(resultado)+seccionParametrizacion(resultado)+bloque('Deudas y advertencias',json(resultado.mensajes||[]))+seccionAuditoria(resultado)+bloque('Snapshot reproducible: solicitud, estructura efectiva, insumos y configuración',json(resultado.snapshot))+bloque('Glosario de operadores',glosario)+'</body></html>';
 }
 function generarNarrativa(resultado,metadatos={}){
  if(!resultado?.modelo||!resultado?.resultados)throw new Error('Resultado del motor requerido');
