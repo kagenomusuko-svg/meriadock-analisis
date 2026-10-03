@@ -4,11 +4,11 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 
 ## Último punto seguro
 
-- Estado: EN EJECUCIÓN
+- Estado: CERRADO — ACEPTADO_CON_RESERVAS
 - Base doctrinal: RESOLUCION_AUDITORIA_I_INV.md
 - Base de hallazgos: REGISTRO_DISCREPANCIAS_AUDITORIA.md
-- Bloque activo: Fase 5
-- Próxima tarea: retirar legacy y reaceptación
+- Bloque activo: ninguno; cinco fases y reaceptación cerradas
+- Próxima tarea: ninguna dentro de Work03; futuras ampliaciones requieren nueva orden
 
 ## Fase 1 — P1 estructurales y numéricos
 
@@ -53,23 +53,23 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 
 ## Fase 5 — legacy
 
-- [ ] AU-16 retirar/reubicar/marcar legacy inactivo.
-- [ ] Verificar imports y rutas.
-- [ ] CI/build/UI verde Fase 5.
+- [x] AU-16 retirar/reubicar/marcar legacy inactivo. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
+- [x] Verificar imports y rutas. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
+- [x] CI/build/UI verde Fase 5. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
 
 ## Reaceptación
 
-- [ ] Verificar AU-01–AU-18.
-- [ ] Verificar invariantes centrales.
-- [ ] Verificar trazabilidad UI/API/motor/expediente/JSON.
-- [ ] Verificar producción.
-- [ ] Crear AUDITORIA_REACEPTACION_POST_CORRECCION.md.
-- [ ] Registrar conclusión.
-- [ ] Cerrar tablero.
+- [x] Verificar AU-01–AU-18. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
+- [x] Verificar invariantes centrales. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
+- [x] Verificar trazabilidad UI/API/motor/expediente/JSON. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
+- [x] Verificar producción. — `7aa0937827ad90fc894bb6c39fc42b28e380b435` (runtime `f49f69921de96a4a9be5771e92c9068fea077fba`); CI37082233427 SUCCESS y evidencia de producción
+- [x] Crear AUDITORIA_REACEPTACION_POST_CORRECCION.md. — informe y evidencia en `adfe17fdf1c54c0b29ef998b92bd6240c4736f1c`; runtime/regresiones `7aa0937827ad90fc894bb6c39fc42b28e380b435`, CI37082233427 SUCCESS
+- [x] Registrar conclusión. — informe y evidencia en `adfe17fdf1c54c0b29ef998b92bd6240c4736f1c`; runtime/regresiones `7aa0937827ad90fc894bb6c39fc42b28e380b435`, CI37082233427 SUCCESS
+- [x] Cerrar tablero. — informe y evidencia en `adfe17fdf1c54c0b29ef998b92bd6240c4736f1c`; runtime/regresiones `7aa0937827ad90fc894bb6c39fc42b28e380b435`, CI37082233427 SUCCESS
 
 ## Decisiones pendientes
 
-Ninguna al inicio. I_inv ya está resuelto.
+Ninguna al cierre. I_inv está resuelto e implementado; no nueva decisión doctrinal obligatoria.
 
 ## Historial de commits
 
@@ -81,3 +81,11 @@ Ninguna al inicio. I_inv ya está resuelto.
 - `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `348de91c05cf09ed17dee861dca46de81fd8046e` + `9430acf2118e018568be6ac3cf6a888c39140cb3` — Fase 3: 65 pruebas y build; CI37081467948 SUCCESS. Los dos CI anteriores detectaron ambigüedades del test Playwright, corregidas sin omitir las aserciones. Contraste de navegación/header comprobado ≥4.5; no certificación WCAG.
 
 - `77e043741ca3278dad7eee976e81cde9e68f0c57` — Fase 4: npm ci, 75 pruebas/build, CI37081724786 SUCCESS. Playwright prueba I_inv signed, Shapley y J integrados; expediente conserva signos y snapshot. Artifacts Fases1–3 descargados y revisados visualmente.
+
+- `f49f69921de96a4a9be5771e92c9068fea077fba` / `7aa0937827ad90fc894bb6c39fc42b28e380b435` — Fase 5 y aceptación: 75 pruebas/build local, npm ci; CI37082233427 completo SUCCESS, UI local de CI y producción exacta, artifacts descargados/revisados. Deployment dpl_JEAzkGf5cwBXS7Vop66ZCRD9JeYS READY.
+
+## Conclusión de cierre
+
+ACEPTADO_CON_RESERVAS. AU-01–AU-18 cerrados según orden, sin P0/P1 abierto. Fraude annona, pilotos genéricos, repertorio conceptual y accesibilidad integral conservan sus reservas autorizadas. No decisión obligatoria nueva. Informe: AUDITORIA_REACEPTACION_POST_CORRECCION.md. Matriz vigente: MATRIZ_CORRECCION_POST_AUDITORIA.md.
+
+- `adfe17fdf1c54c0b29ef998b92bd6240c4736f1c` — Informe de reaceptación, mapa/matrices/45 registros actualizados y evidencia persistente de producción; documentación, sin cambios de runtime.
