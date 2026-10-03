@@ -17,9 +17,9 @@
 
 ## Fase 1 — Schema y loader
 
-- [ ] Definir schema versionado.
-- [ ] Añadir estados epistemológicos.
-- [ ] Añadir sourceRef/proveniencia.
+- [x] Definir schema versionado. — taxonomia/1, 80 pruebas locales; commit funcional documentado abajo.
+- [x] Añadir estados epistemológicos. — siete estados, efectos separados y confirmación.
+- [x] Añadir sourceRef/proveniencia. — SHA/path/capítulo/sección/regla/estado obligatorios.
 - [ ] Refactorizar registry/loader.
 - [ ] Preservar generico@1.
 - [ ] Tests de schema/loader.
@@ -91,3 +91,5 @@ Ninguna al inicio.
 
 - `168144596333a49c25a200d38d3ed6e06fd63c2c` — preparación; base aplicación 280ef549, fuente Paradigma e7c7b06e, 82 blobs exactos. No equivale a revisión/compilación.
 
+
+- `05ddcae7b6328cf7087e01957d3a3b5cf1571323` — schema y extracción Universal; 80/80 pruebas locales. Loader/UI y cobertura de dominio todavía pendientes. U·4: el continuo exige extensión; no se equiparan muestras con cobertura global.
