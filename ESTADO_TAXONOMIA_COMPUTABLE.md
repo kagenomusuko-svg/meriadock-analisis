@@ -2,18 +2,18 @@
 
 ## Último punto seguro
 
-- Estado: NO INICIADO
+- Estado: EN EJECUCIÓN
 - Base runtime: Work03 ACEPTADO_CON_RESERVAS
 - Bloque activo: preparación
-- Próxima tarea: fijar SHA de fuentes y diseñar schema
+- Próxima tarea: schema, protocolo Universal y pruebas
 - Decisiones pendientes: ninguna al inicio
 
 ## Preparación
 
-- [ ] Fijar SHA de meriadock-analisis.
-- [ ] Fijar SHA de Paradigma.
-- [ ] Inventariar U·1–U·4 y capítulos 1–78.
-- [ ] Crear manifiesto inicial de cobertura.
+- [x] Fijar SHA de meriadock-analisis. — 168144596333a49c25a200d38d3ed6e06fd63c2c; 82 blobs verificados mediante hash Git.
+- [x] Fijar SHA de Paradigma. — 168144596333a49c25a200d38d3ed6e06fd63c2c; 82 blobs verificados mediante hash Git.
+- [x] Inventariar U·1–U·4 y capítulos 1–78. — 168144596333a49c25a200d38d3ed6e06fd63c2c; 82 blobs verificados mediante hash Git.
+- [x] Crear manifiesto inicial de cobertura. — 168144596333a49c25a200d38d3ed6e06fd63c2c; 82 blobs verificados mediante hash Git.
 
 ## Fase 1 — Schema y loader
 
@@ -89,4 +89,5 @@ Ninguna al inicio.
 
 ## Historial de commits
 
-Se completará durante Work04.
+- `168144596333a49c25a200d38d3ed6e06fd63c2c` — preparación; base aplicación 280ef549, fuente Paradigma e7c7b06e, 82 blobs exactos. No equivale a revisión/compilación.
+
