@@ -35,6 +35,7 @@ OP13–OP15, OP17–OP18, OP22–OP25, OP32, OP34–OP35, OP39–OP40 y OP45 no 
 - CI verificadora **37096386751** sobre `2b92ce87edd023b0a303d7dca1e9857f0d16a1c5`: `verificar` **SUCCESS** (tests, build y Playwright).
 - Artefacto Playwright: **11263938503** (`verificacion-interfaz`), SHA-256 `ae42d89bcd0ce07c3a2c30b7048963b5af0750a81e8b0dff7603d1770e87a083`.
 - La corrección `26e6be4` eliminó referencias de estilo fuera de ámbito; `2b92ce8` conservó los nombres accesibles canónicos de OP.
-- Producción exacta: se ejecutará en el commit de aceptación con `EXPECTED_COMMIT` igual a la revisión fuente servida por Vercel.
+- CI de aceptación **37096542768** sobre `304d03892edb0b7b848518f13599a893252aa83e`: `verificar` y `produccion` **SUCCESS**.
+- Producción sirvió exactamente `revisionFuente=304d03892edb0b7b848518f13599a893252aa83e`; Playwright remoto pasó contra `https://meriadock-analisis.vercel.app`.
+- Artefactos finales: `11264133252` (`verificacion-interfaz`, SHA-256 `64fda40f6420e281728301c820d535499099283794ad4a4f94e74fb6f03233e1`) y `11263938847` (`reaceptacion-produccion`, SHA-256 `654891112e0c5c1ef4ff9ed3cb85d8b16001fa0bc6d93c7f534f1fc556b46bb4`).
 - Auditoría reproducible: matriz, catálogo, reservas, metadata JSON y pruebas Work05.
-
