@@ -7,7 +7,7 @@ let browser,page;let logs='';if(server){server.stdout.on('data',d=>logs+=d);serv
  try{
   if(server)await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Servidor no arrancó: '+logs)),30000);server.stdout.on('data',()=>{if(logs.includes('Ready')){clearTimeout(timer);resolve();}});server.on('exit',c=>{clearTimeout(timer);reject(Error('Servidor terminó '+c+': '+logs));});});
   const redirect=await fetch(base+'/',{redirect:'manual'});assert.equal(redirect.status,307);assert.equal(redirect.headers.get('location'),'/constructor');
-  browser=await chromium.launch({headless:true});page=await browser.newPage({viewport:{width:1024,height:900}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+  browser=await chromium.launch({headless:true});page=await browser.newPage({viewport:{width:1024,height:900}});const errors=[];page.on('pageerror',e=>{errors.push(e.message);console.error('PAGEERROR:',e.stack||e.message);});
   const {GENERICO}=require('../taxonomia/protocolos');
   const fixtureProtocolo={...GENERICO,id:'fixture_ui',version:'2',alcance:'fixture_sin_calibracion',componentesS:[{id:'manual',texto:'Componente alternativo explícito'}],preguntas:[{id:'contexto',texto:'Pregunta alternativa',tipo:'texto'}]};
   await page.route('**/api/protocolos',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({protocolos:[GENERICO,fixtureProtocolo]})}));
