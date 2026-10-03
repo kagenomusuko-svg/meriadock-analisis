@@ -1,0 +1,1189 @@
+{
+  "revision": "ea8688635f38b349c151fa2cc9beffc7ada8f7db",
+  "runId": 37087942236,
+  "artifactId": 11261148086,
+  "sha256EvidenciaCompleta": "284fbb00578fb69dc0b3cab041b6d81a8f36cc8e52de5a810089026b1cbe5217",
+  "pruebas": [
+    {
+      "caso": "nivel cierre -1",
+      "estado": "error"
+    },
+    {
+      "caso": "nivel cierre 9",
+      "estado": "error"
+    },
+    {
+      "caso": "nivel cierre 1.5",
+      "estado": "error"
+    },
+    {
+      "caso": "cierre E0",
+      "estado": "indeterminado"
+    },
+    {
+      "caso": "overflow B*/daño",
+      "estadoB": "indeterminado",
+      "estadoD": "error"
+    },
+    {
+      "caso": "fallos locales e independencia",
+      "validacion": {
+        "estructuraValida": false,
+        "nodosValidos": true,
+        "errorEstructura": "Relación duplicada: conserva múltiples soportes en una sola relación sin sumar pesos automáticamente",
+        "errorNodos": null
+      }
+    },
+    {
+      "caso": "I_inv denominador cero",
+      "resultado": {
+        "estado": "indeterminado",
+        "valor": null,
+        "motivo": "Exceso del ejecutor cero: denominador cero, sin epsilon oculto",
+        "auditoria": {
+          "disenadorId": "a",
+          "ejecutorId": "b",
+          "deltaDisenador": 0.6,
+          "deltaEjecutor": 0,
+          "numerador": 0.6,
+          "denominador": 0,
+          "formula": "abs(Delta_diseniador)/abs(Delta_ejecutor)",
+          "fuente": "RESOLUCION_AUDITORIA_I_INV.md",
+          "epsilon": null
+        },
+        "dependencias": [],
+        "inputs": [
+          "roles explícitos",
+          "Delta diseñador/ejecutor"
+        ]
+      }
+    },
+    {
+      "caso": "snapshot reconstruye resultados/escenarios exactos",
+      "estado": "conforme"
+    },
+    {
+      "caso": "linter usa alpha externo efectivo",
+      "estado": "calculado"
+    },
+    {
+      "caso": "rho estimado no validado",
+      "rho": 1.5,
+      "residuo": 0.5
+    },
+    {
+      "caso": "sensibilidad parcial",
+      "total": 4,
+      "fallidas": 3
+    },
+    {
+      "caso": "empate secundario invariante en seis permutaciones",
+      "estado": "indeterminado"
+    },
+    {
+      "caso": "cinco estados explícitos",
+      "estado": "conforme"
+    },
+    {
+      "caso": "Fraude producto canónico 0.432",
+      "resultado": {
+        "estado": "calculado",
+        "valor": 0.43200000000000005,
+        "formula": "R*(1−α)(1−IIC)",
+        "insumos": {
+          "rStar": 0.6,
+          "alpha": 0.1,
+          "iic": 0.2
+        },
+        "interpretacion": "Magnitud canónica para el diseñador explícitamente discriminado; no calificación jurídica automática",
+        "disenadorId": "a",
+        "rol": "disenador",
+        "varianteIIC": "congruencia@1",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/meriadock-analisis",
+          "sha": "280ef5490e62618c7f6909b388dea30b2b129667",
+          "path": "ORDEN_WORK_04_TAXONOMIA_COMPUTABLE_Y_FRAUDE_ANNONA.md",
+          "capitulo": "Work04",
+          "seccion": "Fraude annona",
+          "reglaId": "fraude-annona.producto.v1",
+          "estado": "CANONICO"
+        },
+        "dependencias": [
+          "rStar",
+          "alpha",
+          "iic"
+        ],
+        "inputs": [
+          "disenadorId activo",
+          "rol diseñador explícito",
+          "variante IIC identificada"
+        ]
+      }
+    },
+    {
+      "caso": "Fraude producto canónico 0.192",
+      "resultado": {
+        "estado": "calculado",
+        "valor": 0.192,
+        "formula": "R*(1−α)(1−IIC)",
+        "insumos": {
+          "rStar": 0.6,
+          "alpha": 0.6,
+          "iic": 0.2
+        },
+        "interpretacion": "Magnitud canónica para el diseñador explícitamente discriminado; no calificación jurídica automática",
+        "disenadorId": "a",
+        "rol": "disenador",
+        "varianteIIC": "congruencia@1",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/meriadock-analisis",
+          "sha": "280ef5490e62618c7f6909b388dea30b2b129667",
+          "path": "ORDEN_WORK_04_TAXONOMIA_COMPUTABLE_Y_FRAUDE_ANNONA.md",
+          "capitulo": "Work04",
+          "seccion": "Fraude annona",
+          "reglaId": "fraude-annona.producto.v1",
+          "estado": "CANONICO"
+        },
+        "dependencias": [
+          "rStar",
+          "alpha",
+          "iic"
+        ],
+        "inputs": [
+          "disenadorId activo",
+          "rol diseñador explícito",
+          "variante IIC identificada"
+        ]
+      }
+    },
+    {
+      "caso": "Fraude producto canónico 0.108",
+      "resultado": {
+        "estado": "calculado",
+        "valor": 0.10799999999999998,
+        "formula": "R*(1−α)(1−IIC)",
+        "insumos": {
+          "rStar": 0.6,
+          "alpha": 0.1,
+          "iic": 0.8
+        },
+        "interpretacion": "Magnitud canónica para el diseñador explícitamente discriminado; no calificación jurídica automática",
+        "disenadorId": "a",
+        "rol": "disenador",
+        "varianteIIC": "congruencia@1",
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/meriadock-analisis",
+          "sha": "280ef5490e62618c7f6909b388dea30b2b129667",
+          "path": "ORDEN_WORK_04_TAXONOMIA_COMPUTABLE_Y_FRAUDE_ANNONA.md",
+          "capitulo": "Work04",
+          "seccion": "Fraude annona",
+          "reglaId": "fraude-annona.producto.v1",
+          "estado": "CANONICO"
+        },
+        "dependencias": [
+          "rStar",
+          "alpha",
+          "iic"
+        ],
+        "inputs": [
+          "disenadorId activo",
+          "rol diseñador explícito",
+          "variante IIC identificada"
+        ]
+      }
+    }
+  ],
+  "snapshot": {
+    "solicitudOriginal": {
+      "analisis": {
+        "version": "metrologia-causal/2",
+        "taxonomiaVersion": "generico@1",
+        "familia": "contabilidad_ontologica",
+        "dominio": "Genérico",
+        "titulo": "Fixture PF",
+        "pregunta": "¿Cómo converge?",
+        "fenomeno": {
+          "descripcion": "Sistema de dos nodos"
+        },
+        "eventoDeterminado": {
+          "id": "D",
+          "nombre": "Evento D",
+          "descripcion": "Evento D"
+        },
+        "nodosActivos": [
+          {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "nombre": "A",
+            "tipo": "indeterminado",
+            "modo": "indeterminado",
+            "descripcion": "",
+            "componentesS": [
+              "0",
+              ".4",
+              ".1"
+            ],
+            "estrategiaAlpha": "discriminado",
+            "alphaValor": ".08",
+            "alphaMonto": "",
+            "alphaBase": "",
+            "confirmadoS": false,
+            "referenciaS": "",
+            "respuestasTaxonomicas": {},
+            "orientacionTaxonomica": {},
+            "declarado": "x\ny",
+            "observado": "x",
+            "coincidencias": "1",
+            "beneficio": "30",
+            "s": {
+              "componentes": [
+                0,
+                0.4,
+                0.1
+              ],
+              "confirmado": false,
+              "referencia": null
+            },
+            "alpha": {
+              "estrategia": "discriminado",
+              "valor": 0.08,
+              "montoEfectivamenteAsumido": null,
+              "baseComparativa": null,
+              "soportes": []
+            },
+            "iic": {
+              "declarado": [
+                "x",
+                "y"
+              ],
+              "observado": [
+                "x"
+              ],
+              "coincidencias": 1
+            },
+            "soportes": []
+          },
+          {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "nombre": "B",
+            "tipo": "indeterminado",
+            "modo": "indeterminado",
+            "descripcion": "",
+            "componentesS": [
+              ".5",
+              ".5",
+              ".7"
+            ],
+            "estrategiaAlpha": "discriminado",
+            "alphaValor": ".03",
+            "alphaMonto": "",
+            "alphaBase": "",
+            "confirmadoS": false,
+            "referenciaS": "",
+            "respuestasTaxonomicas": {},
+            "orientacionTaxonomica": {},
+            "declarado": "x\ny",
+            "observado": "x",
+            "coincidencias": "1",
+            "beneficio": "10",
+            "s": {
+              "componentes": [
+                0.5,
+                0.5,
+                0.7
+              ],
+              "confirmado": false,
+              "referencia": null
+            },
+            "alpha": {
+              "estrategia": "discriminado",
+              "valor": 0.03,
+              "montoEfectivamenteAsumido": null,
+              "baseComparativa": null,
+              "soportes": []
+            },
+            "iic": {
+              "declarado": [
+                "x",
+                "y"
+              ],
+              "observado": [
+                "x"
+              ],
+              "coincidencias": 1
+            },
+            "soportes": []
+          }
+        ],
+        "relacionesInternas": [
+          {
+            "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "destino": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "evidenciaNivel": 1,
+            "min": ".9",
+            "max": ".9",
+            "soportes": [],
+            "referencia": "",
+            "id": "f487076e-b192-4b94-ba2c-de5cbbbae341",
+            "rango": {
+              "min": 0.9,
+              "max": 0.9
+            }
+          },
+          {
+            "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "destino": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "evidenciaNivel": 1,
+            "min": ".4",
+            "max": ".4",
+            "soportes": [],
+            "referencia": "",
+            "id": "47c0ef75-2d87-4a51-bbe5-7d1dcb64cfe6",
+            "rango": {
+              "min": 0.4,
+              "max": 0.4
+            }
+          },
+          {
+            "origen": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "destino": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "evidenciaNivel": 1,
+            "min": ".1",
+            "max": ".1",
+            "soportes": [],
+            "referencia": "",
+            "id": "9b5095cb-bf1c-4806-a0b2-4bf6a8fda46b",
+            "rango": {
+              "min": 0.1,
+              "max": 0.1
+            }
+          },
+          {
+            "origen": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "destino": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "evidenciaNivel": 1,
+            "min": ".6",
+            "max": ".6",
+            "soportes": [],
+            "referencia": "",
+            "id": "574b0b16-12ef-4742-88ea-d31a263bc0e2",
+            "rango": {
+              "min": 0.6,
+              "max": 0.6
+            }
+          }
+        ],
+        "conexionesCierre": [
+          {
+            "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "destino": "D",
+            "evidenciaNivel": 1,
+            "min": "1",
+            "max": "1",
+            "soportes": [],
+            "referencia": "",
+            "id": "c16b8b26-74df-4950-a59b-c6187c3b430e",
+            "rango": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ],
+        "medicionesSolicitadas": [
+          "rStar",
+          "s",
+          "rStarNeta",
+          "alpha",
+          "delta",
+          "iic",
+          "bStar",
+          "dTotal",
+          "ajusteDebitor",
+          "robustez",
+          "indiceInversion",
+          "shapley",
+          "justiciaEstructural",
+          "fraudeAnnona"
+        ]
+      },
+      "insumos": {
+        "fraudeAnnona": {
+          "disenadorId": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "rol": "disenador",
+          "varianteIIC": "congruencia@1"
+        },
+        "roiPrevencion": {
+          "danioTotal": null,
+          "costo": null,
+          "deltaP": null
+        },
+        "indiceInversion": {
+          "disenadorId": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "ejecutorId": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "deltaDisenador": 0.1,
+          "deltaEjecutor": -0.56
+        },
+        "shapley": {
+          "unidad": "MXN",
+          "coaliciones": [
+            {
+              "miembros": [],
+              "valor": 0
+            },
+            {
+              "miembros": [
+                "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc"
+              ],
+              "valor": 3
+            },
+            {
+              "miembros": [
+                "d210b9bb-072e-4533-87e3-3a7dce8a0de7"
+              ],
+              "valor": 0
+            },
+            {
+              "miembros": [
+                "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+                "d210b9bb-072e-4533-87e3-3a7dce8a0de7"
+              ],
+              "valor": 3
+            }
+          ]
+        },
+        "conversionVital": {
+          "monto": null,
+          "salarioReferencia": null
+        },
+        "comparacion": {
+          "valores": [
+            {
+              "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+              "rAntes": null,
+              "rDespues": null,
+              "alphaAntes": null,
+              "alphaDespues": null
+            },
+            {
+              "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+              "rAntes": null,
+              "rDespues": null,
+              "alphaAntes": null,
+              "alphaDespues": null
+            }
+          ]
+        },
+        "brechaBeneficio": {
+          "valores": [
+            {
+              "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+              "recibido": null,
+              "revertido": null
+            },
+            {
+              "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+              "recibido": null,
+              "revertido": null
+            }
+          ]
+        },
+        "nodosIIC": [
+          {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          }
+        ],
+        "insumosAlpha": [
+          {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "estrategia": "discriminado",
+            "valor": 0.08,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "estrategia": "discriminado",
+            "valor": 0.03,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          }
+        ],
+        "beneficios": {
+          "unidad": "MXN",
+          "valores": [
+            {
+              "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+              "valor": 30
+            },
+            {
+              "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+              "valor": 10
+            }
+          ]
+        },
+        "danio": {
+          "unidad": "MXN",
+          "tInvertido": {
+            "monto": 100
+          },
+          "tImpedido": {
+            "monto": 20
+          },
+          "tTrayectoria": {
+            "montoEstimado": 30
+          }
+        }
+      },
+      "medicionesSolicitadas": [
+        "rStar",
+        "s",
+        "rStarNeta",
+        "alpha",
+        "delta",
+        "iic",
+        "bStar",
+        "dTotal",
+        "ajusteDebitor",
+        "robustez",
+        "indiceInversion",
+        "shapley",
+        "justiciaEstructural",
+        "fraudeAnnona"
+      ],
+      "configuracion": {
+        "pf": {
+          "detalleCompleto": false
+        }
+      }
+    },
+    "estructuraEfectiva": {
+      "version": "metrologia-causal/2",
+      "taxonomiaVersion": "generico@1",
+      "familia": "contabilidad_ontologica",
+      "dominio": "Genérico",
+      "titulo": "Fixture PF",
+      "pregunta": "¿Cómo converge?",
+      "fenomeno": {
+        "descripcion": "Sistema de dos nodos"
+      },
+      "eventoDeterminado": {
+        "id": "D",
+        "nombre": "Evento D",
+        "descripcion": "Evento D"
+      },
+      "nodosActivos": [
+        {
+          "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "nombre": "A",
+          "tipo": "indeterminado",
+          "modo": "indeterminado",
+          "descripcion": "",
+          "componentesS": [
+            "0",
+            ".4",
+            ".1"
+          ],
+          "estrategiaAlpha": "discriminado",
+          "alphaValor": ".08",
+          "alphaMonto": "",
+          "alphaBase": "",
+          "confirmadoS": false,
+          "referenciaS": "",
+          "respuestasTaxonomicas": {},
+          "orientacionTaxonomica": {},
+          "declarado": "x\ny",
+          "observado": "x",
+          "coincidencias": "1",
+          "beneficio": "30",
+          "s": {
+            "componentes": [
+              0,
+              0.4,
+              0.1
+            ],
+            "confirmado": false,
+            "referencia": null
+          },
+          "alpha": {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "estrategia": "discriminado",
+            "valor": 0.08,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          "iic": {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          "soportes": []
+        },
+        {
+          "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "nombre": "B",
+          "tipo": "indeterminado",
+          "modo": "indeterminado",
+          "descripcion": "",
+          "componentesS": [
+            ".5",
+            ".5",
+            ".7"
+          ],
+          "estrategiaAlpha": "discriminado",
+          "alphaValor": ".03",
+          "alphaMonto": "",
+          "alphaBase": "",
+          "confirmadoS": false,
+          "referenciaS": "",
+          "respuestasTaxonomicas": {},
+          "orientacionTaxonomica": {},
+          "declarado": "x\ny",
+          "observado": "x",
+          "coincidencias": "1",
+          "beneficio": "10",
+          "s": {
+            "componentes": [
+              0.5,
+              0.5,
+              0.7
+            ],
+            "confirmado": false,
+            "referencia": null
+          },
+          "alpha": {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "estrategia": "discriminado",
+            "valor": 0.03,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          "iic": {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          "soportes": []
+        }
+      ],
+      "relacionesInternas": [
+        {
+          "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "destino": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "evidenciaNivel": 1,
+          "min": ".9",
+          "max": ".9",
+          "soportes": [],
+          "referencia": "",
+          "id": "f487076e-b192-4b94-ba2c-de5cbbbae341",
+          "rango": {
+            "min": 0.9,
+            "max": 0.9
+          }
+        },
+        {
+          "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "destino": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "evidenciaNivel": 1,
+          "min": ".4",
+          "max": ".4",
+          "soportes": [],
+          "referencia": "",
+          "id": "47c0ef75-2d87-4a51-bbe5-7d1dcb64cfe6",
+          "rango": {
+            "min": 0.4,
+            "max": 0.4
+          }
+        },
+        {
+          "origen": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "destino": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "evidenciaNivel": 1,
+          "min": ".1",
+          "max": ".1",
+          "soportes": [],
+          "referencia": "",
+          "id": "9b5095cb-bf1c-4806-a0b2-4bf6a8fda46b",
+          "rango": {
+            "min": 0.1,
+            "max": 0.1
+          }
+        },
+        {
+          "origen": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "destino": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "evidenciaNivel": 1,
+          "min": ".6",
+          "max": ".6",
+          "soportes": [],
+          "referencia": "",
+          "id": "574b0b16-12ef-4742-88ea-d31a263bc0e2",
+          "rango": {
+            "min": 0.6,
+            "max": 0.6
+          }
+        }
+      ],
+      "conexionesCierre": [
+        {
+          "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "destino": "D",
+          "evidenciaNivel": 1,
+          "min": "1",
+          "max": "1",
+          "soportes": [],
+          "referencia": "",
+          "id": "c16b8b26-74df-4950-a59b-c6187c3b430e",
+          "rango": {
+            "min": 1,
+            "max": 1
+          },
+          "estadoClausura": "declarado_valido"
+        }
+      ],
+      "medicionesSolicitadas": [
+        "rStar",
+        "s",
+        "rStarNeta",
+        "alpha",
+        "delta",
+        "iic",
+        "bStar",
+        "dTotal",
+        "ajusteDebitor",
+        "robustez",
+        "indiceInversion",
+        "shapley",
+        "justiciaEstructural",
+        "fraudeAnnona"
+      ],
+      "nodos": [
+        {
+          "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "nombre": "A",
+          "tipo": "indeterminado",
+          "modo": "indeterminado",
+          "descripcion": "",
+          "componentesS": [
+            "0",
+            ".4",
+            ".1"
+          ],
+          "estrategiaAlpha": "discriminado",
+          "alphaValor": ".08",
+          "alphaMonto": "",
+          "alphaBase": "",
+          "confirmadoS": false,
+          "referenciaS": "",
+          "respuestasTaxonomicas": {},
+          "orientacionTaxonomica": {},
+          "declarado": "x\ny",
+          "observado": "x",
+          "coincidencias": "1",
+          "beneficio": "30",
+          "s": {
+            "componentes": [
+              0,
+              0.4,
+              0.1
+            ],
+            "confirmado": false,
+            "referencia": null
+          },
+          "alpha": {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "estrategia": "discriminado",
+            "valor": 0.08,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          "iic": {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          "soportes": []
+        },
+        {
+          "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "nombre": "B",
+          "tipo": "indeterminado",
+          "modo": "indeterminado",
+          "descripcion": "",
+          "componentesS": [
+            ".5",
+            ".5",
+            ".7"
+          ],
+          "estrategiaAlpha": "discriminado",
+          "alphaValor": ".03",
+          "alphaMonto": "",
+          "alphaBase": "",
+          "confirmadoS": false,
+          "referenciaS": "",
+          "respuestasTaxonomicas": {},
+          "orientacionTaxonomica": {},
+          "declarado": "x\ny",
+          "observado": "x",
+          "coincidencias": "1",
+          "beneficio": "10",
+          "s": {
+            "componentes": [
+              0.5,
+              0.5,
+              0.7
+            ],
+            "confirmado": false,
+            "referencia": null
+          },
+          "alpha": {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "estrategia": "discriminado",
+            "valor": 0.03,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          "iic": {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          "soportes": []
+        }
+      ],
+      "aristas": [
+        {
+          "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "destino": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "evidenciaNivel": 1,
+          "min": ".9",
+          "max": ".9",
+          "soportes": [],
+          "referencia": "",
+          "id": "f487076e-b192-4b94-ba2c-de5cbbbae341",
+          "rango": {
+            "min": 0.9,
+            "max": 0.9
+          }
+        },
+        {
+          "origen": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "destino": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "evidenciaNivel": 1,
+          "min": ".4",
+          "max": ".4",
+          "soportes": [],
+          "referencia": "",
+          "id": "47c0ef75-2d87-4a51-bbe5-7d1dcb64cfe6",
+          "rango": {
+            "min": 0.4,
+            "max": 0.4
+          }
+        },
+        {
+          "origen": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "destino": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "evidenciaNivel": 1,
+          "min": ".1",
+          "max": ".1",
+          "soportes": [],
+          "referencia": "",
+          "id": "9b5095cb-bf1c-4806-a0b2-4bf6a8fda46b",
+          "rango": {
+            "min": 0.1,
+            "max": 0.1
+          }
+        },
+        {
+          "origen": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "destino": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "evidenciaNivel": 1,
+          "min": ".6",
+          "max": ".6",
+          "soportes": [],
+          "referencia": "",
+          "id": "574b0b16-12ef-4742-88ea-d31a263bc0e2",
+          "rango": {
+            "min": 0.6,
+            "max": 0.6
+          }
+        }
+      ]
+    },
+    "insumos": {
+      "fraudeAnnona": {
+        "disenadorId": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+        "rol": "disenador",
+        "varianteIIC": "congruencia@1"
+      },
+      "roiPrevencion": {
+        "danioTotal": null,
+        "costo": null,
+        "deltaP": null
+      },
+      "indiceInversion": {
+        "disenadorId": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+        "ejecutorId": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+        "deltaDisenador": 0.1,
+        "deltaEjecutor": -0.56
+      },
+      "shapley": {
+        "unidad": "MXN",
+        "coaliciones": [
+          {
+            "miembros": [],
+            "valor": 0
+          },
+          {
+            "miembros": [
+              "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc"
+            ],
+            "valor": 3
+          },
+          {
+            "miembros": [
+              "d210b9bb-072e-4533-87e3-3a7dce8a0de7"
+            ],
+            "valor": 0
+          },
+          {
+            "miembros": [
+              "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+              "d210b9bb-072e-4533-87e3-3a7dce8a0de7"
+            ],
+            "valor": 3
+          }
+        ]
+      },
+      "conversionVital": {
+        "monto": null,
+        "salarioReferencia": null
+      },
+      "comparacion": {
+        "valores": [
+          {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "rAntes": null,
+            "rDespues": null,
+            "alphaAntes": null,
+            "alphaDespues": null
+          },
+          {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "rAntes": null,
+            "rDespues": null,
+            "alphaAntes": null,
+            "alphaDespues": null
+          }
+        ]
+      },
+      "brechaBeneficio": {
+        "valores": [
+          {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "recibido": null,
+            "revertido": null
+          },
+          {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "recibido": null,
+            "revertido": null
+          }
+        ]
+      },
+      "nodosIIC": [
+        {
+          "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "declarado": [
+            "x",
+            "y"
+          ],
+          "observado": [
+            "x"
+          ],
+          "coincidencias": 1
+        },
+        {
+          "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "declarado": [
+            "x",
+            "y"
+          ],
+          "observado": [
+            "x"
+          ],
+          "coincidencias": 1
+        }
+      ],
+      "insumosAlpha": [
+        {
+          "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+          "estrategia": "discriminado",
+          "valor": 0.08,
+          "montoEfectivamenteAsumido": null,
+          "baseComparativa": null,
+          "soportes": []
+        },
+        {
+          "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+          "estrategia": "discriminado",
+          "valor": 0.03,
+          "montoEfectivamenteAsumido": null,
+          "baseComparativa": null,
+          "soportes": []
+        }
+      ],
+      "beneficios": {
+        "unidad": "MXN",
+        "valores": [
+          {
+            "id": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+            "valor": 30
+          },
+          {
+            "id": "d210b9bb-072e-4533-87e3-3a7dce8a0de7",
+            "valor": 10
+          }
+        ]
+      },
+      "danio": {
+        "unidad": "MXN",
+        "tInvertido": {
+          "monto": 100
+        },
+        "tImpedido": {
+          "monto": 20
+        },
+        "tTrayectoria": {
+          "montoEstimado": 30
+        }
+      }
+    },
+    "configuracion": {
+      "pf": {
+        "detalleCompleto": false
+      }
+    },
+    "taxonomiaVersionSolicitada": "generico@1",
+    "taxonomiaVersionEfectiva": "generico@1",
+    "protocoloEfectivo": {
+      "id": "generico",
+      "version": "1",
+      "dominios": [
+        "generico"
+      ],
+      "dominioLibre": true,
+      "alcance": "piloto_generico",
+      "estrategiasAlpha": [
+        {
+          "id": "alpha_directa",
+          "texto": "Valor discriminado — protocolo genérico",
+          "regla": "discriminado"
+        },
+        {
+          "id": "alpha_monetaria",
+          "texto": "Proporción comparable — protocolo genérico",
+          "regla": "proporcion_monetaria"
+        }
+      ],
+      "componentesS": [
+        {
+          "id": "formalizacion",
+          "texto": "Formalización / procedimiento"
+        },
+        {
+          "id": "sustituibilidad_actor",
+          "texto": "Sustituibilidad del actor en la posición"
+        },
+        {
+          "id": "sistema_incentivos",
+          "texto": "Determinación por sistema / incentivos"
+        }
+      ],
+      "preguntas": [],
+      "rangos": []
+    },
+    "versionMotor": "metrologia-causal/2",
+    "revisionFuente": "ea8688635f38b349c151fa2cc9beffc7ada8f7db"
+  },
+  "fraudeUI": {
+    "estado": "calculado",
+    "valor": 0.36799999998393473,
+    "formula": "R*(1−α)(1−IIC)",
+    "insumos": {
+      "rStar": 0.7999999999650754,
+      "alpha": 0.08,
+      "iic": 0.5
+    },
+    "interpretacion": "Magnitud canónica para el diseñador explícitamente discriminado; no calificación jurídica automática",
+    "disenadorId": "aa4502d4-0c58-4725-b13c-b8bbb31cb0fc",
+    "rol": "disenador",
+    "varianteIIC": "congruencia@1",
+    "sourceRef": {
+      "repositorio": "kagenomusuko-svg/meriadock-analisis",
+      "sha": "280ef5490e62618c7f6909b388dea30b2b129667",
+      "path": "ORDEN_WORK_04_TAXONOMIA_COMPUTABLE_Y_FRAUDE_ANNONA.md",
+      "capitulo": "Work04",
+      "seccion": "Fraude annona",
+      "reglaId": "fraude-annona.producto.v1",
+      "estado": "CANONICO"
+    },
+    "dependencias": [
+      "rStar",
+      "alpha",
+      "iic"
+    ],
+    "inputs": [
+      "disenadorId activo",
+      "rol diseñador explícito",
+      "variante IIC identificada"
+    ]
+  }
+}

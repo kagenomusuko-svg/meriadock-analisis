@@ -731,3 +731,12 @@ Regla de seguridad: no sustituir esta fórmula por (Delta(1-IIC)), porque con la
 El umbral 0.20, cuando aparezca en la fuente, no se convierte en umbral universal del motor: sólo puede entrar como interpretación protocolaria de dominio con procedencia y estatus explícitos.
 
 Estado al crear esta etapa: Work03 permanece ACEPTADO_CON_RESERVAS; Work04 aún no ejecutado.
+
+
+## 29. Avance efectivo Work04 — sin cierre de cobertura
+
+La reserva de Fraude de Work03 queda sustituida para el runtime vigente por la ratificación de Work04: MAT R*×(1−α)×(1−IIC), diseñador activo/rol/variante explícitos; faltante indetermina. No Δ×(1−IIC), umbral universal ni calificación automática. Las menciones anteriores de reserva describen el estado histórico Work03.
+
+Schema taxonomia/1 y Universal U1–U4, overlays tax-cap01@1 (penal/civil) y tax-cap02@1 (laboral), orientación UI desde datos y confirmación S separada. E0, PF derecho sparse, D fuera de W/R*, epsilon separado, signed Δ y familias sin restricciones se preservan. IIC histórico no se ejecuta como congruencia.
+
+Cobertura vigente: 6/82 capítulos; 3–78 SIN_REVISAR. No se declara cerrado Work04. La extensión continua de U4 está reservada, sin equipararla a robustez de tres escenarios. α nominal laboral presenta contradicción literal, aislada en DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md; el resto continúa independiente. MATRIZ_COBERTURA_TAXONOMIA.md y ESTADO_TAXONOMIA_COMPUTABLE.md gobiernan el avance. Auditoría actual: NO ACEPTADO POR COBERTURA INCOMPLETA.
