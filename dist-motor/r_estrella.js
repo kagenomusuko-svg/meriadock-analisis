@@ -19,7 +19,7 @@ function calcularRStar(input,{tolerancia=1e-10,maxIteraciones=10000,regularizaci
   const wr=multiplicar(W,r),rho=wr.reduce((s,x)=>s+x,0),residuo=wr.reduce((s,x,i)=>s+Math.abs(x-rho*r[i]),0);
   convergio=convergio&&rho>0&&residuo<tolerancia*Math.max(1,rho);
   return {estado:convergio?'calculado':'indeterminado',vector:convergio?r:null,aproximacion:convergio?null:r,
-    eigenvalorDominante:rho,iteraciones,convergio,errorFinal,residuo,tolerancia,maxIteraciones,
+    eigenvalorDominante:convergio?rho:null,estimacionRho:Number.isFinite(rho)?rho:null,iteraciones,convergio,errorFinal:Number.isFinite(errorFinal)?errorFinal:null,residuo:Number.isFinite(residuo)?residuo:null,tolerancia,maxIteraciones,
     motivo:motivo||(!convergio?'No convergente con los parámetros declarados':null),
     regularizacionAplicada:!!regularizacion,epsilon:regularizacion?.epsilon??null,
     diagnostico,diagnosticoEmpirico,W_E,W_epsilon:regularizacion?W:null,rondas,

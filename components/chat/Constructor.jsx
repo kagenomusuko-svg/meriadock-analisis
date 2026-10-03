@@ -168,7 +168,7 @@ export default function Constructor() {
     });
   }
   const solicitud = construirSolicitud(estado);
-  const mensajes = mensajesAnalisis(solicitud.analisis, estado.mediciones);
+  const mensajes = mensajesAnalisis({...solicitud.analisis,nodosActivos:solicitud.analisis.nodosActivos.map(n=>({...n,alpha:solicitud.insumos.insumosAlpha.find(a=>a.id===n.id)||n.alpha}))}, estado.mediciones);
   async function calcular() {
     setCalculando(true);
     setError("");
@@ -983,6 +983,7 @@ export default function Constructor() {
                   Según los insumos declarados por el analista. Versión{" "}
                   {resultado.versionMotor}.
                 </p>
+                {resultado.escenarios.central && <div style={card}><strong>Garantías PF — {resultado.escenarios.central.estado}</strong><p>Convergencia: {String(resultado.escenarios.central.convergio)} · Residuo: {String(resultado.escenarios.central.residuo)} · Tolerancia: {resultado.escenarios.central.tolerancia} · Primitividad: {String(resultado.escenarios.central.diagnostico.primitiva)} · Regularización: {String(resultado.escenarios.central.regularizacionAplicada)} · Estimación de rho: {String(resultado.escenarios.central.estimacionRho)}</p></div>}
                 {resultado.declaracion && (
                   <div style={aOk}>
                     <strong>Declaración {resultado.declaracion.nivel}</strong> —{" "}
@@ -1009,9 +1010,9 @@ export default function Constructor() {
                       {resultado.rStar.map((r) => (
                         <tr key={r.id}>
                           <td>{r.nodo}</td>
-                          <td>{pct(r.valor)}</td>
-                          <td>{pct(r.s)}</td>
-                          <td>{pct(r.neta)}</td>
+                          <td>{r.valor==null?resultado.resultados.rStar.estado.replaceAll('_',' '):pct(r.valor)}</td>
+                          <td>{r.s==null?resultado.resultados.s.estado.replaceAll('_',' '):pct(r.s)}</td>
+                          <td>{r.neta==null?resultado.resultados.rStarNeta.estado.replaceAll('_',' '):pct(r.neta)}</td>
                           <td>
                             {pct(
                               resultado.alpha.find((a) => a.id === r.id)?.valor,
@@ -1020,7 +1021,7 @@ export default function Constructor() {
                           <td>
                             {resultado.delta
                               .find((d) => d.id === r.id)
-                              ?.resultado?.valor?.toFixed(6) ?? "Indeterminado"}
+                              ?.resultado?.valor?.toFixed(6) ?? resultado.resultados.delta.estado.replaceAll("_"," ")}
                           </td>
                         </tr>
                       ))}
@@ -1030,10 +1031,10 @@ export default function Constructor() {
                 {Object.entries(resultado.resultados).map(([id, r]) => (
                   <details key={id} style={card}>
                     <summary>
-                      {OPERADORES[id]} — {r.estado}
+                      {OPERADORES[id] || id} — {r.estado.replaceAll('_',' ')}
                     </summary>
                     {r.motivo && <p>{r.motivo}</p>}
-                    <pre>{JSON.stringify(r.valor, null, 2)}</pre>
+                    <pre>{JSON.stringify(r, null, 2)}</pre>
                   </details>
                 ))}
                 <details style={card}>

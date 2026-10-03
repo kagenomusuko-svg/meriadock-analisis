@@ -15,24 +15,26 @@ function determinarDeclaracion(escenarios){
  return {estado:'calculado',nivel,mismoLider,ordenEstable,brechaCentral:brecha,lideres:l,rankings:rk,metodo:'Tres escenarios mínimo/central/máximo',descripcion:{A:'Mismo líder y mismo orden en los tres escenarios.',B:'Mismo líder; cambia el orden secundario.',C:'Cambia el líder; brecha central mayor de 10 puntos porcentuales.',D:'Cambia el líder; brecha central no mayor de 10 puntos porcentuales.'}[nivel]};
 }
 function sensibilidadExtendida(modelo,config,opcionesPF={}){
+ function evaluar(m){try{return calcularRStar(construirMatrizEmpirica(m),opcionesPF);}catch(e){return {estado:'error',vector:null,motivo:e.message};}}
  if(!config?.metodo)return {estado:'indeterminado',valor:null,motivo:'Selecciona explícitamente un método de sensibilidad extendida'};
- const base=calcularRStar(construirMatrizEmpirica(modelo),opcionesPF);
+ const base=evaluar(modelo);
  if(!base.vector)return {estado:'indeterminado',valor:null,motivo:'Escenario central no convergente'};
  const aristas=modelo.relacionesInternas, muestras=[];
  if(config.metodo==='una_arista_a_la_vez'){
   aristas.forEach((e,i)=>{for(const extremo of ['min','max']){
    const valor=rangoRelacion(e)[extremo];const rel=aristas.map((a,j)=>j===i?{...a,rango:{min:valor,max:valor},pesoMin:valor,pesoMax:valor}:a);
-   const r=calcularRStar(construirMatrizEmpirica({...modelo,relacionesInternas:rel}),opcionesPF);
-   muestras.push({relacion:e.id,extremo,estado:r.estado,vector:r.vector,diferenciaL1:r.vector?r.vector.reduce((s,x,j)=>s+Math.abs(x-base.vector[j]),0):null});
+   const r=evaluar({...modelo,relacionesInternas:rel});
+   muestras.push({relacion:e.id,extremo,estado:r.estado,motivo:r.motivo,vector:r.vector,diferenciaL1:r.vector?r.vector.reduce((s,x,j)=>s+Math.abs(x-base.vector[j]),0):null});
   }});
  }else if(config.metodo==='hipercubo_exhaustivo'){
   const cantidad=2**aristas.length;
   if(!Number.isInteger(config.maxVertices)||config.maxVertices<1||cantidad>config.maxVertices)return {estado:'indeterminado',valor:null,motivo:`${cantidad} vértices exceden el presupuesto técnico declarado`};
   for(let mask=0;mask<cantidad;mask++){
    const rel=aristas.map((e,i)=>{const range=rangoRelacion(e),v=Math.floor(mask/2**i)%2?range.max:range.min;return {...e,rango:{min:v,max:v},pesoMin:v,pesoMax:v};});
-   const r=calcularRStar(construirMatrizEmpirica({...modelo,relacionesInternas:rel}),opcionesPF);muestras.push({vertice:mask,estado:r.estado,vector:r.vector});
+   const r=evaluar({...modelo,relacionesInternas:rel});muestras.push({vertice:mask,estado:r.estado,motivo:r.motivo,vector:r.vector});
   }
  }else throw new Error('Método de sensibilidad no soportado');
- return {estado:'calculado',valor:muestras,metodo:config.metodo,semilla:null,base:base.vector};
+ const convergentes=muestras.filter(m=>m.vector!==null).length,fallidas=muestras.length-convergentes;
+ return {estado:fallidas?'indeterminado':'calculado',valor:muestras,motivo:fallidas?'Una o más muestras no convergen; resultados parciales conservados':null,metodo:config.metodo,semilla:null,base:base.vector,totalMuestras:muestras.length,convergentes,fallidas,completitud:fallidas?'parcial':'completa'};
 }
 module.exports={determinarDeclaracion,sensibilidadExtendida,ranking};

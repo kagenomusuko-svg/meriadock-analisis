@@ -9,7 +9,7 @@ test('API → PF/α/Δ/IIC/B*/D_total/AD, sin restricción por tipo',()=>{
  for(const k of ['min','central','max'])a.ok(Math.abs(r.escenarios[k].vector[0]-.8)<1e-9);
 });
 test('operadores independientes; datos ausentes ≠ cero',()=>{
- const r=calcularSolicitud({grafo:model,medicionesSolicitadas:['iic']});a.equal(r.resultados.rStar,undefined);a.equal(r.convergencia,null);
+ const r=calcularSolicitud({grafo:model,medicionesSolicitadas:['iic']});a.equal(r.resultados.rStar.estado,'no_solicitado');a.equal(r.convergencia,null);
  a.equal(calcularIIC([],[],0),null);a.throws(()=>calcularIIC(['x'],[],1));a.equal(calcularDTotal({...damage,tTrayectoria:{narrativa:'sin monto'}}),null);a.equal(calcularDTotal({...damage,tImpedido:{monto:20,unidad:'USD'}}),null);
  a.equal(calcularBStar(model.nodos.slice(0,2),{unidad:'MXN',valores:[{id:'a',valor:0},{id:'b',valor:0}]}).estado,'no_aplicable');a.equal(calcularBStar(model.nodos.slice(0,2),{unidad:'MXN',valores:[{id:'a',valor:0}]}).estado,'indeterminado');
 });
