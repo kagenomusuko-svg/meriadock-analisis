@@ -4,6 +4,7 @@ const {construirMatrizEmpirica}=require('./grafo');const {calcularRStar}=require
 const {calcularS}=require('./sustituibilidad');const {calcularAlpha}=require('./alpha');const {calcularDelta}=require('./delta');const {calcularContribucionAtribuible}=require('./derivados');
 const {calcularIIC}=require('./iic');const {calcularBStar}=require('./b_estrella');const {calcularDTotal,calcularAjusteDebitor}=require('./danio');const {fraudeDelDisenador}=require('./fraude_annona');const {determinarDeclaracion,sensibilidadExtendida}=require('./hipercubo');
 const ampliacion=require('./ampliacion');
+const {disponibilidad}=require('./operadores-taxonomicos');
 const {exigirFinitud}=require('./numerica');
 const definido=x=>x!==null&&x!==undefined;
 const salida=(valor,motivo)=>({estado:definido(valor)?'calculado':'indeterminado',valor,motivo:definido(valor)?null:motivo});
@@ -57,7 +58,7 @@ function correrAnalisis({estructura,grafo,insumos={},medicionesSolicitadas=[],co
  for(const id of Object.keys(REGISTRY))if(!resultados[id])resultados[id]={estado:'no_solicitado',valor:null,motivo:'Medición no solicitada ni requerida como dependencia'};
  const central=c.escenarios.central;
  const rStar=nodos.map((n,i)=>({id:n.id,nodo:n.nombre,valor:resultados.rStar?.valor?.[i]??null,s:resultados.s?.valor?.[i]?.valor??null,neta:resultados.rStarNeta?.valor?.[i]?.valor??null}));
- return {versionMotor:VERSION,modelo,medicionesSolicitadas,resultados,escenarios:c.escenarios,validacion:{estructuraValida:!errorEstructura,nodosValidos:!errorNodos,errorEstructura,errorNodos},auditoria:{convencion:'W_ij = w(N_i → N_j); W R*=ρ R*',versionMotor:VERSION,revisionFuente:process.env.VERCEL_GIT_COMMIT_SHA||process.env.GITHUB_SHA||'local-sin-SHA-declarado',escenarios:c.escenarios},
+ return {versionMotor:VERSION,modelo,medicionesSolicitadas,resultados,escenarios:c.escenarios,validacion:{estructuraValida:!errorEstructura,nodosValidos:!errorNodos,errorEstructura,errorNodos},auditoria:{convencion:'W_ij = w(N_i → N_j); W R*=ρ R*',versionMotor:VERSION,revisionFuente:process.env.VERCEL_GIT_COMMIT_SHA||process.env.GITHUB_SHA||'local-sin-SHA-declarado',escenarios:c.escenarios,operadoresDisponibles:disponibilidad.map(x=>({id:x.id,estado:x.estado,registro:x.registro||null}))},
   rStar,alpha:resultados.alpha?.valor||[],delta:resultados.delta?.valor||[],serieII:resultados.iic?.valor||[],bStar:resultados.bStar?.valor??null,dTotal:resultados.dTotal?.valor??null,ajusteDebitor:resultados.ajusteDebitor?.valor??null,
   convergencia:central?{convergio:central.convergio,iteraciones:central.iteraciones,metodo:central.metodo,residuo:central.residuo}:null,declaracion:resultados.robustez?.valor??null};
 }

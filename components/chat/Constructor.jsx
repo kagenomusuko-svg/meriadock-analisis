@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { construirSolicitud } from "../constructor/entrada";
 import { mensajesAnalisis } from "../../dist-motor/linter";
-import { OPERADORES, MODOS } from "../../dist-motor/nomenclatura";
+import { OPERADORES, MODOS, DISPONIBILIDAD } from "../../dist-motor/nomenclatura";
 import OrientacionTaxonomica from "../constructor/OrientacionTaxonomica";
 import { GENERICO } from "../../taxonomia/protocolos";
 const G = "#1E4C45",
@@ -60,7 +60,7 @@ function pct(v) {
     ? "Indeterminado"
     : (v * 100).toFixed(2) + "%";
 }
-function CheckRow({ checked, onChange, children }) {
+function CheckRow({ checked, onChange, children, disabled=false }) {
   return (
     <label
       style={{
@@ -69,17 +69,19 @@ function CheckRow({ checked, onChange, children }) {
         padding: "12px 14px",
         background: checked ? "#f0f6f4" : "transparent",
         borderRadius: 10,
-        cursor: "pointer",
+        cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.62 : 1,
         lineHeight: 1.6,
       }}
     >
-      <input type="checkbox" checked={checked} onChange={onChange} />
+      <input type="checkbox" checked={checked} onChange={onChange} disabled={disabled} />
       <span>{children}</span>
     </label>
   );
 }
 export default function Constructor() {
   const [protocolos,setProtocolos]=useState([GENERICO]);
+  const [operadoresDisponibles,setOperadoresDisponibles]=useState(DISPONIBILIDAD);
 
   const [paso, setPaso] = useState(0),
     [estado, setEstado] = useState(vacio),
@@ -102,7 +104,7 @@ export default function Constructor() {
   const seleccionado=protocolos.find(p=>`${p.id}@${p.version}`===estado.taxonomiaVersion);
   const protocolo=seleccionado||{id:'no-resuelto',version:'',componentesS:[],preguntas:[],rangos:[],estrategiasAlpha:[]};
   const headingRef=useRef(null),errorRef=useRef(null);
-  useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
+  useEffect(()=>{let activo=true;Promise.all([fetch('/api/protocolos'),fetch('/api/operadores')]).then(async ([p,o])=>{if(!p.ok||!o.ok)throw Error('No se pudo cargar catálogo declarativo');return Promise.all([p.json(),o.json()]);}).then(([p,o])=>{if(activo){setProtocolos(p.protocolos);setOperadoresDisponibles(o.operadores);}}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
   useEffect(()=>{headingRef.current?.focus();},[paso]);
   useEffect(()=>{if(error)errorRef.current?.focus();},[error,errorVersion]);
   function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,dominio:p.dominioLibre?estado.dominio:p.dominios[0],nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:'',confirmadoS:false,referenciaS:'',respuestasTaxonomicas:{},orientacionTaxonomica:{}}))});}
@@ -256,7 +258,8 @@ export default function Constructor() {
     border: "none",
     padding: "12px 28px",
     borderRadius: "10px",
-    cursor: "pointer",
+    cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.62 : 1,
     fontSize: "14px",
     fontFamily: "Georgia, serif",
   };
@@ -266,14 +269,16 @@ export default function Constructor() {
     border: "1.5px solid #d4cfc8",
     padding: "12px 28px",
     borderRadius: "10px",
-    cursor: "pointer",
+    cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.62 : 1,
     fontSize: "14px",
     fontFamily: "Georgia, serif",
   };
   const bDel = {
     background: "none",
     border: "none",
-    cursor: "pointer",
+    cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.62 : 1,
     color: "#655d52",
     fontSize: "22px",
     lineHeight: 1,
@@ -445,7 +450,8 @@ export default function Constructor() {
               borderBottom:
                 i === paso ? `2px solid ${G}` : "2px solid transparent",
               color: i === paso ? G : i < paso ? "#655d52" : "#655d52",
-              cursor: "pointer",
+              cursor: disabled ? "not-allowed" : "pointer",
+        opacity: disabled ? 0.62 : 1,
               fontSize: "13px",
               fontFamily: "Georgia, serif",
               whiteSpace: "nowrap",
@@ -997,21 +1003,13 @@ export default function Constructor() {
               se registran sin impedir resultados independientes.
             </p>
             <div style={card}>
-              {Object.entries(OPERADORES).map(([id, t]) => (
-                <CheckRow
-                  key={id}
-                  checked={estado.mediciones.includes(id)}
-                  onChange={() =>
-                    editar({
-                      mediciones: estado.mediciones.includes(id)
-                        ? estado.mediciones.filter((x) => x !== id)
-                        : [...estado.mediciones, id],
-                    })
-                  }
-                >
-                  {t}
-                </CheckRow>
-              ))}
+              {operadoresDisponibles.map((op) => {
+                const id=op.registro;
+                const activo=op.estado==='ACTIVO' && Boolean(id);
+                return <CheckRow key={op.id} disabled={!activo} checked={activo && estado.mediciones.includes(id)} onChange={() => editar({mediciones: estado.mediciones.includes(id) ? estado.mediciones.filter((x) => x !== id) : [...estado.mediciones, id]})}>
+                  <strong>{op.id} · {op.nombre}</strong> — <span>{op.estado.replaceAll('_',' ')}</span>{op.causaReserva&&<small style={{display:'block'}}>{op.causaReserva}</small>}
+                </CheckRow>;
+              })}
             </div>
             <button
               style={btn}
