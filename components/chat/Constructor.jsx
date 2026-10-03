@@ -876,7 +876,10 @@ export default function Constructor() {
               {campo('Unidad común de beneficio y reversión',estado.unidadReversion,v=>editar({unidadReversion:v}))}
               {estado.nodos.map(n=><div key={n.id}>{numero(n.nombre+': beneficio causalmente recibido',n.beneficioRecibido,v=>nodo(n.id,{beneficioRecibido:v}),0)}{numero(n.nombre+': beneficio efectivamente revertido',n.beneficioRevertido,v=>nodo(n.id,{beneficioRevertido:v}),0)}</div>)}
             </details>
-            <p>Fraude annona permanece reservado: falta un contrato canónico de intervención/prevención; su fórmula histórica no está activa.</p>
+            <details style={card}><summary>Fraude annona — diseño e IIC explícitos</summary><p>R* × (1−α) × (1−IIC) del diseñador seleccionado. No determina por sí mismo una calificación jurídica ni aplica un umbral universal.</p>
+<label style={fld}><span style={lbl}>Diseñador para Fraude annona</span><select aria-label="Diseñador para Fraude annona" style={sel} value={estado.fraudeDisenadorId||''} onChange={e=>editar({fraudeDisenadorId:e.target.value})}><option value="">Seleccionar rol e ID explícitamente</option>{estado.nodos.map(n=><option key={n.id} value={n.id}>{n.nombre}</option>)}</select></label>
+<label style={fld}><span style={lbl}>Variante IIC para Fraude annona</span><select aria-label="Variante IIC para Fraude annona" style={sel} value={estado.fraudeVarianteIIC||''} onChange={e=>editar({fraudeVarianteIIC:e.target.value})}><option value="">Seleccionar variante</option><option value="congruencia@1">congruencia@1 — coincidencias / total declarado</option></select></label>
+</details>
             <div style={card}>
               <h2 style={secH}>{OPERADORES.bStar}</h2>
               {campo(

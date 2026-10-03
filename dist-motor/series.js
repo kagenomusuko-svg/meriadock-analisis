@@ -2,7 +2,7 @@
 const {crearAnalisis,VERSION}=require('./modelo');
 const {construirMatrizEmpirica}=require('./grafo');const {calcularRStar}=require('./r_estrella');
 const {calcularS}=require('./sustituibilidad');const {calcularAlpha}=require('./alpha');const {calcularDelta}=require('./delta');const {calcularContribucionAtribuible}=require('./derivados');
-const {calcularIIC}=require('./iic');const {calcularBStar}=require('./b_estrella');const {calcularDTotal,calcularAjusteDebitor}=require('./danio');const {calcularFraudeAnnona}=require('./fraude_annona');const {determinarDeclaracion,sensibilidadExtendida}=require('./hipercubo');
+const {calcularIIC}=require('./iic');const {calcularBStar}=require('./b_estrella');const {calcularDTotal,calcularAjusteDebitor}=require('./danio');const {fraudeDelDisenador}=require('./fraude_annona');const {determinarDeclaracion,sensibilidadExtendida}=require('./hipercubo');
 const ampliacion=require('./ampliacion');
 const {exigirFinitud}=require('./numerica');
 const definido=x=>x!==null&&x!==undefined;
@@ -17,7 +17,7 @@ const REGISTRY={
  alpha:{dependencias:[],inputs:['estrategia α explícita por nodo'],calcular:c=>salida(c.nodos.map(n=>{const datos=c.insumos.insumosAlpha?.find(x=>x.id===n.id)||n.alpha;const a=calcularAlpha(datos,c.protocolo);return {id:n.id,nodo:n.nombre,valor:a?.valor??null,contrato:a};}))},
  rStarNeta:{dependencias:['rStar','s'],inputs:[],calcular:c=>salida(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,valor:calcularContribucionAtribuible(c.resultados.rStar.valor?.[i],c.resultados.s.valor[i].valor)})))},
  delta:{dependencias:['rStar','alpha'],inputs:[],calcular:c=>salida(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,resultado:calcularDelta(c.resultados.rStar.valor?.[i],c.resultados.alpha.valor[i].valor)})))},
- iic:{dependencias:[],inputs:['declarado','observado','coincidencias'],calcular:c=>salida(c.nodos.map(n=>{const d=c.insumos.nodosIIC?.find(x=>x.id===n.id)||n.iic;return {id:n.id,nodo:n.nombre,valor:d?calcularIIC(d.declarado,d.observado,d.coincidencias):null,insumos:d??null};}))},
+ iic:{dependencias:[],inputs:['declarado','observado','coincidencias'],calcular:c=>salida(c.nodos.map(n=>{const d=c.insumos.nodosIIC?.find(x=>x.id===n.id)||n.iic;return {id:n.id,nodo:n.nombre,valor:d?calcularIIC(d.declarado,d.observado,d.coincidencias):null,insumos:d??null,varianteIIC:d?.varianteIIC||'congruencia@1'};}))},
  bStar:{dependencias:[],inputs:['beneficios','unidad'],calcular:c=>calcularBStar(c.nodos,c.insumos.beneficios)},
  dTotal:{dependencias:[],inputs:['danio y unidades comparables'],calcular:c=>salida(calcularDTotal(c.insumos.danio),'Componentes de daño o unidad ausentes/incomparables')},
  ajusteDebitor:{dependencias:['rStar','dTotal'],inputs:[],calcular:c=>salida(calcularAjusteDebitor(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,valor:c.resultados.rStar.valor?.[i]??null})),c.resultados.dTotal.valor),'Falta R* o D_total')},
@@ -31,7 +31,7 @@ const REGISTRY={
  impactoCausal:{dependencias:[],inputs:['dos vectores comparables','referencias','IDs'],calcular:c=>ampliacion.impacto(c.insumos.comparacion,c.nodos)},
  aprendizajeSistemico:{dependencias:[],inputs:['R*/alpha antes/después','referencias'],calcular:c=>ampliacion.aprendizaje(c.insumos.comparacion,c.nodos)},
  brechaBeneficio:{dependencias:[],inputs:['B_i absoluto','beta absoluto','unidad'],calcular:c=>ampliacion.brechaBeneficio(c.insumos.brechaBeneficio,c.nodos)},
- fraudeAnnona:{dependencias:[],inputs:['protocolo versionado','intervención/prevención'],calcular:c=>calcularFraudeAnnona(c.insumos.fraudeAnnona,c.configuracion.protocoloFraude)}
+ fraudeAnnona:{dependencias:['rStar','alpha','iic'],inputs:['disenadorId activo','rol diseñador explícito','variante IIC identificada'],calcular:fraudeDelDisenador}
 };
 function correrAnalisis({estructura,grafo,insumos={},medicionesSolicitadas=[],configuracion={},protocolo=null}){
  const fuente=estructura||grafo;if(!Array.isArray(medicionesSolicitadas)||medicionesSolicitadas.some(x=>typeof x!=='string'))throw new Error('Lista de operadores inválida');
