@@ -60,7 +60,7 @@
 
 - [x] `npm ci` / `npm test` local: 93/93.
 - [x] `npm run build` local.
-- [ ] Playwright y producción exacta: commit de aceptación pendiente.
+- [ ] Playwright y producción exacta: commit `acceptance:` en ejecución.
 - [x] Crear catálogo, auditoría y matriz.
 - [x] Actualizar mapa maestro y repertorio.
 - [ ] Cerrar tablero: requiere CI/producción final.

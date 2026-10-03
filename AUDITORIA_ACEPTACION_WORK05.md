@@ -31,6 +31,6 @@ OP13–OP15, OP17–OP18, OP22–OP25, OP32, OP34–OP35, OP39–OP40 y OP45 no 
 ## Verificación
 
 - `npm test`: 93/93.
-- `npm run build`: pendiente de CI final en el commit de aceptación.
+- `npm run build`: correcto localmente; la ejecución exacta queda en el commit de aceptación.
 - Playwright/API/producción: pendiente de CI final.
 - Auditoría reproducible: matriz, catálogo, reservas, metadata JSON y pruebas Work05.
