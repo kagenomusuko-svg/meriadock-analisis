@@ -2,11 +2,11 @@
 
 ## Último punto seguro
 
-- Estado: ACEPTACIÓN EN EJECUCIÓN (CI verificadora cerrada)
+- Estado: CERRADO — ACEPTACIÓN WORK05 COMPLETA
 - Base: Work04 ACEPTADA CON RESERVAS EXPLÍCITAS
 - Cobertura: 45/45 operadores reevaluados
 - Activos: 20; reservas concretas: 25
-- Bloque activo: CI, producción y auditoría final
+- Bloque activo: ninguno; tablero cerrado
 
 ## Fase 1 — Matriz de suficiencia
 
@@ -61,10 +61,11 @@
 - [x] `npm ci` / `npm test` local: 93/93.
 - [x] `npm run build` local.
 - [x] Playwright CI: run 37096386751 SUCCESS sobre `2b92ce87edd023b0a303d7dca1e9857f0d16a1c5`; artefacto 11263938503.
-- [ ] Producción exacta: se verifica en el commit `acceptance:` siguiente.
+- [x] Producción exacta: run 37096542768 SUCCESS; revisión servida `304d03892edb0b7b848518f13599a893252aa83e`; Playwright remoto SUCCESS.
 - [x] Crear catálogo, auditoría y matriz.
 - [x] Actualizar mapa maestro y repertorio.
-- [ ] Cerrar tablero: pendiente únicamente de producción exacta y artefacto final.
+- [x] Artefactos finales: 11264133252 (CI) y 11263938847 (producción).
+- [x] Cerrar tablero Work05 y emitir auditoría de aceptación.
 
 ## Decisiones pendientes
 
@@ -75,4 +76,4 @@
 
 - Inicio Work05: Work04 82/82 y 1.094 reglas.
 - Implementación Work05: metadata OP01–OP45, API/UI de disponibilidad, propagación a snapshot/expediente, 3 pruebas nuevas.
-
+- Aceptación final: CI y producción exacta SUCCESS en run 37096542768.
