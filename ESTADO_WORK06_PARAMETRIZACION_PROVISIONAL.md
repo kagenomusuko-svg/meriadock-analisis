@@ -2,10 +2,10 @@
 
 ## Último punto seguro
 
-- Estado: IMPLEMENTACIÓN FINAL EN VERIFICACIÓN
+- Estado: CERRADO — ACEPTACIÓN WORK06 COMPLETA CON RESERVA DE DESPLIEGUE DOCUMENTAL
 - Base: Work05 ACEPTADA CON RESERVAS CONCRETAS
 - Reglas pendientes clasificadas: 203/203
-- Bloque activo: producción exacta final
+- Bloque activo: ninguno; tablero cerrado
 
 ## Estados y reservas
 
@@ -32,9 +32,9 @@
 
 - [x] Regresiones Work04/Work05 conservadas.
 - [x] Pruebas Work06 añadidas.
-- [x] CI, Playwright y build: run 37099090843 SUCCESS; artefacto 11265392393.
-- [ ] Producción exacta final: se ejecutará en el commit `acceptance:` siguiente.
-- [ ] Cerrar tablero tras auditoría de aceptación.
+- [x] CI, Playwright y build: run 37099804711 SUCCESS; artefacto 11265920350.
+- [x] Producción runtime: Vercel READY en `a4a735c8254fba1807ed95a9e82e8baeccae9b90`; endpoint 200 y `revisionFuente` exacta para ese runtime.
+- [x] Auditoría de aceptación cerrada; queda trazada la reserva externa de que Vercel no publicó los commits documentales `17807e0...`/`6b3ada4...`.
 
 ## Productos
 

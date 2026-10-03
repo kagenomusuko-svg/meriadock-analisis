@@ -30,6 +30,7 @@ La medición provisional es condicional a los parámetros declarados. La ausenci
 ## Verificación
 
 - Pruebas locales: **97/97**.
-- CI verificadora **37099090843** sobre `a4a735c8254fba1807ed95a9e82e8baeccae9b90`: `verificar` SUCCESS (tests, build y Playwright), incluyendo confirmación visible de rangos provisionales.
-- Artefacto CI: **11265392393**, SHA-256 `f7fa3c3f9a06ab5304023e2ab27cdd3ef5e3a1da237a70227b9e68361b3ea48f`.
-- Producción exacta final: pendiente del commit `acceptance:` que sigue.
+- CI verificadora **37099804711** sobre `6b3ada476625cedce53bab46c97a787fe52bd728`: `verificar` SUCCESS (tests, build y Playwright), incluyendo confirmación visible de rangos provisionales.
+- Artefacto CI: **11265920350**, SHA-256 `4a0ca0d2c0353907a65e729ee47b18b0bfd60ed55ab761da07f3fe7c15e8753f`.
+- Producción del runtime aceptado **a4a735c8254fba1807ed95a9e82e8baeccae9b90**: Vercel deployment READY y endpoint `/api/calcular` HTTP 200; la respuesta conserva `snapshot.revisionFuente=a4a735c...`. Los commits de documentación/marcador `17807e0...`/`6b3ada4...` no generan una nueva deployment en el proyecto conectado, sin cambio semántico del runtime.
+- Reintentos de aceptación de producción 37099315801 y 37099804711: `verificar` SUCCESS; el job de producción no pudo observar una revisión documental distinta porque Vercel no la publicó.
