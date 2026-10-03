@@ -5,7 +5,7 @@
 - Estado: EN EJECUCIÓN
 - Base runtime: Work03 ACEPTADO_CON_RESERVAS
 - Bloque activo: compilación de dominios; verificación del subconjunto activo
-- Próxima tarea: revisar/compilar capítulos 3–78; completar instrumentos UI y cobertura de aceptación
+- Próxima tarea: revisar/compilar capítulos 21–78; completar instrumentos UI y cobertura de aceptación
 - Decisiones pendientes: α nominal laboral; ver DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md
 
 ## Preparación
@@ -34,13 +34,14 @@
 
 ## Fase 3 — Capítulos 1–78
 
-- [ ] Revisar/compilar capítulos 1–78.
+- [x] Revisar/compilar capítulos 3–20.
+- [ ] Revisar/compilar capítulos 21–78.
 - [ ] Extraer escalas de evidencia.
 - [ ] Extraer preguntas/observables.
 - [ ] Extraer reglas S/alpha/IIC.
 - [ ] Extraer operadores/condiciones especiales.
 - [ ] Clasificar valores candidatos/ilustrativos/históricos.
-- [ ] Cero capítulos SIN_REVISAR.
+- [ ] Cero capítulos SIN_REVISAR (quedan 58; lote 3–20 cerrado).
 - [ ] Tests de cobertura total.
 
 ## Fase 4 — Fraude annona
@@ -109,3 +110,8 @@ CI37087942236 SUCCESS, instalación limpia/test/build/Chromium, jobs verificar y
 - `60706640ee1552620ccee1b0db1128fe0e9f5f68` — schema JSON formal y tipos estrictos de sourceRef; 88/88 pruebas locales. Producción funcional comprobada en ea868863; este commit valida tipos y añade contrato/test.
 
 CI del schema formal: [37088208395](https://github.com/kagenomusuko-svg/meriadock-analisis/actions/runs/37088208395) SUCCESS para 60706640; npm ci, 88 pruebas, build y Playwright del catálogo real. Job producción omitido por diseño de workflow; producción exacta del bloque funcional ya verificada en ea868863. Referencias de todos los campos de los dos overlays resuelven a reglas del propio protocolo; fusión estable con 83/86 reglas.
+
+
+### Lote capítulos 3–20
+
+Se revisaron doctrinalmente y compilaron 18 overlays `tax-cap03@1`…`tax-cap20@1`, con sourceRef/blobSHA, escalas y rangos presentes, preguntas, observables, S/α/IIC, operadores y condiciones. Pruebas de cobertura y registro pasan; la compilación conserva estados PROPUESTA_PENDIENTE_CALIBRACION/NO_COMPUTABLE/ILUSTRATIVO/HISTORICO cuando la fuente no permite computación.

@@ -19,7 +19,8 @@ function registrarProtocolo(p){const v=validarProtocolo(p),k=`${v.id}@${v.versio
 function cargarProtocolo(id,version){const p=REGISTRY.get(`${id}@${version}`);if(!p)throw new Error('Protocolo/version desconocidos');return structuredClone(p);}
 function cargarJSON(texto){return registrarProtocolo(JSON.parse(texto));}
 registrarProtocolo(GENERICO);
-for(const p of require('./datos/dominios.v1.json'))registrarProtocolo(fusionar(UNIVERSALES,p));
+const CAPITULOS=[...require('./datos/dominios.v1.json'),...require('./datos/capitulos-03-20.v1.json'),...require('./datos/capitulos-21-40.v1.json'),...require('./datos/capitulos-41-60.v1.json'),...require('./datos/capitulos-61-78.v1.json')];
+for(const p of CAPITULOS)registrarProtocolo(fusionar(UNIVERSALES,p));
 function resolverProtocolo(version,dominio){
  if(version===null||version===undefined)return null;
  if(typeof version!=='string'||version.split('@').length!==2)throw new Error('Versión taxonómica inválida');
