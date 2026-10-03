@@ -20,5 +20,32 @@ jobs:
         if: always()
         with:
           name: verificacion-interfaz
-          path: /tmp/meriadock-*.png
+          path: /tmp/meriadock-*
+          if-no-files-found: ignore
+
+  produccion:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && startsWith(github.event.head_commit.message, 'acceptance:')
+    needs: verificar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npx playwright install --with-deps chromium
+      - name: Esperar la revisión exacta en producción
+        env:
+          EXPECTED_COMMIT: ${{ github.sha }}
+        run: node scripts/esperar-produccion.cjs
+      - run: npm run test:ui
+        env:
+          VERIFY_BASE_URL: https://meriadock-analisis.vercel.app
+          EXPECTED_COMMIT: ${{ github.sha }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reaceptacion-produccion
+          path: /tmp/meriadock-*
           if-no-files-found: ignore

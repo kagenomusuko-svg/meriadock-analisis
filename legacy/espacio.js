@@ -1,3 +1,4 @@
+// ARCHIVO HISTÓRICO INACTIVO: sin imports desde runtime; no autoridad doctrinal.
 "use strict";
 exports.vectorCero = function(n) { return new Array(n).fill(0); };
 exports.norma = function(a) { return Math.sqrt(a.reduce(function(s,v){ return s+v*v; },0)); };

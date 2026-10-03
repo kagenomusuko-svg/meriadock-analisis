@@ -1,3 +1,4 @@
+// ARCHIVO HISTÓRICO INACTIVO: sin imports desde runtime; no autoridad doctrinal.
 // LEGACY: evidencia histórica del prototipo; no es autoridad del motor ni de la interfaz.
 // E0: transición no materialmente acreditada; no afirma inexistencia causal.
 "use strict";

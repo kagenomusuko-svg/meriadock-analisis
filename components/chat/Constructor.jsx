@@ -92,15 +92,17 @@ export default function Constructor() {
     soportes: "",
     referencia: "",
   });
-  const [error, setError] = useState(""),
+  const [error, setErrorTexto] = useState(""),
     [calculando, setCalculando] = useState(false),
     [resultado, setResultado] = useState(null),
     [exportando, setExportando] = useState(false);
+  const [errorVersion,setErrorVersion]=useState(0);
+  function setError(texto){setErrorTexto(texto);if(texto)setErrorVersion(v=>v+1);}
   const protocolo=protocolos.find(p=>`${p.id}@${p.version}`===estado.taxonomiaVersion)||GENERICO;
   const headingRef=useRef(null),errorRef=useRef(null);
   useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
   useEffect(()=>{headingRef.current?.focus();},[paso]);
-  useEffect(()=>{if(error)errorRef.current?.focus();},[error]);
+  useEffect(()=>{if(error)errorRef.current?.focus();},[error,errorVersion]);
   function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:''}))});}
   const reglaAlpha=n=>n.estrategiaAlpha?.startsWith('taxonomico:')?protocolo.estrategiasAlpha?.find(a=>a.id===n.estrategiaAlpha.split(':')[1])?.regla:n.estrategiaAlpha;
   function editar(patch) {
@@ -1024,7 +1026,7 @@ export default function Constructor() {
                 </p>
                 {resultado.escenarios.central && <div style={card}><strong>Garantías PF — {resultado.escenarios.central.estado}</strong><p>Convergencia: {String(resultado.escenarios.central.convergio)} · Residuo: {String(resultado.escenarios.central.residuo)} · Tolerancia: {resultado.escenarios.central.tolerancia} · Primitividad: {String(resultado.escenarios.central.diagnostico.primitiva)} · Regularización: {String(resultado.escenarios.central.regularizacionAplicada)} · Estimación de rho: {String(resultado.escenarios.central.estimacionRho)}</p></div>}
                 {resultado.resultados.bStar.estado!=='no_solicitado'&&<div style={card}><h2>{OPERADORES.bStar}</h2><p>Estado: {resultado.resultados.bStar.estado.replaceAll('_',' ')} · Total: {resultado.resultados.bStar.total??'indeterminado'} · Unidad: {resultado.resultados.bStar.unidad||'ausente'}</p>{resultado.resultados.bStar.motivo&&<p>{resultado.resultados.bStar.motivo}</p>}<ul>{(resultado.resultados.bStar.valor||[]).map(b=><li key={b.id}>{b.nodo||b.id}: cuota {b.valor} · Beneficio neto declarado {b.beneficioNeto} {resultado.resultados.bStar.unidad}</li>)}</ul></div>}
-                {resultado.resultados.indiceInversion.estado!=='no_solicitado'&&<div style={card}><h2>Índice de inversión</h2><p>Brecha del diseñador por unidad de exceso del ejecutor.</p><p>Estado: {resultado.resultados.indiceInversion.estado.replaceAll('_',' ')} · Cociente: {resultado.resultados.indiceInversion.valor??'indeterminado'}</p><p>{resultado.resultados.indiceInversion.interpretacion||resultado.resultados.indiceInversion.motivo}</p><p>Diseñador: {resultado.resultados.indiceInversion.auditoria?.disenadorId||'sin discriminar'} · Δ original: {resultado.resultados.indiceInversion.auditoria?.deltaDisenador??'ausente'} · Ejecutor: {resultado.resultados.indiceInversion.auditoria?.ejecutorId||'sin discriminar'} · Δ original: {resultado.resultados.indiceInversion.auditoria?.deltaEjecutor??'ausente'}</p></div>}
+                {resultado.resultados.indiceInversion.estado!=='no_solicitado'&&<div style={card}><h2>Índice de inversión</h2><p>Brecha del diseñador por unidad de exceso del ejecutor.</p><p>Estado: {resultado.resultados.indiceInversion.estado.replaceAll('_',' ')} · Cociente: {resultado.resultados.indiceInversion.valor??'indeterminado'}</p><p>{resultado.resultados.indiceInversion.interpretacion||resultado.resultados.indiceInversion.motivo}</p><p>Diseñador: {resultado.modelo.nodosActivos.find(n=>n.id===resultado.resultados.indiceInversion.auditoria?.disenadorId)?.nombre||'sin discriminar'} · Δ original: {resultado.resultados.indiceInversion.auditoria?.deltaDisenador??'ausente'} · Ejecutor: {resultado.modelo.nodosActivos.find(n=>n.id===resultado.resultados.indiceInversion.auditoria?.ejecutorId)?.nombre||'sin discriminar'} · Δ original: {resultado.resultados.indiceInversion.auditoria?.deltaEjecutor??'ausente'}</p></div>}
                 {resultado.declaracion && (
                   <div style={aOk}>
                     <strong>Declaración {resultado.declaracion.nivel}</strong> —{" "}
@@ -1121,7 +1123,7 @@ export default function Constructor() {
           </section>
         )}
         {error && (
-          <div ref={errorRef} tabIndex={-1} role="alert" style={{ ...aEr, marginTop: 20 }}>
+          <div key={errorVersion} ref={errorRef} tabIndex={-1} role="alert" style={{ ...aEr, marginTop: 20 }}>
             {error}
           </div>
         )}
