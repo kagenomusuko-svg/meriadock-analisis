@@ -2,10 +2,10 @@
 
 ## Último punto seguro
 
-- Estado: EN EJECUCIÓN
+- Estado: CERRADO — ACEPTADA CON RESERVAS EXPLÍCITAS
 - Base runtime: Work03 ACEPTADO_CON_RESERVAS
-- Bloque activo: compilación de dominios; verificación del subconjunto activo
-- Próxima tarea: revisar/compilar ningún capítulo pendiente; completar instrumentos UI y cobertura de aceptación
+- Bloque activo: ninguno; Work04 cerrado
+- Próxima tarea: nueva orden posterior; resolver cap02.alpha.1 o ampliar operadores TAX/CON
 - Decisiones pendientes: α nominal laboral; ver DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md
 
 ## Preparación
