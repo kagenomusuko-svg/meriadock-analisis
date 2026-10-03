@@ -104,7 +104,8 @@ export default function Constructor() {
   const seleccionado=protocolos.find(p=>`${p.id}@${p.version}`===estado.taxonomiaVersion);
   const protocolo=seleccionado||{id:'no-resuelto',version:'',componentesS:[],preguntas:[],rangos:[],estrategiasAlpha:[]};
   const headingRef=useRef(null),errorRef=useRef(null);
-  useEffect(()=>{let activo=true;Promise.all([fetch('/api/protocolos'),fetch('/api/operadores')]).then(async ([p,o])=>{if(!p.ok||!o.ok)throw Error('No se pudo cargar catálogo declarativo');return Promise.all([p.json(),o.json()]);}).then(([p,o])=>{if(activo){setProtocolos(p.protocolos);setOperadoresDisponibles(o.operadores);}}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
+  useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
+  useEffect(()=>{if(paso!==6||operadoresDisponibles.length)return;let activo=true;fetch('/api/operadores').then(r=>{if(!r.ok)throw Error('No se pudo cargar disponibilidad de operadores');return r.json();}).then(d=>{if(activo)setOperadoresDisponibles(Array.isArray(d.operadores)?d.operadores:[]);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[paso,operadoresDisponibles.length]);
   useEffect(()=>{headingRef.current?.focus();},[paso]);
   useEffect(()=>{if(error)errorRef.current?.focus();},[error,errorVersion]);
   function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,dominio:p.dominioLibre?estado.dominio:p.dominios[0],nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:'',confirmadoS:false,referenciaS:'',respuestasTaxonomicas:{},orientacionTaxonomica:{}}))});}
