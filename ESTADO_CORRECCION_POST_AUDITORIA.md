@@ -7,8 +7,8 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 - Estado: EN EJECUCIÓN
 - Base doctrinal: RESOLUCION_AUDITORIA_I_INV.md
 - Base de hallazgos: REGISTRO_DISCREPANCIAS_AUDITORIA.md
-- Bloque activo: Fase 2
-- Próxima tarea: snapshot y estados efectivos
+- Bloque activo: Fase 3
+- Próxima tarea: protocolos efectivos y accesibilidad
 
 ## Fase 1 — P1 estructurales y numéricos
 
@@ -23,15 +23,15 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 
 ## Fase 2 — trazabilidad y coherencia entre capas
 
-- [ ] AU-05 mostrar contrato completo B*.
-- [ ] AU-06 conservar snapshot reproducible.
-- [ ] AU-09 diferenciar estados visibles.
-- [ ] AU-11 alinear linter con insumos efectivos.
-- [ ] AU-12 distinguir estimación de rho de eigenvalor validado.
-- [ ] AU-15 registrar completitud de sensibilidad.
-- [ ] AU-10 delimitar validación global y fallos locales.
-- [ ] Tests de regresión Fase 2.
-- [ ] CI/build/UI verde Fase 2.
+- [x] AU-05 mostrar contrato completo B*. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] AU-06 conservar snapshot reproducible. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] AU-09 diferenciar estados visibles. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] AU-11 alinear linter con insumos efectivos. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] AU-12 distinguir estimación de rho de eigenvalor validado. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] AU-15 registrar completitud de sensibilidad. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] AU-10 delimitar validación global y fallos locales. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] Tests de regresión Fase 2. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
+- [x] CI/build/UI verde Fase 2. — `6688263bdf2a9f212f870fbeccd60e7460021d86`
 
 ## Fase 3 — Taxonomía efectiva y UI
 
@@ -75,3 +75,5 @@ Ninguna al inicio. I_inv ya está resuelto.
 
 - `4de8688a1a6ec5e9b100a316a8a0ae7b22292fe1` — Fase 1, 56 pruebas y build local; CI37079739386 SUCCESS con Chromium/Playwright. UI local bloqueado por navegador no instalado; CI prueba el flujo completo y adverso.
 
+
+- `6688263bdf2a9f212f870fbeccd60e7460021d86` — Fase 2: npm ci, 62 pruebas y build; CI37080135282 SUCCESS incluido flujo UI/API/expediente.
