@@ -1,5 +1,7 @@
 # Registro de discrepancias de auditoría
 
+> Registro histórico de Work02. El estado vigente posterior a las correcciones está en MATRIZ_CORRECCION_POST_AUDITORIA.md, REPERTORIO_POST_CORRECCION.md y AUDITORIA_REACEPTACION_POST_CORRECCION.md. Las reproducciones originales se conservan para trazabilidad; no describen defectos abiertos de Work03.
+
 Severidad según orden02§19. 18 hallazgos runtime/cobertura: **0 P0, 5 P1, 12 P2, 1 P3**. «Sin P0 identificado» se refiere al contrato actual revisado, no a equivalencia con todos los estimandos históricos. El overflow se clasifica P1 por condiciones extremas que alteran resultados. Las erratas/conflictos del corpus se registran aparte en CONTRADICCIONES_ENTRE_FUENTES y no inflan defectos activos.
 
 ## AU-01 — Clausura sólo contada

@@ -1,6 +1,8 @@
-# Plan de corrección posterior — no ejecutado
+# Plan de corrección posterior — ejecutado bajo Work03
 
-Depende de una orden posterior del usuario. La auditoría preservó runtime. No es autorización de migraciones, reparación o nuevos protocolos. El conflicto doctrinal I_inv quedó resuelto posteriormente: se conserva el cociente brecha del diseñador / exceso del ejecutor. Las fases 1–4 siguen sin estar autorizadas para ejecución hasta una orden posterior.
+Estado actualizado: ejecutado conforme a ORDEN_WORK_03_CORRECCION_POST_AUDITORIA.md; cierres y SHA en el estado/matriz correctivos. El texto siguiente conserva la planificación histórica previa a la autorización.
+
+Dependía de una orden posterior del usuario. La auditoría preservó runtime. No es autorización de migraciones, reparación o nuevos protocolos. El conflicto doctrinal I_inv quedó resuelto posteriormente: se conserva el cociente brecha del diseñador / exceso del ejecutor. Las fases 1–4 siguen sin estar autorizadas para ejecución hasta una orden posterior.
 
 | Orden / dependencia | Hallazgo / archivos | Regla fuente / cambio requerido | Tests a añadir o invertir | Criterio de cierre |
 |---|---|---|---|---|
@@ -19,3 +21,4 @@ Depende de una orden posterior del usuario. La auditoría preservó runtime. No 
 | Verificación por fase | CI y Vercel, todos los archivos anteriores | Verificar npmci/test/build/UI y matrizrequisito→fixture; promover sólo lo autorizado | Reproducir fallos originales como regresiones que ahora pasan; recorrido adverso y export | NuevosSHA, producciónREADY + recorrido funcional, igualdadcapas, reservas explícitas; auditoría aceptación posterior |
 
 La corrección de fuentes (CF12 Shapley, CF13 rangoJ, CF14 REC) debe tramitarse separadamente en Paradigma si el autor la ordena; no se alteró ese repositorio. La decisión I_inv no autoriza cambiar R*, S, α ni Δ. No se transforma RES-RSTAR-001 en algoritmo activo sin nueva instrucción que modifique las invariantes actuales.
+

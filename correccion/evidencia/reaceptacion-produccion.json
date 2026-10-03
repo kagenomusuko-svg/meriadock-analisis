@@ -1,0 +1,2694 @@
+{
+  "base": "https://meriadock-analisis.vercel.app",
+  "revision": "7aa0937827ad90fc894bb6c39fc42b28e380b435",
+  "pruebas": [
+    {
+      "caso": "nivel cierre -1",
+      "estado": "error"
+    },
+    {
+      "caso": "nivel cierre 9",
+      "estado": "error"
+    },
+    {
+      "caso": "nivel cierre 1.5",
+      "estado": "error"
+    },
+    {
+      "caso": "cierre E0",
+      "estado": "indeterminado"
+    },
+    {
+      "caso": "overflow B*/daño",
+      "estadoB": "indeterminado",
+      "estadoD": "error"
+    },
+    {
+      "caso": "fallos locales e independencia",
+      "validacion": {
+        "estructuraValida": false,
+        "nodosValidos": true,
+        "errorEstructura": "Relación duplicada: conserva múltiples soportes en una sola relación sin sumar pesos automáticamente",
+        "errorNodos": null
+      }
+    },
+    {
+      "caso": "I_inv denominador cero",
+      "resultado": {
+        "estado": "indeterminado",
+        "valor": null,
+        "motivo": "Exceso del ejecutor cero: denominador cero, sin epsilon oculto",
+        "auditoria": {
+          "disenadorId": "a",
+          "ejecutorId": "b",
+          "deltaDisenador": 0.6,
+          "deltaEjecutor": 0,
+          "numerador": 0.6,
+          "denominador": 0,
+          "formula": "abs(Delta_diseniador)/abs(Delta_ejecutor)",
+          "fuente": "RESOLUCION_AUDITORIA_I_INV.md",
+          "epsilon": null
+        },
+        "dependencias": [],
+        "inputs": [
+          "roles explícitos",
+          "Delta diseñador/ejecutor"
+        ]
+      }
+    },
+    {
+      "caso": "snapshot reconstruye resultados/escenarios exactos",
+      "estado": "conforme"
+    },
+    {
+      "caso": "linter usa alpha externo efectivo",
+      "estado": "calculado"
+    },
+    {
+      "caso": "rho estimado no validado",
+      "rho": 1.5,
+      "residuo": 0.5
+    },
+    {
+      "caso": "sensibilidad parcial",
+      "total": 4,
+      "fallidas": 3
+    },
+    {
+      "caso": "empate secundario invariante en seis permutaciones",
+      "estado": "indeterminado"
+    },
+    {
+      "caso": "cinco estados explícitos",
+      "estado": "conforme"
+    }
+  ],
+  "contraste": [
+    {
+      "texto": "1\nFinalidad",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "2\nFenómeno y pregunta",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "3\nNodos",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "4\nRelaciones y soportes",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "5\nDiscriminaciones",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "6\nMedidas adicionales",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "7\nCalcular",
+      "color": "rgb(101, 93, 82)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 6.479641864498782
+    },
+    {
+      "texto": "8\nResultados / auditoría",
+      "color": "rgb(30, 76, 69)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 9.655551383814041
+    },
+    {
+      "texto": "← Anterior",
+      "color": "rgb(90, 82, 72)",
+      "fondo": [
+        255,
+        255,
+        255
+      ],
+      "ratio": 7.6776130892366625
+    }
+  ],
+  "ciRun": 37082233427,
+  "artifactProduccion": 11258603107,
+  "artifactLocal": 11259272903,
+  "revisionRuntime": "f49f69921de96a4a9be5771e92c9068fea077fba",
+  "deployment": "dpl_JEAzkGf5cwBXS7Vop66ZCRD9JeYS",
+  "deploymentEstado": "READY",
+  "deploymentTarget": "production",
+  "pageErrors": [],
+  "reconstruccionExacta": true,
+  "comparacionUI_API_HTML": "asserts de verificar-ui.cjs (fixture sintético, no datos reales)",
+  "snapshotOriginal": {
+    "analisis": {
+      "version": "metrologia-causal/2",
+      "taxonomiaVersion": "generico@1",
+      "familia": "contabilidad_ontologica",
+      "dominio": "Genérico",
+      "titulo": "Fixture PF",
+      "pregunta": "¿Cómo converge?",
+      "fenomeno": {
+        "descripcion": "Sistema de dos nodos"
+      },
+      "eventoDeterminado": {
+        "id": "D",
+        "nombre": "Evento D",
+        "descripcion": "Evento D"
+      },
+      "nodosActivos": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nombre": "A",
+          "tipo": "indeterminado",
+          "modo": "indeterminado",
+          "descripcion": "",
+          "componentesS": [
+            "0",
+            ".4",
+            ".1"
+          ],
+          "estrategiaAlpha": "discriminado",
+          "alphaValor": ".08",
+          "alphaMonto": "",
+          "alphaBase": "",
+          "declarado": "x\ny",
+          "observado": "x",
+          "coincidencias": "1",
+          "beneficio": "30",
+          "s": {
+            "componentes": [
+              0,
+              0.4,
+              0.1
+            ]
+          },
+          "alpha": {
+            "estrategia": "discriminado",
+            "valor": 0.08,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          "iic": {
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          "soportes": []
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nombre": "B",
+          "tipo": "indeterminado",
+          "modo": "indeterminado",
+          "descripcion": "",
+          "componentesS": [
+            ".5",
+            ".5",
+            ".7"
+          ],
+          "estrategiaAlpha": "discriminado",
+          "alphaValor": ".03",
+          "alphaMonto": "",
+          "alphaBase": "",
+          "declarado": "x\ny",
+          "observado": "x",
+          "coincidencias": "1",
+          "beneficio": "10",
+          "s": {
+            "componentes": [
+              0.5,
+              0.5,
+              0.7
+            ]
+          },
+          "alpha": {
+            "estrategia": "discriminado",
+            "valor": 0.03,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          },
+          "iic": {
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          },
+          "soportes": []
+        }
+      ],
+      "relacionesInternas": [
+        {
+          "origen": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "destino": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "evidenciaNivel": 1,
+          "min": ".9",
+          "max": ".9",
+          "soportes": [],
+          "referencia": "",
+          "id": "4f36d62d-ab6e-4921-9f21-c7339e0ea481",
+          "rango": {
+            "min": 0.9,
+            "max": 0.9
+          }
+        },
+        {
+          "origen": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "destino": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "evidenciaNivel": 1,
+          "min": ".4",
+          "max": ".4",
+          "soportes": [],
+          "referencia": "",
+          "id": "e8fc0ace-8f1b-4066-a99d-4d91c3b05c9d",
+          "rango": {
+            "min": 0.4,
+            "max": 0.4
+          }
+        },
+        {
+          "origen": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "destino": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "evidenciaNivel": 1,
+          "min": ".1",
+          "max": ".1",
+          "soportes": [],
+          "referencia": "",
+          "id": "5281acf6-c1e0-4f76-9f7c-42e4af7570e0",
+          "rango": {
+            "min": 0.1,
+            "max": 0.1
+          }
+        },
+        {
+          "origen": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "destino": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "evidenciaNivel": 1,
+          "min": ".6",
+          "max": ".6",
+          "soportes": [],
+          "referencia": "",
+          "id": "907f5a38-1bf1-43dc-96a7-9785275c791c",
+          "rango": {
+            "min": 0.6,
+            "max": 0.6
+          }
+        }
+      ],
+      "conexionesCierre": [
+        {
+          "origen": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "destino": "D",
+          "evidenciaNivel": 1,
+          "min": "1",
+          "max": "1",
+          "soportes": [],
+          "referencia": "",
+          "id": "2e1ea4c8-d0bd-4304-819c-813b2c90a696",
+          "rango": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ],
+      "medicionesSolicitadas": [
+        "rStar",
+        "s",
+        "rStarNeta",
+        "alpha",
+        "delta",
+        "iic",
+        "bStar",
+        "dTotal",
+        "ajusteDebitor",
+        "robustez",
+        "indiceInversion",
+        "shapley",
+        "justiciaEstructural",
+        "fraudeAnnona"
+      ]
+    },
+    "insumos": {
+      "roiPrevencion": {
+        "danioTotal": null,
+        "costo": null,
+        "deltaP": null
+      },
+      "indiceInversion": {
+        "disenadorId": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+        "ejecutorId": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+        "deltaDisenador": 0.1,
+        "deltaEjecutor": -0.56
+      },
+      "shapley": {
+        "unidad": "MXN",
+        "coaliciones": [
+          {
+            "miembros": [],
+            "valor": 0
+          },
+          {
+            "miembros": [
+              "97e3de19-7721-4a55-96ef-7a71bf4ecf60"
+            ],
+            "valor": 3
+          },
+          {
+            "miembros": [
+              "8f4bae4a-7715-49ba-96f8-fcb27df9a759"
+            ],
+            "valor": 0
+          },
+          {
+            "miembros": [
+              "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+              "8f4bae4a-7715-49ba-96f8-fcb27df9a759"
+            ],
+            "valor": 3
+          }
+        ]
+      },
+      "conversionVital": {
+        "monto": null,
+        "salarioReferencia": null
+      },
+      "comparacion": {
+        "valores": [
+          {
+            "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "rAntes": null,
+            "rDespues": null,
+            "alphaAntes": null,
+            "alphaDespues": null
+          },
+          {
+            "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+            "rAntes": null,
+            "rDespues": null,
+            "alphaAntes": null,
+            "alphaDespues": null
+          }
+        ]
+      },
+      "brechaBeneficio": {
+        "valores": [
+          {
+            "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "recibido": null,
+            "revertido": null
+          },
+          {
+            "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+            "recibido": null,
+            "revertido": null
+          }
+        ]
+      },
+      "nodosIIC": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "declarado": [
+            "x",
+            "y"
+          ],
+          "observado": [
+            "x"
+          ],
+          "coincidencias": 1
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "declarado": [
+            "x",
+            "y"
+          ],
+          "observado": [
+            "x"
+          ],
+          "coincidencias": 1
+        }
+      ],
+      "insumosAlpha": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "estrategia": "discriminado",
+          "valor": 0.08,
+          "montoEfectivamenteAsumido": null,
+          "baseComparativa": null,
+          "soportes": []
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "estrategia": "discriminado",
+          "valor": 0.03,
+          "montoEfectivamenteAsumido": null,
+          "baseComparativa": null,
+          "soportes": []
+        }
+      ],
+      "beneficios": {
+        "unidad": "MXN",
+        "valores": [
+          {
+            "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "valor": 30
+          },
+          {
+            "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+            "valor": 10
+          }
+        ]
+      },
+      "danio": {
+        "unidad": "MXN",
+        "tInvertido": {
+          "monto": 100
+        },
+        "tImpedido": {
+          "monto": 20
+        },
+        "tTrayectoria": {
+          "montoEstimado": 30
+        }
+      }
+    },
+    "medicionesSolicitadas": [
+      "rStar",
+      "s",
+      "rStarNeta",
+      "alpha",
+      "delta",
+      "iic",
+      "bStar",
+      "dTotal",
+      "ajusteDebitor",
+      "robustez",
+      "indiceInversion",
+      "shapley",
+      "justiciaEstructural",
+      "fraudeAnnona"
+    ],
+    "configuracion": {
+      "pf": {
+        "detalleCompleto": false
+      }
+    }
+  },
+  "resultados": {
+    "rStar": {
+      "estado": "calculado",
+      "valor": [
+        0.7999999999650754,
+        0.2000000000349246
+      ],
+      "motivo": null,
+      "auditoria": {
+        "estado": "calculado",
+        "vector": [
+          0.7999999999650754,
+          0.2000000000349246
+        ],
+        "aproximacion": null,
+        "eigenvalorDominante": 1,
+        "estimacionRho": 1,
+        "iteraciones": 33,
+        "convergio": true,
+        "errorFinal": 6.984918199393064e-11,
+        "residuo": 3.492464650811655e-11,
+        "tolerancia": 1e-10,
+        "maxIteraciones": 10000,
+        "motivo": null,
+        "regularizacionAplicada": false,
+        "epsilon": null,
+        "diagnostico": {
+          "irreducible": true,
+          "primitiva": true,
+          "periodo": 1
+        },
+        "diagnosticoEmpirico": {
+          "irreducible": true,
+          "primitiva": true,
+          "periodo": 1
+        },
+        "W_E": {
+          "representacion": "sparse-aristas",
+          "n": 2,
+          "ids": [
+            "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "8f4bae4a-7715-49ba-96f8-fcb27df9a759"
+          ],
+          "entradas": [
+            {
+              "fila": 0,
+              "columna": 0,
+              "valor": 0.9,
+              "relacion": "4f36d62d-ab6e-4921-9f21-c7339e0ea481",
+              "evidenciaNivel": 1
+            },
+            {
+              "fila": 0,
+              "columna": 1,
+              "valor": 0.4,
+              "relacion": "e8fc0ace-8f1b-4066-a99d-4d91c3b05c9d",
+              "evidenciaNivel": 1
+            },
+            {
+              "fila": 1,
+              "columna": 0,
+              "valor": 0.1,
+              "relacion": "5281acf6-c1e0-4f76-9f7c-42e4af7570e0",
+              "evidenciaNivel": 1
+            },
+            {
+              "fila": 1,
+              "columna": 1,
+              "valor": 0.6,
+              "relacion": "907f5a38-1bf1-43dc-96a7-9785275c791c",
+              "evidenciaNivel": 1
+            }
+          ],
+          "escenario": "central",
+          "convencion": "W_ij = w(N_i → N_j)",
+          "empirica": true
+        },
+        "W_epsilon": null,
+        "rondas": [
+          {
+            "ronda": 0,
+            "vector": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "ronda": 1,
+            "anterior": [
+              0.5,
+              0.5
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.5,
+                "producto": 0.45
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.5,
+                "producto": 0.2
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.5,
+                "producto": 0.05
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.5,
+                "producto": 0.3
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.65,
+              0.35
+            ],
+            "suma": 1,
+            "vector": [
+              0.65,
+              0.35
+            ],
+            "error": 0.30000000000000004
+          },
+          {
+            "ronda": 2,
+            "anterior": [
+              0.65,
+              0.35
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.65,
+                "producto": 0.5850000000000001
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.35,
+                "producto": 0.13999999999999999
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.65,
+                "producto": 0.065
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.35,
+                "producto": 0.21
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7250000000000001,
+              0.275
+            ],
+            "suma": 1,
+            "vector": [
+              0.7250000000000001,
+              0.275
+            ],
+            "error": 0.15000000000000002
+          },
+          {
+            "ronda": 3,
+            "anterior": [
+              0.7250000000000001,
+              0.275
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7250000000000001,
+                "producto": 0.6525000000000001
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.275,
+                "producto": 0.11000000000000001
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7250000000000001,
+                "producto": 0.07250000000000001
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.275,
+                "producto": 0.165
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7625000000000001,
+              0.23750000000000002
+            ],
+            "suma": 1,
+            "vector": [
+              0.7625000000000001,
+              0.23750000000000002
+            ],
+            "error": 0.07499999999999998
+          },
+          {
+            "ronda": 4,
+            "anterior": [
+              0.7625000000000001,
+              0.23750000000000002
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7625000000000001,
+                "producto": 0.68625
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.23750000000000002,
+                "producto": 0.09500000000000001
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7625000000000001,
+                "producto": 0.07625000000000001
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.23750000000000002,
+                "producto": 0.14250000000000002
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.78125,
+              0.21875000000000003
+            ],
+            "suma": 1,
+            "vector": [
+              0.78125,
+              0.21875000000000003
+            ],
+            "error": 0.03749999999999992
+          },
+          {
+            "ronda": 5,
+            "anterior": [
+              0.78125,
+              0.21875000000000003
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.78125,
+                "producto": 0.703125
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.21875000000000003,
+                "producto": 0.08750000000000002
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.78125,
+                "producto": 0.078125
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.21875000000000003,
+                "producto": 0.13125
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.790625,
+              0.209375
+            ],
+            "suma": 1,
+            "vector": [
+              0.790625,
+              0.209375
+            ],
+            "error": 0.018750000000000044
+          },
+          {
+            "ronda": 6,
+            "anterior": [
+              0.790625,
+              0.209375
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.790625,
+                "producto": 0.7115625
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.209375,
+                "producto": 0.08375
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.790625,
+                "producto": 0.07906250000000001
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.209375,
+                "producto": 0.125625
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7953125,
+              0.2046875
+            ],
+            "suma": 1,
+            "vector": [
+              0.7953125,
+              0.2046875
+            ],
+            "error": 0.009374999999999967
+          },
+          {
+            "ronda": 7,
+            "anterior": [
+              0.7953125,
+              0.2046875
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7953125,
+                "producto": 0.71578125
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.2046875,
+                "producto": 0.081875
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7953125,
+                "producto": 0.07953125
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.2046875,
+                "producto": 0.12281249999999999
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7976562500000001,
+              0.20234375
+            ],
+            "suma": 1,
+            "vector": [
+              0.7976562500000001,
+              0.20234375
+            ],
+            "error": 0.004687500000000094
+          },
+          {
+            "ronda": 8,
+            "anterior": [
+              0.7976562500000001,
+              0.20234375
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7976562500000001,
+                "producto": 0.7178906250000001
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20234375,
+                "producto": 0.0809375
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7976562500000001,
+                "producto": 0.079765625
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20234375,
+                "producto": 0.12140625
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7988281250000001,
+              0.201171875
+            ],
+            "suma": 1,
+            "vector": [
+              0.7988281250000001,
+              0.201171875
+            ],
+            "error": 0.0023437500000000333
+          },
+          {
+            "ronda": 9,
+            "anterior": [
+              0.7988281250000001,
+              0.201171875
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7988281250000001,
+                "producto": 0.7189453125000002
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.201171875,
+                "producto": 0.08046875
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7988281250000001,
+                "producto": 0.07988281250000001
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.201171875,
+                "producto": 0.120703125
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7994140625000001,
+              0.2005859375
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.7994140624999999,
+              0.20058593749999995
+            ],
+            "error": 0.0011718749999998501
+          },
+          {
+            "ronda": 10,
+            "anterior": [
+              0.7994140624999999,
+              0.20058593749999995
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7994140624999999,
+                "producto": 0.7194726562499999
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20058593749999995,
+                "producto": 0.08023437499999998
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7994140624999999,
+                "producto": 0.07994140625
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20058593749999995,
+                "producto": 0.12035156249999997
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7997070312499999,
+              0.20029296874999997
+            ],
+            "suma": 0.9999999999999998,
+            "vector": [
+              0.7997070312500001,
+              0.20029296875000002
+            ],
+            "error": 0.0005859375000001055
+          },
+          {
+            "ronda": 11,
+            "anterior": [
+              0.7997070312500001,
+              0.20029296875000002
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7997070312500001,
+                "producto": 0.7197363281250001
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20029296875000002,
+                "producto": 0.08011718750000002
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7997070312500001,
+                "producto": 0.07997070312500001
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20029296875000002,
+                "producto": 0.12017578125
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7998535156250002,
+              0.20014648437500002
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.799853515625,
+              0.20014648437499996
+            ],
+            "error": 0.00029296874999992784
+          },
+          {
+            "ronda": 12,
+            "anterior": [
+              0.799853515625,
+              0.20014648437499996
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.799853515625,
+                "producto": 0.7198681640625
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20014648437499996,
+                "producto": 0.08005859374999999
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.799853515625,
+                "producto": 0.0799853515625
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20014648437499996,
+                "producto": 0.12008789062499997
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999267578125,
+              0.20007324218749997
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999267578125,
+              0.20007324218749997
+            ],
+            "error": 0.0001464843750000333
+          },
+          {
+            "ronda": 13,
+            "anterior": [
+              0.7999267578125,
+              0.20007324218749997
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999267578125,
+                "producto": 0.71993408203125
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20007324218749997,
+                "producto": 0.08002929687499999
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999267578125,
+                "producto": 0.07999267578125001
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20007324218749997,
+                "producto": 0.12004394531249998
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999633789062499,
+              0.20003662109374998
+            ],
+            "suma": 0.9999999999999999,
+            "vector": [
+              0.79996337890625,
+              0.20003662109375
+            ],
+            "error": 7.32421874999889e-05
+          },
+          {
+            "ronda": 14,
+            "anterior": [
+              0.79996337890625,
+              0.20003662109375
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.79996337890625,
+                "producto": 0.719967041015625
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20003662109375,
+                "producto": 0.0800146484375
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.79996337890625,
+                "producto": 0.079996337890625
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20003662109375,
+                "producto": 0.12002197265625
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999816894531251,
+              0.20001831054687502
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999816894531251,
+              0.20001831054687502
+            ],
+            "error": 3.662109375004996e-05
+          },
+          {
+            "ronda": 15,
+            "anterior": [
+              0.7999816894531251,
+              0.20001831054687502
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999816894531251,
+                "producto": 0.7199835205078126
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20001831054687502,
+                "producto": 0.08000732421875001
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999816894531251,
+                "producto": 0.07999816894531252
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20001831054687502,
+                "producto": 0.12001098632812501
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999908447265626,
+              0.20000915527343754
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999908447265626,
+              0.20000915527343754
+            ],
+            "error": 1.831054687495559e-05
+          },
+          {
+            "ronda": 16,
+            "anterior": [
+              0.7999908447265626,
+              0.20000915527343754
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999908447265626,
+                "producto": 0.7199917602539063
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000915527343754,
+                "producto": 0.08000366210937503
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999908447265626,
+                "producto": 0.07999908447265626
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000915527343754,
+                "producto": 0.12000549316406252
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999954223632814,
+              0.20000457763671878
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.7999954223632811,
+              0.20000457763671872
+            ],
+            "error": 9.155273437394529e-06
+          },
+          {
+            "ronda": 17,
+            "anterior": [
+              0.7999954223632811,
+              0.20000457763671872
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999954223632811,
+                "producto": 0.719995880126953
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000457763671872,
+                "producto": 0.0800018310546875
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999954223632811,
+                "producto": 0.07999954223632812
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000457763671872,
+                "producto": 0.12000274658203122
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999977111816405,
+              0.20000228881835935
+            ],
+            "suma": 0.9999999999999999,
+            "vector": [
+              0.7999977111816406,
+              0.20000228881835938
+            ],
+            "error": 4.57763671884992e-06
+          },
+          {
+            "ronda": 18,
+            "anterior": [
+              0.7999977111816406,
+              0.20000228881835938
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999977111816406,
+                "producto": 0.7199979400634766
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000228881835938,
+                "producto": 0.08000091552734376
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999977111816406,
+                "producto": 0.07999977111816407
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000228881835938,
+                "producto": 0.12000137329101562
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999988555908204,
+              0.2000011444091797
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999988555908204,
+              0.2000011444091797
+            ],
+            "error": 2.28881835942496e-06
+          },
+          {
+            "ronda": 19,
+            "anterior": [
+              0.7999988555908204,
+              0.2000011444091797
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999988555908204,
+                "producto": 0.7199989700317384
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.2000011444091797,
+                "producto": 0.08000045776367189
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999988555908204,
+                "producto": 0.07999988555908205
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.2000011444091797,
+                "producto": 0.12000068664550782
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999994277954103,
+              0.2000005722045899
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.7999994277954101,
+              0.20000057220458983
+            ],
+            "error": 1.14440917958758e-06
+          },
+          {
+            "ronda": 20,
+            "anterior": [
+              0.7999994277954101,
+              0.20000057220458983
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999994277954101,
+                "producto": 0.7199994850158691
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000057220458983,
+                "producto": 0.08000022888183594
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999994277954101,
+                "producto": 0.07999994277954102
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000057220458983,
+                "producto": 0.12000034332275389
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999997138977051,
+              0.20000028610229492
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999997138977051,
+              0.20000028610229492
+            ],
+            "error": 5.722045898770567e-07
+          },
+          {
+            "ronda": 21,
+            "anterior": [
+              0.7999997138977051,
+              0.20000028610229492
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999997138977051,
+                "producto": 0.7199997425079346
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000028610229492,
+                "producto": 0.08000011444091798
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999997138977051,
+                "producto": 0.07999997138977051
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000028610229492,
+                "producto": 0.12000017166137694
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999998569488527,
+              0.20000014305114744
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999998569488527,
+              0.20000014305114744
+            ],
+            "error": 2.861022950773062e-07
+          },
+          {
+            "ronda": 22,
+            "anterior": [
+              0.7999998569488527,
+              0.20000014305114744
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999998569488527,
+                "producto": 0.7199998712539675
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000014305114744,
+                "producto": 0.08000005722045898
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999998569488527,
+                "producto": 0.07999998569488527
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000014305114744,
+                "producto": 0.12000008583068845
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999284744265,
+              0.20000007152557372
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.7999999284744262,
+              0.20000007152557367
+            ],
+            "error": 1.4305114734436408e-07
+          },
+          {
+            "ronda": 23,
+            "anterior": [
+              0.7999999284744262,
+              0.20000007152557367
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999284744262,
+                "producto": 0.7199999356269836
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000007152557367,
+                "producto": 0.08000002861022948
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999284744262,
+                "producto": 0.07999999284744264
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000007152557367,
+                "producto": 0.12000004291534419
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999642372131,
+              0.20000003576278683
+            ],
+            "suma": 0.9999999999999999,
+            "vector": [
+              0.7999999642372132,
+              0.20000003576278685
+            ],
+            "error": 7.152557376932656e-08
+          },
+          {
+            "ronda": 24,
+            "anterior": [
+              0.7999999642372132,
+              0.20000003576278685
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999642372132,
+                "producto": 0.7199999678134918
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000003576278685,
+                "producto": 0.08000001430511475
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999642372132,
+                "producto": 0.07999999642372133
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000003576278685,
+                "producto": 0.1200000214576721
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999821186066,
+              0.20000001788139343
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999999821186066,
+              0.20000001788139343
+            ],
+            "error": 3.576278678751876e-08
+          },
+          {
+            "ronda": 25,
+            "anterior": [
+              0.7999999821186066,
+              0.20000001788139343
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999821186066,
+                "producto": 0.7199999839067459
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000001788139343,
+                "producto": 0.08000000715255738
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999821186066,
+                "producto": 0.07999999821186066
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000001788139343,
+                "producto": 0.12000001072883605
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999910593033,
+              0.2000000089406967
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999999910593033,
+              0.2000000089406967
+            ],
+            "error": 1.788139347702611e-08
+          },
+          {
+            "ronda": 26,
+            "anterior": [
+              0.7999999910593033,
+              0.2000000089406967
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999910593033,
+                "producto": 0.7199999919533729
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.2000000089406967,
+                "producto": 0.08000000357627868
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999910593033,
+                "producto": 0.07999999910593034
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.2000000089406967,
+                "producto": 0.12000000536441802
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999955296516,
+              0.20000000447034835
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999999955296516,
+              0.20000000447034835
+            ],
+            "error": 8.940696655246327e-09
+          },
+          {
+            "ronda": 27,
+            "anterior": [
+              0.7999999955296516,
+              0.20000000447034835
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999955296516,
+                "producto": 0.7199999959766865
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000000447034835,
+                "producto": 0.08000000178813935
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999955296516,
+                "producto": 0.07999999955296516
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000000447034835,
+                "producto": 0.120000002682209
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999977648259,
+              0.20000000223517417
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999999977648259,
+              0.20000000223517417
+            ],
+            "error": 4.470348452523254e-09
+          },
+          {
+            "ronda": 28,
+            "anterior": [
+              0.7999999977648259,
+              0.20000000223517417
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999977648259,
+                "producto": 0.7199999979883434
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000000223517417,
+                "producto": 0.08000000089406967
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999977648259,
+                "producto": 0.07999999977648259
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000000223517417,
+                "producto": 0.1200000013411045
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.799999998882413,
+              0.2000000011175871
+            ],
+            "suma": 1,
+            "vector": [
+              0.799999998882413,
+              0.2000000011175871
+            ],
+            "error": 2.235174212383839e-09
+          },
+          {
+            "ronda": 29,
+            "anterior": [
+              0.799999998882413,
+              0.2000000011175871
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.799999998882413,
+                "producto": 0.7199999989941718
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.2000000011175871,
+                "producto": 0.08000000044703484
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.799999998882413,
+                "producto": 0.0799999998882413
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.2000000011175871,
+                "producto": 0.12000000067055225
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999994412066,
+              0.20000000055879355
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.7999999994412064,
+              0.2000000005587935
+            ],
+            "error": 1.1175869396584659e-09
+          },
+          {
+            "ronda": 30,
+            "anterior": [
+              0.7999999994412064,
+              0.2000000005587935
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999994412064,
+                "producto": 0.7199999994970857
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.2000000005587935,
+                "producto": 0.0800000002235174
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999994412064,
+                "producto": 0.07999999994412064
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.2000000005587935,
+                "producto": 0.1200000003352761
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999997206031,
+              0.20000000027939674
+            ],
+            "suma": 0.9999999999999998,
+            "vector": [
+              0.7999999997206033,
+              0.2000000002793968
+            ],
+            "error": 5.587936502404744e-10
+          },
+          {
+            "ronda": 31,
+            "anterior": [
+              0.7999999997206033,
+              0.2000000002793968
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999997206033,
+                "producto": 0.719999999748543
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.2000000002793968,
+                "producto": 0.08000000011175873
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999997206033,
+                "producto": 0.07999999997206034
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.2000000002793968,
+                "producto": 0.12000000016763807
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999998603018,
+              0.2000000001396984
+            ],
+            "suma": 1.0000000000000002,
+            "vector": [
+              0.7999999998603016,
+              0.20000000013969835
+            ],
+            "error": 2.7939670022014695e-10
+          },
+          {
+            "ronda": 32,
+            "anterior": [
+              0.7999999998603016,
+              0.20000000013969835
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999998603016,
+                "producto": 0.7199999998742714
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000000013969835,
+                "producto": 0.08000000005587934
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999998603016,
+                "producto": 0.07999999998603016
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000000013969835,
+                "producto": 0.120000000083819
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999999301508,
+              0.20000000006984917
+            ],
+            "suma": 1,
+            "vector": [
+              0.7999999999301508,
+              0.20000000006984917
+            ],
+            "error": 1.3969841949901252e-10
+          },
+          {
+            "ronda": 33,
+            "anterior": [
+              0.7999999999301508,
+              0.20000000006984917
+            ],
+            "terminosEmpiricos": [
+              {
+                "fila": 0,
+                "columna": 0,
+                "peso": 0.9,
+                "coordenada": 0.7999999999301508,
+                "producto": 0.7199999999371357
+              },
+              {
+                "fila": 0,
+                "columna": 1,
+                "peso": 0.4,
+                "coordenada": 0.20000000006984917,
+                "producto": 0.08000000002793967
+              },
+              {
+                "fila": 1,
+                "columna": 0,
+                "peso": 0.1,
+                "coordenada": 0.7999999999301508,
+                "producto": 0.07999999999301509
+              },
+              {
+                "fila": 1,
+                "columna": 1,
+                "peso": 0.6,
+                "coordenada": 0.20000000006984917,
+                "producto": 0.1200000000419095
+              }
+            ],
+            "regularizacion": null,
+            "producto": [
+              0.7999999999650753,
+              0.20000000003492457
+            ],
+            "suma": 0.9999999999999999,
+            "vector": [
+              0.7999999999650754,
+              0.2000000000349246
+            ],
+            "error": 6.984918199393064e-11
+          }
+        ],
+        "sumaVector": 1,
+        "top": [
+          {
+            "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "valor": 0.7999999999650754
+          },
+          {
+            "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+            "valor": 0.2000000000349246
+          }
+        ],
+        "condicionesSuficientes": true,
+        "metodo": "Perron–Frobenius, iteración de potencia; W r, norma L1"
+      },
+      "dependencias": [],
+      "inputs": [
+        "nodosActivos",
+        "relacionesInternas",
+        "conexionesCierre"
+      ]
+    },
+    "s": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "valor": 0.16666666666666666,
+          "componentes": [
+            0,
+            0.4,
+            0.1
+          ],
+          "pesos": null
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "valor": 0.5666666666666667,
+          "componentes": [
+            0.5,
+            0.5,
+            0.7
+          ],
+          "pesos": null
+        }
+      ],
+      "motivo": null,
+      "dependencias": [],
+      "inputs": [
+        "componentes S por nodo"
+      ]
+    },
+    "rStarNeta": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "valor": 0.6666666666375629
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "valor": 0.08666666668180066
+        }
+      ],
+      "motivo": null,
+      "dependencias": [
+        "rStar",
+        "s"
+      ],
+      "inputs": []
+    },
+    "alpha": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "valor": 0.08,
+          "contrato": {
+            "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "estrategia": "discriminado",
+            "valor": 0.08,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          }
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "valor": 0.03,
+          "contrato": {
+            "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+            "estrategia": "discriminado",
+            "valor": 0.03,
+            "montoEfectivamenteAsumido": null,
+            "baseComparativa": null,
+            "soportes": []
+          }
+        }
+      ],
+      "motivo": null,
+      "dependencias": [],
+      "inputs": [
+        "estrategia α explícita por nodo"
+      ]
+    },
+    "delta": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "resultado": {
+            "valor": 0.7199999999650755,
+            "signo": "positiva",
+            "texto": "Índice de convergencia mayor que condiciones adversas atribuibles."
+          }
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "resultado": {
+            "valor": 0.1700000000349246,
+            "signo": "positiva",
+            "texto": "Índice de convergencia mayor que condiciones adversas atribuibles."
+          }
+        }
+      ],
+      "motivo": null,
+      "dependencias": [
+        "rStar",
+        "alpha"
+      ],
+      "inputs": []
+    },
+    "iic": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "valor": 0.5,
+          "insumos": {
+            "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          }
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "valor": 0.5,
+          "insumos": {
+            "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+            "declarado": [
+              "x",
+              "y"
+            ],
+            "observado": [
+              "x"
+            ],
+            "coincidencias": 1
+          }
+        }
+      ],
+      "motivo": null,
+      "dependencias": [],
+      "inputs": [
+        "declarado",
+        "observado",
+        "coincidencias"
+      ]
+    },
+    "bStar": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "valor": 0.75,
+          "beneficioNeto": 30
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "valor": 0.25,
+          "beneficioNeto": 10
+        }
+      ],
+      "total": 40,
+      "unidad": "MXN",
+      "dependencias": [],
+      "inputs": [
+        "beneficios",
+        "unidad"
+      ]
+    },
+    "dTotal": {
+      "estado": "calculado",
+      "valor": {
+        "unidad": "MXN",
+        "tInvertido": {
+          "monto": 100
+        },
+        "tImpedido": {
+          "monto": 20
+        },
+        "tTrayectoria": {
+          "montoEstimado": 30,
+          "monto": 30
+        },
+        "dTotal": 150,
+        "dTotalMin": 100,
+        "dTotalConservador": 120
+      },
+      "motivo": null,
+      "dependencias": [],
+      "inputs": [
+        "danio y unidades comparables"
+      ]
+    },
+    "ajusteDebitor": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "nodo": "A",
+          "rStar": 0.7999999999650754,
+          "unidad": "MXN",
+          "adMin": 79.99999999650754,
+          "adConservador": 95.99999999580905,
+          "adCentral": 119.99999999476131
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "nodo": "B",
+          "rStar": 0.2000000000349246,
+          "unidad": "MXN",
+          "adMin": 20.00000000349246,
+          "adConservador": 24.00000000419095,
+          "adCentral": 30.00000000523869
+        }
+      ],
+      "motivo": null,
+      "dependencias": [
+        "rStar",
+        "dTotal"
+      ],
+      "inputs": []
+    },
+    "robustez": {
+      "estado": "calculado",
+      "nivel": "A",
+      "mismoLider": true,
+      "ordenEstable": true,
+      "brechaCentral": 0.5999999999301509,
+      "lideres": [
+        [
+          0
+        ],
+        [
+          0
+        ],
+        [
+          0
+        ]
+      ],
+      "rankings": [
+        [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ]
+      ],
+      "metodo": "Tres escenarios mínimo/central/máximo",
+      "descripcion": "Mismo líder y mismo orden en los tres escenarios.",
+      "valor": {
+        "estado": "calculado",
+        "nivel": "A",
+        "mismoLider": true,
+        "ordenEstable": true,
+        "brechaCentral": 0.5999999999301509,
+        "lideres": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ],
+        "rankings": [
+          [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ],
+          [
+            [
+              0
+            ],
+            [
+              1
+            ]
+          ]
+        ],
+        "metodo": "Tres escenarios mínimo/central/máximo",
+        "descripcion": "Mismo líder y mismo orden en los tres escenarios."
+      },
+      "dependencias": [
+        "rStar"
+      ],
+      "inputs": []
+    },
+    "indiceInversion": {
+      "estado": "calculado",
+      "valor": 0.17857142857142858,
+      "motivo": null,
+      "auditoria": {
+        "disenadorId": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+        "ejecutorId": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+        "deltaDisenador": 0.1,
+        "deltaEjecutor": -0.56,
+        "numerador": 0.1,
+        "denominador": 0.56,
+        "formula": "abs(Delta_diseniador)/abs(Delta_ejecutor)",
+        "fuente": "RESOLUCION_AUDITORIA_I_INV.md",
+        "epsilon": null
+      },
+      "interpretacion": "El exceso del ejecutor es mayor",
+      "dependencias": [],
+      "inputs": [
+        "roles explícitos",
+        "Delta diseñador/ejecutor"
+      ]
+    },
+    "shapley": {
+      "estado": "calculado",
+      "valor": [
+        {
+          "id": "97e3de19-7721-4a55-96ef-7a71bf4ecf60",
+          "valor": 3
+        },
+        {
+          "id": "8f4bae4a-7715-49ba-96f8-fcb27df9a759",
+          "valor": 0
+        }
+      ],
+      "motivo": null,
+      "unidad": "MXN",
+      "total": 3,
+      "auditoria": {
+        "metodo": "Shapley exacto factorial marginal",
+        "coaliciones": 4,
+        "maxCoaliciones": 65536,
+        "sumaAsignada": 3,
+        "fuente": "Calculo14 §3.5/§6.4",
+        "alcance": "Distribuye el juego discriminado; no estima v(S) ni selecciona PF frente a Shapley"
+      },
+      "dependencias": [],
+      "inputs": [
+        "juego v(S) completo",
+        "unidad"
+      ]
+    },
+    "justiciaEstructural": {
+      "estado": "calculado",
+      "valor": 0.10999999999999999,
+      "motivo": null,
+      "auditoria": {
+        "formula": "1 − suma(abs(R* − alpha))",
+        "deltas": [
+          0.7199999999650755,
+          0.1700000000349246
+        ],
+        "alcance": "Magnitud descriptiva; puede ser negativa, sin clamp ni inferencia moral",
+        "fuente": "Calculo4 §2.1; CF13"
+      },
+      "dependencias": [
+        "delta"
+      ],
+      "inputs": []
+    },
+    "fraudeAnnona": {
+      "estado": "indeterminado",
+      "valor": null,
+      "reserva": "CON/TAX",
+      "motivo": "RESERVADO: falta contrato canónico versionado de intervención/prevención. La fórmula histórica no está activa.",
+      "dependencias": [],
+      "inputs": [
+        "protocolo versionado",
+        "intervención/prevención"
+      ]
+    },
+    "sensibilidadExtendida": {
+      "estado": "no_solicitado",
+      "valor": null,
+      "motivo": "Medición no solicitada ni requerida como dependencia"
+    },
+    "roiPrevencion": {
+      "estado": "no_solicitado",
+      "valor": null,
+      "motivo": "Medición no solicitada ni requerida como dependencia"
+    },
+    "conversionVital": {
+      "estado": "no_solicitado",
+      "valor": null,
+      "motivo": "Medición no solicitada ni requerida como dependencia"
+    },
+    "impactoCausal": {
+      "estado": "no_solicitado",
+      "valor": null,
+      "motivo": "Medición no solicitada ni requerida como dependencia"
+    },
+    "aprendizajeSistemico": {
+      "estado": "no_solicitado",
+      "valor": null,
+      "motivo": "Medición no solicitada ni requerida como dependencia"
+    },
+    "brechaBeneficio": {
+      "estado": "no_solicitado",
+      "valor": null,
+      "motivo": "Medición no solicitada ni requerida como dependencia"
+    }
+  },
+  "auditoriaSHA256": "27f30977256a6a3babce22257bf71266bab1e4f9990504d498b65003575e2d46",
+  "runtimeErrorsConsulta": "2026-10-03 UTC, Vercel get_runtime_errors ventana seleccionada por la herramienta: sin resultados; no ausencia universal",
+  "alcanceContraste": "9 elementos de navegación/header, mínimo 6.479641864498782; no WCAG integral"
+}

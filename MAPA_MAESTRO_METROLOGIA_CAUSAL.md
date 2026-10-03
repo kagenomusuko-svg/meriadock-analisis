@@ -310,7 +310,7 @@ no aplicable.
 
 No inferir beneficios.
 
-La auditoría detectó que UI/HTML perdían total/unidad; eso está incluido en Work 03.
+Work03 cerró AU-05: UI/HTML conservan total/unidad/base numérica/cuotas/estado.
 
 ---
 
@@ -453,13 +453,11 @@ No parser “inteligente” que invente semántica.
 
 La Taxonomía General de Aplicaciones vive en Paradigma.
 
-El runtime actual tiene una frontera/versionado inicial, pero la auditoría detectó que aún no estaba realmente aplicada de extremo a extremo.
-
-Work 03 debe corregir esa frontera.
+Work03 cerró AU-07: loader/registry resuelven realmente la versión, validan el dominio, aplican estrategias autorizadas y conservan protocolo/versión efectiva. La UI consume preguntas/componentes del catálogo; genérico@1 sigue siendo piloto y no toda la Taxonomía General.
 
 No debe hardcodearse toda la Taxonomía dentro de JSX.
 
-Arquitectura deseada:
+Arquitectura aplicada:
 
 protocolo versionado → loader/registry → preguntas/campos/reglas → inputs discriminados → motor universal.
 
@@ -473,7 +471,7 @@ Añadir dominio no debe exigir reconstruir motor.
 
 La auditoría inventarió 45 grupos/constructos frente a un REGISTRY mucho menor.
 
-Entre los faltantes o incompletos aparecen:
+Antes de Work03, entre los faltantes o incompletos aparecían:
 
 - Shapley;
 - recurrencia;
@@ -492,7 +490,7 @@ Entre los faltantes o incompletos aparecen:
 - ablación/distancia;
 - otros históricos o fuera de alcance.
 
-No todo lo inventariado debe implementarse inmediatamente.
+Work03 incorpora I_inv, Shapley, DeltaB absoluta, conversión vital, J, ROI neto, IAS y distancia V con contratos y pruebas. Estado por los 45 registros: REPERTORIO_POST_CORRECCION.md. No todo lo inventariado debe implementarse inmediatamente.
 
 Clasificación obligatoria:
 
@@ -586,13 +584,11 @@ Ya no quedan decisiones doctrinales pendientes heredadas de la auditoría.
 
 ## Etapa E — Work 03
 
-Siguiente frente:
-
-ejecutar PLAN_CORRECCION_POST_AUDITORIA.md mediante ORDEN_WORK_03_CORRECCION_POST_AUDITORIA.md.
+CERRADO: plan ejecutado bajo ORDEN_WORK_03_CORRECCION_POST_AUDITORIA.md. Cinco fases comiteadas y verificadas, 75 pruebas, CI completo/producción exacta. Conclusión: ACEPTADO_CON_RESERVAS. Informe vigente: AUDITORIA_REACEPTACION_POST_CORRECCION.md.
 
 ---
 
-# 22. Hallazgos de auditoría que Work 03 debe cerrar
+# 22. Hallazgos históricos cerrados por Work03
 
 P1:
 
@@ -625,29 +621,22 @@ P3:
 
 # 23. Estado actual
 
-Auditoría exhaustiva:
+Work02: auditoría histórica cerrada con NO_ACEPTADO para la versión previa; no describe el runtime corregido actual.
 
-CERRADA.
+Work03: CERRADO — ACEPTADO_CON_RESERVAS. AU-01–AU-18 atendidos conforme al plan; 0 P0/P1 abierto. I_inv RESUELTO E IMPLEMENTADO, sin nueva decisión obligatoria.
 
-Conclusión:
+Último cambio runtime: f49f69921de96a4a9be5771e92c9068fea077fba. Revisión exacta de reaceptación: 7aa0937827ad90fc894bb6c39fc42b28e380b435; CI37082233427 SUCCESS (verificar y producción), deployment dpl_JEAzkGf5cwBXS7Vop66ZCRD9JeYS READY, recorrido completo/adverso y artifacts revisados. Los commits documentales posteriores conservan ese runtime.
 
-NO_ACEPTADO.
+Repertorio efectivo: 20 entradas, 19 contratos y Fraude annona reservado. Todos disponibles por familia cuando existen sus insumos. Taxonomía genérica piloto, constructos sin contrato y accesibilidad integral conservan reservas explícitas.
 
-Razón:
+Documentos operativos vigentes:
 
-persisten hallazgos runtime/trazabilidad; no por I_inv.
+- ESTADO_CORRECCION_POST_AUDITORIA.md.
+- AUDITORIA_REACEPTACION_POST_CORRECCION.md.
+- MATRIZ_CORRECCION_POST_AUDITORIA.md.
+- REPERTORIO_POST_CORRECCION.md.
 
-I_inv:
-
-RESUELTO.
-
-Plan correctivo:
-
-EXISTE Y NO ESTABA EJECUTADO al crear este mapa.
-
-Siguiente documento operativo:
-
-ORDEN_WORK_03_CORRECCION_POST_AUDITORIA.md.
+Ninguna tarea autorizada independiente queda abierta. Una ampliación futura requiere nueva orden y fuentes completas; no reabrir las decisiones resueltas.
 
 ---
 
@@ -711,3 +700,4 @@ primero busca en:
 - estados operativos.
 
 Sólo escala al autor cuando la cuestión siga siendo doctrinalmente indeterminada después de esa revisión.
+

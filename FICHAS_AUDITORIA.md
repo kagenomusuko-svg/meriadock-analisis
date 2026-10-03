@@ -1,5 +1,7 @@
 # Fichas individuales de auditoría
 
+> Registro histórico de Work02. El estado vigente posterior a las correcciones está en MATRIZ_CORRECCION_POST_AUDITORIA.md, REPERTORIO_POST_CORRECCION.md y AUDITORIA_REACEPTACION_POST_CORRECCION.md. Las reproducciones originales se conservan para trazabilidad; no describen defectos abiertos de Work03.
+
 Cada ficha explicita los campos exigidos por orden02§5. Complementa, no reemplaza, informes con reproducción numérica y fuentes fijadas. Para objetos no programables no se inventan precondiciones universales ni outputs de un operador inexistente. «No observado» significa ausencia comprobada en REGISTRY, no revisión pendiente.
 
 ## OP01 — OP01 R* / orden02 §4, Metrología I II·5, VolII Paso1
@@ -134,11 +136,11 @@ Cada ficha explicita los campos exigidos por orden02§5. Complementa, no reempla
 | Nombre canónico / símbolo | OP06 IIC / §17, VolII Paso3 |
 | Definición doctrinal | conteo actual; correlación histórica distinta; objeto tipado según fuente, sin equiparar aliases de distintos estimandos |
 | Fuentes exactas | §17, VolII Paso3; rutas/SHA en fuentes.json y referencias del inventario |
-| Fórmula o regla | coincidencias/observaciones comparables; IIC_cong∈[0,1]; no corr_stat signed |
+| Fórmula o regla | coincidencias/declarados comparables; IIC_cong∈[0,1]; no corr_stat signed |
 | Dominio | HIST/TAX variante signed, AU-08; tres familias del contrato aplicado no restringen operadores, pero operacionalización sectorial no es universal |
 | Precondiciones | conteo actual; correlación histórica distinta; magnitudes/IDs/unidades compatibles, ausencia no suplida; presupuesto/tolerancia y validación de modelo explícitos |
 | Inputs | conteo actual; correlación histórica distinta |
-| Outputs | coincidencias/observaciones comparables; IIC_cong∈[0,1]; no corr_stat signed; estado/motivo/auditoría si aplicado |
+| Outputs | coincidencias/declarados comparables; IIC_cong∈[0,1]; no corr_stat signed; estado/motivo/auditoría si aplicado |
 | Ausencia | Aplicado: null/indeterminado o no aplicable por contrato; no convertir faltante en0. Faltante: no inferir output ni proponer default sin protocolo |
 | Incertidumbre | Rangos/escenarios/presupuesto numérico declarados; no equivalen a intervalo estadístico de hechos. Faltante: requerir hipótesis de estimación específicas |
 | Interpretación permitida | Medida condicional a inputs discriminados y versión; estimando descrito en fórmula |

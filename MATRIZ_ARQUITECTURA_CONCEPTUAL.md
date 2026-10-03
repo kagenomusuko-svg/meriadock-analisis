@@ -1,5 +1,7 @@
 # Auditoría 1 — Arquitectura conceptual
 
+> Registro histórico de Work02. El estado vigente posterior a las correcciones está en MATRIZ_CORRECCION_POST_AUDITORIA.md, REPERTORIO_POST_CORRECCION.md y AUDITORIA_REACEPTACION_POST_CORRECCION.md. Las reproducciones originales se conservan para trazabilidad; no describen defectos abiertos de Work03.
+
 Base y autoridad: auditoria/BASE_Y_FUENTES.md; instrucciones actuales §§1–11 y orden 02 §§4–6. Estados y severidad se usan según §5/19 de la orden. Los IDs remiten al registro de discrepancias.
 
 | Objeto / símbolo | Definición, inputs y regla | Motor / UI / expediente | Ausencia, incertidumbre e interpretación | Prueba / observado | Estado / severidad / decisión |

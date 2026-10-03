@@ -1,5 +1,7 @@
 # Auditoría 6 — Inventario de operadores y cobertura
 
+> Registro histórico de Work02. El estado vigente posterior a las correcciones está en MATRIZ_CORRECCION_POST_AUDITORIA.md, REPERTORIO_POST_CORRECCION.md y AUDITORIA_REACEPTACION_POST_CORRECCION.md. Las reproducciones originales se conservan para trazabilidad; no describen defectos abiertos de Work03.
+
 La lista REGISTRY tiene 12 entradas. «Disponible para tres familias» no significa repertorio completo del corpus. Índice reproducible de 286 encabezados pertinentes: auditoria/evidencia/indice-operadores.json; fuentes y huellas en fuentes.json. Se recorrieron definiciones y código ilustrativo, distinguiendo aliases, estimadores, magnitudes compuestas y postulados sin contrato ejecutable.
 
 Clases de faltante: MAT = matemáticamente definido con inputs explícitos; CON = constructo sin contrato/calibración suficiente; TAX = operacionalización dependiente de Taxonomía; HIST = histórico/sustituido; FUERA = ajeno al calculador general. «MAT» no adjudica verdad de teoremas ni autoriza implementación durante auditoría.

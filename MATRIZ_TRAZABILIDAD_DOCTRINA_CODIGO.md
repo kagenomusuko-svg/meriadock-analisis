@@ -1,5 +1,7 @@
 # Matriz maestra doctrina → código → pruebas
 
+> Registro histórico de Work02. El estado vigente posterior a las correcciones está en MATRIZ_CORRECCION_POST_AUDITORIA.md, REPERTORIO_POST_CORRECCION.md y AUDITORIA_REACEPTACION_POST_CORRECCION.md. Las reproducciones originales se conservan para trazabilidad; no describen defectos abiertos de Work03.
+
 Fuentes fijadas en BASE_Y_FUENTES. Fichas completas: MATRIZ_ARQUITECTURA_CONCEPTUAL, informes de cada operador, INVENTARIO_OPERADORES_Y_COBERTURA y anexo FICHAS_AUDITORIA. Los símbolos homónimos se tipan por objeto. No existe fila pendiente de revisión: NO_IMPLEMENTADO/NO_APLICABLE/DECISION_REQUERIDA son resultados de revisión, no casillas omitidas.
 
 | ID | Concepto/operador | Fuente canónica | Regla | Código | Test | Resultado | Estado | Severidad | Decisión |

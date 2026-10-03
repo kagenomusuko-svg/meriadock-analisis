@@ -1,5 +1,7 @@
 # Auditoría 11 — Cobertura de pruebas
 
+> Registro histórico de Work02. El estado vigente posterior a las correcciones está en MATRIZ_CORRECCION_POST_AUDITORIA.md, REPERTORIO_POST_CORRECCION.md y AUDITORIA_REACEPTACION_POST_CORRECCION.md. Las reproducciones originales se conservan para trazabilidad; no describen defectos abiertos de Work03.
+
 44 pruebas pasan localmente (evidencia/tests.txt); 18 eran baseline. El número no mide fidelidad doctrinal. Los tests AUD-* caracterizan defectos actuales y deben invertirse como regresiones en una orden posterior. No modifican runtime. Todas las suites se revisaron; las comparaciones puras y HTTP son distintas de la observación visual de producción.
 
 | Requisito / autoridad | Test / fixture | Cobertura observada | Hueco / estado |
