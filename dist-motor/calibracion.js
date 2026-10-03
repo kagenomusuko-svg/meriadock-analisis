@@ -90,3 +90,5 @@ function crearObservacion({ operador, dominio, protocolo, parametros, inputs, re
   return { schema: version, operador, dominio, protocolo, parametros: validarParametros(parametros || []), inputs: inputs ?? null, resultado: resultado ?? null, observadoPosterior, diferencia: observadoPosterior === null || resultado === null ? null : observadoPosterior - resultado, referencia, creadoEn: new Date().toISOString() };
 }
 module.exports = { ESTADOS, CLASIFICACIONES, PARAMETROS, reglas, pendientes, resumenReglas, validarParametros, prepararParametros, crearObservacion };
+
+// Work06 acceptance marker: preserves semantics while forcing a fresh production revision.
