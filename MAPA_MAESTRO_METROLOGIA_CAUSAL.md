@@ -752,3 +752,53 @@ Fraude annona está activo con `R*(1-α)*(1-IIC)` y diseñador/rol/ID/variante e
 Work05 reevalúa OP01–OP45 contra la Taxonomía completa de Work04. Se activan 20 contratos ya suficientemente determinados: OP01–OP12, OP16, OP19–OP21, OP27, OP29 y OP41–OP42. La disponibilidad completa de los 45 registros se publica mediante `dist-motor/operadores-taxonomicos.json` y `/api/operadores`; la UI muestra estado, inputs y causa de reserva. El resultado, snapshot y expediente conservan el catálogo efectivo.
 
 Los restantes operadores quedan clasificados como pendientes de calibración, decisión doctrinal, conceptuales o fuera del calculador en `MATRIZ_SUFICIENCIA_OPERADORES_WORK05.md` y `REGISTRO_RESERVAS_POST_WORK05.md`. `cap02.alpha.1` sigue reservado y no bloquea ningún contrato independiente. U·4 continuo permanece como reserva matemática.
+
+
+## 32. Work06 — parametrización provisional y medición pre-calibración
+
+Work06 corrige una distinción epistemológica importante: **pendiente de calibración no equivale a incalculable**.
+
+La secuencia metrológica autorizada es:
+
+[
+	ext{formalización}
+ightarrow
+	ext{parametrización provisional}
+ightarrow
+	ext{medición}
+ightarrow
+	ext{contraste}
+ightarrow
+	ext{calibración}
+ightarrow
+	ext{validación externa}
+]
+
+No debe exigirse calibración empírica como condición previa para toda medición si esa calibración necesita precisamente resultados medidos.
+
+Estados nuevos de referencia:
+
+- FORMALMENTE_DEFINIDO;
+- PARAMETRIZABLE;
+- PARAMETRIZADO_PROVISIONALMENTE;
+- CALIBRADO;
+- VALIDADO_EXTERNAMENTE;
+- NO_OPERACIONALIZADO.
+
+Regla:
+
+[
+	ext{NO CALIBRADO} 
+eq 	ext{NO OPERACIONALIZADO}
+]
+
+Work06 reevaluará las reservas de OP13, OP14, OP24, OP25 y OP32, y las 203 reglas `PROPUESTA_PENDIENTE_CALIBRACION` de Work04.
+
+Un operador formalmente definido debe poder calcularse con parámetros explícitos aunque éstos todavía no estén calibrados, siempre que el resultado conserve procedencia, estatus provisional y confirmación humana.
+
+Documento operativo:
+
+- `ORDEN_WORK_06_PARAMETRIZACION_PROVISIONAL_Y_CALIBRACION.md`
+- `ESTADO_WORK06_PARAMETRIZACION_PROVISIONAL.md`
+
+`cap02.alpha.1` permanece reservado por contradicción doctrinal y no pertenece al problema de calibración.
