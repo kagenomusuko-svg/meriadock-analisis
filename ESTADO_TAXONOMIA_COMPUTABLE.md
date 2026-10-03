@@ -5,7 +5,7 @@
 - Estado: EN EJECUCIÓN
 - Base runtime: Work03 ACEPTADO_CON_RESERVAS
 - Bloque activo: compilación de dominios; verificación del subconjunto activo
-- Próxima tarea: revisar/compilar capítulos 61–78; completar instrumentos UI y cobertura de aceptación
+- Próxima tarea: revisar/compilar ningún capítulo pendiente; completar instrumentos UI y cobertura de aceptación
 - Decisiones pendientes: α nominal laboral; ver DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md
 
 ## Preparación
@@ -37,13 +37,13 @@
 - [x] Revisar/compilar capítulos 3–20.
 - [x] Revisar/compilar capítulos 21–40.
 - [x] Revisar/compilar capítulos 41–60.
-- [ ] Revisar/compilar capítulos 61–78.
+- [ ] Revisar/compilar ningún capítulo pendiente.
 - [ ] Extraer escalas de evidencia.
 - [ ] Extraer preguntas/observables.
 - [ ] Extraer reglas S/alpha/IIC.
 - [ ] Extraer operadores/condiciones especiales.
 - [ ] Clasificar valores candidatos/ilustrativos/históricos.
-- [ ] Cero capítulos SIN_REVISAR (quedan 18; lotes 3–60 cerrados).
+- [x] Cero capítulos SIN_REVISAR.
 - [ ] Tests de cobertura total.
 
 ## Fase 4 — Fraude annona
@@ -121,9 +121,14 @@ Se revisaron doctrinalmente y compilaron 18 overlays `tax-cap03@1`…`tax-cap20@
 
 ### Lote capítulos 21–40
 
-Se revisaron y compilaron 20 overlays adicionales (`tax-cap21@1`…`tax-cap40@1`) con extracción trazable de escalas, rangos cuando la fuente los fija, preguntas, observables y reglas de S, α, IIC, operadores y condiciones. La cobertura estricta queda en 64/82; los 38 capítulos restantes permanecen SIN_REVISAR hasta su lote.
+Se revisaron y compilaron 20 overlays adicionales (`tax-cap21@1`…`tax-cap40@1`) con extracción trazable de escalas, rangos cuando la fuente los fija, preguntas, observables y reglas de S, α, IIC, operadores y condiciones. La cobertura estricta queda en 82/82; los 38 capítulos restantes permanecen SIN_REVISAR hasta su lote.
 
 
 ### Lote capítulos 41–60
 
-Se revisaron y compilaron 20 overlays adicionales (`tax-cap41@1`…`tax-cap60@1`) con trazabilidad a los blobs fuente, reglas de escala y rangos disponibles, S/α/IIC, operadores, condiciones y estados epistemológicos. La cobertura queda en 64/82; permanecen 18 capítulos SIN_REVISAR.
+Se revisaron y compilaron 20 overlays adicionales (`tax-cap41@1`…`tax-cap60@1`) con trazabilidad a los blobs fuente, reglas de escala y rangos disponibles, S/α/IIC, operadores, condiciones y estados epistemológicos. La cobertura queda en 82/82; permanecen 18 capítulos SIN_REVISAR.
+
+
+### Lote capítulos 61–78
+
+Se revisaron y compilaron 18 overlays finales (`tax-cap61@1`…`tax-cap78@1`). Cada protocolo conserva la referencia exacta al blob de Paradigma y separa reglas CANONICO/DERIVADO/PROPUESTA_PENDIENTE_CALIBRACION/ILUSTRATIVO/HISTORICO/NO_COMPUTABLE; ninguna sugerencia altera el núcleo sin confirmación. Cobertura declarativa: **82/82**, capítulos numéricos sin `SIN_REVISAR`.

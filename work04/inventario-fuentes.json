@@ -731,7 +731,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-61.md",
         "blobSHA": "d91fcae6374c535b003baa7f3506cec499bc1420"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap61@1"
     },
     {
       "capitulo": "62",
@@ -742,7 +743,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-62.md",
         "blobSHA": "71deac728d4c53b71a0a9a077edc76f42608cc88"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap62@1"
     },
     {
       "capitulo": "63",
@@ -753,7 +755,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-63.md",
         "blobSHA": "55aeb5eb0e4803e67e70441bcf76b60efbb60f91"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap63@1"
     },
     {
       "capitulo": "64",
@@ -764,7 +767,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-64.md",
         "blobSHA": "5ae94a351bce8b2e3e36a8005fa46c2724d0db53"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap64@1"
     },
     {
       "capitulo": "65",
@@ -775,7 +779,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-65.md",
         "blobSHA": "28d3b1cbcd6dd0a8beaca2ab1f3d59613948d3dc"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap65@1"
     },
     {
       "capitulo": "66",
@@ -786,7 +791,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-66.md",
         "blobSHA": "4325d63e218891463d6ba4cce62edeae59e1bb7b"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap66@1"
     },
     {
       "capitulo": "67",
@@ -797,7 +803,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-67.md",
         "blobSHA": "63f5c749aadc665cff22c56a0eb4b40696f7d210"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap67@1"
     },
     {
       "capitulo": "68",
@@ -808,7 +815,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-68.md",
         "blobSHA": "e3815c91ff72079b0a9723896232e90f002129b3"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap68@1"
     },
     {
       "capitulo": "69",
@@ -819,7 +827,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-69.md",
         "blobSHA": "a2a742ce7567119d9188df3423a74231d37266c5"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap69@1"
     },
     {
       "capitulo": "70",
@@ -830,7 +839,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-70.md",
         "blobSHA": "18bd8a8b0f799780e637fbb51d720d85b2c5a148"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap70@1"
     },
     {
       "capitulo": "71",
@@ -841,7 +851,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-71.md",
         "blobSHA": "4ecc9d6fb720621289aba959105cc51a07aceac2"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap71@1"
     },
     {
       "capitulo": "72",
@@ -852,7 +863,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-72.md",
         "blobSHA": "db8aa99f0a38db50905e040d17e5f1b6ee2564cf"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap72@1"
     },
     {
       "capitulo": "73",
@@ -863,7 +875,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-73.md",
         "blobSHA": "260445cd0ae72874f9909c6282cdc0b57105f431"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap73@1"
     },
     {
       "capitulo": "74",
@@ -874,7 +887,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-74.md",
         "blobSHA": "98818656a2acbfb12acb0438db92d4e6269bdffe"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap74@1"
     },
     {
       "capitulo": "75",
@@ -885,7 +899,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-75.md",
         "blobSHA": "331a4e389a5e0ee7a42b1c7bc08ee563548b80d2"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap75@1"
     },
     {
       "capitulo": "76",
@@ -896,7 +911,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-76.md",
         "blobSHA": "8c701381401c7ff2c16afd210c54d3fca84379dd"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap76@1"
     },
     {
       "capitulo": "77",
@@ -907,7 +923,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-77.md",
         "blobSHA": "35d368530772f86fbc31834f44b9134a87f32344"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap77@1"
     },
     {
       "capitulo": "78",
@@ -918,7 +935,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-78.md",
         "blobSHA": "839ba9d329b900a02805404edc4eb860f5ad7a68"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO",
+      "protocolo": "tax-cap78@1"
     },
     {
       "capitulo": "U·1",
