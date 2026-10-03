@@ -30,7 +30,11 @@ OP13–OP15, OP17–OP18, OP22–OP25, OP32, OP34–OP35, OP39–OP40 y OP45 no 
 
 ## Verificación
 
-- `npm test`: 93/93.
-- `npm run build`: correcto localmente; CI 37095045137 verificó pruebas/build y detectó una excepción cliente en Playwright antes del flujo UI. Se corrigió el cargado inicial de disponibilidad en `b523bacf` y se retiró el import indirecto del catálogo del bundle cliente en `580de8c`; la aceptación exacta se relanza con carga diferida de disponibilidad en `e8ae1cb`; el primer render ya no depende del endpoint adicional.
-- Playwright/API/producción: pendiente de CI final.
+- `npm test`: **93/93**.
+- `npm run build`: correcto localmente.
+- CI verificadora **37096386751** sobre `2b92ce87edd023b0a303d7dca1e9857f0d16a1c5`: `verificar` **SUCCESS** (tests, build y Playwright).
+- Artefacto Playwright: **11263938503** (`verificacion-interfaz`), SHA-256 `ae42d89bcd0ce07c3a2c30b7048963b5af0750a81e8b0dff7603d1770e87a083`.
+- La corrección `26e6be4` eliminó referencias de estilo fuera de ámbito; `2b92ce8` conservó los nombres accesibles canónicos de OP.
+- Producción exacta: se ejecutará en el commit de aceptación con `EXPECTED_COMMIT` igual a la revisión fuente servida por Vercel.
 - Auditoría reproducible: matriz, catálogo, reservas, metadata JSON y pruebas Work05.
+

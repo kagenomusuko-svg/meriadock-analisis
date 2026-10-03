@@ -2,7 +2,7 @@
 
 ## Último punto seguro
 
-- Estado: IMPLEMENTACIÓN Y AUDITORÍA EN CURSO
+- Estado: ACEPTACIÓN EN EJECUCIÓN (CI verificadora cerrada)
 - Base: Work04 ACEPTADA CON RESERVAS EXPLÍCITAS
 - Cobertura: 45/45 operadores reevaluados
 - Activos: 20; reservas concretas: 25
@@ -60,10 +60,11 @@
 
 - [x] `npm ci` / `npm test` local: 93/93.
 - [x] `npm run build` local.
-- [ ] Playwright y producción exacta: CI 37095045137 detectó excepción cliente; fixes b523bacf y 580de8c publicados, aceptación en relanzamiento tras carga diferida de disponibilidad (`e8ae1cb`).
+- [x] Playwright CI: run 37096386751 SUCCESS sobre `2b92ce87edd023b0a303d7dca1e9857f0d16a1c5`; artefacto 11263938503.
+- [ ] Producción exacta: se verifica en el commit `acceptance:` siguiente.
 - [x] Crear catálogo, auditoría y matriz.
 - [x] Actualizar mapa maestro y repertorio.
-- [ ] Cerrar tablero: requiere CI/producción final.
+- [ ] Cerrar tablero: pendiente únicamente de producción exacta y artefacto final.
 
 ## Decisiones pendientes
 
@@ -74,3 +75,4 @@
 
 - Inicio Work05: Work04 82/82 y 1.094 reglas.
 - Implementación Work05: metadata OP01–OP45, API/UI de disponibilidad, propagación a snapshot/expediente, 3 pruebas nuevas.
+
