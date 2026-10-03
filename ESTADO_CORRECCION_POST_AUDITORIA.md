@@ -7,8 +7,8 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 - Estado: EN EJECUCIÓN
 - Base doctrinal: RESOLUCION_AUDITORIA_I_INV.md
 - Base de hallazgos: REGISTRO_DISCREPANCIAS_AUDITORIA.md
-- Bloque activo: Fase 4
-- Próxima tarea: repertorio e I_inv
+- Bloque activo: Fase 5
+- Próxima tarea: retirar legacy y reaceptación
 
 ## Fase 1 — P1 estructurales y numéricos
 
@@ -43,13 +43,13 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 
 ## Fase 4 — repertorio e I_inv
 
-- [ ] AU-13 mantener Fraude annona reservado de forma explícita.
-- [ ] AU-17 clasificar repertorio MAT/TAX/CON/HIST/FUERA.
-- [ ] Implementar sólo operadores MAT con contrato completo y autorizado.
-- [ ] Implementar I_inv conforme a RESOLUCION_AUDITORIA_I_INV.md.
-- [ ] Añadir casos canónicos y casos límite de I_inv.
-- [ ] Tests de regresión Fase 4.
-- [ ] CI/build/UI verde Fase 4.
+- [x] AU-13 mantener Fraude annona reservado de forma explícita. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
+- [x] AU-17 clasificar repertorio MAT/TAX/CON/HIST/FUERA. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
+- [x] Implementar sólo operadores MAT con contrato completo y autorizado. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
+- [x] Implementar I_inv conforme a RESOLUCION_AUDITORIA_I_INV.md. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
+- [x] Añadir casos canónicos y casos límite de I_inv. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
+- [x] Tests de regresión Fase 4. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
+- [x] CI/build/UI verde Fase 4. — `77e043741ca3278dad7eee976e81cde9e68f0c57`
 
 ## Fase 5 — legacy
 
@@ -79,3 +79,5 @@ Ninguna al inicio. I_inv ya está resuelto.
 - `6688263bdf2a9f212f870fbeccd60e7460021d86` — Fase 2: npm ci, 62 pruebas y build; CI37080135282 SUCCESS incluido flujo UI/API/expediente.
 
 - `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `348de91c05cf09ed17dee861dca46de81fd8046e` + `9430acf2118e018568be6ac3cf6a888c39140cb3` — Fase 3: 65 pruebas y build; CI37081467948 SUCCESS. Los dos CI anteriores detectaron ambigüedades del test Playwright, corregidas sin omitir las aserciones. Contraste de navegación/header comprobado ≥4.5; no certificación WCAG.
+
+- `77e043741ca3278dad7eee976e81cde9e68f0c57` — Fase 4: npm ci, 75 pruebas/build, CI37081724786 SUCCESS. Playwright prueba I_inv signed, Shapley y J integrados; expediente conserva signos y snapshot. Artifacts Fases1–3 descargados y revisados visualmente.
