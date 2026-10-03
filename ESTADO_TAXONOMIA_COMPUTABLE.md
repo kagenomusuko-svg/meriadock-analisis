@@ -45,13 +45,13 @@
 
 ## Fase 4 — Fraude annona
 
-- [ ] Retirar reserva del operador.
-- [ ] Implementar R*(1-alpha)*(1-IIC).
-- [ ] Exigir rol de diseño explícito.
-- [ ] Exigir variante IIC identificada.
-- [ ] No usar Delta*(1-IIC) como equivalencia.
-- [ ] No universalizar umbral 0.20.
-- [ ] Añadir casos canónicos y límites.
+- [x] Retirar reserva del operador. — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
+- [x] Implementar R*(1-alpha)*(1-IIC). — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
+- [x] Exigir rol de diseño explícito. — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
+- [x] Exigir variante IIC identificada. — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
+- [x] No usar Delta*(1-IIC) como equivalencia. — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
+- [x] No universalizar umbral 0.20. — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
+- [x] Añadir casos canónicos y límites. — 8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f, pruebas locales y build.
 - [ ] Actualizar repertorio.
 
 ## Fase 5 — UI taxonómica dinámica
@@ -93,3 +93,5 @@ Ninguna al inicio.
 
 
 - `05ddcae7b6328cf7087e01957d3a3b5cf1571323` — schema y extracción Universal; 80/80 pruebas locales. Loader/UI y cobertura de dominio todavía pendientes. U·4: el continuo exige extensión; no se equiparan muestras con cobertura global.
+
+- `8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f` — Fraude annona, motor/UI/adaptador/Playwright; 82/82 pruebas locales y build correcto. CI y producción pendientes de lectura, sin aceptación final.

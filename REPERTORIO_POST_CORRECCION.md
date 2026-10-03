@@ -2,7 +2,7 @@
 
 La clasificación cubre los 45 registros del inventario auditado. Clase primaria MAT/TAX/CON/HIST/FUERA; las variantes históricas sustituidas se identifican HIST dentro de la observación. Las reservas de ampliación no equivalen a un operador calculado ni a una decisión doctrinal obligatoria para cerrar Work03.
 
-El núcleo tiene 20 entradas de REGISTRY: 19 contratos ejecutables (algunos dependen de datos y garantías) y Fraude annona reservado. Las tres familias tienen acceso al mismo repertorio. La fórmula de I_inv procede de la resolución autoral posterior, que sustituye la reserva OP41 del inventario histórico.
+El núcleo tiene 20 entradas de REGISTRY: 20 contratos ejecutables condicionales; Fraude annona activado por Work04 con diseño e IIC explícitos. Las tres familias tienen acceso al mismo repertorio. La fórmula de I_inv procede de la resolución autoral posterior, que sustituye la reserva OP41 del inventario histórico.
 
 | Operador / fuente del inventario | Clase primaria | Estado efectivo | Límite |
 |---|---|---|---|
@@ -17,7 +17,7 @@ El núcleo tiene 20 entradas de REGISTRY: 19 contratos ejecutables (algunos depe
 | OP09 AD / §21 | MAT | ajusteDebitor | Contrato aplicado explícito; alcance y precondiciones en el resultado. No implica validación empírica. |
 | OP10 Robustez A–D / §11 | MAT | robustez | Contrato aplicado explícito; alcance y precondiciones en el resultado. No implica validación empírica. |
 | OP11 Sensibilidad / §11 | MAT | sensibilidadExtendida | Contrato aplicado explícito; alcance y precondiciones en el resultado. No implica validación empírica. |
-| OP12 Fraude annona / §18, MC I IV·4/C·7, II CorIII | CON | fraudeAnnona — RESERVADO | Contrato aplicado explícito; alcance y precondiciones en el resultado. No implica validación empírica. |
+| OP12 Fraude annona / §18, MC I IV·4/C·7, II CorIII | MAT | fraudeAnnona — Work04 | Contrato aplicado explícito; alcance y precondiciones en el resultado. No implica validación empírica. |
 | OP13 Recurrencia / Calculo11§5.4 y Taxonomía compliance | TAX | Reserva de ampliación | Sin modelo temporal/probabilístico calibrado. |
 | OP14 Exposición / VolII α protocolo, Taxonomía grupos riesgo | TAX | Reserva de ampliación | Sin oportunidades/ventana/base comparable acordadas. |
 | OP15 Intervención/prevención / Prometeo, SDO-PROM§9 | CON | Reserva de ampliación | Sin función de respuesta causal ni contrafactual tipado. |
@@ -62,6 +62,11 @@ El núcleo tiene 20 entradas de REGISTRY: 19 contratos ejecutables (algunos depe
 - V(G,G′): distancia L1 entre vectores R* comparables, IDs alineados y referencias. No inferir qué intervención produjo G′ ni aplicar ablación automática. Vectores [0,1], L1=1 con tolerancia técnica de redondeo 64×Number.EPSILON; no normalización silenciosa.
 - Delta_B absoluta: B_i recibido menos beta_i revertido, misma unidad y magnitudes finitas no negativas. Signo negativo permitido. No sustituye beta por alpha ni R*_B por cuota B*; RES-DELTAB §7–9.
 
+## Actualización Work04
+
+Fraude annona canónico = R* del diseñador × (1−α del diseñador) × (1−IIC identificado). Rol/ID activos explícitos; todo insumo finito [0,1]; faltante indetermina incluso si otro factor es cero. No equivale a Δ×(1−IIC), no se aplica .20 universal ni se infiere calificación jurídica. La reserva anterior es histórica y fue sustituida por la orden autoral Work04.
+
 Toda suma/producto debe terminar finito para etiquetarse calculado. Inputs ausentes quedan indeterminados. Las reservas TAX/CON/HIST/FUERA no se activan como fórmulas terminadas.
 
 - ROI neto: contrato del inventario/plan y Calculo9 §5.5; daño no negativo, costo positivo, ΔP externo en [−1,1], moneda común, base declarada. No descuento automático, modelo predictivo, recomendación ni equivalencia con retorno bruto; conserva beneficio bruto y neto como montos en auditoría. Caso ApA: 50M×.185 y costo 1M → 8.25 (825%).
+
