@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { construirSolicitud } from "../constructor/entrada";
@@ -32,6 +32,7 @@ const FAMILIAS = [
   ],
 ];
 const vacio = {
+  taxonomiaVersion: "generico@1",
   familia: "",
   dominio: "",
   titulo: "",
@@ -77,6 +78,8 @@ function CheckRow({ checked, onChange, children }) {
   );
 }
 export default function Constructor() {
+  const [protocolos,setProtocolos]=useState([GENERICO]);
+
   const [paso, setPaso] = useState(0),
     [estado, setEstado] = useState(vacio),
     [nuevoNombre, setNuevoNombre] = useState("");
@@ -93,6 +96,13 @@ export default function Constructor() {
     [calculando, setCalculando] = useState(false),
     [resultado, setResultado] = useState(null),
     [exportando, setExportando] = useState(false);
+  const protocolo=protocolos.find(p=>`${p.id}@${p.version}`===estado.taxonomiaVersion)||GENERICO;
+  const headingRef=useRef(null),errorRef=useRef(null);
+  useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
+  useEffect(()=>{headingRef.current?.focus();},[paso]);
+  useEffect(()=>{if(error)errorRef.current?.focus();},[error]);
+  function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:''}))});}
+  const reglaAlpha=n=>n.estrategiaAlpha?.startsWith('taxonomico:')?protocolo.estrategiasAlpha?.find(a=>a.id===n.estrategiaAlpha.split(':')[1])?.regla:n.estrategiaAlpha;
   function editar(patch) {
     setEstado((e) => ({ ...e, ...patch }));
     setResultado(null);
@@ -117,7 +127,7 @@ export default function Constructor() {
           tipo: "indeterminado",
           modo: "indeterminado",
           descripcion: "",
-          componentesS: ["", "", ""],
+          componentesS: protocolo.componentesS.map(()=>""),
         },
       ],
     });
@@ -168,7 +178,7 @@ export default function Constructor() {
     });
   }
   const solicitud = construirSolicitud(estado);
-  const mensajes = mensajesAnalisis({...solicitud.analisis,nodosActivos:solicitud.analisis.nodosActivos.map(n=>({...n,alpha:solicitud.insumos.insumosAlpha.find(a=>a.id===n.id)||n.alpha}))}, estado.mediciones);
+  const mensajes = mensajesAnalisis({...solicitud.analisis,nodosActivos:solicitud.analisis.nodosActivos.map(n=>({...n,alpha:solicitud.insumos.insumosAlpha.find(a=>a.id===n.id)||n.alpha}))}, estado.mediciones,protocolo);
   async function calcular() {
     setCalculando(true);
     setError("");
@@ -259,7 +269,7 @@ export default function Constructor() {
     background: "none",
     border: "none",
     cursor: "pointer",
-    color: "#c4bdb5",
+    color: "#655d52",
     fontSize: "22px",
     lineHeight: 1,
     padding: "2px 6px",
@@ -309,7 +319,7 @@ export default function Constructor() {
   };
   const secS = {
     fontSize: "14px",
-    color: "#9a9080",
+    color: "#655d52",
     marginBottom: "30px",
     lineHeight: "1.7",
   };
@@ -360,7 +370,7 @@ export default function Constructor() {
         color: "#2c2820",
       }}
     >
-      <style>{`input:focus,textarea:focus,select:focus{border-color:#1E4C45!important;box-shadow:0 0 0 3px rgba(30,76,69,0.09)} label{display:block} pre{white-space:pre-wrap;overflow-wrap:anywhere} th,td{padding:10px;text-align:left;border-bottom:1px solid #e8e3db} button:disabled{opacity:.5;cursor:default}`}</style>
+      <style>{`button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #1E4C45;outline-offset:3px} input:focus,textarea:focus,select:focus{border-color:#1E4C45!important;box-shadow:0 0 0 3px rgba(30,76,69,0.09)} label{display:block} pre{white-space:pre-wrap;overflow-wrap:anywhere} th,td{padding:10px;text-align:left;border-bottom:1px solid #e8e3db} button:disabled{opacity:.5;cursor:default}`}</style>
       {/* Header */}
       <div
         style={{
@@ -400,7 +410,7 @@ export default function Constructor() {
           href="/"
           style={{
             fontSize: "12px",
-            color: "rgba(217,217,217,0.5)",
+            color: "#D9D9D9",
             textDecoration: "none",
           }}
         >
@@ -409,7 +419,7 @@ export default function Constructor() {
       </div>
 
       {/* Tabs */}
-      <div
+      <nav aria-label="Pasos del análisis"
         style={{
           background: "#fff",
           borderBottom: "1px solid #e8e3db",
@@ -421,6 +431,7 @@ export default function Constructor() {
         {PASOS.map((t, i) => (
           <button
             key={i}
+            aria-current={i===paso?"step":undefined}
             onClick={() => setPaso(i)}
             style={{
               padding: "14px 20px",
@@ -428,7 +439,7 @@ export default function Constructor() {
               border: "none",
               borderBottom:
                 i === paso ? `2px solid ${G}` : "2px solid transparent",
-              color: i === paso ? G : i < paso ? "#7aab9a" : "#c4bdb5",
+              color: i === paso ? G : i < paso ? "#655d52" : "#655d52",
               cursor: "pointer",
               fontSize: "13px",
               fontFamily: "Georgia, serif",
@@ -444,7 +455,7 @@ export default function Constructor() {
                 height: "22px",
                 borderRadius: "50%",
                 background: i === paso ? G : i < paso ? "#e8f0ee" : "#f0ede8",
-                color: i === paso ? "#fff" : i < paso ? G : "#c4bdb5",
+                color: i === paso ? "#fff" : i < paso ? G : "#655d52",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
@@ -452,17 +463,17 @@ export default function Constructor() {
                 flexShrink: 0,
               }}
             >
-              {i < paso ? "✓" : i + 1}
+              {i + 1}
             </span>
             {t}
           </button>
         ))}
-      </div>
+      </nav>
 
       <main
         style={{ maxWidth: 960, margin: "0 auto", padding: "44px 20px 80px" }}
       >
-        <h1 style={secH}>{PASOS[paso]}</h1>
+        <h1 ref={headingRef} tabIndex={-1} style={secH}>{PASOS[paso]}</h1>
         {paso === 0 && (
           <section>
             <h2 style={secH}>¿Qué quieres hacer con este análisis?</h2>
@@ -484,6 +495,8 @@ export default function Constructor() {
                 {t}
               </label>
             ))}
+            <label style={fld}><span style={lbl}>Protocolo taxonómico versionado</span><select aria-label="Protocolo taxonómico versionado" style={sel} value={estado.taxonomiaVersion} onChange={e=>cambiarProtocolo(e.target.value)}>{protocolos.map(p=><option key={p.id+'@'+p.version} value={p.id+'@'+p.version}>{p.id}@{p.version} — {p.alcance||'dominio-específico'}</option>)}</select></label>
+            <p>Protocolo {protocolo.id}@{protocolo.version}: {protocolo.alcance||'dominio-específico'}. La versión genérica es piloto; no agota la Taxonomía ni calibra automáticamente el dominio declarado.</p>
             {campo("¿Qué estás analizando? Dominio", estado.dominio, (v) =>
               editar({ dominio: v }),
             )}
@@ -714,19 +727,20 @@ export default function Constructor() {
             {estado.nodos.map((n) => (
               <article key={n.id} style={card}>
                 <h2 style={secH}>{n.nombre}</h2>
-                <h3>{OPERADORES.s}</h3>
+                <h3>{OPERADORES.s}</h3><p>Componentes discriminados conforme a {protocolo.id}@{protocolo.version}; alcance {protocolo.alcance||'dominio-específico'}.</p>
+                {protocolo.preguntas.map(q=><div key={q.id}>{q.tipo==='numero'?numero(q.texto,n.respuestasTaxonomicas?.[q.id]??'',v=>nodo(n.id,{respuestasTaxonomicas:{...n.respuestasTaxonomicas,[q.id]:v}}),q.min,q.max):texto(q.texto,n.respuestasTaxonomicas?.[q.id]??'',v=>nodo(n.id,{respuestasTaxonomicas:{...n.respuestasTaxonomicas,[q.id]:v}}))}</div>)}
                 {n.tipo === "instrumental" ? (
                   <p>
                     S no aplicable al nodo instrumental en el protocolo piloto.
                   </p>
                 ) : (
-                  GENERICO.componentesS.map((c, i) =>
+                  protocolo.componentesS.map((c, i) =>
                     numero(
                       c.texto,
                       n.componentesS?.[i] ?? "",
                       (v) =>
                         nodo(n.id, {
-                          componentesS: (n.componentesS || ["", "", ""]).map(
+                          componentesS: (n.componentesS || protocolo.componentesS.map(()=>"")).map(
                             (x, j) => (i === j ? v : x),
                           ),
                         }),
@@ -751,12 +765,10 @@ export default function Constructor() {
                     <option value="proporcion_monetaria">
                       Proporción monetaria comparable
                     </option>
-                    <option value="taxonomico">
-                      Taxonómica — pendiente de protocolo
-                    </option>
+                    {(protocolo.estrategiasAlpha||[]).map(a=><option key={a.id} value={'taxonomico:'+a.id}>{a.texto}</option>)}
                   </select>
                 </label>
-                {n.estrategiaAlpha === "discriminado" &&
+                {reglaAlpha(n) === "discriminado" &&
                   numero(
                     "α entre 0 y 1",
                     n.alphaValor,
@@ -764,7 +776,7 @@ export default function Constructor() {
                     0,
                     1,
                   )}
-                {n.estrategiaAlpha === "proporcion_monetaria" && (
+                {reglaAlpha(n) === "proporcion_monetaria" && (
                   <>
                     {numero(
                       "Monto efectivamente asumido",
@@ -792,7 +804,7 @@ export default function Constructor() {
                   nodo(n.id, { referenciaAlpha: v }),
                 )}
                 <details>
-                  <summary>{OPERADORES.iic} — opcional</summary>
+                  <summary>{OPERADORES.iic} — opcional</summary><p>IIC de congruencia: coincidencias / elementos declarados. No es correlación estadística ni otro IIC histórico.</p>
                   {texto(
                     "Declaraciones / compromisos (uno por línea)",
                     n.declarado,
@@ -1082,10 +1094,11 @@ export default function Constructor() {
           </section>
         )}
         {error && (
-          <div role="alert" style={{ ...aEr, marginTop: 20 }}>
+          <div ref={errorRef} tabIndex={-1} role="alert" style={{ ...aEr, marginTop: 20 }}>
             {error}
           </div>
         )}
+        <p role="status" aria-live="polite">{calculando?"Calculando mediciones":resultado?"Resultados disponibles":`Paso ${paso+1}: ${PASOS[paso]}`}</p>
         <aside
           style={{ ...card, marginTop: 24 }}
           aria-label="Estado del análisis"

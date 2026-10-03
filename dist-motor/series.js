@@ -12,8 +12,8 @@ const REGISTRY={
   c.escenarios=Object.fromEntries(['min','central','max'].map(k=>[k,calcularRStar(construirMatrizEmpirica(c.modelo,k),c.configuracion.pf)]));
   const r=c.escenarios.central;return {...salida(r.vector,r.motivo),auditoria:r};
  }},
- s:{dependencias:[],inputs:['componentes S por nodo'],calcular:c=>salida(c.nodos.map(n=>({id:n.id,nodo:n.nombre,valor:n.tipo==='instrumental'?null:calcularS(n.s?.componentes,n.s?.pesos),componentes:n.s?.componentes??null,pesos:n.s?.pesos??null})))},
- alpha:{dependencias:[],inputs:['estrategia α explícita por nodo'],calcular:c=>salida(c.nodos.map(n=>{const datos=c.insumos.insumosAlpha?.find(x=>x.id===n.id)||n.alpha;const a=calcularAlpha(datos);return {id:n.id,nodo:n.nombre,valor:a?.valor??null,contrato:a};}))},
+ s:{dependencias:[],inputs:['componentes S por nodo'],calcular:c=>salida(c.nodos.map(n=>({id:n.id,nodo:n.nombre,valor:n.tipo==='instrumental'||c.protocolo&&n.s?.componentes?.length!==c.protocolo.componentesS.length?null:calcularS(n.s?.componentes,n.s?.pesos),componentes:n.s?.componentes??null,pesos:n.s?.pesos??null})))},
+ alpha:{dependencias:[],inputs:['estrategia α explícita por nodo'],calcular:c=>salida(c.nodos.map(n=>{const datos=c.insumos.insumosAlpha?.find(x=>x.id===n.id)||n.alpha;const a=calcularAlpha(datos,c.protocolo);return {id:n.id,nodo:n.nombre,valor:a?.valor??null,contrato:a};}))},
  rStarNeta:{dependencias:['rStar','s'],inputs:[],calcular:c=>salida(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,valor:calcularContribucionAtribuible(c.resultados.rStar.valor?.[i],c.resultados.s.valor[i].valor)})))},
  delta:{dependencias:['rStar','alpha'],inputs:[],calcular:c=>salida(c.nodos.map((n,i)=>({id:n.id,nodo:n.nombre,resultado:calcularDelta(c.resultados.rStar.valor?.[i],c.resultados.alpha.valor[i].valor)})))},
  iic:{dependencias:[],inputs:['declarado','observado','coincidencias'],calcular:c=>salida(c.nodos.map(n=>{const d=c.insumos.nodosIIC?.find(x=>x.id===n.id)||n.iic;return {id:n.id,nodo:n.nombre,valor:d?calcularIIC(d.declarado,d.observado,d.coincidencias):null,insumos:d??null};}))},
@@ -24,13 +24,13 @@ const REGISTRY={
  sensibilidadExtendida:{dependencias:['rStar'],inputs:['método explícito'],calcular:c=>sensibilidadExtendida(c.modelo,c.configuracion.sensibilidadExtendida,c.configuracion.pf)},
  fraudeAnnona:{dependencias:['rStar','alpha','iic'],inputs:['protocolo versionado','intervención/prevención'],calcular:c=>calcularFraudeAnnona(c.insumos.fraudeAnnona,c.configuracion.protocoloFraude)}
 };
-function correrAnalisis({estructura,grafo,insumos={},medicionesSolicitadas=[],configuracion={}}){
+function correrAnalisis({estructura,grafo,insumos={},medicionesSolicitadas=[],configuracion={},protocolo=null}){
  const fuente=estructura||grafo;if(!Array.isArray(medicionesSolicitadas)||medicionesSolicitadas.some(x=>typeof x!=='string'))throw new Error('Lista de operadores inválida');
  let modelo,errorEstructura=null,errorNodos=null;
  try{modelo=crearAnalisis(fuente);}catch(e){errorEstructura=e.message;try{modelo=crearAnalisis({...fuente,nodosActivos:fuente.nodosActivos||fuente.nodos||[],relacionesInternas:[],aristas:[],conexionesCierre:[]});}catch(n){errorNodos=n.message;modelo={...fuente,nodosActivos:[],relacionesInternas:[],conexionesCierre:[]};}}
  const resultados={},nodos=modelo.nodosActivos.map(n=>({...n,alpha:insumos.insumosAlpha?.find(x=>x.id===n.id)||n.alpha,iic:insumos.nodosIIC?.find(x=>x.id===n.id)||n.iic}));
  modelo={...modelo,nodosActivos:nodos,nodos};
- const c={modelo,nodos,insumos,configuracion,resultados,escenarios:{}};
+ const c={modelo,nodos,insumos,configuracion,resultados,protocolo,escenarios:{}};
  function ejecutar(id){
   if(resultados[id])return;
   const op=REGISTRY[id];if(!op){resultados[id]={estado:'error',valor:null,motivo:'Operador desconocido: '+id};return;}
