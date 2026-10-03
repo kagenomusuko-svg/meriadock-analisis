@@ -107,3 +107,5 @@
 CI37087942236 SUCCESS, instalación limpia/test/build/Chromium, jobs verificar y produccion. SHA exacto ea8688635f38b349c151fa2cc9beffc7ada8f7db, deployment dpl_9FAsfjBam2fWgRVHu8v7EGT7fPrq READY. Artifact11261148086 descargado y revisado: 16 casos, Fraude .432/.192/.108; circuito UI/API/HTML y snapshot. Las casillas integrales de fase6 permanecen pendientes para la Taxonomía completa. Auditoría actual NO ACEPTADO POR COBERTURA INCOMPLETA. Capítulos3–78 pendientes, no bloqueados por la decisión nominal laboral.
 
 - `60706640ee1552620ccee1b0db1128fe0e9f5f68` — schema JSON formal y tipos estrictos de sourceRef; 88/88 pruebas locales. Producción funcional comprobada en ea868863; este commit valida tipos y añade contrato/test.
+
+CI del schema formal: [37088208395](https://github.com/kagenomusuko-svg/meriadock-analisis/actions/runs/37088208395) SUCCESS para 60706640; npm ci, 88 pruebas, build y Playwright del catálogo real. Job producción omitido por diseño de workflow; producción exacta del bloque funcional ya verificada en ea868863. Referencias de todos los campos de los dos overlays resuelven a reglas del propio protocolo; fusión estable con 83/86 reglas.

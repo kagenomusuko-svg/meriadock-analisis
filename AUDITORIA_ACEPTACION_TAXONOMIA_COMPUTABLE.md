@@ -39,3 +39,5 @@ DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md: capítulo 2 §4 prohíbe comunic
 ## Trabajo que impide aceptación final
 
 Revisar y compilar capítulos3–78, sus escalas/condiciones/exclusiones/operadores/valores ilustrativos; ampliar regresiones de dominio; resolver o conservar explícitamente la reserva doctrinal nominal; verificar que ningún campo computational pierda estado/fuente y ningún operador no declarado se active; terminar la auditoría integral y el circuito de producción sobre la revisión completa. No queda cerrado el tablero ni se certifica la Taxonomía completa.
+
+Actualización del schema formal: CI37088208395 SUCCESS (60706640), 88 pruebas/build/Playwright. Este run omite producción según el trigger; no se presenta como nueva verificación exacta de producción.
