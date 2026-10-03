@@ -12,7 +12,7 @@ let browser,page;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.o
   await page.route('**/api/protocolos',route=>route.fulfill({contentType:'application/json',body:JSON.stringify({protocolos:[GENERICO,fixtureProtocolo]})}));
   await page.goto('http://127.0.0.1:3100/');await page.getByRole('heading',{name:'¿Qué quieres hacer con este análisis?'}).waitFor();
   await page.getByRole('radio',{name:/Describir y medir/}).check();await page.getByLabel('¿Qué estás analizando? Dominio').fill('Genérico');
-  async function tab(name){const b=page.getByRole('button',{name:new RegExp(name)});await b.focus();await page.keyboard.press('Enter');assert.equal(await b.getAttribute('aria-current'),'step');assert.equal(await page.locator('h1').evaluate(el=>el===document.activeElement),true);}
+  async function tab(name){const b=page.getByRole('navigation',{name:'Pasos del análisis'}).getByRole('button',{name:new RegExp(name)});await b.focus();await page.keyboard.press('Enter');assert.equal(await b.getAttribute('aria-current'),'step');assert.equal(await page.locator('h1').evaluate(el=>el===document.activeElement),true);}
   await tab('Fenómeno y pregunta');await page.getByLabel('Título del análisis').fill('Fixture PF');await page.getByLabel('Pregunta del análisis',{exact:true}).fill('¿Cómo converge?');await page.getByLabel('Describe el fenómeno, evento o estructura que quieres analizar.').fill('Sistema de dos nodos');await page.getByLabel('Evento determinado / punto de cierre (D)').fill('Evento D');
   await tab('Nodos');for(const name of ['A','B']){await page.getByLabel('Nombre del nuevo nodo').fill(name);await page.getByRole('button',{name:'Agregar nodo',exact:true}).click();}
   await tab('Finalidad');await page.getByLabel('Protocolo taxonómico versionado').selectOption('fixture_ui@2');await tab('Discriminaciones');
@@ -44,3 +44,4 @@ let browser,page;let logs='';server.stdout.on('data',d=>logs+=d);server.stderr.o
   await page.screenshot({path:'/tmp/meriadock-verificacion.png',fullPage:true});assert.deepEqual(errors,[]);console.log('UI → API → PF/IIC/B*/D_total/AD → resultados → descarga: VERDE; sin errores de página.');
  }catch(e){if(page){console.error('Estado de interfaz:',await page.locator('body').innerText());await page.screenshot({path:'/tmp/meriadock-error.png',fullPage:true}).catch(()=>{});}throw e;}finally{if(browser)await browser.close();server.kill();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
+
