@@ -30,8 +30,6 @@ La medición provisional es condicional a los parámetros declarados. La ausenci
 ## Verificación
 
 - Pruebas locales: **97/97**.
-- CI verificadora **37098702607** sobre `f0c2c11b7d8d5be64acad28d2f78b616ec08d581`: `verificar` SUCCESS (tests, build y Playwright).
-- Artefacto CI: **11265381772**, SHA-256 `fe89279c1e66702dc9079242cd5b0fed11a1ad31911f8df5d1eecc3775e3620e`.
-- CI de aceptación **37098820658** sobre `a05598c7d37cbbad5c5a24be5d7c998748605528`: `verificar` y `produccion` SUCCESS.
-- Producción sirvió exactamente `revisionFuente=a05598c7d37cbbad5c5a24be5d7c998748605528`; Playwright remoto SUCCESS.
-- Artefactos finales: `11264594119` (`verificacion-interfaz`, SHA-256 `9362423d734ca02e9c975b291f22cc197b747a26f78b4bbf5ef2c0f06c72bfab`) y `11264689196` (`reaceptacion-produccion`, SHA-256 `f7e1bfc3d6fc223cea2a81950b95ea720aa6c9dd91519241b66dd45546283bf2`).
+- CI verificadora **37099090843** sobre `a4a735c8254fba1807ed95a9e82e8baeccae9b90`: `verificar` SUCCESS (tests, build y Playwright), incluyendo confirmación visible de rangos provisionales.
+- Artefacto CI: **11265392393**, SHA-256 `f7fa3c3f9a06ab5304023e2ab27cdd3ef5e3a1da237a70227b9e68361b3ea48f`.
+- Producción exacta final: pendiente del commit `acceptance:` que sigue.

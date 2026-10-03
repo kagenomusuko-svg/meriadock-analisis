@@ -2,10 +2,10 @@
 
 ## Último punto seguro
 
-- Estado: CERRADO — ACEPTACIÓN WORK06 COMPLETA
+- Estado: IMPLEMENTACIÓN FINAL EN VERIFICACIÓN
 - Base: Work05 ACEPTADA CON RESERVAS CONCRETAS
 - Reglas pendientes clasificadas: 203/203
-- Bloque activo: ninguno; tablero cerrado
+- Bloque activo: producción exacta final
 
 ## Estados y reservas
 
@@ -32,9 +32,8 @@
 
 - [x] Regresiones Work04/Work05 conservadas.
 - [x] Pruebas Work06 añadidas.
-- [x] CI, Playwright y build: run 37098702607 SUCCESS; artefacto 11265381772.
-- [x] Producción exacta: run 37098820658 SUCCESS; revisión servida `a05598c7d37cbbad5c5a24be5d7c998748605528`; Playwright remoto SUCCESS.
-- [x] Artefactos finales: 11264594119 y 11264689196.
+- [x] CI, Playwright y build: run 37099090843 SUCCESS; artefacto 11265392393.
+- [ ] Producción exacta final: se ejecutará en el commit `acceptance:` siguiente.
 - [ ] Cerrar tablero tras auditoría de aceptación.
 
 ## Productos
