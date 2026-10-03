@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { construirSolicitud } from "../constructor/entrada";
 import { mensajesAnalisis } from "../../dist-motor/linter";
-import { OPERADORES, MODOS, DISPONIBILIDAD } from "../../dist-motor/nomenclatura";
+import { OPERADORES, MODOS } from "../../dist-motor/nomenclatura";
 import OrientacionTaxonomica from "../constructor/OrientacionTaxonomica";
 import { GENERICO } from "../../taxonomia/protocolos";
 const G = "#1E4C45",
@@ -81,7 +81,7 @@ function CheckRow({ checked, onChange, children, disabled=false }) {
 }
 export default function Constructor() {
   const [protocolos,setProtocolos]=useState([GENERICO]);
-  const [operadoresDisponibles,setOperadoresDisponibles]=useState(DISPONIBILIDAD);
+  const [operadoresDisponibles,setOperadoresDisponibles]=useState([]);
 
   const [paso, setPaso] = useState(0),
     [estado, setEstado] = useState(vacio),
