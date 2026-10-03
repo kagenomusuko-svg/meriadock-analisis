@@ -5,7 +5,7 @@
 - Estado: IMPLEMENTACIÓN Y AUDITORÍA EN CURSO
 - Base: Work05 ACEPTADA CON RESERVAS CONCRETAS
 - Reglas pendientes clasificadas: 203/203
-- Bloque activo: verificación CI, producción y auditoría final
+- Bloque activo: producción exacta y cierre de auditoría
 
 ## Estados y reservas
 
@@ -32,7 +32,8 @@
 
 - [x] Regresiones Work04/Work05 conservadas.
 - [x] Pruebas Work06 añadidas.
-- [ ] CI, Playwright y producción exacta: pendientes sobre el commit final.
+- [x] CI, Playwright y build: run 37098702607 SUCCESS; artefacto 11265381772.
+- [ ] Producción exacta: se ejecutará en el commit `acceptance:` final.
 - [ ] Cerrar tablero tras auditoría de aceptación.
 
 ## Productos

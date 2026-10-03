@@ -29,4 +29,7 @@ La medición provisional es condicional a los parámetros declarados. La ausenci
 
 ## Verificación
 
-Pendiente de ejecutar CI, Playwright y producción exacta sobre el commit final de Work06. Las pruebas locales incluyen las 93 regresiones previas más cuatro pruebas Work06.
+- Pruebas locales: **97/97**.
+- CI verificadora **37098702607** sobre `f0c2c11b7d8d5be64acad28d2f78b616ec08d581`: `verificar` SUCCESS (tests, build y Playwright).
+- Artefacto CI: **11265381772**, SHA-256 `fe89279c1e66702dc9079242cd5b0fed11a1ad31911f8df5d1eecc3775e3620e`.
+- Producción exacta: pendiente del commit de aceptación `acceptance:` siguiente.
