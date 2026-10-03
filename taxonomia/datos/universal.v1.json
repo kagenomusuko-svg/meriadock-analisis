@@ -66,39 +66,114 @@
           "estado": "CANONICO"
         },
         "valor": {
-          "energia": [
-            "si",
-            "no"
-          ],
-          "ausencia": [
-            "selectiva",
-            "generalizada"
-          ],
-          "busquedaAusente": [
-            "si",
-            "no"
-          ],
-          "direccion": [
-            "reactiva",
-            "proactiva"
-          ],
-          "desproporcion": [
-            "si",
-            "no"
-          ],
-          "friccion": [
-            "si",
-            "no"
-          ],
-          "orientacion": [
-            "pasado",
-            "nuevo",
-            "no_clara"
-          ],
-          "patronSostenido": [
-            "si",
-            "no"
-          ]
+          "energia": {
+            "texto": "¿Existe señal de energía ante el evento?",
+            "opciones": [
+              {
+                "id": "si",
+                "texto": "si"
+              },
+              {
+                "id": "no",
+                "texto": "no"
+              }
+            ]
+          },
+          "ausencia": {
+            "texto": "¿La ausencia es selectiva o generalizada?",
+            "opciones": [
+              {
+                "id": "selectiva",
+                "texto": "selectiva"
+              },
+              {
+                "id": "generalizada",
+                "texto": "generalizada"
+              }
+            ]
+          },
+          "busquedaAusente": {
+            "texto": "¿Falta búsqueda causal ante eventos que la requerían?",
+            "opciones": [
+              {
+                "id": "si",
+                "texto": "si"
+              },
+              {
+                "id": "no",
+                "texto": "no"
+              }
+            ]
+          },
+          "direccion": {
+            "texto": "¿La energía es reactiva o proactiva?",
+            "opciones": [
+              {
+                "id": "reactiva",
+                "texto": "reactiva"
+              },
+              {
+                "id": "proactiva",
+                "texto": "proactiva"
+              }
+            ]
+          },
+          "desproporcion": {
+            "texto": "¿La respuesta es desproporcionada a la amenaza?",
+            "opciones": [
+              {
+                "id": "si",
+                "texto": "si"
+              },
+              {
+                "id": "no",
+                "texto": "no"
+              }
+            ]
+          },
+          "friccion": {
+            "texto": "¿Hay fricción productiva sostenida con el campo?",
+            "opciones": [
+              {
+                "id": "si",
+                "texto": "si"
+              },
+              {
+                "id": "no",
+                "texto": "no"
+              }
+            ]
+          },
+          "orientacion": {
+            "texto": "¿La orientación dominante mira al pasado o a lo nuevo?",
+            "opciones": [
+              {
+                "id": "pasado",
+                "texto": "pasado"
+              },
+              {
+                "id": "nuevo",
+                "texto": "nuevo"
+              },
+              {
+                "id": "no_clara",
+                "texto": "no clara"
+              }
+            ]
+          },
+          "patronSostenido": {
+            "texto": "¿El patrón es claro y sostenido en el momento relevante?",
+            "opciones": [
+              {
+                "id": "si",
+                "texto": "si"
+              },
+              {
+                "id": "no",
+                "texto": "no"
+              }
+            ]
+          }
         }
       },
       {

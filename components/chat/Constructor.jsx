@@ -4,6 +4,7 @@ import Link from "next/link";
 import { construirSolicitud } from "../constructor/entrada";
 import { mensajesAnalisis } from "../../dist-motor/linter";
 import { OPERADORES, MODOS } from "../../dist-motor/nomenclatura";
+import OrientacionTaxonomica from "../constructor/OrientacionTaxonomica";
 import { GENERICO } from "../../taxonomia/protocolos";
 const G = "#1E4C45",
   BG = "#faf9f7";
@@ -104,7 +105,7 @@ export default function Constructor() {
   useEffect(()=>{let activo=true;fetch('/api/protocolos').then(r=>{if(!r.ok)throw Error('No se pudo cargar catálogo taxonómico');return r.json();}).then(d=>{if(activo)setProtocolos(d.protocolos);}).catch(e=>{if(activo)setError(e.message);});return()=>{activo=false;};},[]);
   useEffect(()=>{headingRef.current?.focus();},[paso]);
   useEffect(()=>{if(error)errorRef.current?.focus();},[error,errorVersion]);
-  function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,dominio:p.dominioLibre?estado.dominio:p.dominios[0],nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:'',confirmadoS:false,referenciaS:'',respuestasTaxonomicas:{}}))});}
+  function cambiarProtocolo(version){const p=protocolos.find(p=>`${p.id}@${p.version}`===version);if(!p)return;editar({taxonomiaVersion:version,dominio:p.dominioLibre?estado.dominio:p.dominios[0],nodos:estado.nodos.map(n=>({...n,componentesS:p.componentesS.map(()=>''),estrategiaAlpha:'',alphaValor:'',alphaMonto:'',alphaBase:'',confirmadoS:false,referenciaS:'',respuestasTaxonomicas:{},orientacionTaxonomica:{}}))});}
   const reglaAlpha=n=>n.estrategiaAlpha?.startsWith('taxonomico:')?protocolo.estrategiasAlpha?.find(a=>a.id===n.estrategiaAlpha.split(':')[1])?.regla:n.estrategiaAlpha;
   function editar(patch) {
     setEstado((e) => ({ ...e, ...patch }));
@@ -734,7 +735,7 @@ export default function Constructor() {
             {estado.nodos.map((n) => (
               <article key={n.id} style={card}>
                 <h2 style={secH}>{n.nombre}</h2>
-                <h3>{OPERADORES.s}</h3><p>Componentes discriminados conforme a {protocolo.id}@{protocolo.version}; alcance {protocolo.alcance||'dominio-específico'}.</p>
+                <OrientacionTaxonomica protocolo={protocolo} nodo={n} actualizar={patch=>nodo(n.id,patch)}/><h3>{OPERADORES.s}</h3><p>Componentes discriminados conforme a {protocolo.id}@{protocolo.version}; alcance {protocolo.alcance||'dominio-específico'}.</p>
                 {protocolo.preguntas.map(q=><div key={q.id}>{q.tipo==='numero'?numero(q.texto,n.respuestasTaxonomicas?.[q.id]??'',v=>nodo(n.id,{respuestasTaxonomicas:{...n.respuestasTaxonomicas,[q.id]:v}}),q.min,q.max):texto(q.texto,n.respuestasTaxonomicas?.[q.id]??'',v=>nodo(n.id,{respuestasTaxonomicas:{...n.respuestasTaxonomicas,[q.id]:v}}))}</div>)}
                 {n.tipo === "instrumental" ? (
                   <p>
