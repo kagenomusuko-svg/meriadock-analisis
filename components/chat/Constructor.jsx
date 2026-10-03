@@ -69,8 +69,7 @@ function CheckRow({ checked, onChange, children, disabled=false }) {
         padding: "12px 14px",
         background: checked ? "#f0f6f4" : "transparent",
         borderRadius: 10,
-        cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.62 : 1,
+        cursor: "pointer",
         lineHeight: 1.6,
       }}
     >
@@ -259,8 +258,7 @@ export default function Constructor() {
     border: "none",
     padding: "12px 28px",
     borderRadius: "10px",
-    cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.62 : 1,
+    cursor: "pointer",
     fontSize: "14px",
     fontFamily: "Georgia, serif",
   };
@@ -270,16 +268,14 @@ export default function Constructor() {
     border: "1.5px solid #d4cfc8",
     padding: "12px 28px",
     borderRadius: "10px",
-    cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.62 : 1,
+    cursor: "pointer",
     fontSize: "14px",
     fontFamily: "Georgia, serif",
   };
   const bDel = {
     background: "none",
     border: "none",
-    cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.62 : 1,
+    cursor: "pointer",
     color: "#655d52",
     fontSize: "22px",
     lineHeight: 1,
@@ -451,8 +447,7 @@ export default function Constructor() {
               borderBottom:
                 i === paso ? `2px solid ${G}` : "2px solid transparent",
               color: i === paso ? G : i < paso ? "#655d52" : "#655d52",
-              cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.62 : 1,
+              cursor: "pointer",
               fontSize: "13px",
               fontFamily: "Georgia, serif",
               whiteSpace: "nowrap",
