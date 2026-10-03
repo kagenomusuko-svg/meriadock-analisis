@@ -60,7 +60,7 @@ function pct(v) {
     ? "Indeterminado"
     : (v * 100).toFixed(2) + "%";
 }
-function CheckRow({ checked, onChange, children, disabled=false }) {
+function CheckRow({ checked, onChange, children, disabled=false, ariaLabel }) {
   return (
     <label
       style={{
@@ -73,7 +73,7 @@ function CheckRow({ checked, onChange, children, disabled=false }) {
         lineHeight: 1.6,
       }}
     >
-      <input type="checkbox" checked={checked} onChange={onChange} disabled={disabled} />
+      <input type="checkbox" aria-label={ariaLabel} checked={checked} onChange={onChange} disabled={disabled} />
       <span>{children}</span>
     </label>
   );
@@ -1002,7 +1002,7 @@ export default function Constructor() {
               {operadoresDisponibles.map((op) => {
                 const id=op.registro;
                 const activo=op.estado==='ACTIVO' && Boolean(id);
-                return <CheckRow key={op.id} disabled={!activo} checked={activo && estado.mediciones.includes(id)} onChange={() => editar({mediciones: estado.mediciones.includes(id) ? estado.mediciones.filter((x) => x !== id) : [...estado.mediciones, id]})}>
+                return <CheckRow key={op.id} ariaLabel={OPERADORES[id] || op.nombre} disabled={!activo} checked={activo && estado.mediciones.includes(id)} onChange={() => editar({mediciones: estado.mediciones.includes(id) ? estado.mediciones.filter((x) => x !== id) : [...estado.mediciones, id]})}>
                   <strong>{op.id} · {op.nombre}</strong> — <span>{op.estado.replaceAll('_',' ')}</span>{op.causaReserva&&<small style={{display:'block'}}>{op.causaReserva}</small>}
                 </CheckRow>;
               })}
