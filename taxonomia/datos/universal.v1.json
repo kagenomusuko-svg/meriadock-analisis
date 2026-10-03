@@ -1,0 +1,1054 @@
+[
+  {
+    "schemaVersion": "taxonomia/1",
+    "capa": "universal",
+    "id": "universal-u1",
+    "version": "1",
+    "titulo": "Hijos y legibilidad documental",
+    "sourceRef": {
+      "repositorio": "kagenomusuko-svg/Paradigma",
+      "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+      "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+      "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6",
+      "capitulo": "U·1",
+      "seccion": "I–IX",
+      "reglaId": "u1.protocolo",
+      "estado": "CANONICO"
+    },
+    "reglas": [
+      {
+        "id": "u1.legibilidad",
+        "tipo": "jerarquia",
+        "texto": "Confirmable no significa clasificación automática.",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+          "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6",
+          "capitulo": "U·1",
+          "seccion": "II",
+          "reglaId": "u1.legibilidad",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "confirmable": [
+            "fobos",
+            "deimos",
+            "anteros"
+          ],
+          "hipotesis": [
+            "potos",
+            "eros"
+          ],
+          "requiereECO": [
+            "harmonia"
+          ]
+        }
+      },
+      {
+        "id": "u1.arbol",
+        "tipo": "arbol",
+        "texto": "Respuestas estructuradas discriminadas por el analista; ausencia no equivale a NO.",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+          "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6",
+          "capitulo": "U·1",
+          "seccion": "V",
+          "reglaId": "u1.arbol",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "energia": [
+            "si",
+            "no"
+          ],
+          "ausencia": [
+            "selectiva",
+            "generalizada"
+          ],
+          "busquedaAusente": [
+            "si",
+            "no"
+          ],
+          "direccion": [
+            "reactiva",
+            "proactiva"
+          ],
+          "desproporcion": [
+            "si",
+            "no"
+          ],
+          "friccion": [
+            "si",
+            "no"
+          ],
+          "orientacion": [
+            "pasado",
+            "nuevo",
+            "no_clara"
+          ],
+          "patronSostenido": [
+            "si",
+            "no"
+          ]
+        }
+      },
+      {
+        "id": "u1.distribucion",
+        "tipo": "restriccion",
+        "texto": "P(Hijos) suma 1; Harmonía=0 sin presencia; Potós/Eros con incertidumbre alta; máximo ≤.40 no concluyente.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+          "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6",
+          "capitulo": "U·1",
+          "seccion": "VI",
+          "reglaId": "u1.distribucion",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "suma": 1,
+          "umbralNoConcluyente": 0.4,
+          "harmoniaSinPresencia": 0
+        }
+      },
+      {
+        "id": "u1.retrospectiva",
+        "tipo": "restriccion",
+        "texto": "Actor no disponible: Potós, Eros y Harmonía peso cero; rango ampliado y nota retrospectiva.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+          "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6",
+          "capitulo": "U·1",
+          "seccion": "VII",
+          "reglaId": "u1.retrospectiva",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "u1.no-automatismo",
+        "tipo": "restriccion",
+        "texto": "Ningún resultado del árbol asigna S ni reemplaza confirmación humana.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-01.md",
+          "blobSHA": "9a3e8d37601cebabbab286de5c9d1961f1f42ef6",
+          "capitulo": "U·1",
+          "seccion": "I",
+          "reglaId": "u1.no-automatismo",
+          "estado": "CANONICO"
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "taxonomia/1",
+    "capa": "universal",
+    "id": "universal-u2",
+    "version": "1",
+    "titulo": "Evidencia contradictoria",
+    "sourceRef": {
+      "repositorio": "kagenomusuko-svg/Paradigma",
+      "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+      "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+      "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+      "capitulo": "U·2",
+      "seccion": "I–IX",
+      "reglaId": "u2.protocolo",
+      "estado": "CANONICO"
+    },
+    "reglas": [
+      {
+        "id": "u2.e1",
+        "tipo": "rango",
+        "texto": "Referencia universal E1; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e1",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.75,
+          0.95
+        ]
+      },
+      {
+        "id": "u2.e2",
+        "tipo": "rango",
+        "texto": "Referencia universal E2; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e2",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.55,
+          0.75
+        ]
+      },
+      {
+        "id": "u2.e3",
+        "tipo": "rango",
+        "texto": "Referencia universal E3; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e3",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.4,
+          0.6
+        ]
+      },
+      {
+        "id": "u2.e4",
+        "tipo": "rango",
+        "texto": "Referencia universal E4; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e4",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.35,
+          0.55
+        ]
+      },
+      {
+        "id": "u2.e5",
+        "tipo": "rango",
+        "texto": "Referencia universal E5; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e5",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.3,
+          0.5
+        ]
+      },
+      {
+        "id": "u2.e6",
+        "tipo": "rango",
+        "texto": "Referencia universal E6; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e6",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.25,
+          0.45
+        ]
+      },
+      {
+        "id": "u2.e7",
+        "tipo": "rango",
+        "texto": "Referencia universal E7; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e7",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.15,
+          0.35
+        ]
+      },
+      {
+        "id": "u2.e8",
+        "tipo": "rango",
+        "texto": "Referencia universal E8; el dominio puede concretar el rango.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e8",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.05,
+          0.2
+        ]
+      },
+      {
+        "id": "u2.e0",
+        "tipo": "semantica",
+        "texto": "E0 vigente: transición no materialmente acreditada; conserva nodo y otros datos.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e0",
+          "estado": "CANONICO"
+        },
+        "valor": 0
+      },
+      {
+        "id": "u2.e0-historico",
+        "tipo": "semantica",
+        "texto": "La fuente dice excluir la arista. Se conserva como representación histórica, sin cambiar el cero epistémico vigente.",
+        "estado": "HISTORICO",
+        "efecto": "documentacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "II",
+          "reglaId": "u2.e0-historico",
+          "estado": "HISTORICO"
+        }
+      },
+      {
+        "id": "u2.interseccion",
+        "tipo": "regla",
+        "texto": "Rangos compatibles: [max(mínimos),min(máximos)]. Nunca incrementar por conteo.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "III",
+          "reglaId": "u2.interseccion",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "u2.prioridad",
+        "tipo": "regla",
+        "texto": "Rangos incompatibles: documentar contradicción; prioridad explícita y desplazamiento conservador [a−k(a−d),b].",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "IV",
+          "reglaId": "u2.prioridad",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "leve": {
+            "distanciaMenor": 0.1,
+            "k": 0.1
+          },
+          "moderada": {
+            "desde": 0.1,
+            "hasta": 0.25,
+            "k": 0.2
+          },
+          "severa": {
+            "mayor": 0.25,
+            "k": 0.3
+          }
+        }
+      },
+      {
+        "id": "u2.insuficiencia",
+        "tipo": "formulario",
+        "texto": "Evidencia empírica concreta, observación ECO, accesibilidad y provisional/terminal; no certificar D desde un peso aislado.",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-02.md",
+          "blobSHA": "05441182cf4babe981e4a566cd3821c7588ae218",
+          "capitulo": "U·2",
+          "seccion": "VI",
+          "reglaId": "u2.insuficiencia",
+          "estado": "CANONICO"
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "taxonomia/1",
+    "capa": "universal",
+    "id": "universal-u3",
+    "version": "1",
+    "titulo": "Rutas S, α e IIC",
+    "sourceRef": {
+      "repositorio": "kagenomusuko-svg/Paradigma",
+      "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+      "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+      "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+      "capitulo": "U·3",
+      "seccion": "I–IX",
+      "reglaId": "u3.protocolo",
+      "estado": "CANONICO"
+    },
+    "reglas": [
+      {
+        "id": "u3.sa.harmonia",
+        "tipo": "rango",
+        "texto": "Ruta A: harmonia; intervalo ponderado por P(Hijos) confirmado, S efectivo requiere confirmación.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "II",
+          "reglaId": "u3.sa.harmonia",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.05,
+          0.2
+        ]
+      },
+      {
+        "id": "u3.sa.anteros",
+        "tipo": "rango",
+        "texto": "Ruta A: anteros; intervalo ponderado por P(Hijos) confirmado, S efectivo requiere confirmación.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "II",
+          "reglaId": "u3.sa.anteros",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.08,
+          0.3
+        ]
+      },
+      {
+        "id": "u3.sa.eros",
+        "tipo": "rango",
+        "texto": "Ruta A: eros; intervalo ponderado por P(Hijos) confirmado, S efectivo requiere confirmación.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "II",
+          "reglaId": "u3.sa.eros",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.3,
+          0.6
+        ]
+      },
+      {
+        "id": "u3.sa.potos",
+        "tipo": "rango",
+        "texto": "Ruta A: potos; intervalo ponderado por P(Hijos) confirmado, S efectivo requiere confirmación.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "II",
+          "reglaId": "u3.sa.potos",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.55,
+          0.8
+        ]
+      },
+      {
+        "id": "u3.sa.fobos",
+        "tipo": "rango",
+        "texto": "Ruta A: fobos; intervalo ponderado por P(Hijos) confirmado, S efectivo requiere confirmación.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "II",
+          "reglaId": "u3.sa.fobos",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.7,
+          0.92
+        ]
+      },
+      {
+        "id": "u3.sa.deimos",
+        "tipo": "rango",
+        "texto": "Ruta A: deimos; intervalo ponderado por P(Hijos) confirmado, S efectivo requiere confirmación.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "II",
+          "reglaId": "u3.sa.deimos",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.75,
+          0.95
+        ]
+      },
+      {
+        "id": "u3.ds1",
+        "tipo": "rango",
+        "texto": "Ruta B DS-1: propuesta derivada pendiente de calibración.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III",
+          "reglaId": "u3.ds1",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": [
+          0.8,
+          0.95
+        ]
+      },
+      {
+        "id": "u3.ds2",
+        "tipo": "rango",
+        "texto": "Ruta B DS-2: propuesta derivada pendiente de calibración.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III",
+          "reglaId": "u3.ds2",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": [
+          0.65,
+          0.82
+        ]
+      },
+      {
+        "id": "u3.ds3",
+        "tipo": "rango",
+        "texto": "Ruta B DS-3: propuesta derivada pendiente de calibración.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III",
+          "reglaId": "u3.ds3",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": [
+          0.5,
+          0.7
+        ]
+      },
+      {
+        "id": "u3.ds4",
+        "tipo": "rango",
+        "texto": "Ruta B DS-4: propuesta derivada pendiente de calibración.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III",
+          "reglaId": "u3.ds4",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": [
+          0.3,
+          0.55
+        ]
+      },
+      {
+        "id": "u3.ds5",
+        "tipo": "rango",
+        "texto": "Ruta B DS-5: propuesta derivada pendiente de calibración.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III",
+          "reglaId": "u3.ds5",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": [
+          0.15,
+          0.35
+        ]
+      },
+      {
+        "id": "u3.ds6",
+        "tipo": "rango",
+        "texto": "Ruta B DS-6: propuesta derivada pendiente de calibración.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III",
+          "reglaId": "u3.ds6",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": [
+          0.05,
+          0.2
+        ]
+      },
+      {
+        "id": "u3.coherencia",
+        "tipo": "regla",
+        "texto": "Convergencia: proponer intersección y registrar rutas. Divergencia: incompatibilidad, revisión y ampliación declarada; jamás promedio automático.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "IV",
+          "reglaId": "u3.coherencia",
+          "estado": "CANONICO"
+        }
+      },
+      {
+        "id": "u3.iic-ajuste",
+        "tipo": "tabla",
+        "texto": "Solo aristas estructurales, propuesta pendiente; colapso no se corrige por inversión del rango.",
+        "estado": "PROPUESTA_PENDIENTE_CALIBRACION",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "V",
+          "reglaId": "u3.iic-ajuste",
+          "estado": "PROPUESTA_PENDIENTE_CALIBRACION"
+        },
+        "valor": {
+          "alto": 1,
+          "moderado": 0.85,
+          "disforia": 0.7,
+          "severo": 0.55
+        }
+      },
+      {
+        "id": "u3.alpha.negacion",
+        "tipo": "rango",
+        "texto": "Gradación clínica negacion: orientación, no conteo de documentos.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "VI",
+          "reglaId": "u3.alpha.negacion",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0,
+          0.05
+        ]
+      },
+      {
+        "id": "u3.alpha.factual",
+        "tipo": "rango",
+        "texto": "Gradación clínica factual: orientación, no conteo de documentos.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "VI",
+          "reglaId": "u3.alpha.factual",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.05,
+          0.25
+        ]
+      },
+      {
+        "id": "u3.alpha.parcial",
+        "tipo": "rango",
+        "texto": "Gradación clínica parcial: orientación, no conteo de documentos.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "VI",
+          "reglaId": "u3.alpha.parcial",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.25,
+          0.55
+        ]
+      },
+      {
+        "id": "u3.alpha.causal",
+        "tipo": "rango",
+        "texto": "Gradación clínica causal: orientación, no conteo de documentos.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "VI",
+          "reglaId": "u3.alpha.causal",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.55,
+          0.8
+        ]
+      },
+      {
+        "id": "u3.alpha.constitutiva",
+        "tipo": "rango",
+        "texto": "Gradación clínica constitutiva: orientación, no conteo de documentos.",
+        "estado": "CANONICO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "VI",
+          "reglaId": "u3.alpha.constitutiva",
+          "estado": "CANONICO"
+        },
+        "valor": [
+          0.8,
+          1
+        ]
+      },
+      {
+        "id": "u3.iic-variantes",
+        "tipo": "variantes",
+        "texto": "Congruencia, correlación histórica y variantes sectoriales tienen IDs y contratos separados.",
+        "estado": "CANONICO",
+        "efecto": "documentacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-03.md",
+          "blobSHA": "a5b3ac9f0a730e95b513a2a0e6331ac9a1cec5ec",
+          "capitulo": "U·3",
+          "seccion": "III/V",
+          "reglaId": "u3.iic-variantes",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "congruencia@1": {
+            "formula": "coincidencias/totalDeclarado",
+            "estado": "DERIVADO"
+          },
+          "correlacion-historica@1": {
+            "formula": "correlación entre declaración y conducta",
+            "estado": "HISTORICO"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schemaVersion": "taxonomia/1",
+    "capa": "universal",
+    "id": "universal-u4",
+    "version": "1",
+    "titulo": "Declaración taxonómica de sensibilidad conjunta",
+    "sourceRef": {
+      "repositorio": "kagenomusuko-svg/Paradigma",
+      "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+      "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+      "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180",
+      "capitulo": "U·4",
+      "seccion": "I–IX",
+      "reglaId": "u4.protocolo",
+      "estado": "CANONICO"
+    },
+    "reglas": [
+      {
+        "id": "u4.cobertura",
+        "tipo": "contrato",
+        "texto": "Producto cartesiano continuo w×P(Hijos)×α. Muestras o vértices no prueban todo el continuo.",
+        "estado": "CANONICO",
+        "efecto": "validacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+          "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180",
+          "capitulo": "U·4",
+          "seccion": "II",
+          "reglaId": "u4.cobertura",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "dimensiones": [
+            "w",
+            "pHijos",
+            "alpha"
+          ],
+          "objetivo": "rStarNeta",
+          "protocolo": "taxonomia-cartesiana@1"
+        }
+      },
+      {
+        "id": "u4.declaraciones",
+        "tipo": "arbol",
+        "texto": "A/B: líder estable y brecha estable/variable; C candidato base con cambio; D incertidumbre sin patrón. Distinto de robustez tres escenarios.",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+          "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180",
+          "capitulo": "U·4",
+          "seccion": "III–IV",
+          "reglaId": "u4.declaraciones",
+          "estado": "CANONICO"
+        },
+        "valor": {
+          "A": "líder estable y brecha estable",
+          "B": "líder estable y brecha variable",
+          "C": "candidato con cambio",
+          "D": "incertidumbre sin patrón"
+        }
+      },
+      {
+        "id": "u4.umbral",
+        "tipo": "rango",
+        "texto": "30% orientativo; analista puede justificar otro umbral. No se impone universalmente.",
+        "estado": "DERIVADO",
+        "efecto": "sugerencia",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+          "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180",
+          "capitulo": "U·4",
+          "seccion": "IV",
+          "reglaId": "u4.umbral",
+          "estado": "DERIVADO"
+        },
+        "valor": 0.3
+      },
+      {
+        "id": "u4.extension",
+        "tipo": "contrato",
+        "texto": "Declaración sobre todo el continuo reservada hasta disponer de certificado de cobertura global. Exploración finita no equivalente.",
+        "estado": "RESERVADO",
+        "efecto": "reserva",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+          "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180",
+          "capitulo": "U·4",
+          "seccion": "II/IV",
+          "reglaId": "u4.extension",
+          "estado": "RESERVADO"
+        }
+      },
+      {
+        "id": "u4.documento",
+        "tipo": "formulario",
+        "texto": "Tipo, condición, nodos, centrales/rangos, cobertura, aristas sensibles, evidencia adicional, firma/credenciales/fecha.",
+        "estado": "CANONICO",
+        "efecto": "orientacion",
+        "condiciones": [],
+        "sourceRef": {
+          "repositorio": "kagenomusuko-svg/Paradigma",
+          "sha": "e7c7b06eebd56e412a8b27f3c58747af2d1e531c",
+          "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-u-04.md",
+          "blobSHA": "9c55aa0d98c1947f2912f0b2bb442fe8c6f20180",
+          "capitulo": "U·4",
+          "seccion": "VI",
+          "reglaId": "u4.documento",
+          "estado": "CANONICO"
+        }
+      }
+    ]
+  }
+]
