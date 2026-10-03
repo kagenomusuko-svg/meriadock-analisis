@@ -23,7 +23,8 @@
         "path": "corpus/libros/taxonomia-general-de-aplicaciones/capitulo-02.md",
         "blobSHA": "7cd206b404cdc3efdc5464ab1aa168ddfa0d9acb"
       },
-      "estado": "SIN_REVISAR"
+      "estado": "REVISADO_COMPILADO_CON_RESERVA",
+      "protocolo": "tax-cap02@1"
     },
     {
       "capitulo": "3",

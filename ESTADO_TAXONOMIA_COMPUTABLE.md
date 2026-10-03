@@ -5,8 +5,8 @@
 - Estado: EN EJECUCIÓN
 - Base runtime: Work03 ACEPTADO_CON_RESERVAS
 - Bloque activo: preparación
-- Próxima tarea: revisar/compilar capítulos 2–78; completar instrumentos UI y cobertura de aceptación
-- Decisiones pendientes: ninguna al inicio
+- Próxima tarea: revisar/compilar capítulos 3–78; completar instrumentos UI y cobertura de aceptación
+- Decisiones pendientes: α nominal laboral; ver DECISION_PENDIENTE_TAX_ALPHA_NOMINAL_WORK04.md
 
 ## Preparación
 
@@ -85,7 +85,7 @@
 
 ## Decisiones pendientes
 
-Ninguna al inicio.
+α nominal laboral: prohibición de comunicados sin acciones vs tabla .06–.20; sólo esa traducción reservada. El resto sigue independiente.
 
 ## Historial de commits
 
@@ -96,4 +96,6 @@ Ninguna al inicio.
 
 - `8d9c4cb9d8984e985f7fe1962e3ffab2e4c6938f` — Fraude annona, motor/UI/adaptador/Playwright; 82/82 pruebas locales y build correcto. CI y producción pendientes de lectura, sin aceptación final.
 
-- `ae545f6393872e6659925e66cd191aa58e4cfbc2` — primer overlay penal/civil, herencia Universal, loader, fuentes visibles, confirmación S, linter y prueba real de catálogo UI. 84/84 pruebas locales y build. Cobertura estricta debe fallar mientras falten capítulos: 77 dominios siguen SIN_REVISAR.
+- `ae545f6393872e6659925e66cd191aa58e4cfbc2` — primer overlay penal/civil, herencia Universal, loader, fuentes visibles, confirmación S, linter y prueba real de catálogo UI. 84/84 pruebas locales y build. Cobertura estricta debe fallar mientras falten capítulos: 77 dominios seguían SIN_REVISAR en ese commit; después capítulo 2 compilado, quedan 76..
+
+- `414a8c4b003363dd35a72a0f4d8bf5603cd1957a` — orientación Universal en UI desde datos y capítulo 2 laboral; confirmaciones booleanas explícitas. 85/85 pruebas locales y build. Conflicto doctrinal α nominal aislado en regla reservada. CI 37087488709 y 37087528363 anteriores SUCCESS.

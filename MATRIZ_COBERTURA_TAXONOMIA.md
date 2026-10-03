@@ -5,7 +5,7 @@ Inventario congelado: 82 capítulos. Estado de revisión pendiente; inventariar 
 | Capítulo | Dominio / título | Fuente SHA | Escala E | S | α | IIC | Operadores | Reglas especiales | Protocolo | Pruebas | Estado |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | Derecho penal y civil — responsabilidad individual y colectiva | 3db9cc1fbd71319d26a8d8849913d14414fa5237 | E0 vigente / escalas trazadas | Rutas A/B; confirmación | Orientación / estrategia explícita | Variantes separadas | Sin bloqueo familiar | Estados y límites trazados | tax-cap01@1 | work04-universal / loader | REVISADO_COMPILADO |
-| 2 | Derecho laboral — relaciones de poder y responsabilidad | 7cd206b404cdc3efdc5464ab1aa168ddfa0d9acb | — | — | — | — | — | — | — | — | SIN_REVISAR |
+| 2 | Derecho laboral — relaciones de poder y responsabilidad patronal | 7cd206b404cdc3efdc5464ab1aa168ddfa0d9acb | L1–L8 pendientes calibración; E0 vigente | Rutas A/B | Escala pendiente; nominal RESERVADO | Variantes separadas | R*_B reservado; resto por insumos | Omisión deber/conocimiento; α institucional ≠ despido ejecutor | tax-cap02@1 | work04-loader | REVISADO_COMPILADO_CON_RESERVA |
 | 3 | Derecho penal internacional y | 579d56362af45445d8fad5ed52ca149c5773cefe | — | — | — | — | — | — | — | — | SIN_REVISAR |
 | 4 | Derecho ambiental — responsabilidad por daño ecológico | ed2ccb1704a1c332ccc04504717b182465b73807 | — | — | — | — | — | — | — | — | SIN_REVISAR |
 | 5 | Derecho de familia — responsabilidad parental y protección del | 6770a1e456dd514ad0f4f8a8a698c445a813830e | — | — | — | — | — | — | — | — | SIN_REVISAR |
