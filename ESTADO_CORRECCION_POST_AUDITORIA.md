@@ -7,8 +7,8 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 - Estado: EN EJECUCIÓN
 - Base doctrinal: RESOLUCION_AUDITORIA_I_INV.md
 - Base de hallazgos: REGISTRO_DISCREPANCIAS_AUDITORIA.md
-- Bloque activo: Fase 3
-- Próxima tarea: protocolos efectivos y accesibilidad
+- Bloque activo: Fase 4
+- Próxima tarea: repertorio e I_inv
 
 ## Fase 1 — P1 estructurales y numéricos
 
@@ -35,11 +35,11 @@ Regla: una tarea sólo se marca [x] después de commit + pruebas.
 
 ## Fase 3 — Taxonomía efectiva y UI
 
-- [ ] AU-07 resolver/aplicar protocolos versionados.
-- [ ] AU-08 etiquetar pilotos y alcances.
-- [ ] AU-18 mejorar accesibilidad verificable.
-- [ ] Tests de regresión Fase 3.
-- [ ] CI/build/UI verde Fase 3.
+- [x] AU-07 resolver/aplicar protocolos versionados. — `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `9430acf2118e018568be6ac3cf6a888c39140cb3`
+- [x] AU-08 etiquetar pilotos y alcances. — `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `9430acf2118e018568be6ac3cf6a888c39140cb3`
+- [x] AU-18 mejorar accesibilidad verificable. — `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `9430acf2118e018568be6ac3cf6a888c39140cb3`
+- [x] Tests de regresión Fase 3. — `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `9430acf2118e018568be6ac3cf6a888c39140cb3`
+- [x] CI/build/UI verde Fase 3. — `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `9430acf2118e018568be6ac3cf6a888c39140cb3`
 
 ## Fase 4 — repertorio e I_inv
 
@@ -77,3 +77,5 @@ Ninguna al inicio. I_inv ya está resuelto.
 
 
 - `6688263bdf2a9f212f870fbeccd60e7460021d86` — Fase 2: npm ci, 62 pruebas y build; CI37080135282 SUCCESS incluido flujo UI/API/expediente.
+
+- `7abc8ff76f20dd4701ed128f510f628fa4cdd260` + `348de91c05cf09ed17dee861dca46de81fd8046e` + `9430acf2118e018568be6ac3cf6a888c39140cb3` — Fase 3: 65 pruebas y build; CI37081467948 SUCCESS. Los dos CI anteriores detectaron ambigüedades del test Playwright, corregidas sin omitir las aserciones. Contraste de navegación/header comprobado ≥4.5; no certificación WCAG.
