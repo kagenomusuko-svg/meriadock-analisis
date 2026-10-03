@@ -74,8 +74,8 @@
 - [x] npm run build.
 - [x] Playwright flujo completo.
 - [x] Pruebas adversas.
-- [ ] Deployment producción exacta (pendiente del commit de aceptación).
-- [ ] Recorrido real (pendiente del commit de aceptación).
+- [ ] Deployment producción exacta (CI 37094194998 verificó; segundo commit `acceptance:` en ejecución).
+- [ ] Recorrido real (segundo job `produccion` pendiente).
 
 ## Productos finales
 
